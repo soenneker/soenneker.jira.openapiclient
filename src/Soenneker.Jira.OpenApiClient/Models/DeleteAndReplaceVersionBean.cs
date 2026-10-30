@@ -11,19 +11,33 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DeleteAndReplaceVersionBean : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customFieldReplacementList") is { } nullNodeCustomFieldReplacementList && nullNodeCustomFieldReplacementList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldReplacementList = null;
+            if (parseNode.GetChildNode("moveAffectedIssuesTo") is { } nullNodeMoveAffectedIssuesTo && nullNodeMoveAffectedIssuesTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveAffectedIssuesTo = null;
+            if (parseNode.GetChildNode("moveFixIssuesTo") is { } nullNodeMoveFixIssuesTo && nullNodeMoveFixIssuesTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveFixIssuesTo = null;
+        }
+
         /// <summary>An array of custom field IDs (`customFieldId`) and version IDs (`moveTo`) to update when the fields contain the deleted version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement>? CustomFieldReplacementList { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement>? CustomFieldReplacementList { get => _explicitNullValueCustomFieldReplacementList; set { _explicitNullValueCustomFieldReplacementList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFieldReplacementList"); else _explicitNullProperties?.Remove("customFieldReplacementList"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement>? _explicitNullValueCustomFieldReplacementList = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement> CustomFieldReplacementList { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement> CustomFieldReplacementList { get => _explicitNullValueCustomFieldReplacementList; set { _explicitNullValueCustomFieldReplacementList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFieldReplacementList"); else _explicitNullProperties?.Remove("customFieldReplacementList"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement> _explicitNullValueCustomFieldReplacementList = default!;
 #endif
         /// <summary>The ID of the version to update `affectedVersion` to when the field contains the deleted version.</summary>
-        public long? MoveAffectedIssuesTo { get; set; }
+        public long? MoveAffectedIssuesTo { get => _explicitNullValueMoveAffectedIssuesTo; set { _explicitNullValueMoveAffectedIssuesTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moveAffectedIssuesTo"); else _explicitNullProperties?.Remove("moveAffectedIssuesTo"); } }
+        private long? _explicitNullValueMoveAffectedIssuesTo = default!;
         /// <summary>The ID of the version to update `fixVersion` to when the field contains the deleted version.</summary>
-        public long? MoveFixIssuesTo { get; set; }
+        public long? MoveFixIssuesTo { get => _explicitNullValueMoveFixIssuesTo; set { _explicitNullValueMoveFixIssuesTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moveFixIssuesTo"); else _explicitNullProperties?.Remove("moveFixIssuesTo"); } }
+        private long? _explicitNullValueMoveFixIssuesTo = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -32,7 +46,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.DeleteAndReplaceVersionBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.DeleteAndReplaceVersionBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.DeleteAndReplaceVersionBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,7 +70,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement>("customFieldReplacementList", CustomFieldReplacementList);
             writer.WriteLongValue("moveAffectedIssuesTo", MoveAffectedIssuesTo);
-            writer.WriteLongValue("moveFixIssuesTo", MoveFixIssuesTo);
+            writer.WriteLongValue("moveFixIssuesTo", MoveFixIssuesTo);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

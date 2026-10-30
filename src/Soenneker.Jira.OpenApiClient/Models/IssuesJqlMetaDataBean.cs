@@ -12,22 +12,40 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssuesJqlMetaDataBean : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("maxResults") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
+            if (parseNode.GetChildNode("startAt") is { } nullNodeStartAt && nullNodeStartAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartAt = null;
+            if (parseNode.GetChildNode("totalCount") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
+            if (parseNode.GetChildNode("validationWarnings") is { } nullNodeValidationWarnings && nullNodeValidationWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationWarnings = null;
+        }
+
         /// <summary>The number of issues that were loaded in this evaluation.</summary>
-        public int? Count { get; set; }
+        public int? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private int? _explicitNullValueCount = default!;
         /// <summary>The maximum number of issues that could be loaded in this evaluation.</summary>
-        public int? MaxResults { get; set; }
+        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxResults"); else _explicitNullProperties?.Remove("maxResults"); } }
+        private int? _explicitNullValueMaxResults = default!;
         /// <summary>The index of the first issue.</summary>
-        public long? StartAt { get; set; }
+        public long? StartAt { get => _explicitNullValueStartAt; set { _explicitNullValueStartAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAt"); else _explicitNullProperties?.Remove("startAt"); } }
+        private long? _explicitNullValueStartAt = default!;
         /// <summary>The total number of issues the JQL returned.</summary>
-        public long? TotalCount { get; set; }
+        public long? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCount"); else _explicitNullProperties?.Remove("totalCount"); } }
+        private long? _explicitNullValueTotalCount = default!;
         /// <summary>Any warnings related to the JQL query. Present only if the validation mode was set to `warn`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ValidationWarnings { get; set; }
+        public List<string>? ValidationWarnings { get => _explicitNullValueValidationWarnings; set { _explicitNullValueValidationWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validationWarnings"); else _explicitNullProperties?.Remove("validationWarnings"); } }
+        private List<string>? _explicitNullValueValidationWarnings = default!;
 #nullable restore
 #else
-        public List<string> ValidationWarnings { get; set; }
+        public List<string> ValidationWarnings { get => _explicitNullValueValidationWarnings; set { _explicitNullValueValidationWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validationWarnings"); else _explicitNullProperties?.Remove("validationWarnings"); } }
+        private List<string> _explicitNullValueValidationWarnings = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +55,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssuesJqlMetaDataBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssuesJqlMetaDataBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssuesJqlMetaDataBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,7 +83,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteIntValue("maxResults", MaxResults);
             writer.WriteLongValue("startAt", StartAt);
             writer.WriteLongValue("totalCount", TotalCount);
-            writer.WriteCollectionOfPrimitiveValues<string>("validationWarnings", ValidationWarnings);
+            writer.WriteCollectionOfPrimitiveValues<string>("validationWarnings", ValidationWarnings);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

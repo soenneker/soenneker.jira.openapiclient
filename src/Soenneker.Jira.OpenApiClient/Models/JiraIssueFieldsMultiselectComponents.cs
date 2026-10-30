@@ -12,24 +12,39 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JiraIssueFieldsMultiselectComponents : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bulkEditMultiSelectFieldOption") is { } nullNodeBulkEditMultiSelectFieldOption && nullNodeBulkEditMultiSelectFieldOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkEditMultiSelectFieldOption = null;
+            if (parseNode.GetChildNode("components") is { } nullNodeComponents && nullNodeComponents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Components = null;
+            if (parseNode.GetChildNode("fieldId") is { } nullNodeFieldId && nullNodeFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldId = null;
+        }
+
         /// <summary>The bulkEditMultiSelectFieldOption property</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraMultiSelectComponentFieldBulkEditMultiSelectFieldOption? BulkEditMultiSelectFieldOption { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraMultiSelectComponentFieldBulkEditMultiSelectFieldOption? BulkEditMultiSelectFieldOption { get => _explicitNullValueBulkEditMultiSelectFieldOption; set { _explicitNullValueBulkEditMultiSelectFieldOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulkEditMultiSelectFieldOption"); else _explicitNullProperties?.Remove("bulkEditMultiSelectFieldOption"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraMultiSelectComponentFieldBulkEditMultiSelectFieldOption? _explicitNullValueBulkEditMultiSelectFieldOption = default!;
         /// <summary>The components property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraComponentField>? Components { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraComponentField>? Components { get => _explicitNullValueComponents; set { _explicitNullValueComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("components"); else _explicitNullProperties?.Remove("components"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraComponentField>? _explicitNullValueComponents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraComponentField> Components { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraComponentField> Components { get => _explicitNullValueComponents; set { _explicitNullValueComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("components"); else _explicitNullProperties?.Remove("components"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraComponentField> _explicitNullValueComponents = default!;
 #endif
         /// <summary>The fieldId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldId { get; set; }
+        public string? FieldId { get => _explicitNullValueFieldId; set { _explicitNullValueFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldId"); else _explicitNullProperties?.Remove("fieldId"); } }
+        private string? _explicitNullValueFieldId = default!;
 #nullable restore
 #else
-        public string FieldId { get; set; }
+        public string FieldId { get => _explicitNullValueFieldId; set { _explicitNullValueFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldId"); else _explicitNullProperties?.Remove("fieldId"); } }
+        private string _explicitNullValueFieldId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +54,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +78,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.JiraMultiSelectComponentFieldBulkEditMultiSelectFieldOption>("bulkEditMultiSelectFieldOption", BulkEditMultiSelectFieldOption);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JiraComponentField>("components", Components);
-            writer.WriteStringValue("fieldId", FieldId);
+            writer.WriteStringValue("fieldId", FieldId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

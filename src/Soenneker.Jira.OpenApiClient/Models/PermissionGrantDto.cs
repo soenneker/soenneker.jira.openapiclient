@@ -12,70 +12,101 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PermissionGrantDto : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("applicationAccess") is { } nullNodeApplicationAccess && nullNodeApplicationAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplicationAccess = null;
+            if (parseNode.GetChildNode("groupCustomFields") is { } nullNodeGroupCustomFields && nullNodeGroupCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupCustomFields = null;
+            if (parseNode.GetChildNode("groups") is { } nullNodeGroups && nullNodeGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Groups = null;
+            if (parseNode.GetChildNode("permissionKeys") is { } nullNodePermissionKeys && nullNodePermissionKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionKeys = null;
+            if (parseNode.GetChildNode("projectRoles") is { } nullNodeProjectRoles && nullNodeProjectRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectRoles = null;
+            if (parseNode.GetChildNode("specialGrants") is { } nullNodeSpecialGrants && nullNodeSpecialGrants.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpecialGrants = null;
+            if (parseNode.GetChildNode("userCustomFields") is { } nullNodeUserCustomFields && nullNodeUserCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCustomFields = null;
+            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+        }
+
         /// <summary>The applicationAccess property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ApplicationAccess { get; set; }
+        public List<string>? ApplicationAccess { get => _explicitNullValueApplicationAccess; set { _explicitNullValueApplicationAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicationAccess"); else _explicitNullProperties?.Remove("applicationAccess"); } }
+        private List<string>? _explicitNullValueApplicationAccess = default!;
 #nullable restore
 #else
-        public List<string> ApplicationAccess { get; set; }
+        public List<string> ApplicationAccess { get => _explicitNullValueApplicationAccess; set { _explicitNullValueApplicationAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicationAccess"); else _explicitNullProperties?.Remove("applicationAccess"); } }
+        private List<string> _explicitNullValueApplicationAccess = default!;
 #endif
         /// <summary>The groupCustomFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? GroupCustomFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? GroupCustomFields { get => _explicitNullValueGroupCustomFields; set { _explicitNullValueGroupCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupCustomFields"); else _explicitNullProperties?.Remove("groupCustomFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? _explicitNullValueGroupCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> GroupCustomFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> GroupCustomFields { get => _explicitNullValueGroupCustomFields; set { _explicitNullValueGroupCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupCustomFields"); else _explicitNullProperties?.Remove("groupCustomFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> _explicitNullValueGroupCustomFields = default!;
 #endif
         /// <summary>The groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? Groups { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? _explicitNullValueGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> Groups { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> _explicitNullValueGroups = default!;
 #endif
         /// <summary>The permissionKeys property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? PermissionKeys { get; set; }
+        public List<string>? PermissionKeys { get => _explicitNullValuePermissionKeys; set { _explicitNullValuePermissionKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionKeys"); else _explicitNullProperties?.Remove("permissionKeys"); } }
+        private List<string>? _explicitNullValuePermissionKeys = default!;
 #nullable restore
 #else
-        public List<string> PermissionKeys { get; set; }
+        public List<string> PermissionKeys { get => _explicitNullValuePermissionKeys; set { _explicitNullValuePermissionKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionKeys"); else _explicitNullProperties?.Remove("permissionKeys"); } }
+        private List<string> _explicitNullValuePermissionKeys = default!;
 #endif
         /// <summary>The projectRoles property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? ProjectRoles { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? ProjectRoles { get => _explicitNullValueProjectRoles; set { _explicitNullValueProjectRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectRoles"); else _explicitNullProperties?.Remove("projectRoles"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? _explicitNullValueProjectRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> ProjectRoles { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> ProjectRoles { get => _explicitNullValueProjectRoles; set { _explicitNullValueProjectRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectRoles"); else _explicitNullProperties?.Remove("projectRoles"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> _explicitNullValueProjectRoles = default!;
 #endif
         /// <summary>The specialGrants property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SpecialGrants { get; set; }
+        public List<string>? SpecialGrants { get => _explicitNullValueSpecialGrants; set { _explicitNullValueSpecialGrants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialGrants"); else _explicitNullProperties?.Remove("specialGrants"); } }
+        private List<string>? _explicitNullValueSpecialGrants = default!;
 #nullable restore
 #else
-        public List<string> SpecialGrants { get; set; }
+        public List<string> SpecialGrants { get => _explicitNullValueSpecialGrants; set { _explicitNullValueSpecialGrants = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("specialGrants"); else _explicitNullProperties?.Remove("specialGrants"); } }
+        private List<string> _explicitNullValueSpecialGrants = default!;
 #endif
         /// <summary>The userCustomFields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? UserCustomFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? UserCustomFields { get => _explicitNullValueUserCustomFields; set { _explicitNullValueUserCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userCustomFields"); else _explicitNullProperties?.Remove("userCustomFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? _explicitNullValueUserCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> UserCustomFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> UserCustomFields { get => _explicitNullValueUserCustomFields; set { _explicitNullValueUserCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userCustomFields"); else _explicitNullProperties?.Remove("userCustomFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> _explicitNullValueUserCustomFields = default!;
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? Users { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> Users { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> _explicitNullValueUsers = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -85,7 +116,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.PermissionGrantDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.PermissionGrantDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.PermissionGrantDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -119,7 +150,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("projectRoles", ProjectRoles);
             writer.WriteCollectionOfPrimitiveValues<string>("specialGrants", SpecialGrants);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("userCustomFields", UserCustomFields);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("users", Users);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("users", Users);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

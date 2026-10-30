@@ -12,48 +12,72 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreatePrioritySchemeDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultPriorityId") is { } nullNodeDefaultPriorityId && nullNodeDefaultPriorityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultPriorityId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("mappings") is { } nullNodeMappings && nullNodeMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mappings = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("priorityIds") is { } nullNodePriorityIds && nullNodePriorityIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorityIds = null;
+            if (parseNode.GetChildNode("projectIds") is { } nullNodeProjectIds && nullNodeProjectIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectIds = null;
+        }
+
         /// <summary>The ID of the default priority for the priority scheme.</summary>
-        public long? DefaultPriorityId { get; set; }
+        public long? DefaultPriorityId { get => _explicitNullValueDefaultPriorityId; set { _explicitNullValueDefaultPriorityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultPriorityId"); else _explicitNullProperties?.Remove("defaultPriorityId"); } }
+        private long? _explicitNullValueDefaultPriorityId = default!;
         /// <summary>The description of the priority scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Instructions to migrate the priorities of issues.`in` mappings are used to migrate the priorities of issues to priorities used within the priority scheme.`out` mappings are used to migrate the priorities of issues to priorities not used within the priority scheme. *  When **priorities** are **added** to the new priority scheme, no mapping needs to be provided as the new priorities are not used by any issues. *  When **priorities** are **removed** from the new priority scheme, no mapping needs to be provided as the removed priorities are not used by any issues. *  When **projects** are **added** to the priority scheme, the priorities of issues in those projects might need to be migrated to new priorities used by the priority scheme. This can occur when the current scheme does not use all the priorities in the project(s)&apos; priority scheme(s).         *  An `in` mapping must be provided for each of these priorities. *  When **projects** are **removed** from the priority scheme, no mapping needs to be provided as the removed projects are not using the priorities of the new priority scheme.For more information on `in` and `out` mappings, see the child properties documentation for the `PriorityMapping` object below.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetailsMappings? Mappings { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetailsMappings? Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetailsMappings? _explicitNullValueMappings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetailsMappings Mappings { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetailsMappings Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetailsMappings _explicitNullValueMappings = default!;
 #endif
         /// <summary>The name of the priority scheme. Must be unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The IDs of priorities in the scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? PriorityIds { get; set; }
+        public List<long?>? PriorityIds { get => _explicitNullValuePriorityIds; set { _explicitNullValuePriorityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityIds"); else _explicitNullProperties?.Remove("priorityIds"); } }
+        private List<long?>? _explicitNullValuePriorityIds = default!;
 #nullable restore
 #else
-        public List<long?> PriorityIds { get; set; }
+        public List<long?> PriorityIds { get => _explicitNullValuePriorityIds; set { _explicitNullValuePriorityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityIds"); else _explicitNullProperties?.Remove("priorityIds"); } }
+        private List<long?> _explicitNullValuePriorityIds = default!;
 #endif
         /// <summary>The IDs of projects that will use the priority scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? ProjectIds { get; set; }
+        public List<long?>? ProjectIds { get => _explicitNullValueProjectIds; set { _explicitNullValueProjectIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectIds"); else _explicitNullProperties?.Remove("projectIds"); } }
+        private List<long?>? _explicitNullValueProjectIds = default!;
 #nullable restore
 #else
-        public List<long?> ProjectIds { get; set; }
+        public List<long?> ProjectIds { get => _explicitNullValueProjectIds; set { _explicitNullValueProjectIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectIds"); else _explicitNullProperties?.Remove("projectIds"); } }
+        private List<long?> _explicitNullValueProjectIds = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +87,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,7 +117,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CreatePrioritySchemeDetailsMappings>("mappings", Mappings);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<long?>("priorityIds", PriorityIds);
-            writer.WriteCollectionOfPrimitiveValues<long?>("projectIds", ProjectIds);
+            writer.WriteCollectionOfPrimitiveValues<long?>("projectIds", ProjectIds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

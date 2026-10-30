@@ -12,82 +12,133 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateProjectDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assigneeType") is { } nullNodeAssigneeType && nullNodeAssigneeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeType = null;
+            if (parseNode.GetChildNode("avatarId") is { } nullNodeAvatarId && nullNodeAvatarId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarId = null;
+            if (parseNode.GetChildNode("categoryId") is { } nullNodeCategoryId && nullNodeCategoryId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategoryId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("fieldConfigurationScheme") is { } nullNodeFieldConfigurationScheme && nullNodeFieldConfigurationScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldConfigurationScheme = null;
+            if (parseNode.GetChildNode("fieldScheme") is { } nullNodeFieldScheme && nullNodeFieldScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldScheme = null;
+            if (parseNode.GetChildNode("issueSecurityScheme") is { } nullNodeIssueSecurityScheme && nullNodeIssueSecurityScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueSecurityScheme = null;
+            if (parseNode.GetChildNode("issueTypeScheme") is { } nullNodeIssueTypeScheme && nullNodeIssueTypeScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeScheme = null;
+            if (parseNode.GetChildNode("issueTypeScreenScheme") is { } nullNodeIssueTypeScreenScheme && nullNodeIssueTypeScreenScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeScreenScheme = null;
+            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("lead") is { } nullNodeLead && nullNodeLead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lead = null;
+            if (parseNode.GetChildNode("leadAccountId") is { } nullNodeLeadAccountId && nullNodeLeadAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadAccountId = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("notificationScheme") is { } nullNodeNotificationScheme && nullNodeNotificationScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationScheme = null;
+            if (parseNode.GetChildNode("permissionScheme") is { } nullNodePermissionScheme && nullNodePermissionScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionScheme = null;
+            if (parseNode.GetChildNode("projectTemplateKey") is { } nullNodeProjectTemplateKey && nullNodeProjectTemplateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectTemplateKey = null;
+            if (parseNode.GetChildNode("projectTypeKey") is { } nullNodeProjectTypeKey && nullNodeProjectTypeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectTypeKey = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("workflowScheme") is { } nullNodeWorkflowScheme && nullNodeWorkflowScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowScheme = null;
+        }
+
         /// <summary>The default assignee when creating issues for this project.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsAssigneeType? AssigneeType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsAssigneeType? AssigneeType { get => _explicitNullValueAssigneeType; set { _explicitNullValueAssigneeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigneeType"); else _explicitNullProperties?.Remove("assigneeType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsAssigneeType? _explicitNullValueAssigneeType = default!;
         /// <summary>An integer value for the project&apos;s avatar.</summary>
-        public long? AvatarId { get; set; }
+        public long? AvatarId { get => _explicitNullValueAvatarId; set { _explicitNullValueAvatarId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarId"); else _explicitNullProperties?.Remove("avatarId"); } }
+        private long? _explicitNullValueAvatarId = default!;
         /// <summary>The ID of the project&apos;s category. A complete list of category IDs is found using the [Get all project categories](#api-rest-api-3-projectCategory-get) operation.</summary>
-        public long? CategoryId { get; set; }
+        public long? CategoryId { get => _explicitNullValueCategoryId; set { _explicitNullValueCategoryId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categoryId"); else _explicitNullProperties?.Remove("categoryId"); } }
+        private long? _explicitNullValueCategoryId = default!;
         /// <summary>A brief description of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Deprecated use [fieldScheme](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-field-schemes/#api-group-field-schemes) instead. The ID of the field configuration scheme for the project. Use the [Get all field configuration schemes](#api-rest-api-3-fieldconfigurationscheme-get) operation to get a list of field configuration scheme IDs. If you specify the field configuration scheme you cannot specify the project template key.</summary>
         [Obsolete("")]
-        public long? FieldConfigurationScheme { get; set; }
+        public long? FieldConfigurationScheme { get => _explicitNullValueFieldConfigurationScheme; set { _explicitNullValueFieldConfigurationScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldConfigurationScheme"); else _explicitNullProperties?.Remove("fieldConfigurationScheme"); } }
+        private long? _explicitNullValueFieldConfigurationScheme = default!;
         /// <summary>The ID of the field scheme for the project. Use the [Get field schemes](#api-rest-api-3-config-fieldschemes-get) operation to get a list of field scheme IDs. If you specify the field scheme you cannot specify the project template key.</summary>
-        public long? FieldScheme { get; set; }
+        public long? FieldScheme { get => _explicitNullValueFieldScheme; set { _explicitNullValueFieldScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldScheme"); else _explicitNullProperties?.Remove("fieldScheme"); } }
+        private long? _explicitNullValueFieldScheme = default!;
         /// <summary>The ID of the issue security scheme for the project, which enables you to control who can and cannot view issues. Use the [Get issue security schemes](#api-rest-api-3-issuesecurityschemes-get) resource to get all issue security scheme IDs.</summary>
-        public long? IssueSecurityScheme { get; set; }
+        public long? IssueSecurityScheme { get => _explicitNullValueIssueSecurityScheme; set { _explicitNullValueIssueSecurityScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecurityScheme"); else _explicitNullProperties?.Remove("issueSecurityScheme"); } }
+        private long? _explicitNullValueIssueSecurityScheme = default!;
         /// <summary>The ID of the issue type scheme for the project. Use the [Get all issue type schemes](#api-rest-api-3-issuetypescheme-get) operation to get a list of issue type scheme IDs. If you specify the issue type scheme you cannot specify the project template key.</summary>
-        public long? IssueTypeScheme { get; set; }
+        public long? IssueTypeScheme { get => _explicitNullValueIssueTypeScheme; set { _explicitNullValueIssueTypeScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScheme"); else _explicitNullProperties?.Remove("issueTypeScheme"); } }
+        private long? _explicitNullValueIssueTypeScheme = default!;
         /// <summary>The ID of the issue type screen scheme for the project. Use the [Get all issue type screen schemes](#api-rest-api-3-issuetypescreenscheme-get) operation to get a list of issue type screen scheme IDs. If you specify the issue type screen scheme you cannot specify the project template key.</summary>
-        public long? IssueTypeScreenScheme { get; set; }
+        public long? IssueTypeScreenScheme { get => _explicitNullValueIssueTypeScreenScheme; set { _explicitNullValueIssueTypeScreenScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScreenScheme"); else _explicitNullProperties?.Remove("issueTypeScreenScheme"); } }
+        private long? _explicitNullValueIssueTypeScreenScheme = default!;
         /// <summary>Project keys must be unique and start with an uppercase letter followed by one or more uppercase alphanumeric characters. The maximum length is 10 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get; set; }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>This parameter is deprecated because of privacy changes. Use `leadAccountId` instead. See the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details. The user name of the project lead. Either `lead` or `leadAccountId` must be set when creating a project. Cannot be provided with `leadAccountId`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Lead { get; set; }
+        public string? Lead { get => _explicitNullValueLead; set { _explicitNullValueLead = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead"); else _explicitNullProperties?.Remove("lead"); } }
+        private string? _explicitNullValueLead = default!;
 #nullable restore
 #else
-        public string Lead { get; set; }
+        public string Lead { get => _explicitNullValueLead; set { _explicitNullValueLead = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead"); else _explicitNullProperties?.Remove("lead"); } }
+        private string _explicitNullValueLead = default!;
 #endif
         /// <summary>The account ID of the project lead. Either `lead` or `leadAccountId` must be set when creating a project. Cannot be provided with `lead`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadAccountId { get; set; }
+        public string? LeadAccountId { get => _explicitNullValueLeadAccountId; set { _explicitNullValueLeadAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadAccountId"); else _explicitNullProperties?.Remove("leadAccountId"); } }
+        private string? _explicitNullValueLeadAccountId = default!;
 #nullable restore
 #else
-        public string LeadAccountId { get; set; }
+        public string LeadAccountId { get => _explicitNullValueLeadAccountId; set { _explicitNullValueLeadAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadAccountId"); else _explicitNullProperties?.Remove("leadAccountId"); } }
+        private string _explicitNullValueLeadAccountId = default!;
 #endif
         /// <summary>The name of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The ID of the notification scheme for the project. Use the [Get notification schemes](#api-rest-api-3-notificationscheme-get) resource to get a list of notification scheme IDs.</summary>
-        public long? NotificationScheme { get; set; }
+        public long? NotificationScheme { get => _explicitNullValueNotificationScheme; set { _explicitNullValueNotificationScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationScheme"); else _explicitNullProperties?.Remove("notificationScheme"); } }
+        private long? _explicitNullValueNotificationScheme = default!;
         /// <summary>The ID of the permission scheme for the project. Use the [Get all permission schemes](#api-rest-api-3-permissionscheme-get) resource to see a list of all permission scheme IDs.</summary>
-        public long? PermissionScheme { get; set; }
+        public long? PermissionScheme { get => _explicitNullValuePermissionScheme; set { _explicitNullValuePermissionScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionScheme"); else _explicitNullProperties?.Remove("permissionScheme"); } }
+        private long? _explicitNullValuePermissionScheme = default!;
         /// <summary>A predefined configuration for a project. The type of the `projectTemplateKey` must match with the type of the `projectTypeKey`.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTemplateKey? ProjectTemplateKey { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTemplateKey? ProjectTemplateKey { get => _explicitNullValueProjectTemplateKey; set { _explicitNullValueProjectTemplateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectTemplateKey"); else _explicitNullProperties?.Remove("projectTemplateKey"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTemplateKey? _explicitNullValueProjectTemplateKey = default!;
         /// <summary>The [project type](https://confluence.atlassian.com/x/GwiiLQ#Jiraapplicationsoverview-Productfeaturesandprojecttypes), which defines the application-specific feature set. If you don&apos;t specify the project template you have to specify the project type.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTypeKey? ProjectTypeKey { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTypeKey? ProjectTypeKey { get => _explicitNullValueProjectTypeKey; set { _explicitNullValueProjectTypeKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectTypeKey"); else _explicitNullProperties?.Remove("projectTypeKey"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTypeKey? _explicitNullValueProjectTypeKey = default!;
         /// <summary>A link to information about this project, such as project documentation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The ID of the workflow scheme for the project. Use the [Get all workflow schemes](#api-rest-api-3-workflowscheme-get) operation to get a list of workflow scheme IDs. If you specify the workflow scheme you cannot specify the project template key.</summary>
-        public long? WorkflowScheme { get; set; }
+        public long? WorkflowScheme { get => _explicitNullValueWorkflowScheme; set { _explicitNullValueWorkflowScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowScheme"); else _explicitNullProperties?.Remove("workflowScheme"); } }
+        private long? _explicitNullValueWorkflowScheme = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -96,7 +147,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,7 +203,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTemplateKey>("projectTemplateKey", ProjectTemplateKey);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.CreateProjectDetailsProjectTypeKey>("projectTypeKey", ProjectTypeKey);
             writer.WriteStringValue("url", Url);
-            writer.WriteLongValue("workflowScheme", WorkflowScheme);
+            writer.WriteLongValue("workflowScheme", WorkflowScheme);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

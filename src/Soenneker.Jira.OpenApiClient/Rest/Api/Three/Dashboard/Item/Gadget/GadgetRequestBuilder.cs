@@ -66,6 +66,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Dashboard.Item.Gadget
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.DashboardGadgetResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.DashboardGadgetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -93,6 +95,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Dashboard.Item.Gadget
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.DashboardGadget>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.DashboardGadget.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

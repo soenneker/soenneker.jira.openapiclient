@@ -12,38 +12,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SanitizedJqlQuery : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accountId") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("initialQuery") is { } nullNodeInitialQuery && nullNodeInitialQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InitialQuery = null;
+            if (parseNode.GetChildNode("sanitizedQuery") is { } nullNodeSanitizedQuery && nullNodeSanitizedQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SanitizedQuery = null;
+        }
+
         /// <summary>The account ID of the user for whom sanitization was performed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get; set; }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountId"); else _explicitNullProperties?.Remove("accountId"); } }
+        private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get; set; }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountId"); else _explicitNullProperties?.Remove("accountId"); } }
+        private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>The list of errors.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQueryErrors? Errors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQueryErrors? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQueryErrors? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQueryErrors Errors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQueryErrors Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQueryErrors _explicitNullValueErrors = default!;
 #endif
         /// <summary>The initial query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InitialQuery { get; set; }
+        public string? InitialQuery { get => _explicitNullValueInitialQuery; set { _explicitNullValueInitialQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialQuery"); else _explicitNullProperties?.Remove("initialQuery"); } }
+        private string? _explicitNullValueInitialQuery = default!;
 #nullable restore
 #else
-        public string InitialQuery { get; set; }
+        public string InitialQuery { get => _explicitNullValueInitialQuery; set { _explicitNullValueInitialQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initialQuery"); else _explicitNullProperties?.Remove("initialQuery"); } }
+        private string _explicitNullValueInitialQuery = default!;
 #endif
         /// <summary>The sanitized query, if there were no errors.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SanitizedQuery { get; set; }
+        public string? SanitizedQuery { get => _explicitNullValueSanitizedQuery; set { _explicitNullValueSanitizedQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sanitizedQuery"); else _explicitNullProperties?.Remove("sanitizedQuery"); } }
+        private string? _explicitNullValueSanitizedQuery = default!;
 #nullable restore
 #else
-        public string SanitizedQuery { get; set; }
+        public string SanitizedQuery { get => _explicitNullValueSanitizedQuery; set { _explicitNullValueSanitizedQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sanitizedQuery"); else _explicitNullProperties?.Remove("sanitizedQuery"); } }
+        private string _explicitNullValueSanitizedQuery = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQuery CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQuery();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQuery(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,7 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("accountId", AccountId);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SanitizedJqlQueryErrors>("errors", Errors);
             writer.WriteStringValue("initialQuery", InitialQuery);
-            writer.WriteStringValue("sanitizedQuery", SanitizedQuery);
+            writer.WriteStringValue("sanitizedQuery", SanitizedQuery);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Project.Search
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanProject>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanProject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanProject>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanProject.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns a [paginated](#pagination) list of projects visible to the user.This operation can be accessed anonymously.**[Permissions](#permissions) required:** Projects are returned only where the user has one of: *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).

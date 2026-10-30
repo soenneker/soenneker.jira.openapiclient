@@ -12,53 +12,81 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectFeature : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("feature") is { } nullNodeFeature && nullNodeFeature.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Feature = null;
+            if (parseNode.GetChildNode("imageUri") is { } nullNodeImageUri && nullNodeImageUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImageUri = null;
+            if (parseNode.GetChildNode("localisedDescription") is { } nullNodeLocalisedDescription && nullNodeLocalisedDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalisedDescription = null;
+            if (parseNode.GetChildNode("localisedName") is { } nullNodeLocalisedName && nullNodeLocalisedName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalisedName = null;
+            if (parseNode.GetChildNode("prerequisites") is { } nullNodePrerequisites && nullNodePrerequisites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Prerequisites = null;
+            if (parseNode.GetChildNode("projectId") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("toggleLocked") is { } nullNodeToggleLocked && nullNodeToggleLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToggleLocked = null;
+        }
+
         /// <summary>The key of the feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Feature { get; set; }
+        public string? Feature { get => _explicitNullValueFeature; set { _explicitNullValueFeature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature"); else _explicitNullProperties?.Remove("feature"); } }
+        private string? _explicitNullValueFeature = default!;
 #nullable restore
 #else
-        public string Feature { get; set; }
+        public string Feature { get => _explicitNullValueFeature; set { _explicitNullValueFeature = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature"); else _explicitNullProperties?.Remove("feature"); } }
+        private string _explicitNullValueFeature = default!;
 #endif
         /// <summary>URI for the image representing the feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImageUri { get; set; }
+        public string? ImageUri { get => _explicitNullValueImageUri; set { _explicitNullValueImageUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageUri"); else _explicitNullProperties?.Remove("imageUri"); } }
+        private string? _explicitNullValueImageUri = default!;
 #nullable restore
 #else
-        public string ImageUri { get; set; }
+        public string ImageUri { get => _explicitNullValueImageUri; set { _explicitNullValueImageUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imageUri"); else _explicitNullProperties?.Remove("imageUri"); } }
+        private string _explicitNullValueImageUri = default!;
 #endif
         /// <summary>Localized display description for the feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocalisedDescription { get; set; }
+        public string? LocalisedDescription { get => _explicitNullValueLocalisedDescription; set { _explicitNullValueLocalisedDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localisedDescription"); else _explicitNullProperties?.Remove("localisedDescription"); } }
+        private string? _explicitNullValueLocalisedDescription = default!;
 #nullable restore
 #else
-        public string LocalisedDescription { get; set; }
+        public string LocalisedDescription { get => _explicitNullValueLocalisedDescription; set { _explicitNullValueLocalisedDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localisedDescription"); else _explicitNullProperties?.Remove("localisedDescription"); } }
+        private string _explicitNullValueLocalisedDescription = default!;
 #endif
         /// <summary>Localized display name for the feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LocalisedName { get; set; }
+        public string? LocalisedName { get => _explicitNullValueLocalisedName; set { _explicitNullValueLocalisedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localisedName"); else _explicitNullProperties?.Remove("localisedName"); } }
+        private string? _explicitNullValueLocalisedName = default!;
 #nullable restore
 #else
-        public string LocalisedName { get; set; }
+        public string LocalisedName { get => _explicitNullValueLocalisedName; set { _explicitNullValueLocalisedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("localisedName"); else _explicitNullProperties?.Remove("localisedName"); } }
+        private string _explicitNullValueLocalisedName = default!;
 #endif
         /// <summary>List of keys of the features required to enable the feature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Prerequisites { get; set; }
+        public List<string>? Prerequisites { get => _explicitNullValuePrerequisites; set { _explicitNullValuePrerequisites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prerequisites"); else _explicitNullProperties?.Remove("prerequisites"); } }
+        private List<string>? _explicitNullValuePrerequisites = default!;
 #nullable restore
 #else
-        public List<string> Prerequisites { get; set; }
+        public List<string> Prerequisites { get => _explicitNullValuePrerequisites; set { _explicitNullValuePrerequisites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prerequisites"); else _explicitNullProperties?.Remove("prerequisites"); } }
+        private List<string> _explicitNullValuePrerequisites = default!;
 #endif
         /// <summary>The ID of the project.</summary>
-        public long? ProjectId { get; set; }
+        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        private long? _explicitNullValueProjectId = default!;
         /// <summary>The state of the feature. When updating the state of a feature, only ENABLED and DISABLED are supported. Responses can contain all values</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectFeatureStateEnum? State { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectFeatureStateEnum? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectFeatureStateEnum? _explicitNullValueState = default!;
         /// <summary>Whether the state of the feature can be updated.</summary>
-        public bool? ToggleLocked { get; set; }
+        public bool? ToggleLocked { get => _explicitNullValueToggleLocked; set { _explicitNullValueToggleLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toggleLocked"); else _explicitNullProperties?.Remove("toggleLocked"); } }
+        private bool? _explicitNullValueToggleLocked = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -67,7 +95,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ProjectFeature CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ProjectFeature();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ProjectFeature(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,7 +129,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("prerequisites", Prerequisites);
             writer.WriteLongValue("projectId", ProjectId);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectFeatureStateEnum>("state", State);
-            writer.WriteBoolValue("toggleLocked", ToggleLocked);
+            writer.WriteBoolValue("toggleLocked", ToggleLocked);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -61,6 +61,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.License.ApproximateLicense
             {
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollections.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollections.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.LicenseMetric>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.LicenseMetric.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

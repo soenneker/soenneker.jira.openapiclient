@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowTransitionRulesUpdateErrorDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ruleUpdateErrors") is { } nullNodeRuleUpdateErrors && nullNodeRuleUpdateErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleUpdateErrors = null;
+            if (parseNode.GetChildNode("updateErrors") is { } nullNodeUpdateErrors && nullNodeUpdateErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateErrors = null;
+            if (parseNode.GetChildNode("workflowId") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+        }
+
         /// <summary>A list of transition rule update errors, indexed by the transition rule ID. Any transition rule that appears here wasn&apos;t updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetailsRuleUpdateErrorsProperty? RuleUpdateErrors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetailsRuleUpdateErrorsProperty? RuleUpdateErrors { get => _explicitNullValueRuleUpdateErrors; set { _explicitNullValueRuleUpdateErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleUpdateErrors"); else _explicitNullProperties?.Remove("ruleUpdateErrors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetailsRuleUpdateErrorsProperty? _explicitNullValueRuleUpdateErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetailsRuleUpdateErrorsProperty RuleUpdateErrors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetailsRuleUpdateErrorsProperty RuleUpdateErrors { get => _explicitNullValueRuleUpdateErrors; set { _explicitNullValueRuleUpdateErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleUpdateErrors"); else _explicitNullProperties?.Remove("ruleUpdateErrors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetailsRuleUpdateErrorsProperty _explicitNullValueRuleUpdateErrors = default!;
 #endif
         /// <summary>The list of errors that specify why the workflow update failed. The workflow was not updated if the list contains any entries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? UpdateErrors { get; set; }
+        public List<string>? UpdateErrors { get => _explicitNullValueUpdateErrors; set { _explicitNullValueUpdateErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateErrors"); else _explicitNullProperties?.Remove("updateErrors"); } }
+        private List<string>? _explicitNullValueUpdateErrors = default!;
 #nullable restore
 #else
-        public List<string> UpdateErrors { get; set; }
+        public List<string> UpdateErrors { get => _explicitNullValueUpdateErrors; set { _explicitNullValueUpdateErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateErrors"); else _explicitNullProperties?.Remove("updateErrors"); } }
+        private List<string> _explicitNullValueUpdateErrors = default!;
 #endif
         /// <summary>Properties that identify a workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowId? WorkflowId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowId? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowId? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowId WorkflowId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowId WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowId _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrorDetailsRuleUpdateErrorsProperty>("ruleUpdateErrors", RuleUpdateErrors);
             writer.WriteCollectionOfPrimitiveValues<string>("updateErrors", UpdateErrors);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowId>("workflowId", WorkflowId);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowId>("workflowId", WorkflowId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

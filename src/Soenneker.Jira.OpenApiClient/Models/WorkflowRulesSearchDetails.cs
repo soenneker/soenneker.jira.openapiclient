@@ -12,27 +12,42 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowRulesSearchDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("invalidRules") is { } nullNodeInvalidRules && nullNodeInvalidRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidRules = null;
+            if (parseNode.GetChildNode("validRules") is { } nullNodeValidRules && nullNodeValidRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidRules = null;
+            if (parseNode.GetChildNode("workflowEntityId") is { } nullNodeWorkflowEntityId && nullNodeWorkflowEntityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowEntityId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of workflow rule IDs that do not belong to the workflow or can not be found.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<Guid?>? InvalidRules { get; set; }
+        public List<Guid?>? InvalidRules { get => _explicitNullValueInvalidRules; set { _explicitNullValueInvalidRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidRules"); else _explicitNullProperties?.Remove("invalidRules"); } }
+        private List<Guid?>? _explicitNullValueInvalidRules = default!;
 #nullable restore
 #else
-        public List<Guid?> InvalidRules { get; set; }
+        public List<Guid?> InvalidRules { get => _explicitNullValueInvalidRules; set { _explicitNullValueInvalidRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidRules"); else _explicitNullProperties?.Remove("invalidRules"); } }
+        private List<Guid?> _explicitNullValueInvalidRules = default!;
 #endif
         /// <summary>List of valid workflow transition rules.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRules>? ValidRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRules>? ValidRules { get => _explicitNullValueValidRules; set { _explicitNullValueValidRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validRules"); else _explicitNullProperties?.Remove("validRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRules>? _explicitNullValueValidRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRules> ValidRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRules> ValidRules { get => _explicitNullValueValidRules; set { _explicitNullValueValidRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validRules"); else _explicitNullProperties?.Remove("validRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRules> _explicitNullValueValidRules = default!;
 #endif
         /// <summary>The workflow ID.</summary>
-        public Guid? WorkflowEntityId { get; set; }
+        public Guid? WorkflowEntityId { get => _explicitNullValueWorkflowEntityId; set { _explicitNullValueWorkflowEntityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowEntityId"); else _explicitNullProperties?.Remove("workflowEntityId"); } }
+        private Guid? _explicitNullValueWorkflowEntityId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails"/> and sets the default values.
         /// </summary>
@@ -48,7 +63,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<Guid?>("invalidRules", InvalidRules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRules>("validRules", ValidRules);
             writer.WriteGuidValue("workflowEntityId", WorkflowEntityId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

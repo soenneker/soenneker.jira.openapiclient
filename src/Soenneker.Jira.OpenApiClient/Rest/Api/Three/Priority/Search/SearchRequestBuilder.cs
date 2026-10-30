@@ -53,6 +53,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Priority.Search
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanPriority>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanPriority.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

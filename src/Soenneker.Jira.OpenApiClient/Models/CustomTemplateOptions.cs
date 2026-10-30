@@ -11,11 +11,22 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CustomTemplateOptions : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enableScreenDelegatedAdminSupport") is { } nullNodeEnableScreenDelegatedAdminSupport && nullNodeEnableScreenDelegatedAdminSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableScreenDelegatedAdminSupport = null;
+            if (parseNode.GetChildNode("enableWorkflowDelegatedAdminSupport") is { } nullNodeEnableWorkflowDelegatedAdminSupport && nullNodeEnableWorkflowDelegatedAdminSupport.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableWorkflowDelegatedAdminSupport = null;
+        }
+
         /// <summary>Enable screen delegated admin support for the template. This means screen and associated schemes will be copied rather than referenced.</summary>
-        public bool? EnableScreenDelegatedAdminSupport { get; set; }
+        public bool? EnableScreenDelegatedAdminSupport { get => _explicitNullValueEnableScreenDelegatedAdminSupport; set { _explicitNullValueEnableScreenDelegatedAdminSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableScreenDelegatedAdminSupport"); else _explicitNullProperties?.Remove("enableScreenDelegatedAdminSupport"); } }
+        private bool? _explicitNullValueEnableScreenDelegatedAdminSupport = default!;
         /// <summary>Enable workflow delegated admin support for the template. This means workflows and workflow schemes will be copied rather than referenced.</summary>
-        public bool? EnableWorkflowDelegatedAdminSupport { get; set; }
+        public bool? EnableWorkflowDelegatedAdminSupport { get => _explicitNullValueEnableWorkflowDelegatedAdminSupport; set { _explicitNullValueEnableWorkflowDelegatedAdminSupport = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableWorkflowDelegatedAdminSupport"); else _explicitNullProperties?.Remove("enableWorkflowDelegatedAdminSupport"); } }
+        private bool? _explicitNullValueEnableWorkflowDelegatedAdminSupport = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -24,7 +35,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -46,7 +57,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("enableScreenDelegatedAdminSupport", EnableScreenDelegatedAdminSupport);
-            writer.WriteBoolValue("enableWorkflowDelegatedAdminSupport", EnableWorkflowDelegatedAdminSupport);
+            writer.WriteBoolValue("enableWorkflowDelegatedAdminSupport", EnableWorkflowDelegatedAdminSupport);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

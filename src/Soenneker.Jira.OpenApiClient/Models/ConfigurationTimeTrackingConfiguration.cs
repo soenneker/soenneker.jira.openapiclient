@@ -12,15 +12,30 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConfigurationTimeTrackingConfiguration : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultUnit") is { } nullNodeDefaultUnit && nullNodeDefaultUnit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultUnit = null;
+            if (parseNode.GetChildNode("timeFormat") is { } nullNodeTimeFormat && nullNodeTimeFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeFormat = null;
+            if (parseNode.GetChildNode("workingDaysPerWeek") is { } nullNodeWorkingDaysPerWeek && nullNodeWorkingDaysPerWeek.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkingDaysPerWeek = null;
+            if (parseNode.GetChildNode("workingHoursPerDay") is { } nullNodeWorkingHoursPerDay && nullNodeWorkingHoursPerDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkingHoursPerDay = null;
+        }
+
         /// <summary>The default unit of time applied to logged time.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationDefaultUnit? DefaultUnit { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationDefaultUnit? DefaultUnit { get => _explicitNullValueDefaultUnit; set { _explicitNullValueDefaultUnit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultUnit"); else _explicitNullProperties?.Remove("defaultUnit"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationDefaultUnit? _explicitNullValueDefaultUnit = default!;
         /// <summary>The format that will appear on an issue&apos;s *Time Spent* field.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationTimeFormat? TimeFormat { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationTimeFormat? TimeFormat { get => _explicitNullValueTimeFormat; set { _explicitNullValueTimeFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeFormat"); else _explicitNullProperties?.Remove("timeFormat"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationTimeFormat? _explicitNullValueTimeFormat = default!;
         /// <summary>The number of days in a working week.</summary>
-        public double? WorkingDaysPerWeek { get; set; }
+        public double? WorkingDaysPerWeek { get => _explicitNullValueWorkingDaysPerWeek; set { _explicitNullValueWorkingDaysPerWeek = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingDaysPerWeek"); else _explicitNullProperties?.Remove("workingDaysPerWeek"); } }
+        private double? _explicitNullValueWorkingDaysPerWeek = default!;
         /// <summary>The number of hours in a working day.</summary>
-        public double? WorkingHoursPerDay { get; set; }
+        public double? WorkingHoursPerDay { get => _explicitNullValueWorkingHoursPerDay; set { _explicitNullValueWorkingHoursPerDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingHoursPerDay"); else _explicitNullProperties?.Remove("workingHoursPerDay"); } }
+        private double? _explicitNullValueWorkingHoursPerDay = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -29,7 +44,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ConfigurationTimeTrackingConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ConfigurationTimeTrackingConfiguration();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ConfigurationTimeTrackingConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,7 +70,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationDefaultUnit>("defaultUnit", DefaultUnit);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.TimeTrackingConfigurationTimeFormat>("timeFormat", TimeFormat);
             writer.WriteDoubleValue("workingDaysPerWeek", WorkingDaysPerWeek);
-            writer.WriteDoubleValue("workingHoursPerDay", WorkingHoursPerDay);
+            writer.WriteDoubleValue("workingHoursPerDay", WorkingHoursPerDay);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

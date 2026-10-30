@@ -29,6 +29,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflow
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflow.Rule.RuleRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The search property</summary>
+        [Obsolete("")]
         public global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflow.Search.SearchRequestBuilder Search
         {
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflow.Search.SearchRequestBuilder(PathParameters, RequestAdapter);

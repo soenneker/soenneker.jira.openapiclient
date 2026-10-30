@@ -13,27 +13,42 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ErrorCollection : ApiException, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("errorMessages") is { } nullNodeErrorMessages && nullNodeErrorMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessages = null;
+            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>The list of error messages produced by this operation. For example, &quot;input parameter &apos;key&apos; must be provided&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ErrorMessages { get; set; }
+        public List<string>? ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
+        private List<string>? _explicitNullValueErrorMessages = default!;
 #nullable restore
 #else
-        public List<string> ErrorMessages { get; set; }
+        public List<string> ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
+        private List<string> _explicitNullValueErrorMessages = default!;
 #endif
         /// <summary>The list of errors by parameter returned by the operation. For example,&quot;projectKey&quot;: &quot;Project keys must start with an uppercase letter, followed by one or more uppercase alphanumeric characters.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollectionErrorsProperty? Errors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollectionErrorsProperty? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ErrorCollectionErrorsProperty? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollectionErrorsProperty Errors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollectionErrorsProperty Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ErrorCollectionErrorsProperty _explicitNullValueErrors = default!;
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
         /// <summary>The status property</summary>
-        public int? Status { get; set; }
+        public int? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private int? _explicitNullValueStatus = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -42,7 +57,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +81,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("errorMessages", ErrorMessages);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ErrorCollectionErrorsProperty>("errors", Errors);
-            writer.WriteIntValue("status", Status);
+            writer.WriteIntValue("status", Status);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

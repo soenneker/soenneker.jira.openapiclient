@@ -12,34 +12,54 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkEditShareableEntityRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("changeOwnerDetails") is { } nullNodeChangeOwnerDetails && nullNodeChangeOwnerDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChangeOwnerDetails = null;
+            if (parseNode.GetChildNode("entityIds") is { } nullNodeEntityIds && nullNodeEntityIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityIds = null;
+            if (parseNode.GetChildNode("extendAdminPermissions") is { } nullNodeExtendAdminPermissions && nullNodeExtendAdminPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtendAdminPermissions = null;
+            if (parseNode.GetChildNode("permissionDetails") is { } nullNodePermissionDetails && nullNodePermissionDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionDetails = null;
+        }
+
         /// <summary>Allowed action for bulk edit shareable entity</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestAction? Action { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestAction? _explicitNullValueAction = default!;
         /// <summary>The details of change owner action.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails? ChangeOwnerDetails { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails? ChangeOwnerDetails { get => _explicitNullValueChangeOwnerDetails; set { _explicitNullValueChangeOwnerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("changeOwnerDetails"); else _explicitNullProperties?.Remove("changeOwnerDetails"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails? _explicitNullValueChangeOwnerDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails ChangeOwnerDetails { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails ChangeOwnerDetails { get => _explicitNullValueChangeOwnerDetails; set { _explicitNullValueChangeOwnerDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("changeOwnerDetails"); else _explicitNullProperties?.Remove("changeOwnerDetails"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails _explicitNullValueChangeOwnerDetails = default!;
 #endif
         /// <summary>The id list of shareable entities to be changed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? EntityIds { get; set; }
+        public List<long?>? EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityIds"); else _explicitNullProperties?.Remove("entityIds"); } }
+        private List<long?>? _explicitNullValueEntityIds = default!;
 #nullable restore
 #else
-        public List<long?> EntityIds { get; set; }
+        public List<long?> EntityIds { get => _explicitNullValueEntityIds; set { _explicitNullValueEntityIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityIds"); else _explicitNullProperties?.Remove("entityIds"); } }
+        private List<long?> _explicitNullValueEntityIds = default!;
 #endif
         /// <summary>Whether the actions are executed by users with Administer Jira global permission.</summary>
-        public bool? ExtendAdminPermissions { get; set; }
+        public bool? ExtendAdminPermissions { get => _explicitNullValueExtendAdminPermissions; set { _explicitNullValueExtendAdminPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extendAdminPermissions"); else _explicitNullProperties?.Remove("extendAdminPermissions"); } }
+        private bool? _explicitNullValueExtendAdminPermissions = default!;
         /// <summary>The permission details to be changed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails? PermissionDetails { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails? PermissionDetails { get => _explicitNullValuePermissionDetails; set { _explicitNullValuePermissionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionDetails"); else _explicitNullProperties?.Remove("permissionDetails"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails? _explicitNullValuePermissionDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails PermissionDetails { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails PermissionDetails { get => _explicitNullValuePermissionDetails; set { _explicitNullValuePermissionDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionDetails"); else _explicitNullProperties?.Remove("permissionDetails"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails _explicitNullValuePermissionDetails = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +69,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,7 +97,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails>("changeOwnerDetails", ChangeOwnerDetails);
             writer.WriteCollectionOfPrimitiveValues<long?>("entityIds", EntityIds);
             writer.WriteBoolValue("extendAdminPermissions", ExtendAdminPermissions);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails>("permissionDetails", PermissionDetails);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestPermissionDetails>("permissionDetails", PermissionDetails);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,19 +12,33 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueSecurityLevelMember : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("holder") is { } nullNodeHolder && nullNodeHolder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Holder = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("issueSecurityLevelId") is { } nullNodeIssueSecurityLevelId && nullNodeIssueSecurityLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueSecurityLevelId = null;
+        }
+
         /// <summary>The user or group being granted the permission. It consists of a `type` and a type-dependent `parameter`. See [Holder object](../api-group-permission-schemes/#holder-object) in *Get all permission schemes* for more information.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMemberHolder? Holder { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMemberHolder? Holder { get => _explicitNullValueHolder; set { _explicitNullValueHolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holder"); else _explicitNullProperties?.Remove("holder"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMemberHolder? _explicitNullValueHolder = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMemberHolder Holder { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMemberHolder Holder { get => _explicitNullValueHolder; set { _explicitNullValueHolder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("holder"); else _explicitNullProperties?.Remove("holder"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMemberHolder _explicitNullValueHolder = default!;
 #endif
         /// <summary>The ID of the issue security level member.</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The ID of the issue security level.</summary>
-        public long? IssueSecurityLevelId { get; set; }
+        public long? IssueSecurityLevelId { get => _explicitNullValueIssueSecurityLevelId; set { _explicitNullValueIssueSecurityLevelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecurityLevelId"); else _explicitNullProperties?.Remove("issueSecurityLevelId"); } }
+        private long? _explicitNullValueIssueSecurityLevelId = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -33,7 +47,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMember CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMember();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMember(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,7 +71,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueSecurityLevelMemberHolder>("holder", Holder);
             writer.WriteLongValue("id", Id);
-            writer.WriteLongValue("issueSecurityLevelId", IssueSecurityLevelId);
+            writer.WriteLongValue("issueSecurityLevelId", IssueSecurityLevelId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

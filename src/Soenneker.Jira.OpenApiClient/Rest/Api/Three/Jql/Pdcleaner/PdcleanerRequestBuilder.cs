@@ -51,7 +51,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Pdcleaner
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.ConvertedJqlQueries>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.ConvertedJqlQueries.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.ConvertedJqlQueries>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.ConvertedJqlQueries.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Converts one or more JQL queries with user identifiers (username or user key) to equivalent JQL queries with account IDs.You may wish to use this operation if your system stores JQL queries and you want to make them GDPR-compliant. For more information about GDPR-related changes, see the [migration guide](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/).**[Permissions](#permissions) required:** Permission to access Jira.

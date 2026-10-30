@@ -67,7 +67,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.DeleteFieldAssociationSchemeResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.DeleteFieldAssociationSchemeResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.DeleteFieldAssociationSchemeResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.DeleteFieldAssociationSchemeResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Endpoint for fetching a field association scheme by its ID**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
@@ -85,7 +85,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.GetFieldAssociationSchemeByIdResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.GetFieldAssociationSchemeByIdResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.GetFieldAssociationSchemeByIdResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.GetFieldAssociationSchemeByIdResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Endpoint for updating an existing field association scheme.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
@@ -109,6 +109,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollections.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldAssociationSchemeResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldAssociationSchemeResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

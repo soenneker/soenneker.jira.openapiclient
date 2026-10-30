@@ -57,6 +57,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflow.Rule.Config.Delet
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrors>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRulesUpdateErrors.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

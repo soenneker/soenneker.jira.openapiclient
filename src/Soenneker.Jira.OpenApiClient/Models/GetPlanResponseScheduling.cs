@@ -12,28 +12,47 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetPlanResponseScheduling : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
+            if (parseNode.GetChildNode("endDate") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("estimation") is { } nullNodeEstimation && nullNodeEstimation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Estimation = null;
+            if (parseNode.GetChildNode("inferredDates") is { } nullNodeInferredDates && nullNodeInferredDates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InferredDates = null;
+            if (parseNode.GetChildNode("startDate") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+        }
+
         /// <summary>The dependencies for the plan. This is &quot;Sequential&quot; or &quot;Concurrent&quot;.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseDependencies? Dependencies { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseDependencies? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseDependencies? _explicitNullValueDependencies = default!;
         /// <summary>The end date field for the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEndDate? EndDate { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEndDate? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEndDate? _explicitNullValueEndDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEndDate EndDate { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEndDate EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endDate"); else _explicitNullProperties?.Remove("endDate"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEndDate _explicitNullValueEndDate = default!;
 #endif
         /// <summary>The estimation unit for the plan. This is &quot;StoryPoints&quot;, &quot;Days&quot; or &quot;Hours&quot;.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEstimation? Estimation { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEstimation? Estimation { get => _explicitNullValueEstimation; set { _explicitNullValueEstimation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimation"); else _explicitNullProperties?.Remove("estimation"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEstimation? _explicitNullValueEstimation = default!;
         /// <summary>The inferred dates for the plan. This is &quot;None&quot;, &quot;SprintDates&quot; or &quot;ReleaseDates&quot;.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseInferredDates? InferredDates { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseInferredDates? InferredDates { get => _explicitNullValueInferredDates; set { _explicitNullValueInferredDates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inferredDates"); else _explicitNullProperties?.Remove("inferredDates"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseInferredDates? _explicitNullValueInferredDates = default!;
         /// <summary>The start date field for the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate? StartDate { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate StartDate { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startDate"); else _explicitNullProperties?.Remove("startDate"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate _explicitNullValueStartDate = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -43,7 +62,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.GetPlanResponseScheduling CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.GetPlanResponseScheduling();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.GetPlanResponseScheduling(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,7 +90,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEndDate>("endDate", EndDate);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseEstimation>("estimation", Estimation);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseInferredDates>("inferredDates", InferredDates);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate>("startDate", StartDate);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.GetSchedulingResponseStartDate>("startDate", StartDate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

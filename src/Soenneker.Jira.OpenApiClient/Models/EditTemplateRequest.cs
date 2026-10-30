@@ -12,38 +12,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EditTemplateRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("templateDescription") is { } nullNodeTemplateDescription && nullNodeTemplateDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateDescription = null;
+            if (parseNode.GetChildNode("templateGenerationOptions") is { } nullNodeTemplateGenerationOptions && nullNodeTemplateGenerationOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateGenerationOptions = null;
+            if (parseNode.GetChildNode("templateKey") is { } nullNodeTemplateKey && nullNodeTemplateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateKey = null;
+            if (parseNode.GetChildNode("templateName") is { } nullNodeTemplateName && nullNodeTemplateName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateName = null;
+        }
+
         /// <summary>The description of the template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateDescription { get; set; }
+        public string? TemplateDescription { get => _explicitNullValueTemplateDescription; set { _explicitNullValueTemplateDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDescription"); else _explicitNullProperties?.Remove("templateDescription"); } }
+        private string? _explicitNullValueTemplateDescription = default!;
 #nullable restore
 #else
-        public string TemplateDescription { get; set; }
+        public string TemplateDescription { get => _explicitNullValueTemplateDescription; set { _explicitNullValueTemplateDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDescription"); else _explicitNullProperties?.Remove("templateDescription"); } }
+        private string _explicitNullValueTemplateDescription = default!;
 #endif
         /// <summary>The templateGenerationOptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions? TemplateGenerationOptions { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions? TemplateGenerationOptions { get => _explicitNullValueTemplateGenerationOptions; set { _explicitNullValueTemplateGenerationOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateGenerationOptions"); else _explicitNullProperties?.Remove("templateGenerationOptions"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions? _explicitNullValueTemplateGenerationOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions TemplateGenerationOptions { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions TemplateGenerationOptions { get => _explicitNullValueTemplateGenerationOptions; set { _explicitNullValueTemplateGenerationOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateGenerationOptions"); else _explicitNullProperties?.Remove("templateGenerationOptions"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions _explicitNullValueTemplateGenerationOptions = default!;
 #endif
         /// <summary>The unique identifier of the template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateKey { get; set; }
+        public string? TemplateKey { get => _explicitNullValueTemplateKey; set { _explicitNullValueTemplateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateKey"); else _explicitNullProperties?.Remove("templateKey"); } }
+        private string? _explicitNullValueTemplateKey = default!;
 #nullable restore
 #else
-        public string TemplateKey { get; set; }
+        public string TemplateKey { get => _explicitNullValueTemplateKey; set { _explicitNullValueTemplateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateKey"); else _explicitNullProperties?.Remove("templateKey"); } }
+        private string _explicitNullValueTemplateKey = default!;
 #endif
         /// <summary>The name of the template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateName { get; set; }
+        public string? TemplateName { get => _explicitNullValueTemplateName; set { _explicitNullValueTemplateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateName"); else _explicitNullProperties?.Remove("templateName"); } }
+        private string? _explicitNullValueTemplateName = default!;
 #nullable restore
 #else
-        public string TemplateName { get; set; }
+        public string TemplateName { get => _explicitNullValueTemplateName; set { _explicitNullValueTemplateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateName"); else _explicitNullProperties?.Remove("templateName"); } }
+        private string _explicitNullValueTemplateName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.EditTemplateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.EditTemplateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.EditTemplateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,7 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("templateDescription", TemplateDescription);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateOptions>("templateGenerationOptions", TemplateGenerationOptions);
             writer.WriteStringValue("templateKey", TemplateKey);
-            writer.WriteStringValue("templateName", TemplateName);
+            writer.WriteStringValue("templateName", TemplateName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

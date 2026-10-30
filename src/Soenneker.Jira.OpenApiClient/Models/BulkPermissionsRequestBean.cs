@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkPermissionsRequestBean : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accountId") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("globalPermissions") is { } nullNodeGlobalPermissions && nullNodeGlobalPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlobalPermissions = null;
+            if (parseNode.GetChildNode("projectPermissions") is { } nullNodeProjectPermissions && nullNodeProjectPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectPermissions = null;
+        }
+
         /// <summary>The account ID of a user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get; set; }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountId"); else _explicitNullProperties?.Remove("accountId"); } }
+        private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get; set; }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accountId"); else _explicitNullProperties?.Remove("accountId"); } }
+        private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Global permissions to look up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? GlobalPermissions { get; set; }
+        public List<string>? GlobalPermissions { get => _explicitNullValueGlobalPermissions; set { _explicitNullValueGlobalPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalPermissions"); else _explicitNullProperties?.Remove("globalPermissions"); } }
+        private List<string>? _explicitNullValueGlobalPermissions = default!;
 #nullable restore
 #else
-        public List<string> GlobalPermissions { get; set; }
+        public List<string> GlobalPermissions { get => _explicitNullValueGlobalPermissions; set { _explicitNullValueGlobalPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalPermissions"); else _explicitNullProperties?.Remove("globalPermissions"); } }
+        private List<string> _explicitNullValueGlobalPermissions = default!;
 #endif
         /// <summary>Project permissions with associated projects and issues to look up.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions>? ProjectPermissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions>? ProjectPermissions { get => _explicitNullValueProjectPermissions; set { _explicitNullValueProjectPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectPermissions"); else _explicitNullProperties?.Remove("projectPermissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions>? _explicitNullValueProjectPermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions> ProjectPermissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions> ProjectPermissions { get => _explicitNullValueProjectPermissions; set { _explicitNullValueProjectPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectPermissions"); else _explicitNullProperties?.Remove("projectPermissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions> _explicitNullValueProjectPermissions = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkPermissionsRequestBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkPermissionsRequestBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkPermissionsRequestBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("accountId", AccountId);
             writer.WriteCollectionOfPrimitiveValues<string>("globalPermissions", GlobalPermissions);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions>("projectPermissions", ProjectPermissions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.BulkProjectPermissions>("projectPermissions", ProjectPermissions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

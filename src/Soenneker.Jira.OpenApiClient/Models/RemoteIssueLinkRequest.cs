@@ -12,40 +12,59 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RemoteIssueLinkRequest : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("application") is { } nullNodeApplication && nullNodeApplication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Application = null;
+            if (parseNode.GetChildNode("globalId") is { } nullNodeGlobalId && nullNodeGlobalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlobalId = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("relationship") is { } nullNodeRelationship && nullNodeRelationship.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relationship = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Details of the remote application the linked item is in. For example, trello.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestApplication? Application { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestApplication? Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestApplication? _explicitNullValueApplication = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestApplication Application { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestApplication Application { get => _explicitNullValueApplication; set { _explicitNullValueApplication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("application"); else _explicitNullProperties?.Remove("application"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestApplication _explicitNullValueApplication = default!;
 #endif
         /// <summary>An identifier for the remote item in the remote system. For example, the global ID for a remote item in Confluence would consist of the app ID and page ID, like this: `appId=456&amp;pageId=123`.Setting this field enables the remote issue link details to be updated or deleted using remote system and item details as the record identifier, rather than using the record&apos;s Jira ID.The maximum length is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GlobalId { get; set; }
+        public string? GlobalId { get => _explicitNullValueGlobalId; set { _explicitNullValueGlobalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalId"); else _explicitNullProperties?.Remove("globalId"); } }
+        private string? _explicitNullValueGlobalId = default!;
 #nullable restore
 #else
-        public string GlobalId { get; set; }
+        public string GlobalId { get => _explicitNullValueGlobalId; set { _explicitNullValueGlobalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("globalId"); else _explicitNullProperties?.Remove("globalId"); } }
+        private string _explicitNullValueGlobalId = default!;
 #endif
         /// <summary>Details of the item linked to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestObject? Object { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestObject? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestObject? _explicitNullValueObject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestObject Object { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestObject Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestObject _explicitNullValueObject = default!;
 #endif
         /// <summary>Description of the relationship between the issue and the linked item. If not set, the relationship description &quot;links to&quot; is used in Jira.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Relationship { get; set; }
+        public string? Relationship { get => _explicitNullValueRelationship; set { _explicitNullValueRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship"); else _explicitNullProperties?.Remove("relationship"); } }
+        private string? _explicitNullValueRelationship = default!;
 #nullable restore
 #else
-        public string Relationship { get; set; }
+        public string Relationship { get => _explicitNullValueRelationship; set { _explicitNullValueRelationship = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relationship"); else _explicitNullProperties?.Remove("relationship"); } }
+        private string _explicitNullValueRelationship = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequest"/> and sets the default values.
@@ -62,7 +81,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,6 +108,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("globalId", GlobalId);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequestObject>("object", Object);
             writer.WriteStringValue("relationship", Relationship);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

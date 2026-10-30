@@ -12,14 +12,24 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueTypeIdsToRemove : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("issueTypeIds") is { } nullNodeIssueTypeIds && nullNodeIssueTypeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeIds = null;
+        }
+
         /// <summary>The list of issue type IDs. Must contain unique values not longer than 255 characters and not be empty. Maximum of 100 IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IssueTypeIds { get; set; }
+        public List<string>? IssueTypeIds { get => _explicitNullValueIssueTypeIds; set { _explicitNullValueIssueTypeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeIds"); else _explicitNullProperties?.Remove("issueTypeIds"); } }
+        private List<string>? _explicitNullValueIssueTypeIds = default!;
 #nullable restore
 #else
-        public List<string> IssueTypeIds { get; set; }
+        public List<string> IssueTypeIds { get => _explicitNullValueIssueTypeIds; set { _explicitNullValueIssueTypeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeIds"); else _explicitNullProperties?.Remove("issueTypeIds"); } }
+        private List<string> _explicitNullValueIssueTypeIds = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -29,7 +39,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIdsToRemove CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIdsToRemove();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIdsToRemove(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +59,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("issueTypeIds", IssueTypeIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("issueTypeIds", IssueTypeIds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

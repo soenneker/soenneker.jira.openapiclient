@@ -23,6 +23,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Expression
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Expression.Analyse.AnalyseRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The eval property</summary>
+        [Obsolete("")]
         public global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Expression.Eval.EvalRequestBuilder Eval
         {
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Expression.Eval.EvalRequestBuilder(PathParameters, RequestAdapter);

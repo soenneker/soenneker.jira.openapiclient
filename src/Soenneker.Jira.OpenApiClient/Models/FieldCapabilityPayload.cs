@@ -12,72 +12,103 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FieldCapabilityPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customFieldDefinitions") is { } nullNodeCustomFieldDefinitions && nullNodeCustomFieldDefinitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldDefinitions = null;
+            if (parseNode.GetChildNode("fieldLayouts") is { } nullNodeFieldLayouts && nullNodeFieldLayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldLayouts = null;
+            if (parseNode.GetChildNode("fieldLayoutScheme") is { } nullNodeFieldLayoutScheme && nullNodeFieldLayoutScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldLayoutScheme = null;
+            if (parseNode.GetChildNode("fieldScheme") is { } nullNodeFieldScheme && nullNodeFieldScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldScheme = null;
+            if (parseNode.GetChildNode("issueLayouts") is { } nullNodeIssueLayouts && nullNodeIssueLayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueLayouts = null;
+            if (parseNode.GetChildNode("issueTypeScreenScheme") is { } nullNodeIssueTypeScreenScheme && nullNodeIssueTypeScreenScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeScreenScheme = null;
+            if (parseNode.GetChildNode("screens") is { } nullNodeScreens && nullNodeScreens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Screens = null;
+            if (parseNode.GetChildNode("screenScheme") is { } nullNodeScreenScheme && nullNodeScreenScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScreenScheme = null;
+        }
+
         /// <summary>The custom field definitions. See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-fields/\#api-rest-api-3-field-post</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldPayload>? CustomFieldDefinitions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldPayload>? CustomFieldDefinitions { get => _explicitNullValueCustomFieldDefinitions; set { _explicitNullValueCustomFieldDefinitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFieldDefinitions"); else _explicitNullProperties?.Remove("customFieldDefinitions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldPayload>? _explicitNullValueCustomFieldDefinitions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldPayload> CustomFieldDefinitions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldPayload> CustomFieldDefinitions { get => _explicitNullValueCustomFieldDefinitions; set { _explicitNullValueCustomFieldDefinitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFieldDefinitions"); else _explicitNullProperties?.Remove("customFieldDefinitions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldPayload> _explicitNullValueCustomFieldDefinitions = default!;
 #endif
         /// <summary>The field layouts configuration.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutPayload>? FieldLayouts { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutPayload>? FieldLayouts { get => _explicitNullValueFieldLayouts; set { _explicitNullValueFieldLayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldLayouts"); else _explicitNullProperties?.Remove("fieldLayouts"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutPayload>? _explicitNullValueFieldLayouts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutPayload> FieldLayouts { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutPayload> FieldLayouts { get => _explicitNullValueFieldLayouts; set { _explicitNullValueFieldLayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldLayouts"); else _explicitNullProperties?.Remove("fieldLayouts"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutPayload> _explicitNullValueFieldLayouts = default!;
 #endif
         /// <summary>Deprecated use [fieldAssociationScheme](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-field-schemes/#api-group-field-schemes) instead Defines the payload for the field layout schemes. See [ Field configuration scheme](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-field-configurations/#api-rest-api-3-fieldconfigurationscheme-post).[ How to configure a field configuration scheme](https://support.atlassian.com/jira-cloud-administration/docs/configure-a-field-configuration-scheme/).</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutSchemePayload? FieldLayoutScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutSchemePayload? FieldLayoutScheme { get => _explicitNullValueFieldLayoutScheme; set { _explicitNullValueFieldLayoutScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldLayoutScheme"); else _explicitNullProperties?.Remove("fieldLayoutScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutSchemePayload? _explicitNullValueFieldLayoutScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutSchemePayload FieldLayoutScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutSchemePayload FieldLayoutScheme { get => _explicitNullValueFieldLayoutScheme; set { _explicitNullValueFieldLayoutScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldLayoutScheme"); else _explicitNullProperties?.Remove("fieldLayoutScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldLayoutSchemePayload _explicitNullValueFieldLayoutScheme = default!;
 #endif
         /// <summary>Defines the payload to configure the field scheme for a project. See [Field schemes](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-field-schemes/#api-group-field-schemes).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldSchemePayload? FieldScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldSchemePayload? FieldScheme { get => _explicitNullValueFieldScheme; set { _explicitNullValueFieldScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldScheme"); else _explicitNullProperties?.Remove("fieldScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldSchemePayload? _explicitNullValueFieldScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldSchemePayload FieldScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldSchemePayload FieldScheme { get => _explicitNullValueFieldScheme; set { _explicitNullValueFieldScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldScheme"); else _explicitNullProperties?.Remove("fieldScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldSchemePayload _explicitNullValueFieldScheme = default!;
 #endif
         /// <summary>The issue layouts configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutPayload>? IssueLayouts { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutPayload>? IssueLayouts { get => _explicitNullValueIssueLayouts; set { _explicitNullValueIssueLayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueLayouts"); else _explicitNullProperties?.Remove("issueLayouts"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutPayload>? _explicitNullValueIssueLayouts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutPayload> IssueLayouts { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutPayload> IssueLayouts { get => _explicitNullValueIssueLayouts; set { _explicitNullValueIssueLayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueLayouts"); else _explicitNullProperties?.Remove("issueLayouts"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutPayload> _explicitNullValueIssueLayouts = default!;
 #endif
         /// <summary>Defines the payload for the issue type screen schemes. See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-type-screen-schemes/\#api-rest-api-3-issuetypescreenscheme-post</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeScreenSchemePayload? IssueTypeScreenScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeScreenSchemePayload? IssueTypeScreenScheme { get => _explicitNullValueIssueTypeScreenScheme; set { _explicitNullValueIssueTypeScreenScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScreenScheme"); else _explicitNullProperties?.Remove("issueTypeScreenScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueTypeScreenSchemePayload? _explicitNullValueIssueTypeScreenScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeScreenSchemePayload IssueTypeScreenScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeScreenSchemePayload IssueTypeScreenScheme { get => _explicitNullValueIssueTypeScreenScheme; set { _explicitNullValueIssueTypeScreenScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScreenScheme"); else _explicitNullProperties?.Remove("issueTypeScreenScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueTypeScreenSchemePayload _explicitNullValueIssueTypeScreenScheme = default!;
 #endif
         /// <summary>The screens. See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-screens/\#api-rest-api-3-screens-post</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenPayload>? Screens { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenPayload>? Screens { get => _explicitNullValueScreens; set { _explicitNullValueScreens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("screens"); else _explicitNullProperties?.Remove("screens"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ScreenPayload>? _explicitNullValueScreens = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenPayload> Screens { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenPayload> Screens { get => _explicitNullValueScreens; set { _explicitNullValueScreens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("screens"); else _explicitNullProperties?.Remove("screens"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ScreenPayload> _explicitNullValueScreens = default!;
 #endif
         /// <summary>The screen schemes See https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-screen-schemes/\#api-rest-api-3-screenscheme-post</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload>? ScreenScheme { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload>? ScreenScheme { get => _explicitNullValueScreenScheme; set { _explicitNullValueScreenScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("screenScheme"); else _explicitNullProperties?.Remove("screenScheme"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload>? _explicitNullValueScreenScheme = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload> ScreenScheme { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload> ScreenScheme { get => _explicitNullValueScreenScheme; set { _explicitNullValueScreenScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("screenScheme"); else _explicitNullProperties?.Remove("screenScheme"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload> _explicitNullValueScreenScheme = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -87,7 +118,9 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -121,7 +154,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutPayload>("issueLayouts", IssueLayouts);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeScreenSchemePayload>("issueTypeScreenScheme", IssueTypeScreenScheme);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ScreenPayload>("screens", Screens);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload>("screenScheme", ScreenScheme);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ScreenSchemePayload>("screenScheme", ScreenScheme);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

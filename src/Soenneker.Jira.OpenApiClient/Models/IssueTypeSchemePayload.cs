@@ -12,46 +12,68 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueTypeSchemePayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultIssueTypeId") is { } nullNodeDefaultIssueTypeId && nullNodeDefaultIssueTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultIssueTypeId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("issueTypeIds") is { } nullNodeIssueTypeIds && nullNodeIssueTypeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeIds = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pcri") is { } nullNodePcri && nullNodePcri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pcri = null;
+        }
+
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? DefaultIssueTypeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? DefaultIssueTypeId { get => _explicitNullValueDefaultIssueTypeId; set { _explicitNullValueDefaultIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultIssueTypeId"); else _explicitNullProperties?.Remove("defaultIssueTypeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueDefaultIssueTypeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier DefaultIssueTypeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier DefaultIssueTypeId { get => _explicitNullValueDefaultIssueTypeId; set { _explicitNullValueDefaultIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultIssueTypeId"); else _explicitNullProperties?.Remove("defaultIssueTypeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueDefaultIssueTypeId = default!;
 #endif
         /// <summary>The description of the issue type scheme</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The issue type IDs for the issue type scheme</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? IssueTypeIds { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? IssueTypeIds { get => _explicitNullValueIssueTypeIds; set { _explicitNullValueIssueTypeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeIds"); else _explicitNullProperties?.Remove("issueTypeIds"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? _explicitNullValueIssueTypeIds = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> IssueTypeIds { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> IssueTypeIds { get => _explicitNullValueIssueTypeIds; set { _explicitNullValueIssueTypeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeIds"); else _explicitNullProperties?.Remove("issueTypeIds"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> _explicitNullValueIssueTypeIds = default!;
 #endif
         /// <summary>The name of the issue type scheme</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? Pcri { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? Pcri { get => _explicitNullValuePcri; set { _explicitNullValuePcri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcri"); else _explicitNullProperties?.Remove("pcri"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValuePcri = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier Pcri { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier Pcri { get => _explicitNullValuePcri; set { _explicitNullValuePcri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcri"); else _explicitNullProperties?.Remove("pcri"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValuePcri = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +83,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,7 +111,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("issueTypeIds", IssueTypeIds);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("pcri", Pcri);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("pcri", Pcri);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

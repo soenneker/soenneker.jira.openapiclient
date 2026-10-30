@@ -12,72 +12,105 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AvailableWorkflowConnectRule : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addonKey") is { } nullNodeAddonKey && nullNodeAddonKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddonKey = null;
+            if (parseNode.GetChildNode("createUrl") is { } nullNodeCreateUrl && nullNodeCreateUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateUrl = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("editUrl") is { } nullNodeEditUrl && nullNodeEditUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditUrl = null;
+            if (parseNode.GetChildNode("moduleKey") is { } nullNodeModuleKey && nullNodeModuleKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModuleKey = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("ruleKey") is { } nullNodeRuleKey && nullNodeRuleKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleKey = null;
+            if (parseNode.GetChildNode("ruleType") is { } nullNodeRuleType && nullNodeRuleType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleType = null;
+            if (parseNode.GetChildNode("viewUrl") is { } nullNodeViewUrl && nullNodeViewUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewUrl = null;
+        }
+
         /// <summary>The add-on providing the rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddonKey { get; set; }
+        public string? AddonKey { get => _explicitNullValueAddonKey; set { _explicitNullValueAddonKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addonKey"); else _explicitNullProperties?.Remove("addonKey"); } }
+        private string? _explicitNullValueAddonKey = default!;
 #nullable restore
 #else
-        public string AddonKey { get; set; }
+        public string AddonKey { get => _explicitNullValueAddonKey; set { _explicitNullValueAddonKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addonKey"); else _explicitNullProperties?.Remove("addonKey"); } }
+        private string _explicitNullValueAddonKey = default!;
 #endif
         /// <summary>The URL creation path segment defined in the Connect module.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateUrl { get; set; }
+        public string? CreateUrl { get => _explicitNullValueCreateUrl; set { _explicitNullValueCreateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createUrl"); else _explicitNullProperties?.Remove("createUrl"); } }
+        private string? _explicitNullValueCreateUrl = default!;
 #nullable restore
 #else
-        public string CreateUrl { get; set; }
+        public string CreateUrl { get => _explicitNullValueCreateUrl; set { _explicitNullValueCreateUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createUrl"); else _explicitNullProperties?.Remove("createUrl"); } }
+        private string _explicitNullValueCreateUrl = default!;
 #endif
         /// <summary>The rule description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The URL edit path segment defined in the Connect module.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EditUrl { get; set; }
+        public string? EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editUrl"); else _explicitNullProperties?.Remove("editUrl"); } }
+        private string? _explicitNullValueEditUrl = default!;
 #nullable restore
 #else
-        public string EditUrl { get; set; }
+        public string EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editUrl"); else _explicitNullProperties?.Remove("editUrl"); } }
+        private string _explicitNullValueEditUrl = default!;
 #endif
         /// <summary>The module providing the rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ModuleKey { get; set; }
+        public string? ModuleKey { get => _explicitNullValueModuleKey; set { _explicitNullValueModuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moduleKey"); else _explicitNullProperties?.Remove("moduleKey"); } }
+        private string? _explicitNullValueModuleKey = default!;
 #nullable restore
 #else
-        public string ModuleKey { get; set; }
+        public string ModuleKey { get => _explicitNullValueModuleKey; set { _explicitNullValueModuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moduleKey"); else _explicitNullProperties?.Remove("moduleKey"); } }
+        private string _explicitNullValueModuleKey = default!;
 #endif
         /// <summary>The rule name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The rule key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleKey { get; set; }
+        public string? RuleKey { get => _explicitNullValueRuleKey; set { _explicitNullValueRuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleKey"); else _explicitNullProperties?.Remove("ruleKey"); } }
+        private string? _explicitNullValueRuleKey = default!;
 #nullable restore
 #else
-        public string RuleKey { get; set; }
+        public string RuleKey { get => _explicitNullValueRuleKey; set { _explicitNullValueRuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleKey"); else _explicitNullProperties?.Remove("ruleKey"); } }
+        private string _explicitNullValueRuleKey = default!;
 #endif
         /// <summary>The rule type.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRuleRuleType? RuleType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRuleRuleType? RuleType { get => _explicitNullValueRuleType; set { _explicitNullValueRuleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleType"); else _explicitNullProperties?.Remove("ruleType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRuleRuleType? _explicitNullValueRuleType = default!;
         /// <summary>The URL view path segment defined in the Connect module.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViewUrl { get; set; }
+        public string? ViewUrl { get => _explicitNullValueViewUrl; set { _explicitNullValueViewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewUrl"); else _explicitNullProperties?.Remove("viewUrl"); } }
+        private string? _explicitNullValueViewUrl = default!;
 #nullable restore
 #else
-        public string ViewUrl { get; set; }
+        public string ViewUrl { get => _explicitNullValueViewUrl; set { _explicitNullValueViewUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewUrl"); else _explicitNullProperties?.Remove("viewUrl"); } }
+        private string _explicitNullValueViewUrl = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -87,7 +120,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -123,7 +156,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("ruleKey", RuleKey);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRuleRuleType>("ruleType", RuleType);
-            writer.WriteStringValue("viewUrl", ViewUrl);
+            writer.WriteStringValue("viewUrl", ViewUrl);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

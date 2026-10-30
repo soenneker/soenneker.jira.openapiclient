@@ -60,6 +60,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Resolution.Item
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -79,7 +81,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Resolution.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.Resolution>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.Resolution.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.Resolution>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.Resolution.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates an issue resolution.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
@@ -108,6 +110,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Resolution.Item
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

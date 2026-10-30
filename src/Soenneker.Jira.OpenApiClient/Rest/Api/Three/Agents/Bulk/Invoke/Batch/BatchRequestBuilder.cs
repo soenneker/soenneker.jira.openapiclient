@@ -61,6 +61,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Agents.Bulk.Invoke.Batch
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionsResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

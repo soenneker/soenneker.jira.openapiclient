@@ -12,11 +12,22 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreateSchedulingRequestStartDate : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dateCustomFieldId") is { } nullNodeDateCustomFieldId && nullNodeDateCustomFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateCustomFieldId = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>A date custom field ID. This is required if the type is &quot;DateCustomField&quot;.</summary>
-        public long? DateCustomFieldId { get; set; }
+        public long? DateCustomFieldId { get => _explicitNullValueDateCustomFieldId; set { _explicitNullValueDateCustomFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateCustomFieldId"); else _explicitNullProperties?.Remove("dateCustomFieldId"); } }
+        private long? _explicitNullValueDateCustomFieldId = default!;
         /// <summary>The date field type. This must be &quot;DueDate&quot;, &quot;TargetStartDate&quot;, &quot;TargetEndDate&quot; or &quot;DateCustomField&quot;.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.CreateDateFieldRequestType? Type { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreateDateFieldRequestType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreateDateFieldRequestType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -25,7 +36,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CreateSchedulingRequestStartDate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CreateSchedulingRequestStartDate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CreateSchedulingRequestStartDate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +58,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("dateCustomFieldId", DateCustomFieldId);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.CreateDateFieldRequestType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.CreateDateFieldRequestType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

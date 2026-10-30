@@ -12,115 +12,200 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TaskProgressBeanJsonNodeResult : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("array") is { } nullNodeArray && nullNodeArray.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Array = null;
+            if (parseNode.GetChildNode("bigDecimal") is { } nullNodeBigDecimal && nullNodeBigDecimal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BigDecimal = null;
+            if (parseNode.GetChildNode("bigInteger") is { } nullNodeBigInteger && nullNodeBigInteger.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BigInteger = null;
+            if (parseNode.GetChildNode("bigIntegerValue") is { } nullNodeBigIntegerValue && nullNodeBigIntegerValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BigIntegerValue = null;
+            if (parseNode.GetChildNode("binary") is { } nullNodeBinary && nullNodeBinary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Binary = null;
+            if (parseNode.GetChildNode("binaryValue") is { } nullNodeBinaryValue && nullNodeBinaryValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BinaryValue = null;
+            if (parseNode.GetChildNode("boolean") is { } nullNodeBoolean && nullNodeBoolean.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Boolean = null;
+            if (parseNode.GetChildNode("booleanValue") is { } nullNodeBooleanValue && nullNodeBooleanValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BooleanValue = null;
+            if (parseNode.GetChildNode("containerNode") is { } nullNodeContainerNode && nullNodeContainerNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerNode = null;
+            if (parseNode.GetChildNode("decimalValue") is { } nullNodeDecimalValue && nullNodeDecimalValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DecimalValue = null;
+            if (parseNode.GetChildNode("double") is { } nullNodeDouble && nullNodeDouble.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Double = null;
+            if (parseNode.GetChildNode("doubleValue") is { } nullNodeDoubleValue && nullNodeDoubleValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DoubleValue = null;
+            if (parseNode.GetChildNode("elements") is { } nullNodeElements && nullNodeElements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Elements = null;
+            if (parseNode.GetChildNode("fieldNames") is { } nullNodeFieldNames && nullNodeFieldNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldNames = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("floatingPointNumber") is { } nullNodeFloatingPointNumber && nullNodeFloatingPointNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FloatingPointNumber = null;
+            if (parseNode.GetChildNode("int") is { } nullNodeInt && nullNodeInt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Int = null;
+            if (parseNode.GetChildNode("integralNumber") is { } nullNodeIntegralNumber && nullNodeIntegralNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegralNumber = null;
+            if (parseNode.GetChildNode("intValue") is { } nullNodeIntValue && nullNodeIntValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntValue = null;
+            if (parseNode.GetChildNode("long") is { } nullNodeLong && nullNodeLong.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Long = null;
+            if (parseNode.GetChildNode("longValue") is { } nullNodeLongValue && nullNodeLongValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LongValue = null;
+            if (parseNode.GetChildNode("missingNode") is { } nullNodeMissingNode && nullNodeMissingNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MissingNode = null;
+            if (parseNode.GetChildNode("null") is { } nullNodeNull && nullNodeNull.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Null = null;
+            if (parseNode.GetChildNode("number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
+            if (parseNode.GetChildNode("numberType") is { } nullNodeNumberType && nullNodeNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberType = null;
+            if (parseNode.GetChildNode("numberValue") is { } nullNodeNumberValue && nullNodeNumberValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberValue = null;
+            if (parseNode.GetChildNode("object") is { } nullNodeObject && nullNodeObject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Object = null;
+            if (parseNode.GetChildNode("pojo") is { } nullNodePojo && nullNodePojo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pojo = null;
+            if (parseNode.GetChildNode("textual") is { } nullNodeTextual && nullNodeTextual.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Textual = null;
+            if (parseNode.GetChildNode("textValue") is { } nullNodeTextValue && nullNodeTextValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextValue = null;
+            if (parseNode.GetChildNode("valueAsBoolean") is { } nullNodeValueAsBoolean && nullNodeValueAsBoolean.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueAsBoolean = null;
+            if (parseNode.GetChildNode("valueAsDouble") is { } nullNodeValueAsDouble && nullNodeValueAsDouble.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueAsDouble = null;
+            if (parseNode.GetChildNode("valueAsInt") is { } nullNodeValueAsInt && nullNodeValueAsInt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueAsInt = null;
+            if (parseNode.GetChildNode("valueAsLong") is { } nullNodeValueAsLong && nullNodeValueAsLong.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueAsLong = null;
+            if (parseNode.GetChildNode("valueAsText") is { } nullNodeValueAsText && nullNodeValueAsText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueAsText = null;
+            if (parseNode.GetChildNode("valueNode") is { } nullNodeValueNode && nullNodeValueNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValueNode = null;
+        }
+
         /// <summary>The array property</summary>
-        public bool? Array { get; set; }
+        public bool? Array { get => _explicitNullValueArray; set { _explicitNullValueArray = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("array"); else _explicitNullProperties?.Remove("array"); } }
+        private bool? _explicitNullValueArray = default!;
         /// <summary>The bigDecimal property</summary>
-        public bool? BigDecimal { get; set; }
+        public bool? BigDecimal { get => _explicitNullValueBigDecimal; set { _explicitNullValueBigDecimal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bigDecimal"); else _explicitNullProperties?.Remove("bigDecimal"); } }
+        private bool? _explicitNullValueBigDecimal = default!;
         /// <summary>The bigInteger property</summary>
-        public bool? BigInteger { get; set; }
+        public bool? BigInteger { get => _explicitNullValueBigInteger; set { _explicitNullValueBigInteger = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bigInteger"); else _explicitNullProperties?.Remove("bigInteger"); } }
+        private bool? _explicitNullValueBigInteger = default!;
         /// <summary>The bigIntegerValue property</summary>
-        public int? BigIntegerValue { get; set; }
+        public int? BigIntegerValue { get => _explicitNullValueBigIntegerValue; set { _explicitNullValueBigIntegerValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bigIntegerValue"); else _explicitNullProperties?.Remove("bigIntegerValue"); } }
+        private int? _explicitNullValueBigIntegerValue = default!;
         /// <summary>The binary property</summary>
-        public bool? Binary { get; set; }
+        public bool? Binary { get => _explicitNullValueBinary; set { _explicitNullValueBinary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binary"); else _explicitNullProperties?.Remove("binary"); } }
+        private bool? _explicitNullValueBinary = default!;
         /// <summary>The binaryValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<byte[]>? BinaryValue { get; set; }
+        public List<byte[]>? BinaryValue { get => _explicitNullValueBinaryValue; set { _explicitNullValueBinaryValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryValue"); else _explicitNullProperties?.Remove("binaryValue"); } }
+        private List<byte[]>? _explicitNullValueBinaryValue = default!;
 #nullable restore
 #else
-        public List<byte[]> BinaryValue { get; set; }
+        public List<byte[]> BinaryValue { get => _explicitNullValueBinaryValue; set { _explicitNullValueBinaryValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("binaryValue"); else _explicitNullProperties?.Remove("binaryValue"); } }
+        private List<byte[]> _explicitNullValueBinaryValue = default!;
 #endif
         /// <summary>The boolean property</summary>
-        public bool? Boolean { get; set; }
+        public bool? Boolean { get => _explicitNullValueBoolean; set { _explicitNullValueBoolean = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boolean"); else _explicitNullProperties?.Remove("boolean"); } }
+        private bool? _explicitNullValueBoolean = default!;
         /// <summary>The booleanValue property</summary>
-        public bool? BooleanValue { get; set; }
+        public bool? BooleanValue { get => _explicitNullValueBooleanValue; set { _explicitNullValueBooleanValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("booleanValue"); else _explicitNullProperties?.Remove("booleanValue"); } }
+        private bool? _explicitNullValueBooleanValue = default!;
         /// <summary>The containerNode property</summary>
-        public bool? ContainerNode { get; set; }
+        public bool? ContainerNode { get => _explicitNullValueContainerNode; set { _explicitNullValueContainerNode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containerNode"); else _explicitNullProperties?.Remove("containerNode"); } }
+        private bool? _explicitNullValueContainerNode = default!;
         /// <summary>The decimalValue property</summary>
-        public double? DecimalValue { get; set; }
+        public double? DecimalValue { get => _explicitNullValueDecimalValue; set { _explicitNullValueDecimalValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decimalValue"); else _explicitNullProperties?.Remove("decimalValue"); } }
+        private double? _explicitNullValueDecimalValue = default!;
         /// <summary>The double property</summary>
-        public bool? Double { get; set; }
+        public bool? Double { get => _explicitNullValueDouble; set { _explicitNullValueDouble = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("double"); else _explicitNullProperties?.Remove("double"); } }
+        private bool? _explicitNullValueDouble = default!;
         /// <summary>The doubleValue property</summary>
-        public double? DoubleValue { get; set; }
+        public double? DoubleValue { get => _explicitNullValueDoubleValue; set { _explicitNullValueDoubleValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("doubleValue"); else _explicitNullProperties?.Remove("doubleValue"); } }
+        private double? _explicitNullValueDoubleValue = default!;
         /// <summary>The elements property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeElementsProperty? Elements { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeElementsProperty? Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonNodeElementsProperty? _explicitNullValueElements = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeElementsProperty Elements { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeElementsProperty Elements { get => _explicitNullValueElements; set { _explicitNullValueElements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elements"); else _explicitNullProperties?.Remove("elements"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonNodeElementsProperty _explicitNullValueElements = default!;
 #endif
         /// <summary>The fieldNames property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldNamesProperty? FieldNames { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldNamesProperty? FieldNames { get => _explicitNullValueFieldNames; set { _explicitNullValueFieldNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldNames"); else _explicitNullProperties?.Remove("fieldNames"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldNamesProperty? _explicitNullValueFieldNames = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldNamesProperty FieldNames { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldNamesProperty FieldNames { get => _explicitNullValueFieldNames; set { _explicitNullValueFieldNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldNames"); else _explicitNullProperties?.Remove("fieldNames"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldNamesProperty _explicitNullValueFieldNames = default!;
 #endif
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldsProperty? Fields { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldsProperty? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldsProperty? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldsProperty Fields { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldsProperty Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonNodeFieldsProperty _explicitNullValueFields = default!;
 #endif
         /// <summary>The floatingPointNumber property</summary>
-        public bool? FloatingPointNumber { get; set; }
+        public bool? FloatingPointNumber { get => _explicitNullValueFloatingPointNumber; set { _explicitNullValueFloatingPointNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("floatingPointNumber"); else _explicitNullProperties?.Remove("floatingPointNumber"); } }
+        private bool? _explicitNullValueFloatingPointNumber = default!;
         /// <summary>The int property</summary>
-        public bool? Int { get; set; }
+        public bool? Int { get => _explicitNullValueInt; set { _explicitNullValueInt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("int"); else _explicitNullProperties?.Remove("int"); } }
+        private bool? _explicitNullValueInt = default!;
         /// <summary>The integralNumber property</summary>
-        public bool? IntegralNumber { get; set; }
+        public bool? IntegralNumber { get => _explicitNullValueIntegralNumber; set { _explicitNullValueIntegralNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integralNumber"); else _explicitNullProperties?.Remove("integralNumber"); } }
+        private bool? _explicitNullValueIntegralNumber = default!;
         /// <summary>The intValue property</summary>
-        public int? IntValue { get; set; }
+        public int? IntValue { get => _explicitNullValueIntValue; set { _explicitNullValueIntValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intValue"); else _explicitNullProperties?.Remove("intValue"); } }
+        private int? _explicitNullValueIntValue = default!;
         /// <summary>The long property</summary>
-        public bool? Long { get; set; }
+        public bool? Long { get => _explicitNullValueLong; set { _explicitNullValueLong = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("long"); else _explicitNullProperties?.Remove("long"); } }
+        private bool? _explicitNullValueLong = default!;
         /// <summary>The longValue property</summary>
-        public long? LongValue { get; set; }
+        public long? LongValue { get => _explicitNullValueLongValue; set { _explicitNullValueLongValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("longValue"); else _explicitNullProperties?.Remove("longValue"); } }
+        private long? _explicitNullValueLongValue = default!;
         /// <summary>The missingNode property</summary>
-        public bool? MissingNode { get; set; }
+        public bool? MissingNode { get => _explicitNullValueMissingNode; set { _explicitNullValueMissingNode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("missingNode"); else _explicitNullProperties?.Remove("missingNode"); } }
+        private bool? _explicitNullValueMissingNode = default!;
         /// <summary>The null property</summary>
-        public bool? Null { get; set; }
+        public bool? Null { get => _explicitNullValueNull; set { _explicitNullValueNull = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("null"); else _explicitNullProperties?.Remove("null"); } }
+        private bool? _explicitNullValueNull = default!;
         /// <summary>The number property</summary>
-        public bool? Number { get; set; }
+        public bool? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number"); else _explicitNullProperties?.Remove("number"); } }
+        private bool? _explicitNullValueNumber = default!;
         /// <summary>The numberType property</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeNumberType? NumberType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonNodeNumberType? NumberType { get => _explicitNullValueNumberType; set { _explicitNullValueNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberType"); else _explicitNullProperties?.Remove("numberType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonNodeNumberType? _explicitNullValueNumberType = default!;
         /// <summary>The numberValue property</summary>
-        public double? NumberValue { get; set; }
+        public double? NumberValue { get => _explicitNullValueNumberValue; set { _explicitNullValueNumberValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberValue"); else _explicitNullProperties?.Remove("numberValue"); } }
+        private double? _explicitNullValueNumberValue = default!;
         /// <summary>The object property</summary>
-        public bool? Object { get; set; }
+        public bool? Object { get => _explicitNullValueObject; set { _explicitNullValueObject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("object"); else _explicitNullProperties?.Remove("object"); } }
+        private bool? _explicitNullValueObject = default!;
         /// <summary>The pojo property</summary>
-        public bool? Pojo { get; set; }
+        public bool? Pojo { get => _explicitNullValuePojo; set { _explicitNullValuePojo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pojo"); else _explicitNullProperties?.Remove("pojo"); } }
+        private bool? _explicitNullValuePojo = default!;
         /// <summary>The textual property</summary>
-        public bool? Textual { get; set; }
+        public bool? Textual { get => _explicitNullValueTextual; set { _explicitNullValueTextual = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textual"); else _explicitNullProperties?.Remove("textual"); } }
+        private bool? _explicitNullValueTextual = default!;
         /// <summary>The textValue property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextValue { get; set; }
+        public string? TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textValue"); else _explicitNullProperties?.Remove("textValue"); } }
+        private string? _explicitNullValueTextValue = default!;
 #nullable restore
 #else
-        public string TextValue { get; set; }
+        public string TextValue { get => _explicitNullValueTextValue; set { _explicitNullValueTextValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("textValue"); else _explicitNullProperties?.Remove("textValue"); } }
+        private string _explicitNullValueTextValue = default!;
 #endif
         /// <summary>The valueAsBoolean property</summary>
-        public bool? ValueAsBoolean { get; set; }
+        public bool? ValueAsBoolean { get => _explicitNullValueValueAsBoolean; set { _explicitNullValueValueAsBoolean = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueAsBoolean"); else _explicitNullProperties?.Remove("valueAsBoolean"); } }
+        private bool? _explicitNullValueValueAsBoolean = default!;
         /// <summary>The valueAsDouble property</summary>
-        public double? ValueAsDouble { get; set; }
+        public double? ValueAsDouble { get => _explicitNullValueValueAsDouble; set { _explicitNullValueValueAsDouble = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueAsDouble"); else _explicitNullProperties?.Remove("valueAsDouble"); } }
+        private double? _explicitNullValueValueAsDouble = default!;
         /// <summary>The valueAsInt property</summary>
-        public int? ValueAsInt { get; set; }
+        public int? ValueAsInt { get => _explicitNullValueValueAsInt; set { _explicitNullValueValueAsInt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueAsInt"); else _explicitNullProperties?.Remove("valueAsInt"); } }
+        private int? _explicitNullValueValueAsInt = default!;
         /// <summary>The valueAsLong property</summary>
-        public long? ValueAsLong { get; set; }
+        public long? ValueAsLong { get => _explicitNullValueValueAsLong; set { _explicitNullValueValueAsLong = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueAsLong"); else _explicitNullProperties?.Remove("valueAsLong"); } }
+        private long? _explicitNullValueValueAsLong = default!;
         /// <summary>The valueAsText property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValueAsText { get; set; }
+        public string? ValueAsText { get => _explicitNullValueValueAsText; set { _explicitNullValueValueAsText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueAsText"); else _explicitNullProperties?.Remove("valueAsText"); } }
+        private string? _explicitNullValueValueAsText = default!;
 #nullable restore
 #else
-        public string ValueAsText { get; set; }
+        public string ValueAsText { get => _explicitNullValueValueAsText; set { _explicitNullValueValueAsText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueAsText"); else _explicitNullProperties?.Remove("valueAsText"); } }
+        private string _explicitNullValueValueAsText = default!;
 #endif
         /// <summary>The valueNode property</summary>
-        public bool? ValueNode { get; set; }
+        public bool? ValueNode { get => _explicitNullValueValueNode; set { _explicitNullValueValueNode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valueNode"); else _explicitNullProperties?.Remove("valueNode"); } }
+        private bool? _explicitNullValueValueNode = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -129,7 +214,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.TaskProgressBeanJsonNodeResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.TaskProgressBeanJsonNodeResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.TaskProgressBeanJsonNodeResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -219,7 +304,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteIntValue("valueAsInt", ValueAsInt);
             writer.WriteLongValue("valueAsLong", ValueAsLong);
             writer.WriteStringValue("valueAsText", ValueAsText);
-            writer.WriteBoolValue("valueNode", ValueNode);
+            writer.WriteBoolValue("valueNode", ValueNode);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

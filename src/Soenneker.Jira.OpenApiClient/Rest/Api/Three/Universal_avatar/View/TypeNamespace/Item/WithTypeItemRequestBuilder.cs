@@ -48,7 +48,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Universal_avatar.View.Type
         /// <summary>
         /// Returns the default project, issue type or priority avatar image.This operation can be accessed anonymously.**[Permissions](#permissions) required:** None.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.StreamingResponseBody"/></returns>
+        /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection">When receiving a 401 status code</exception>
@@ -56,11 +56,11 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Universal_avatar.View.Type
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.StreamingResponseBody?> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Universal_avatar.View.TypeNamespace.Item.WithTypeItemRequestBuilder.WithTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Universal_avatar.View.TypeNamespace.Item.WithTypeItemRequestBuilder.WithTypeItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.StreamingResponseBody> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Universal_avatar.View.TypeNamespace.Item.WithTypeItemRequestBuilder.WithTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Universal_avatar.View.TypeNamespace.Item.WithTypeItemRequestBuilder.WithTypeItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -69,8 +69,10 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Universal_avatar.View.Type
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.StreamingResponseBody>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.StreamingResponseBody.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the default project, issue type or priority avatar image.This operation can be accessed anonymously.**[Permissions](#permissions) required:** None.

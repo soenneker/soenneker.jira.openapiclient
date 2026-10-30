@@ -12,7 +12,19 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UiModificationContextDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("issueTypeId") is { } nullNodeIssueTypeId && nullNodeIssueTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeId = null;
+            if (parseNode.GetChildNode("portalId") is { } nullNodePortalId && nullNodePortalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PortalId = null;
+            if (parseNode.GetChildNode("projectId") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("requestTypeId") is { } nullNodeRequestTypeId && nullNodeRequestTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestTypeId = null;
+            if (parseNode.GetChildNode("viewType") is { } nullNodeViewType && nullNodeViewType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewType = null;
+        }
+
         /// <summary>The ID of the UI modification context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -26,37 +38,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The issue type ID of the context. Null is treated as a wildcard, meaning the UI modification will be applied to all issue types. Each UI modification context can have a maximum of one wildcard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueTypeId { get; set; }
+        public string? IssueTypeId { get => _explicitNullValueIssueTypeId; set { _explicitNullValueIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeId"); else _explicitNullProperties?.Remove("issueTypeId"); } }
+        private string? _explicitNullValueIssueTypeId = default!;
 #nullable restore
 #else
-        public string IssueTypeId { get; set; }
+        public string IssueTypeId { get => _explicitNullValueIssueTypeId; set { _explicitNullValueIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeId"); else _explicitNullProperties?.Remove("issueTypeId"); } }
+        private string _explicitNullValueIssueTypeId = default!;
 #endif
         /// <summary>The portal ID of the context. Only required for Jira Service Management request create portal view (`JSMRequestCreate`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PortalId { get; set; }
+        public string? PortalId { get => _explicitNullValuePortalId; set { _explicitNullValuePortalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalId"); else _explicitNullProperties?.Remove("portalId"); } }
+        private string? _explicitNullValuePortalId = default!;
 #nullable restore
 #else
-        public string PortalId { get; set; }
+        public string PortalId { get => _explicitNullValuePortalId; set { _explicitNullValuePortalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("portalId"); else _explicitNullProperties?.Remove("portalId"); } }
+        private string _explicitNullValuePortalId = default!;
 #endif
         /// <summary>The project ID of the context. Null is treated as a wildcard, meaning the UI modification will be applied to all projects. Each UI modification context can have a maximum of one wildcard.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get; set; }
+        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        private string? _explicitNullValueProjectId = default!;
 #nullable restore
 #else
-        public string ProjectId { get; set; }
+        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        private string _explicitNullValueProjectId = default!;
 #endif
         /// <summary>The request type ID of the context. Required for Jira Service Management request create portal view (`JSMRequestCreate`). Optional for Agent view types (`GICAgentView`, `IssueViewAgentView`, `IssueTransitionAgentView`): when set on an agent view context, the UI modification applies only to issues with that request type. Omitting `requestTypeId` does not create a wildcard — it means the context is not scoped to any specific request type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestTypeId { get; set; }
+        public string? RequestTypeId { get => _explicitNullValueRequestTypeId; set { _explicitNullValueRequestTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestTypeId"); else _explicitNullProperties?.Remove("requestTypeId"); } }
+        private string? _explicitNullValueRequestTypeId = default!;
 #nullable restore
 #else
-        public string RequestTypeId { get; set; }
+        public string RequestTypeId { get => _explicitNullValueRequestTypeId; set { _explicitNullValueRequestTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestTypeId"); else _explicitNullProperties?.Remove("requestTypeId"); } }
+        private string _explicitNullValueRequestTypeId = default!;
 #endif
         /// <summary>The view type of the context.  Supported values: *  `GIC` \- Jira global issue create *  `IssueView` \- Jira issue view *  `IssueTransition` \- Jira issue transition *  `JSMRequestCreate` \- Jira Service Management request create portal view *  `GICAgentView` \- Agent view variant of Jira global issue create *  `IssueViewAgentView` \- Agent view variant of Jira issue view *  `IssueTransitionAgentView` \- Agent view variant of Jira issue transitionFor Jira and Agent view types (`GIC`, `IssueView`, `IssueTransition`, `GICAgentView`, `IssueViewAgentView`, `IssueTransitionAgentView`), null is treated as a wildcard, meaning the UI modification will be applied to all view types. Each Jira or Agent context can have a maximum of one wildcard.    Agent view contexts use `projectId` and `issueTypeId` like Jira contexts, and may optionally also set `requestTypeId`. Agent view contexts must not set `portalId`.    Wildcards are not applicable for JSM contexts.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetailsViewType? ViewType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetailsViewType? ViewType { get => _explicitNullValueViewType; set { _explicitNullValueViewType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewType"); else _explicitNullProperties?.Remove("viewType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetailsViewType? _explicitNullValueViewType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -65,7 +86,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -95,7 +116,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("portalId", PortalId);
             writer.WriteStringValue("projectId", ProjectId);
             writer.WriteStringValue("requestTypeId", RequestTypeId);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetailsViewType>("viewType", ViewType);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.UiModificationContextDetailsViewType>("viewType", ViewType);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

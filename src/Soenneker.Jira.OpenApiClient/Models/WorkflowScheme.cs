@@ -12,22 +12,38 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowScheme : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultWorkflow") is { } nullNodeDefaultWorkflow && nullNodeDefaultWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultWorkflow = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("issueTypeMappings") is { } nullNodeIssueTypeMappings && nullNodeIssueTypeMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeMappings = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("updateDraftIfNeeded") is { } nullNodeUpdateDraftIfNeeded && nullNodeUpdateDraftIfNeeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateDraftIfNeeded = null;
+        }
+
         /// <summary>The name of the default workflow for the workflow scheme. The default workflow has *All Unassigned Issue Types* assigned to it in Jira. If `defaultWorkflow` is not specified when creating a workflow scheme, it is set to *Jira Workflow (jira)*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultWorkflow { get; set; }
+        public string? DefaultWorkflow { get => _explicitNullValueDefaultWorkflow; set { _explicitNullValueDefaultWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflow"); else _explicitNullProperties?.Remove("defaultWorkflow"); } }
+        private string? _explicitNullValueDefaultWorkflow = default!;
 #nullable restore
 #else
-        public string DefaultWorkflow { get; set; }
+        public string DefaultWorkflow { get => _explicitNullValueDefaultWorkflow; set { _explicitNullValueDefaultWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflow"); else _explicitNullProperties?.Remove("defaultWorkflow"); } }
+        private string _explicitNullValueDefaultWorkflow = default!;
 #endif
         /// <summary>The description of the workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Whether the workflow scheme is a draft or not.</summary>
         public bool? Draft { get; private set; }
@@ -36,10 +52,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The issue type to workflow mappings, where each mapping is an issue type ID and workflow name pair. Note that an issue type can only be mapped to one workflow in a workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeIssueTypeMappingsProperty? IssueTypeMappings { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeIssueTypeMappingsProperty? IssueTypeMappings { get => _explicitNullValueIssueTypeMappings; set { _explicitNullValueIssueTypeMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeMappings"); else _explicitNullProperties?.Remove("issueTypeMappings"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeIssueTypeMappingsProperty? _explicitNullValueIssueTypeMappings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeIssueTypeMappingsProperty IssueTypeMappings { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeIssueTypeMappingsProperty IssueTypeMappings { get => _explicitNullValueIssueTypeMappings; set { _explicitNullValueIssueTypeMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeMappings"); else _explicitNullProperties?.Remove("issueTypeMappings"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeIssueTypeMappingsProperty _explicitNullValueIssueTypeMappings = default!;
 #endif
         /// <summary>The issue types available in Jira.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -68,10 +86,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The name of the workflow scheme. The name must be unique. The maximum length is 255 characters. Required when creating a workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>For draft workflow schemes, this property is the name of the default workflow for the original workflow scheme. The default workflow has *All Unassigned Issue Types* assigned to it in Jira.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -98,7 +118,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public string Self { get; private set; }
 #endif
         /// <summary>Whether to create or update a draft workflow scheme when updating an active workflow scheme. An active workflow scheme is a workflow scheme that is used by at least one project. The following examples show how this property works: *  Update an active workflow scheme with `updateDraftIfNeeded` set to `true`: If a draft workflow scheme exists, it is updated. Otherwise, a draft workflow scheme is created. *  Update an active workflow scheme with `updateDraftIfNeeded` set to `false`: An error is returned, as active workflow schemes cannot be updated. *  Update an inactive workflow scheme with `updateDraftIfNeeded` set to `true`: The workflow scheme is updated, as inactive workflow schemes do not require drafts to update.Defaults to `false`.</summary>
-        public bool? UpdateDraftIfNeeded { get; set; }
+        public bool? UpdateDraftIfNeeded { get => _explicitNullValueUpdateDraftIfNeeded; set { _explicitNullValueUpdateDraftIfNeeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updateDraftIfNeeded"); else _explicitNullProperties?.Remove("updateDraftIfNeeded"); } }
+        private bool? _explicitNullValueUpdateDraftIfNeeded = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -107,7 +128,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowScheme CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowScheme();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowScheme(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -143,7 +164,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeIssueTypeMappingsProperty>("issueTypeMappings", IssueTypeMappings);
             writer.WriteStringValue("name", Name);
-            writer.WriteBoolValue("updateDraftIfNeeded", UpdateDraftIfNeeded);
+            writer.WriteBoolValue("updateDraftIfNeeded", UpdateDraftIfNeeded);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

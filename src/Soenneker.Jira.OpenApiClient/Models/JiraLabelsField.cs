@@ -11,32 +11,50 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class JiraLabelsField : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bulkEditMultiSelectFieldOption") is { } nullNodeBulkEditMultiSelectFieldOption && nullNodeBulkEditMultiSelectFieldOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkEditMultiSelectFieldOption = null;
+            if (parseNode.GetChildNode("fieldId") is { } nullNodeFieldId && nullNodeFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldId = null;
+            if (parseNode.GetChildNode("labelProperties") is { } nullNodeLabelProperties && nullNodeLabelProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelProperties = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+        }
+
         /// <summary>The bulkEditMultiSelectFieldOption property</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsFieldBulkEditMultiSelectFieldOption? BulkEditMultiSelectFieldOption { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsFieldBulkEditMultiSelectFieldOption? BulkEditMultiSelectFieldOption { get => _explicitNullValueBulkEditMultiSelectFieldOption; set { _explicitNullValueBulkEditMultiSelectFieldOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulkEditMultiSelectFieldOption"); else _explicitNullProperties?.Remove("bulkEditMultiSelectFieldOption"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsFieldBulkEditMultiSelectFieldOption? _explicitNullValueBulkEditMultiSelectFieldOption = default!;
         /// <summary>The fieldId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldId { get; set; }
+        public string? FieldId { get => _explicitNullValueFieldId; set { _explicitNullValueFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldId"); else _explicitNullProperties?.Remove("fieldId"); } }
+        private string? _explicitNullValueFieldId = default!;
 #nullable restore
 #else
-        public string FieldId { get; set; }
+        public string FieldId { get => _explicitNullValueFieldId; set { _explicitNullValueFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldId"); else _explicitNullProperties?.Remove("fieldId"); } }
+        private string _explicitNullValueFieldId = default!;
 #endif
         /// <summary>The labelProperties property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelPropertiesInputJackson1>? LabelProperties { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelPropertiesInputJackson1>? LabelProperties { get => _explicitNullValueLabelProperties; set { _explicitNullValueLabelProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labelProperties"); else _explicitNullProperties?.Remove("labelProperties"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelPropertiesInputJackson1>? _explicitNullValueLabelProperties = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelPropertiesInputJackson1> LabelProperties { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelPropertiesInputJackson1> LabelProperties { get => _explicitNullValueLabelProperties; set { _explicitNullValueLabelProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labelProperties"); else _explicitNullProperties?.Remove("labelProperties"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelPropertiesInputJackson1> _explicitNullValueLabelProperties = default!;
 #endif
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput>? Labels { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput>? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput> Labels { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput> _explicitNullValueLabels = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +64,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,7 +90,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsFieldBulkEditMultiSelectFieldOption>("bulkEditMultiSelectFieldOption", BulkEditMultiSelectFieldOption);
             writer.WriteStringValue("fieldId", FieldId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelPropertiesInputJackson1>("labelProperties", LabelProperties);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput>("labels", Labels);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsInput>("labels", Labels);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

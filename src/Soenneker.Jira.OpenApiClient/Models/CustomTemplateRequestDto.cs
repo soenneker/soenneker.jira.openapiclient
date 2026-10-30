@@ -12,94 +12,134 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomTemplateRequestDto : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("boardFeatures") is { } nullNodeBoardFeatures && nullNodeBoardFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoardFeatures = null;
+            if (parseNode.GetChildNode("boards") is { } nullNodeBoards && nullNodeBoards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Boards = null;
+            if (parseNode.GetChildNode("field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
+            if (parseNode.GetChildNode("issueType") is { } nullNodeIssueType && nullNodeIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueType = null;
+            if (parseNode.GetChildNode("notification") is { } nullNodeNotification && nullNodeNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notification = null;
+            if (parseNode.GetChildNode("permissionScheme") is { } nullNodePermissionScheme && nullNodePermissionScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionScheme = null;
+            if (parseNode.GetChildNode("project") is { } nullNodeProject && nullNodeProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Project = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
+            if (parseNode.GetChildNode("security") is { } nullNodeSecurity && nullNodeSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Security = null;
+            if (parseNode.GetChildNode("workflow") is { } nullNodeWorkflow && nullNodeWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Workflow = null;
+        }
+
         /// <summary>Configuration of features for one or more boards. Replaces the deprecated features field on BoardPayload</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload? BoardFeatures { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload? BoardFeatures { get => _explicitNullValueBoardFeatures; set { _explicitNullValueBoardFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boardFeatures"); else _explicitNullProperties?.Remove("boardFeatures"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload? _explicitNullValueBoardFeatures = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload BoardFeatures { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload BoardFeatures { get => _explicitNullValueBoardFeatures; set { _explicitNullValueBoardFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boardFeatures"); else _explicitNullProperties?.Remove("boardFeatures"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload _explicitNullValueBoardFeatures = default!;
 #endif
         /// <summary>The boards property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload? Boards { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload? Boards { get => _explicitNullValueBoards; set { _explicitNullValueBoards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boards"); else _explicitNullProperties?.Remove("boards"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload? _explicitNullValueBoards = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload Boards { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload Boards { get => _explicitNullValueBoards; set { _explicitNullValueBoards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boards"); else _explicitNullProperties?.Remove("boards"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload _explicitNullValueBoards = default!;
 #endif
         /// <summary>Defines the payload for the fields, screens, screen schemes, issue type screen schemes, field layouts, and field layout schemes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload? Field { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload? _explicitNullValueField = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload Field { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldCapabilityPayload _explicitNullValueField = default!;
 #endif
         /// <summary>The payload for creating issue types in a project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload? IssueType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload? IssueType { get => _explicitNullValueIssueType; set { _explicitNullValueIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueType"); else _explicitNullProperties?.Remove("issueType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload? _explicitNullValueIssueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload IssueType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload IssueType { get => _explicitNullValueIssueType; set { _explicitNullValueIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueType"); else _explicitNullProperties?.Remove("issueType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload _explicitNullValueIssueType = default!;
 #endif
         /// <summary>The payload for creating a notification scheme. The user has to supply the ID for the default notification scheme. For CMP this is provided in the project payload and should be left empty, for TMP it&apos;s provided using this payload</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemePayload? Notification { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemePayload? Notification { get => _explicitNullValueNotification; set { _explicitNullValueNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification"); else _explicitNullProperties?.Remove("notification"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemePayload? _explicitNullValueNotification = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemePayload Notification { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemePayload Notification { get => _explicitNullValueNotification; set { _explicitNullValueNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification"); else _explicitNullProperties?.Remove("notification"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemePayload _explicitNullValueNotification = default!;
 #endif
         /// <summary>The payload to create a permission scheme</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.PermissionPayloadDto? PermissionScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PermissionPayloadDto? PermissionScheme { get => _explicitNullValuePermissionScheme; set { _explicitNullValuePermissionScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionScheme"); else _explicitNullProperties?.Remove("permissionScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PermissionPayloadDto? _explicitNullValuePermissionScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.PermissionPayloadDto PermissionScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PermissionPayloadDto PermissionScheme { get => _explicitNullValuePermissionScheme; set { _explicitNullValuePermissionScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionScheme"); else _explicitNullProperties?.Remove("permissionScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PermissionPayloadDto _explicitNullValuePermissionScheme = default!;
 #endif
         /// <summary>The payload for creating a project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload? Project { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload? Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload? _explicitNullValueProject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload Project { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload _explicitNullValueProject = default!;
 #endif
         /// <summary>The role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload? Role { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload? _explicitNullValueRole = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload Role { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload _explicitNullValueRole = default!;
 #endif
         /// <summary>The payload for creating a scope. Defines if a project is team-managed project or company-managed project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ScopePayload? Scope { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ScopePayload? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ScopePayload? _explicitNullValueScope = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ScopePayload Scope { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ScopePayload Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ScopePayload _explicitNullValueScope = default!;
 #endif
         /// <summary>The payload for creating a security scheme. See https://support.atlassian.com/jira-cloud-administration/docs/configure-issue-security-schemes/</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemePayload? Security { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemePayload? Security { get => _explicitNullValueSecurity; set { _explicitNullValueSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security"); else _explicitNullProperties?.Remove("security"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemePayload? _explicitNullValueSecurity = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemePayload Security { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemePayload Security { get => _explicitNullValueSecurity; set { _explicitNullValueSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security"); else _explicitNullProperties?.Remove("security"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemePayload _explicitNullValueSecurity = default!;
 #endif
         /// <summary>The payload for creating a workflows. See https://www.atlassian.com/software/jira/guides/workflows/overview\#what-is-a-jira-workflow</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload? Workflow { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload? Workflow { get => _explicitNullValueWorkflow; set { _explicitNullValueWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow"); else _explicitNullProperties?.Remove("workflow"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload? _explicitNullValueWorkflow = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload Workflow { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload Workflow { get => _explicitNullValueWorkflow; set { _explicitNullValueWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow"); else _explicitNullProperties?.Remove("workflow"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload _explicitNullValueWorkflow = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -109,7 +149,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -149,7 +189,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload>("role", Role);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ScopePayload>("scope", Scope);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemePayload>("security", Security);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload>("workflow", Workflow);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilityPayload>("workflow", Workflow);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

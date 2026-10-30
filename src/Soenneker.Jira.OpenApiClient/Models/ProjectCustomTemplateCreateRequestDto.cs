@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectCustomTemplateCreateRequestDto : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+        }
+
         /// <summary>Project Details</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplatesProjectDetails? Details { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplatesProjectDetails? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomTemplatesProjectDetails? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplatesProjectDetails Details { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplatesProjectDetails Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomTemplatesProjectDetails _explicitNullValueDetails = default!;
 #endif
         /// <summary>The specific request object for creating a project with template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto? Template { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto Template { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto _explicitNullValueTemplate = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ProjectCustomTemplateCreateRequestDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ProjectCustomTemplateCreateRequestDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ProjectCustomTemplateCreateRequestDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomTemplatesProjectDetails>("details", Details);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto>("template", Template);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomTemplateRequestDto>("template", Template);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

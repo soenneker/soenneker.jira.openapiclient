@@ -12,25 +12,40 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdateCustomFieldDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("searcherKey") is { } nullNodeSearcherKey && nullNodeSearcherKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearcherKey = null;
+        }
+
         /// <summary>The description of the custom field. The maximum length is 40000 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The name of the custom field. It doesn&apos;t have to be unique. The maximum length is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The searcher that defines the way the field is searched in Jira. It can be set to `null`, otherwise you must specify the valid searcher for the field type, as listed below (abbreviated values shown): *  `cascadingselect`: `cascadingselectsearcher` *  `datepicker`: `daterange` *  `datetime`: `datetimerange` *  `float`: `exactnumber` or `numberrange` *  `grouppicker`: `grouppickersearcher` *  `importid`: `exactnumber` or `numberrange` *  `labels`: `labelsearcher` *  `multicheckboxes`: `multiselectsearcher` *  `multigrouppicker`: `multiselectsearcher` *  `multiselect`: `multiselectsearcher` *  `multiuserpicker`: `userpickergroupsearcher` *  `multiversion`: `versionsearcher` *  `project`: `projectsearcher` *  `radiobuttons`: `multiselectsearcher` *  `readonlyfield`: `textsearcher` *  `select`: `multiselectsearcher` *  `textarea`: `textsearcher` *  `textfield`: `textsearcher` *  `url`: `exacttextsearcher` *  `userpicker`: `userpickergroupsearcher` *  `version`: `versionsearcher`</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetailsSearcherKey? SearcherKey { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetailsSearcherKey? SearcherKey { get => _explicitNullValueSearcherKey; set { _explicitNullValueSearcherKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searcherKey"); else _explicitNullProperties?.Remove("searcherKey"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetailsSearcherKey? _explicitNullValueSearcherKey = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,7 +54,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +78,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetailsSearcherKey>("searcherKey", SearcherKey);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.UpdateCustomFieldDetailsSearcherKey>("searcherKey", SearcherKey);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

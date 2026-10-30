@@ -12,7 +12,17 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventNotificationProjectRole : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("currentUserRole") is { } nullNodeCurrentUserRole && nullNodeCurrentUserRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentUserRole = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("translatedName") is { } nullNodeTranslatedName && nullNodeTranslatedName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranslatedName = null;
+        }
+
         /// <summary>The list of users who act in this role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -24,7 +34,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>Whether this role is the admin role for the project.</summary>
         public bool? Admin { get; private set; }
         /// <summary>Whether the calling user is part of this role.</summary>
-        public bool? CurrentUserRole { get; set; }
+        public bool? CurrentUserRole { get => _explicitNullValueCurrentUserRole; set { _explicitNullValueCurrentUserRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("currentUserRole"); else _explicitNullProperties?.Remove("currentUserRole"); } }
+        private bool? _explicitNullValueCurrentUserRole = default!;
         /// <summary>Whether this role is the default role for the project</summary>
         public bool? Default { get; private set; }
         /// <summary>The description of the project role.</summary>
@@ -40,10 +51,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The name of the project role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Whether the roles are configurable for this project.</summary>
         public bool? RoleConfigurable { get; private set; }
@@ -66,10 +79,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The translated name of the project role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranslatedName { get; set; }
+        public string? TranslatedName { get => _explicitNullValueTranslatedName; set { _explicitNullValueTranslatedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedName"); else _explicitNullProperties?.Remove("translatedName"); } }
+        private string? _explicitNullValueTranslatedName = default!;
 #nullable restore
 #else
-        public string TranslatedName { get; set; }
+        public string TranslatedName { get => _explicitNullValueTranslatedName; set { _explicitNullValueTranslatedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedName"); else _explicitNullProperties?.Remove("translatedName"); } }
+        private string _explicitNullValueTranslatedName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -79,7 +94,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -111,7 +126,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("currentUserRole", CurrentUserRole);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("translatedName", TranslatedName);
+            writer.WriteStringValue("translatedName", TranslatedName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

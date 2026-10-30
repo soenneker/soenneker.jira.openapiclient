@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ParsedJqlQueryStructure : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("orderBy") is { } nullNodeOrderBy && nullNodeOrderBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderBy = null;
+            if (parseNode.GetChildNode("where") is { } nullNodeWhere && nullNodeWhere.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Where = null;
+        }
+
         /// <summary>Details of the order-by JQL clause.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryOrderByClause? OrderBy { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryOrderByClause? OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderBy"); else _explicitNullProperties?.Remove("orderBy"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryOrderByClause? _explicitNullValueOrderBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryOrderByClause OrderBy { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryOrderByClause OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orderBy"); else _explicitNullProperties?.Remove("orderBy"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryOrderByClause _explicitNullValueOrderBy = default!;
 #endif
         /// <summary>A JQL query clause.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause? Where { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause? Where { get => _explicitNullValueWhere; set { _explicitNullValueWhere = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("where"); else _explicitNullProperties?.Remove("where"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause? _explicitNullValueWhere = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause Where { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause Where { get => _explicitNullValueWhere; set { _explicitNullValueWhere = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("where"); else _explicitNullProperties?.Remove("where"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause _explicitNullValueWhere = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ParsedJqlQueryStructure CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ParsedJqlQueryStructure();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ParsedJqlQueryStructure(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryOrderByClause>("orderBy", OrderBy);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause>("where", Where);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClause>("where", Where);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

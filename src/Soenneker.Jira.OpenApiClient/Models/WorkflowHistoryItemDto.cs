@@ -12,26 +12,43 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowHistoryItemDto : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isIntermediate") is { } nullNodeIsIntermediate && nullNodeIsIntermediate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsIntermediate = null;
+            if (parseNode.GetChildNode("workflowId") is { } nullNodeWorkflowId && nullNodeWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowId = null;
+            if (parseNode.GetChildNode("workflowVersion") is { } nullNodeWorkflowVersion && nullNodeWorkflowVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowVersion = null;
+            if (parseNode.GetChildNode("writtenAt") is { } nullNodeWrittenAt && nullNodeWrittenAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WrittenAt = null;
+        }
+
         /// <summary>Whether the version is an intermediate workflow state, sometimes created during workflow updates.</summary>
-        public bool? IsIntermediate { get; set; }
+        public bool? IsIntermediate { get => _explicitNullValueIsIntermediate; set { _explicitNullValueIsIntermediate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isIntermediate"); else _explicitNullProperties?.Remove("isIntermediate"); } }
+        private bool? _explicitNullValueIsIntermediate = default!;
         /// <summary>The workflowId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowId { get; set; }
+        public string? WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        private string? _explicitNullValueWorkflowId = default!;
 #nullable restore
 #else
-        public string WorkflowId { get; set; }
+        public string WorkflowId { get => _explicitNullValueWorkflowId; set { _explicitNullValueWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowId"); else _explicitNullProperties?.Remove("workflowId"); } }
+        private string _explicitNullValueWorkflowId = default!;
 #endif
         /// <summary>The workflowVersion property</summary>
-        public long? WorkflowVersion { get; set; }
+        public long? WorkflowVersion { get => _explicitNullValueWorkflowVersion; set { _explicitNullValueWorkflowVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowVersion"); else _explicitNullProperties?.Remove("workflowVersion"); } }
+        private long? _explicitNullValueWorkflowVersion = default!;
         /// <summary>The timestamp when this workflow version was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WrittenAt { get; set; }
+        public string? WrittenAt { get => _explicitNullValueWrittenAt; set { _explicitNullValueWrittenAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("writtenAt"); else _explicitNullProperties?.Remove("writtenAt"); } }
+        private string? _explicitNullValueWrittenAt = default!;
 #nullable restore
 #else
-        public string WrittenAt { get; set; }
+        public string WrittenAt { get => _explicitNullValueWrittenAt; set { _explicitNullValueWrittenAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("writtenAt"); else _explicitNullProperties?.Remove("writtenAt"); } }
+        private string _explicitNullValueWrittenAt = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +58,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowHistoryItemDto CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowHistoryItemDto();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowHistoryItemDto(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +84,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteBoolValue("isIntermediate", IsIntermediate);
             writer.WriteStringValue("workflowId", WorkflowId);
             writer.WriteLongValue("workflowVersion", WorkflowVersion);
-            writer.WriteStringValue("writtenAt", WrittenAt);
+            writer.WriteStringValue("writtenAt", WrittenAt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

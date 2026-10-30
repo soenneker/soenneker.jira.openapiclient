@@ -12,25 +12,40 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SwimlanesPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customSwimlanes") is { } nullNodeCustomSwimlanes && nullNodeCustomSwimlanes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomSwimlanes = null;
+            if (parseNode.GetChildNode("defaultCustomSwimlaneName") is { } nullNodeDefaultCustomSwimlaneName && nullNodeDefaultCustomSwimlaneName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultCustomSwimlaneName = null;
+            if (parseNode.GetChildNode("swimlaneStrategy") is { } nullNodeSwimlaneStrategy && nullNodeSwimlaneStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SwimlaneStrategy = null;
+        }
+
         /// <summary>The custom swimlane definitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SwimlanePayload>? CustomSwimlanes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SwimlanePayload>? CustomSwimlanes { get => _explicitNullValueCustomSwimlanes; set { _explicitNullValueCustomSwimlanes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customSwimlanes"); else _explicitNullProperties?.Remove("customSwimlanes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SwimlanePayload>? _explicitNullValueCustomSwimlanes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SwimlanePayload> CustomSwimlanes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SwimlanePayload> CustomSwimlanes { get => _explicitNullValueCustomSwimlanes; set { _explicitNullValueCustomSwimlanes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customSwimlanes"); else _explicitNullProperties?.Remove("customSwimlanes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SwimlanePayload> _explicitNullValueCustomSwimlanes = default!;
 #endif
         /// <summary>The name of the custom swimlane to use for work items that don&apos;t match any other swimlanes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultCustomSwimlaneName { get; set; }
+        public string? DefaultCustomSwimlaneName { get => _explicitNullValueDefaultCustomSwimlaneName; set { _explicitNullValueDefaultCustomSwimlaneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultCustomSwimlaneName"); else _explicitNullProperties?.Remove("defaultCustomSwimlaneName"); } }
+        private string? _explicitNullValueDefaultCustomSwimlaneName = default!;
 #nullable restore
 #else
-        public string DefaultCustomSwimlaneName { get; set; }
+        public string DefaultCustomSwimlaneName { get => _explicitNullValueDefaultCustomSwimlaneName; set { _explicitNullValueDefaultCustomSwimlaneName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultCustomSwimlaneName"); else _explicitNullProperties?.Remove("defaultCustomSwimlaneName"); } }
+        private string _explicitNullValueDefaultCustomSwimlaneName = default!;
 #endif
         /// <summary>The swimlane strategy for the board.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayloadSwimlaneStrategy? SwimlaneStrategy { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayloadSwimlaneStrategy? SwimlaneStrategy { get => _explicitNullValueSwimlaneStrategy; set { _explicitNullValueSwimlaneStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swimlaneStrategy"); else _explicitNullProperties?.Remove("swimlaneStrategy"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayloadSwimlaneStrategy? _explicitNullValueSwimlaneStrategy = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,7 +54,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +78,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.SwimlanePayload>("customSwimlanes", CustomSwimlanes);
             writer.WriteStringValue("defaultCustomSwimlaneName", DefaultCustomSwimlaneName);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayloadSwimlaneStrategy>("swimlaneStrategy", SwimlaneStrategy);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayloadSwimlaneStrategy>("swimlaneStrategy", SwimlaneStrategy);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

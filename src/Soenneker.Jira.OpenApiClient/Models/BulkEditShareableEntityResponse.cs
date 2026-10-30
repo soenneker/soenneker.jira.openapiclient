@@ -12,16 +12,28 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkEditShareableEntityResponse : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("entityErrors") is { } nullNodeEntityErrors && nullNodeEntityErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntityErrors = null;
+        }
+
         /// <summary>Allowed action for bulk edit shareable entity</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseAction? Action { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseAction? _explicitNullValueAction = default!;
         /// <summary>The mapping dashboard id to errors if any.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty? EntityErrors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty? EntityErrors { get => _explicitNullValueEntityErrors; set { _explicitNullValueEntityErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityErrors"); else _explicitNullProperties?.Remove("entityErrors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty? _explicitNullValueEntityErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty EntityErrors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty EntityErrors { get => _explicitNullValueEntityErrors; set { _explicitNullValueEntityErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entityErrors"); else _explicitNullProperties?.Remove("entityErrors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty _explicitNullValueEntityErrors = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -31,7 +43,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,7 +65,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseAction>("action", Action);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty>("entityErrors", EntityErrors);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityResponseEntityErrorsProperty>("entityErrors", EntityErrors);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

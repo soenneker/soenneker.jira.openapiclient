@@ -11,70 +11,101 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class CreatePlanRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("crossProjectReleases") is { } nullNodeCrossProjectReleases && nullNodeCrossProjectReleases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrossProjectReleases = null;
+            if (parseNode.GetChildNode("customFields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("exclusionRules") is { } nullNodeExclusionRules && nullNodeExclusionRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExclusionRules = null;
+            if (parseNode.GetChildNode("issueSources") is { } nullNodeIssueSources && nullNodeIssueSources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueSources = null;
+            if (parseNode.GetChildNode("leadAccountId") is { } nullNodeLeadAccountId && nullNodeLeadAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadAccountId = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("scheduling") is { } nullNodeScheduling && nullNodeScheduling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scheduling = null;
+        }
+
         /// <summary>The cross-project releases to include in the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest>? CrossProjectReleases { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest>? CrossProjectReleases { get => _explicitNullValueCrossProjectReleases; set { _explicitNullValueCrossProjectReleases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crossProjectReleases"); else _explicitNullProperties?.Remove("crossProjectReleases"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest>? _explicitNullValueCrossProjectReleases = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest> CrossProjectReleases { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest> CrossProjectReleases { get => _explicitNullValueCrossProjectReleases; set { _explicitNullValueCrossProjectReleases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("crossProjectReleases"); else _explicitNullProperties?.Remove("crossProjectReleases"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest> _explicitNullValueCrossProjectReleases = default!;
 #endif
         /// <summary>The custom fields for the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest>? CustomFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFields"); else _explicitNullProperties?.Remove("customFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest> CustomFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFields"); else _explicitNullProperties?.Remove("customFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>The exclusion rules for the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestExclusionRules? ExclusionRules { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestExclusionRules? ExclusionRules { get => _explicitNullValueExclusionRules; set { _explicitNullValueExclusionRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusionRules"); else _explicitNullProperties?.Remove("exclusionRules"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestExclusionRules? _explicitNullValueExclusionRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestExclusionRules ExclusionRules { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestExclusionRules ExclusionRules { get => _explicitNullValueExclusionRules; set { _explicitNullValueExclusionRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclusionRules"); else _explicitNullProperties?.Remove("exclusionRules"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestExclusionRules _explicitNullValueExclusionRules = default!;
 #endif
         /// <summary>The issue sources to include in the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateIssueSourceRequest>? IssueSources { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateIssueSourceRequest>? IssueSources { get => _explicitNullValueIssueSources; set { _explicitNullValueIssueSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSources"); else _explicitNullProperties?.Remove("issueSources"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreateIssueSourceRequest>? _explicitNullValueIssueSources = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateIssueSourceRequest> IssueSources { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreateIssueSourceRequest> IssueSources { get => _explicitNullValueIssueSources; set { _explicitNullValueIssueSources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSources"); else _explicitNullProperties?.Remove("issueSources"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreateIssueSourceRequest> _explicitNullValueIssueSources = default!;
 #endif
         /// <summary>The account ID of the plan lead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadAccountId { get; set; }
+        public string? LeadAccountId { get => _explicitNullValueLeadAccountId; set { _explicitNullValueLeadAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadAccountId"); else _explicitNullProperties?.Remove("leadAccountId"); } }
+        private string? _explicitNullValueLeadAccountId = default!;
 #nullable restore
 #else
-        public string LeadAccountId { get; set; }
+        public string LeadAccountId { get => _explicitNullValueLeadAccountId; set { _explicitNullValueLeadAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadAccountId"); else _explicitNullProperties?.Remove("leadAccountId"); } }
+        private string _explicitNullValueLeadAccountId = default!;
 #endif
         /// <summary>The plan name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The permissions for the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreatePermissionRequest>? Permissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreatePermissionRequest>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreatePermissionRequest>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CreatePermissionRequest> Permissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CreatePermissionRequest> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CreatePermissionRequest> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The scheduling settings for the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling? Scheduling { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling? Scheduling { get => _explicitNullValueScheduling; set { _explicitNullValueScheduling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduling"); else _explicitNullProperties?.Remove("scheduling"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling? _explicitNullValueScheduling = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling Scheduling { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling Scheduling { get => _explicitNullValueScheduling; set { _explicitNullValueScheduling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scheduling"); else _explicitNullProperties?.Remove("scheduling"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling _explicitNullValueScheduling = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -84,7 +115,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,7 +149,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("leadAccountId", LeadAccountId);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.CreatePermissionRequest>("permissions", Permissions);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling>("scheduling", Scheduling);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CreatePlanRequestScheduling>("scheduling", Scheduling);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,43 +11,66 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class StatePolicyDocument : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isDefault") is { } nullNodeIsDefault && nullNodeIsDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsDefault = null;
+            if (parseNode.GetChildNode("policyDescription") is { } nullNodePolicyDescription && nullNodePolicyDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyDescription = null;
+            if (parseNode.GetChildNode("policyName") is { } nullNodePolicyName && nullNodePolicyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyName = null;
+            if (parseNode.GetChildNode("rulesByDomain") is { } nullNodeRulesByDomain && nullNodeRulesByDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RulesByDomain = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The isDefault property</summary>
-        public bool? IsDefault { get; set; }
+        public bool? IsDefault { get => _explicitNullValueIsDefault; set { _explicitNullValueIsDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isDefault"); else _explicitNullProperties?.Remove("isDefault"); } }
+        private bool? _explicitNullValueIsDefault = default!;
         /// <summary>The policyDescription property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyDescription { get; set; }
+        public string? PolicyDescription { get => _explicitNullValuePolicyDescription; set { _explicitNullValuePolicyDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policyDescription"); else _explicitNullProperties?.Remove("policyDescription"); } }
+        private string? _explicitNullValuePolicyDescription = default!;
 #nullable restore
 #else
-        public string PolicyDescription { get; set; }
+        public string PolicyDescription { get => _explicitNullValuePolicyDescription; set { _explicitNullValuePolicyDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policyDescription"); else _explicitNullProperties?.Remove("policyDescription"); } }
+        private string _explicitNullValuePolicyDescription = default!;
 #endif
         /// <summary>The policyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyName { get; set; }
+        public string? PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policyName"); else _explicitNullProperties?.Remove("policyName"); } }
+        private string? _explicitNullValuePolicyName = default!;
 #nullable restore
 #else
-        public string PolicyName { get; set; }
+        public string PolicyName { get => _explicitNullValuePolicyName; set { _explicitNullValuePolicyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policyName"); else _explicitNullProperties?.Remove("policyName"); } }
+        private string _explicitNullValuePolicyName = default!;
 #endif
         /// <summary>The rulesByDomain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocumentRulesByDomainProperty? RulesByDomain { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocumentRulesByDomainProperty? RulesByDomain { get => _explicitNullValueRulesByDomain; set { _explicitNullValueRulesByDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rulesByDomain"); else _explicitNullProperties?.Remove("rulesByDomain"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocumentRulesByDomainProperty? _explicitNullValueRulesByDomain = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocumentRulesByDomainProperty RulesByDomain { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocumentRulesByDomainProperty RulesByDomain { get => _explicitNullValueRulesByDomain; set { _explicitNullValueRulesByDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rulesByDomain"); else _explicitNullProperties?.Remove("rulesByDomain"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocumentRulesByDomainProperty _explicitNullValueRulesByDomain = default!;
 #endif
         /// <summary>The version property</summary>
-        public long? Version { get; set; }
+        public long? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private long? _explicitNullValueVersion = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -56,7 +79,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocument CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocument();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocument(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,7 +109,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("policyDescription", PolicyDescription);
             writer.WriteStringValue("policyName", PolicyName);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.StatePolicyDocumentRulesByDomainProperty>("rulesByDomain", RulesByDomain);
-            writer.WriteLongValue("version", Version);
+            writer.WriteLongValue("version", Version);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

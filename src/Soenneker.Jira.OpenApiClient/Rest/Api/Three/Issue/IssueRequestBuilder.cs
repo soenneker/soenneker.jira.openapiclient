@@ -43,6 +43,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Bulkfetch.BulkfetchRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The createmeta property</summary>
+        [Obsolete("")]
         public global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Createmeta.CreatemetaRequestBuilder Createmeta
         {
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Createmeta.CreatemetaRequestBuilder(PathParameters, RequestAdapter);
@@ -128,6 +129,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "422", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.CreatedIssue>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.CreatedIssue.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

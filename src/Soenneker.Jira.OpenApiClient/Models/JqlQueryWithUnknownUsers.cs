@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JqlQueryWithUnknownUsers : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("convertedQuery") is { } nullNodeConvertedQuery && nullNodeConvertedQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConvertedQuery = null;
+            if (parseNode.GetChildNode("originalQuery") is { } nullNodeOriginalQuery && nullNodeOriginalQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalQuery = null;
+        }
+
         /// <summary>The converted query, with accountIDs instead of user identifiers, or &apos;unknown&apos; for users that could not be found</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConvertedQuery { get; set; }
+        public string? ConvertedQuery { get => _explicitNullValueConvertedQuery; set { _explicitNullValueConvertedQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("convertedQuery"); else _explicitNullProperties?.Remove("convertedQuery"); } }
+        private string? _explicitNullValueConvertedQuery = default!;
 #nullable restore
 #else
-        public string ConvertedQuery { get; set; }
+        public string ConvertedQuery { get => _explicitNullValueConvertedQuery; set { _explicitNullValueConvertedQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("convertedQuery"); else _explicitNullProperties?.Remove("convertedQuery"); } }
+        private string _explicitNullValueConvertedQuery = default!;
 #endif
         /// <summary>The original query, for reference</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalQuery { get; set; }
+        public string? OriginalQuery { get => _explicitNullValueOriginalQuery; set { _explicitNullValueOriginalQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalQuery"); else _explicitNullProperties?.Remove("originalQuery"); } }
+        private string? _explicitNullValueOriginalQuery = default!;
 #nullable restore
 #else
-        public string OriginalQuery { get; set; }
+        public string OriginalQuery { get => _explicitNullValueOriginalQuery; set { _explicitNullValueOriginalQuery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalQuery"); else _explicitNullProperties?.Remove("originalQuery"); } }
+        private string _explicitNullValueOriginalQuery = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("convertedQuery", ConvertedQuery);
-            writer.WriteStringValue("originalQuery", OriginalQuery);
+            writer.WriteStringValue("originalQuery", OriginalQuery);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

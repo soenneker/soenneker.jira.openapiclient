@@ -12,104 +12,154 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Field : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contextsCount") is { } nullNodeContextsCount && nullNodeContextsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextsCount = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isLocked") is { } nullNodeIsLocked && nullNodeIsLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocked = null;
+            if (parseNode.GetChildNode("isUnscreenable") is { } nullNodeIsUnscreenable && nullNodeIsUnscreenable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUnscreenable = null;
+            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("lastUsed") is { } nullNodeLastUsed && nullNodeLastUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUsed = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("projectsCount") is { } nullNodeProjectsCount && nullNodeProjectsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectsCount = null;
+            if (parseNode.GetChildNode("schema") is { } nullNodeSchema && nullNodeSchema.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schema = null;
+            if (parseNode.GetChildNode("screensCount") is { } nullNodeScreensCount && nullNodeScreensCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScreensCount = null;
+            if (parseNode.GetChildNode("searcherKey") is { } nullNodeSearcherKey && nullNodeSearcherKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearcherKey = null;
+            if (parseNode.GetChildNode("stableId") is { } nullNodeStableId && nullNodeStableId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StableId = null;
+            if (parseNode.GetChildNode("translatedDescription") is { } nullNodeTranslatedDescription && nullNodeTranslatedDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranslatedDescription = null;
+            if (parseNode.GetChildNode("translatedName") is { } nullNodeTranslatedName && nullNodeTranslatedName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TranslatedName = null;
+            if (parseNode.GetChildNode("typeDisplayName") is { } nullNodeTypeDisplayName && nullNodeTypeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TypeDisplayName = null;
+        }
+
         /// <summary>Number of contexts where the field is used.</summary>
-        public long? ContextsCount { get; set; }
+        public long? ContextsCount { get => _explicitNullValueContextsCount; set { _explicitNullValueContextsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contextsCount"); else _explicitNullProperties?.Remove("contextsCount"); } }
+        private long? _explicitNullValueContextsCount = default!;
         /// <summary>The description of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The ID of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the field is locked.</summary>
-        public bool? IsLocked { get; set; }
+        public bool? IsLocked { get => _explicitNullValueIsLocked; set { _explicitNullValueIsLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isLocked"); else _explicitNullProperties?.Remove("isLocked"); } }
+        private bool? _explicitNullValueIsLocked = default!;
         /// <summary>Whether the field is shown on screen or not.</summary>
-        public bool? IsUnscreenable { get; set; }
+        public bool? IsUnscreenable { get => _explicitNullValueIsUnscreenable; set { _explicitNullValueIsUnscreenable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUnscreenable"); else _explicitNullProperties?.Remove("isUnscreenable"); } }
+        private bool? _explicitNullValueIsUnscreenable = default!;
         /// <summary>The key of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get; set; }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>Information about the most recent use of a field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldLastUsed? LastUsed { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldLastUsed? LastUsed { get => _explicitNullValueLastUsed; set { _explicitNullValueLastUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUsed"); else _explicitNullProperties?.Remove("lastUsed"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldLastUsed? _explicitNullValueLastUsed = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldLastUsed LastUsed { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldLastUsed LastUsed { get => _explicitNullValueLastUsed; set { _explicitNullValueLastUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUsed"); else _explicitNullProperties?.Remove("lastUsed"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldLastUsed _explicitNullValueLastUsed = default!;
 #endif
         /// <summary>The name of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Number of projects where the field is used.</summary>
-        public long? ProjectsCount { get; set; }
+        public long? ProjectsCount { get => _explicitNullValueProjectsCount; set { _explicitNullValueProjectsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectsCount"); else _explicitNullProperties?.Remove("projectsCount"); } }
+        private long? _explicitNullValueProjectsCount = default!;
         /// <summary>The schema of a field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonTypeBean? Schema { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonTypeBean? Schema { get => _explicitNullValueSchema; set { _explicitNullValueSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schema"); else _explicitNullProperties?.Remove("schema"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonTypeBean? _explicitNullValueSchema = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JsonTypeBean Schema { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JsonTypeBean Schema { get => _explicitNullValueSchema; set { _explicitNullValueSchema = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schema"); else _explicitNullProperties?.Remove("schema"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JsonTypeBean _explicitNullValueSchema = default!;
 #endif
         /// <summary>Number of screens where the field is used.</summary>
-        public long? ScreensCount { get; set; }
+        public long? ScreensCount { get => _explicitNullValueScreensCount; set { _explicitNullValueScreensCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("screensCount"); else _explicitNullProperties?.Remove("screensCount"); } }
+        private long? _explicitNullValueScreensCount = default!;
         /// <summary>The searcher key of the field. Returned for custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearcherKey { get; set; }
+        public string? SearcherKey { get => _explicitNullValueSearcherKey; set { _explicitNullValueSearcherKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searcherKey"); else _explicitNullProperties?.Remove("searcherKey"); } }
+        private string? _explicitNullValueSearcherKey = default!;
 #nullable restore
 #else
-        public string SearcherKey { get; set; }
+        public string SearcherKey { get => _explicitNullValueSearcherKey; set { _explicitNullValueSearcherKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searcherKey"); else _explicitNullProperties?.Remove("searcherKey"); } }
+        private string _explicitNullValueSearcherKey = default!;
 #endif
         /// <summary>The stable ID of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StableId { get; set; }
+        public string? StableId { get => _explicitNullValueStableId; set { _explicitNullValueStableId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableId"); else _explicitNullProperties?.Remove("stableId"); } }
+        private string? _explicitNullValueStableId = default!;
 #nullable restore
 #else
-        public string StableId { get; set; }
+        public string StableId { get => _explicitNullValueStableId; set { _explicitNullValueStableId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stableId"); else _explicitNullProperties?.Remove("stableId"); } }
+        private string _explicitNullValueStableId = default!;
 #endif
         /// <summary>The translated (i18n) description of the field for the current locale. Returned for custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranslatedDescription { get; set; }
+        public string? TranslatedDescription { get => _explicitNullValueTranslatedDescription; set { _explicitNullValueTranslatedDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedDescription"); else _explicitNullProperties?.Remove("translatedDescription"); } }
+        private string? _explicitNullValueTranslatedDescription = default!;
 #nullable restore
 #else
-        public string TranslatedDescription { get; set; }
+        public string TranslatedDescription { get => _explicitNullValueTranslatedDescription; set { _explicitNullValueTranslatedDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedDescription"); else _explicitNullProperties?.Remove("translatedDescription"); } }
+        private string _explicitNullValueTranslatedDescription = default!;
 #endif
         /// <summary>The translated (i18n) name of the field for the current locale. Returned for custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TranslatedName { get; set; }
+        public string? TranslatedName { get => _explicitNullValueTranslatedName; set { _explicitNullValueTranslatedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedName"); else _explicitNullProperties?.Remove("translatedName"); } }
+        private string? _explicitNullValueTranslatedName = default!;
 #nullable restore
 #else
-        public string TranslatedName { get; set; }
+        public string TranslatedName { get => _explicitNullValueTranslatedName; set { _explicitNullValueTranslatedName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("translatedName"); else _explicitNullProperties?.Remove("translatedName"); } }
+        private string _explicitNullValueTranslatedName = default!;
 #endif
         /// <summary>The display name of the field type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TypeDisplayName { get; set; }
+        public string? TypeDisplayName { get => _explicitNullValueTypeDisplayName; set { _explicitNullValueTypeDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typeDisplayName"); else _explicitNullProperties?.Remove("typeDisplayName"); } }
+        private string? _explicitNullValueTypeDisplayName = default!;
 #nullable restore
 #else
-        public string TypeDisplayName { get; set; }
+        public string TypeDisplayName { get => _explicitNullValueTypeDisplayName; set { _explicitNullValueTypeDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("typeDisplayName"); else _explicitNullProperties?.Remove("typeDisplayName"); } }
+        private string _explicitNullValueTypeDisplayName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -119,7 +169,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.Field CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.Field();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.Field(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -169,7 +219,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("stableId", StableId);
             writer.WriteStringValue("translatedDescription", TranslatedDescription);
             writer.WriteStringValue("translatedName", TranslatedName);
-            writer.WriteStringValue("typeDisplayName", TypeDisplayName);
+            writer.WriteStringValue("typeDisplayName", TypeDisplayName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,25 +12,45 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkAgentSessionsResponse : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("alreadyStartedCount") is { } nullNodeAlreadyStartedCount && nullNodeAlreadyStartedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AlreadyStartedCount = null;
+            if (parseNode.GetChildNode("failedCount") is { } nullNodeFailedCount && nullNodeFailedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedCount = null;
+            if (parseNode.GetChildNode("rateLimitedCount") is { } nullNodeRateLimitedCount && nullNodeRateLimitedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RateLimitedCount = null;
+            if (parseNode.GetChildNode("results") is { } nullNodeResults && nullNodeResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Results = null;
+            if (parseNode.GetChildNode("startedCount") is { } nullNodeStartedCount && nullNodeStartedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedCount = null;
+            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+        }
+
         /// <summary>Number of ALREADY\_STARTED items.</summary>
-        public int? AlreadyStartedCount { get; set; }
+        public int? AlreadyStartedCount { get => _explicitNullValueAlreadyStartedCount; set { _explicitNullValueAlreadyStartedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("alreadyStartedCount"); else _explicitNullProperties?.Remove("alreadyStartedCount"); } }
+        private int? _explicitNullValueAlreadyStartedCount = default!;
         /// <summary>Number of FAILED and IN\_DOUBT items.</summary>
-        public int? FailedCount { get; set; }
+        public int? FailedCount { get => _explicitNullValueFailedCount; set { _explicitNullValueFailedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failedCount"); else _explicitNullProperties?.Remove("failedCount"); } }
+        private int? _explicitNullValueFailedCount = default!;
         /// <summary>Number of RATE\_LIMITED items.</summary>
-        public int? RateLimitedCount { get; set; }
+        public int? RateLimitedCount { get => _explicitNullValueRateLimitedCount; set { _explicitNullValueRateLimitedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rateLimitedCount"); else _explicitNullProperties?.Remove("rateLimitedCount"); } }
+        private int? _explicitNullValueRateLimitedCount = default!;
         /// <summary>One outcome per requested item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionOutcome>? Results { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionOutcome>? Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionOutcome>? _explicitNullValueResults = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionOutcome> Results { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionOutcome> Results { get => _explicitNullValueResults; set { _explicitNullValueResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("results"); else _explicitNullProperties?.Remove("results"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionOutcome> _explicitNullValueResults = default!;
 #endif
         /// <summary>Number of STARTED items.</summary>
-        public int? StartedCount { get; set; }
+        public int? StartedCount { get => _explicitNullValueStartedCount; set { _explicitNullValueStartedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedCount"); else _explicitNullProperties?.Remove("startedCount"); } }
+        private int? _explicitNullValueStartedCount = default!;
         /// <summary>True when startedCount or alreadyStartedCount is greater than zero. Does not indicate that every item succeeded.</summary>
-        public bool? Success { get; set; }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,7 +59,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +89,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteIntValue("rateLimitedCount", RateLimitedCount);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionOutcome>("results", Results);
             writer.WriteIntValue("startedCount", StartedCount);
-            writer.WriteBoolValue("success", Success);
+            writer.WriteBoolValue("success", Success);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

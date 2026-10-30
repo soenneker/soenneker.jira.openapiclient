@@ -60,7 +60,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Priorityscheme.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates a priority scheme. This includes its details, the lists of priorities and projects in it**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
@@ -84,6 +84,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Priorityscheme.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "422", global::Soenneker.Jira.OpenApiClient.Models.LimitExceededResponseBean.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeResponseBean>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeResponseBean.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

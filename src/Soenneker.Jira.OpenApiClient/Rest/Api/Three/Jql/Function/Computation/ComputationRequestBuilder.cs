@@ -55,12 +55,12 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Function.Computation
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBean2JqlFunctionPrecomputationBean>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBean2JqlFunctionPrecomputationBean.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBean2JqlFunctionPrecomputationBean>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBean2JqlFunctionPrecomputationBean.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the precomputation value of a function created by a Forge/Connect app.**[Permissions](#permissions) required:** An API for apps to update their own precomputations.The new `write:app-data:jira` OAuth scope is 100% optional now, and not using it won&apos;t break your app. However, we recommend adding it to your app&apos;s scope list because we will eventually make it mandatory.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.UpdatePrecomputationsSuccessResponse"/></returns>
         /// <param name="body">List of pairs (id and value) for precomputation updates.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -69,11 +69,11 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Function.Computation
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateErrorResponse">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateResponse?> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateRequestBean body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Function.Computation.ComputationRequestBuilder.ComputationRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrecomputationsSuccessResponse?> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateRequestBean body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Function.Computation.ComputationRequestBuilder.ComputationRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateResponse> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateRequestBean body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Function.Computation.ComputationRequestBuilder.ComputationRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrecomputationsSuccessResponse> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateRequestBean body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Function.Computation.ComputationRequestBuilder.ComputationRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -83,8 +83,10 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Function.Computation
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.JqlFunctionPrecomputationUpdateResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrecomputationsSuccessResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.UpdatePrecomputationsSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the list of a function&apos;s precomputations along with information about when they were created, updated, and last used. Each precomputation has a `value` \- the JQL fragment to replace the custom function clause with.**[Permissions](#permissions) required:** This API is only accessible to apps and apps can only inspect their own functions.The new `read:app-data:jira` OAuth scope is 100% optional now, and not using it won&apos;t break your app. However, we recommend adding it to your app&apos;s scope list because we will eventually make it mandatory.

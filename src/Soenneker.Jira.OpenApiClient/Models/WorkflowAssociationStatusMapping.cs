@@ -11,22 +11,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowAssociationStatusMapping : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("newStatusId") is { } nullNodeNewStatusId && nullNodeNewStatusId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewStatusId = null;
+            if (parseNode.GetChildNode("oldStatusId") is { } nullNodeOldStatusId && nullNodeOldStatusId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldStatusId = null;
+        }
+
         /// <summary>The newStatusId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewStatusId { get; set; }
+        public string? NewStatusId { get => _explicitNullValueNewStatusId; set { _explicitNullValueNewStatusId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newStatusId"); else _explicitNullProperties?.Remove("newStatusId"); } }
+        private string? _explicitNullValueNewStatusId = default!;
 #nullable restore
 #else
-        public string NewStatusId { get; set; }
+        public string NewStatusId { get => _explicitNullValueNewStatusId; set { _explicitNullValueNewStatusId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newStatusId"); else _explicitNullProperties?.Remove("newStatusId"); } }
+        private string _explicitNullValueNewStatusId = default!;
 #endif
         /// <summary>The oldStatusId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OldStatusId { get; set; }
+        public string? OldStatusId { get => _explicitNullValueOldStatusId; set { _explicitNullValueOldStatusId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldStatusId"); else _explicitNullProperties?.Remove("oldStatusId"); } }
+        private string? _explicitNullValueOldStatusId = default!;
 #nullable restore
 #else
-        public string OldStatusId { get; set; }
+        public string OldStatusId { get => _explicitNullValueOldStatusId; set { _explicitNullValueOldStatusId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldStatusId"); else _explicitNullProperties?.Remove("oldStatusId"); } }
+        private string _explicitNullValueOldStatusId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowAssociationStatusMapping CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowAssociationStatusMapping();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowAssociationStatusMapping(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +71,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("newStatusId", NewStatusId);
-            writer.WriteStringValue("oldStatusId", OldStatusId);
+            writer.WriteStringValue("oldStatusId", OldStatusId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

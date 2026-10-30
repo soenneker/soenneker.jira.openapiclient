@@ -12,26 +12,41 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FieldChangedClause : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
+            if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("predicates") is { } nullNodePredicates && nullNodePredicates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Predicates = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A field used in a JQL query. See [Advanced searching - fields reference](https://confluence.atlassian.com/x/dAiiLQ) for more information about fields in JQL queries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryField? Field { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryField? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryField? _explicitNullValueField = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryField Field { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryField Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryField _explicitNullValueField = default!;
 #endif
         /// <summary>The operator applied to the field.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ChangedOperator? Operator { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ChangedOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ChangedOperator? _explicitNullValueOperator = default!;
         /// <summary>The list of time predicates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate>? Predicates { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate>? Predicates { get => _explicitNullValuePredicates; set { _explicitNullValuePredicates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicates"); else _explicitNullProperties?.Remove("predicates"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate>? _explicitNullValuePredicates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate> Predicates { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate> Predicates { get => _explicitNullValuePredicates; set { _explicitNullValuePredicates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicates"); else _explicitNullProperties?.Remove("predicates"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate> _explicitNullValuePredicates = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.FieldChangedClause"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.FieldChangedClause CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.FieldChangedClause();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.FieldChangedClause(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryField>("field", Field);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.ChangedOperator>("operator", Operator);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate>("predicates", Predicates);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

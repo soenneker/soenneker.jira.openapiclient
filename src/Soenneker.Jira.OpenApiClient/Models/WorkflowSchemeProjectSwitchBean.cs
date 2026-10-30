@@ -12,32 +12,48 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowSchemeProjectSwitchBean : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("mappingsByIssueTypeOverride") is { } nullNodeMappingsByIssueTypeOverride && nullNodeMappingsByIssueTypeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappingsByIssueTypeOverride = null;
+            if (parseNode.GetChildNode("projectId") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("targetSchemeId") is { } nullNodeTargetSchemeId && nullNodeTargetSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetSchemeId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The mappings for migrating issues from old statuses to new statuses when switching from one workflow scheme to another. This field is required if any statuses in the current project&apos;s workflows would no longer exist in the target workflow scheme. Each mapping defines how to update issues from an old status to the corresponding new status in the issue’s new workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? MappingsByIssueTypeOverride { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? MappingsByIssueTypeOverride { get => _explicitNullValueMappingsByIssueTypeOverride; set { _explicitNullValueMappingsByIssueTypeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("mappingsByIssueTypeOverride"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? _explicitNullValueMappingsByIssueTypeOverride = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> MappingsByIssueTypeOverride { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> MappingsByIssueTypeOverride { get => _explicitNullValueMappingsByIssueTypeOverride; set { _explicitNullValueMappingsByIssueTypeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("mappingsByIssueTypeOverride"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> _explicitNullValueMappingsByIssueTypeOverride = default!;
 #endif
         /// <summary>The ID of the project to switch the workflow scheme for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get; set; }
+        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        private string? _explicitNullValueProjectId = default!;
 #nullable restore
 #else
-        public string ProjectId { get; set; }
+        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        private string _explicitNullValueProjectId = default!;
 #endif
         /// <summary>The ID of the target workflow scheme to switch to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetSchemeId { get; set; }
+        public string? TargetSchemeId { get => _explicitNullValueTargetSchemeId; set { _explicitNullValueTargetSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetSchemeId"); else _explicitNullProperties?.Remove("targetSchemeId"); } }
+        private string? _explicitNullValueTargetSchemeId = default!;
 #nullable restore
 #else
-        public string TargetSchemeId { get; set; }
+        public string TargetSchemeId { get => _explicitNullValueTargetSchemeId; set { _explicitNullValueTargetSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetSchemeId"); else _explicitNullProperties?.Remove("targetSchemeId"); } }
+        private string _explicitNullValueTargetSchemeId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectSwitchBean"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectSwitchBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectSwitchBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectSwitchBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>("mappingsByIssueTypeOverride", MappingsByIssueTypeOverride);
             writer.WriteStringValue("projectId", ProjectId);
             writer.WriteStringValue("targetSchemeId", TargetSchemeId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,30 +11,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IncludedFields : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actuallyIncluded") is { } nullNodeActuallyIncluded && nullNodeActuallyIncluded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActuallyIncluded = null;
+            if (parseNode.GetChildNode("excluded") is { } nullNodeExcluded && nullNodeExcluded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Excluded = null;
+            if (parseNode.GetChildNode("included") is { } nullNodeIncluded && nullNodeIncluded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Included = null;
+        }
+
         /// <summary>The actuallyIncluded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ActuallyIncluded { get; set; }
+        public List<string>? ActuallyIncluded { get => _explicitNullValueActuallyIncluded; set { _explicitNullValueActuallyIncluded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actuallyIncluded"); else _explicitNullProperties?.Remove("actuallyIncluded"); } }
+        private List<string>? _explicitNullValueActuallyIncluded = default!;
 #nullable restore
 #else
-        public List<string> ActuallyIncluded { get; set; }
+        public List<string> ActuallyIncluded { get => _explicitNullValueActuallyIncluded; set { _explicitNullValueActuallyIncluded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actuallyIncluded"); else _explicitNullProperties?.Remove("actuallyIncluded"); } }
+        private List<string> _explicitNullValueActuallyIncluded = default!;
 #endif
         /// <summary>The excluded property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Excluded { get; set; }
+        public List<string>? Excluded { get => _explicitNullValueExcluded; set { _explicitNullValueExcluded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded"); else _explicitNullProperties?.Remove("excluded"); } }
+        private List<string>? _explicitNullValueExcluded = default!;
 #nullable restore
 #else
-        public List<string> Excluded { get; set; }
+        public List<string> Excluded { get => _explicitNullValueExcluded; set { _explicitNullValueExcluded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("excluded"); else _explicitNullProperties?.Remove("excluded"); } }
+        private List<string> _explicitNullValueExcluded = default!;
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Included { get; set; }
+        public List<string>? Included { get => _explicitNullValueIncluded; set { _explicitNullValueIncluded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("included"); else _explicitNullProperties?.Remove("included"); } }
+        private List<string>? _explicitNullValueIncluded = default!;
 #nullable restore
 #else
-        public List<string> Included { get; set; }
+        public List<string> Included { get => _explicitNullValueIncluded; set { _explicitNullValueIncluded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("included"); else _explicitNullProperties?.Remove("included"); } }
+        private List<string> _explicitNullValueIncluded = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +60,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IncludedFields CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IncludedFields();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IncludedFields(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +84,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("actuallyIncluded", ActuallyIncluded);
             writer.WriteCollectionOfPrimitiveValues<string>("excluded", Excluded);
-            writer.WriteCollectionOfPrimitiveValues<string>("included", Included);
+            writer.WriteCollectionOfPrimitiveValues<string>("included", Included);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

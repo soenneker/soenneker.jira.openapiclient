@@ -11,19 +11,33 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkOperationErrorResult : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("elementErrors") is { } nullNodeElementErrors && nullNodeElementErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ElementErrors = null;
+            if (parseNode.GetChildNode("failedElementNumber") is { } nullNodeFailedElementNumber && nullNodeFailedElementNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedElementNumber = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Error messages from an operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection? ElementErrors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection? ElementErrors { get => _explicitNullValueElementErrors; set { _explicitNullValueElementErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elementErrors"); else _explicitNullProperties?.Remove("elementErrors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection? _explicitNullValueElementErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection ElementErrors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection ElementErrors { get => _explicitNullValueElementErrors; set { _explicitNullValueElementErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elementErrors"); else _explicitNullProperties?.Remove("elementErrors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection _explicitNullValueElementErrors = default!;
 #endif
         /// <summary>The failedElementNumber property</summary>
-        public int? FailedElementNumber { get; set; }
+        public int? FailedElementNumber { get => _explicitNullValueFailedElementNumber; set { _explicitNullValueFailedElementNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failedElementNumber"); else _explicitNullProperties?.Remove("failedElementNumber"); } }
+        private int? _explicitNullValueFailedElementNumber = default!;
         /// <summary>The status property</summary>
-        public int? Status { get; set; }
+        public int? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private int? _explicitNullValueStatus = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -32,7 +46,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkOperationErrorResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkOperationErrorResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkOperationErrorResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,7 +70,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection>("elementErrors", ElementErrors);
             writer.WriteIntValue("failedElementNumber", FailedElementNumber);
-            writer.WriteIntValue("status", Status);
+            writer.WriteIntValue("status", Status);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,24 +12,39 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CreatedIssueWatchers : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("errorCollection") is { } nullNodeErrorCollection && nullNodeErrorCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCollection = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("warningCollection") is { } nullNodeWarningCollection && nullNodeWarningCollection.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningCollection = null;
+        }
+
         /// <summary>Error messages from an operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection? ErrorCollection { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection? ErrorCollection { get => _explicitNullValueErrorCollection; set { _explicitNullValueErrorCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorCollection"); else _explicitNullProperties?.Remove("errorCollection"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection? _explicitNullValueErrorCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection ErrorCollection { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection ErrorCollection { get => _explicitNullValueErrorCollection; set { _explicitNullValueErrorCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorCollection"); else _explicitNullProperties?.Remove("errorCollection"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection _explicitNullValueErrorCollection = default!;
 #endif
         /// <summary>The status property</summary>
-        public int? Status { get; set; }
+        public int? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private int? _explicitNullValueStatus = default!;
         /// <summary>The warningCollection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WarningCollection? WarningCollection { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WarningCollection? WarningCollection { get => _explicitNullValueWarningCollection; set { _explicitNullValueWarningCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningCollection"); else _explicitNullProperties?.Remove("warningCollection"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WarningCollection? _explicitNullValueWarningCollection = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WarningCollection WarningCollection { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WarningCollection WarningCollection { get => _explicitNullValueWarningCollection; set { _explicitNullValueWarningCollection = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warningCollection"); else _explicitNullProperties?.Remove("warningCollection"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WarningCollection _explicitNullValueWarningCollection = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +54,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CreatedIssueWatchers CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CreatedIssueWatchers();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CreatedIssueWatchers(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +78,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection>("errorCollection", ErrorCollection);
             writer.WriteIntValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WarningCollection>("warningCollection", WarningCollection);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WarningCollection>("warningCollection", WarningCollection);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

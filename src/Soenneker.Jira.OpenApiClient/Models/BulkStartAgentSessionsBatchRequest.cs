@@ -12,16 +12,28 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkStartAgentSessionsBatchRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("clientMutationId") is { } nullNodeClientMutationId && nullNodeClientMutationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientMutationId = null;
+            if (parseNode.GetChildNode("invocations") is { } nullNodeInvocations && nullNodeInvocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invocations = null;
+        }
+
         /// <summary>Caller-supplied UUID</summary>
-        public Guid? ClientMutationId { get; set; }
+        public Guid? ClientMutationId { get => _explicitNullValueClientMutationId; set { _explicitNullValueClientMutationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientMutationId"); else _explicitNullProperties?.Remove("clientMutationId"); } }
+        private Guid? _explicitNullValueClientMutationId = default!;
         /// <summary>Between 1 and 50 invocations. Request IDs must be unique within the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation>? Invocations { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation>? Invocations { get => _explicitNullValueInvocations; set { _explicitNullValueInvocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invocations"); else _explicitNullProperties?.Remove("invocations"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation>? _explicitNullValueInvocations = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation> Invocations { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation> Invocations { get => _explicitNullValueInvocations; set { _explicitNullValueInvocations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invocations"); else _explicitNullProperties?.Remove("invocations"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation> _explicitNullValueInvocations = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -31,7 +43,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkStartAgentSessionsBatchRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkStartAgentSessionsBatchRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkStartAgentSessionsBatchRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,7 +65,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteGuidValue("clientMutationId", ClientMutationId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation>("invocations", Invocations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.BulkAgentSessionInvocation>("invocations", Invocations);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

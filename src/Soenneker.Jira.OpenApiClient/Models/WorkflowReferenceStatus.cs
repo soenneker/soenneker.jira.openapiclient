@@ -12,40 +12,61 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowReferenceStatus : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvalConfiguration") is { } nullNodeApprovalConfiguration && nullNodeApprovalConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalConfiguration = null;
+            if (parseNode.GetChildNode("deprecated") is { } nullNodeDeprecated && nullNodeDeprecated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Deprecated = null;
+            if (parseNode.GetChildNode("layout") is { } nullNodeLayout && nullNodeLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Layout = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("statusReference") is { } nullNodeStatusReference && nullNodeStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusReference = null;
+        }
+
         /// <summary>The approval configuration of a status within a workflow. Applies only to Jira Service Management approvals.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration? ApprovalConfiguration { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration? ApprovalConfiguration { get => _explicitNullValueApprovalConfiguration; set { _explicitNullValueApprovalConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalConfiguration"); else _explicitNullProperties?.Remove("approvalConfiguration"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration? _explicitNullValueApprovalConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration ApprovalConfiguration { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration ApprovalConfiguration { get => _explicitNullValueApprovalConfiguration; set { _explicitNullValueApprovalConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalConfiguration"); else _explicitNullProperties?.Remove("approvalConfiguration"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration _explicitNullValueApprovalConfiguration = default!;
 #endif
         /// <summary>Indicates if the status is deprecated.</summary>
-        public bool? Deprecated { get; set; }
+        public bool? Deprecated { get => _explicitNullValueDeprecated; set { _explicitNullValueDeprecated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deprecated"); else _explicitNullProperties?.Remove("deprecated"); } }
+        private bool? _explicitNullValueDeprecated = default!;
         /// <summary>The x and y location of the status in the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowStatusLayout? Layout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowStatusLayout? Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowStatusLayout? _explicitNullValueLayout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowStatusLayout Layout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowStatusLayout Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowStatusLayout _explicitNullValueLayout = default!;
 #endif
         /// <summary>The properties associated with the status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatusPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatusPropertiesProperty? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatusPropertiesProperty? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatusPropertiesProperty Properties { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatusPropertiesProperty Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatusPropertiesProperty _explicitNullValueProperties = default!;
 #endif
         /// <summary>The reference of the status.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusReference { get; set; }
+        public string? StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
+        private string? _explicitNullValueStatusReference = default!;
 #nullable restore
 #else
-        public string StatusReference { get; set; }
+        public string StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
+        private string _explicitNullValueStatusReference = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +76,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,7 +104,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteBoolValue("deprecated", Deprecated);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowStatusLayout>("layout", Layout);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowReferenceStatusPropertiesProperty>("properties", Properties);
-            writer.WriteStringValue("statusReference", StatusReference);
+            writer.WriteStringValue("statusReference", StatusReference);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

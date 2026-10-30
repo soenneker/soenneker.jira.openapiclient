@@ -11,38 +11,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssueLimitReportResponseBean : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("entitiesBreachingLimit") is { } nullNodeEntitiesBreachingLimit && nullNodeEntitiesBreachingLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EntitiesBreachingLimit = null;
+            if (parseNode.GetChildNode("issuesApproachingLimit") is { } nullNodeIssuesApproachingLimit && nullNodeIssuesApproachingLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesApproachingLimit = null;
+            if (parseNode.GetChildNode("issuesBreachingLimit") is { } nullNodeIssuesBreachingLimit && nullNodeIssuesBreachingLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesBreachingLimit = null;
+            if (parseNode.GetChildNode("limits") is { } nullNodeLimits && nullNodeLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limits = null;
+        }
+
         /// <summary>For each field, the ids of the individual entities breaching the limit, grouped by the id or key of the issue they belong to. Fields that hold a single value, such as description and environment, map to an empty list because the issue itself identifies the breaching content</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanEntitiesBreachingLimitProperty? EntitiesBreachingLimit { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanEntitiesBreachingLimitProperty? EntitiesBreachingLimit { get => _explicitNullValueEntitiesBreachingLimit; set { _explicitNullValueEntitiesBreachingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entitiesBreachingLimit"); else _explicitNullProperties?.Remove("entitiesBreachingLimit"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanEntitiesBreachingLimitProperty? _explicitNullValueEntitiesBreachingLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanEntitiesBreachingLimitProperty EntitiesBreachingLimit { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanEntitiesBreachingLimitProperty EntitiesBreachingLimit { get => _explicitNullValueEntitiesBreachingLimit; set { _explicitNullValueEntitiesBreachingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entitiesBreachingLimit"); else _explicitNullProperties?.Remove("entitiesBreachingLimit"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanEntitiesBreachingLimitProperty _explicitNullValueEntitiesBreachingLimit = default!;
 #endif
         /// <summary>A list of ids of issues approaching the limit and their field count</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesApproachingLimitProperty? IssuesApproachingLimit { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesApproachingLimitProperty? IssuesApproachingLimit { get => _explicitNullValueIssuesApproachingLimit; set { _explicitNullValueIssuesApproachingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesApproachingLimit"); else _explicitNullProperties?.Remove("issuesApproachingLimit"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesApproachingLimitProperty? _explicitNullValueIssuesApproachingLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesApproachingLimitProperty IssuesApproachingLimit { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesApproachingLimitProperty IssuesApproachingLimit { get => _explicitNullValueIssuesApproachingLimit; set { _explicitNullValueIssuesApproachingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesApproachingLimit"); else _explicitNullProperties?.Remove("issuesApproachingLimit"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesApproachingLimitProperty _explicitNullValueIssuesApproachingLimit = default!;
 #endif
         /// <summary>A list of ids of issues breaching the limit and their field count</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesBreachingLimitProperty? IssuesBreachingLimit { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesBreachingLimitProperty? IssuesBreachingLimit { get => _explicitNullValueIssuesBreachingLimit; set { _explicitNullValueIssuesBreachingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesBreachingLimit"); else _explicitNullProperties?.Remove("issuesBreachingLimit"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesBreachingLimitProperty? _explicitNullValueIssuesBreachingLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesBreachingLimitProperty IssuesBreachingLimit { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesBreachingLimitProperty IssuesBreachingLimit { get => _explicitNullValueIssuesBreachingLimit; set { _explicitNullValueIssuesBreachingLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesBreachingLimit"); else _explicitNullProperties?.Remove("issuesBreachingLimit"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesBreachingLimitProperty _explicitNullValueIssuesBreachingLimit = default!;
 #endif
         /// <summary>The fields and their defined limits</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty? Limits { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty? Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty? _explicitNullValueLimits = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty Limits { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty Limits { get => _explicitNullValueLimits; set { _explicitNullValueLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limits"); else _explicitNullProperties?.Remove("limits"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty _explicitNullValueLimits = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +71,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +97,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanEntitiesBreachingLimitProperty>("entitiesBreachingLimit", EntitiesBreachingLimit);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesApproachingLimitProperty>("issuesApproachingLimit", IssuesApproachingLimit);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanIssuesBreachingLimitProperty>("issuesBreachingLimit", IssuesBreachingLimit);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty>("limits", Limits);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLimitReportResponseBeanLimitsProperty>("limits", Limits);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

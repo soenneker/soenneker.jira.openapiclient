@@ -12,42 +12,63 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SharePermission : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
+            if (parseNode.GetChildNode("project") is { } nullNodeProject && nullNodeProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Project = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>The group that the filter is shared with. For a request, specify the `groupId` or `name` property for the group. As a group&apos;s name can change, use of `groupId` is recommended.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionGroup? Group { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionGroup? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionGroup? _explicitNullValueGroup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionGroup Group { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionGroup Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionGroup _explicitNullValueGroup = default!;
 #endif
         /// <summary>The unique identifier of the share permission.</summary>
         public long? Id { get; private set; }
         /// <summary>The project that the filter is shared with. This is similar to the project object returned by [Get project](#api-rest-api-3-project-projectIdOrKey-get) but it contains a subset of the properties, which are: `self`, `id`, `key`, `assigneeType`, `name`, `roles`, `avatarUrls`, `projectType`, `simplified`.  For a request, specify the `id` for the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionProject? Project { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionProject? Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionProject? _explicitNullValueProject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionProject Project { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionProject Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionProject _explicitNullValueProject = default!;
 #endif
         /// <summary>The project role that the filter is shared with.  For a request, specify the `id` for the role. You must also specify the `project` object and `id` for the project that the role is in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionRole? Role { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionRole? _explicitNullValueRole = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionRole Role { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionRole Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionRole _explicitNullValueRole = default!;
 #endif
         /// <summary>The type of share permission: *  `user` Shared with a user. *  `group` Shared with a group. If set in a request, then specify `sharePermission.group` as well. *  `project` Shared with a project. If set in a request, then specify `sharePermission.project` as well. *  `projectRole` Share with a project role in a project. This value is not returned in responses. It is used in requests, where it needs to be specify with `projectId` and `projectRoleId`. *  `global` Shared globally. If set in a request, no other `sharePermission` properties need to be specified. *  `loggedin` Shared with all logged-in users. Note: This value is set in a request by specifying `authenticated` as the `type`. *  `project-unknown` Shared with a project that the user does not have access to. Cannot be set in a request.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionType? Type { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionType? _explicitNullValueType = default!;
         /// <summary>The user account ID that the filter is shared with. For a request, specify the `accountId` property for the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser? User { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser User { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +78,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SharePermission CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SharePermission();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SharePermission(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,7 +107,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SharePermissionProject>("project", Project);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SharePermissionRole>("role", Role);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.SharePermissionType>("type", Type);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SharePermissionUser>("user", User);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,25 +12,40 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConditionGroupPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conditionGroup") is { } nullNodeConditionGroup && nullNodeConditionGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionGroup = null;
+            if (parseNode.GetChildNode("conditions") is { } nullNodeConditions && nullNodeConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Conditions = null;
+            if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
+        }
+
         /// <summary>The nested conditions of the condition group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload>? ConditionGroup { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload>? ConditionGroup { get => _explicitNullValueConditionGroup; set { _explicitNullValueConditionGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionGroup"); else _explicitNullProperties?.Remove("conditionGroup"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload>? _explicitNullValueConditionGroup = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload> ConditionGroup { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload> ConditionGroup { get => _explicitNullValueConditionGroup; set { _explicitNullValueConditionGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionGroup"); else _explicitNullProperties?.Remove("conditionGroup"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload> _explicitNullValueConditionGroup = default!;
 #endif
         /// <summary>The rules for this condition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RulePayload>? Conditions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RulePayload>? Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RulePayload>? _explicitNullValueConditions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RulePayload> Conditions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RulePayload> Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RulePayload> _explicitNullValueConditions = default!;
 #endif
         /// <summary>Determines how the conditions in the group are evaluated. Accepts either `ANY` or `ALL`. If `ANY` is used, at least one condition in the group must be true for the group to evaluate to true. If `ALL` is used, all conditions in the group must be true for the group to evaluate to true.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayloadOperation? Operation { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayloadOperation? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayloadOperation? _explicitNullValueOperation = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,7 +54,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +78,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayload>("conditionGroup", ConditionGroup);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RulePayload>("conditions", Conditions);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayloadOperation>("operation", Operation);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupPayloadOperation>("operation", Operation);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

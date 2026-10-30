@@ -12,24 +12,39 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueTypeDefaultValue : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isAnyIssueType") is { } nullNodeIsAnyIssueType && nullNodeIsAnyIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAnyIssueType = null;
+            if (parseNode.GetChildNode("issueTypeId") is { } nullNodeIssueTypeId && nullNodeIssueTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeId = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+        }
+
         /// <summary>True when this default value applies to every issue type covered by the context (no specific issue type). Only present when true; omitted otherwise.</summary>
-        public bool? IsAnyIssueType { get; set; }
+        public bool? IsAnyIssueType { get => _explicitNullValueIsAnyIssueType; set { _explicitNullValueIsAnyIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAnyIssueType"); else _explicitNullProperties?.Remove("isAnyIssueType"); } }
+        private bool? _explicitNullValueIsAnyIssueType = default!;
         /// <summary>The ID of the issue type this default value applies to. Null when isAnyIssueType is true.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueTypeId { get; set; }
+        public string? IssueTypeId { get => _explicitNullValueIssueTypeId; set { _explicitNullValueIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeId"); else _explicitNullProperties?.Remove("issueTypeId"); } }
+        private string? _explicitNullValueIssueTypeId = default!;
 #nullable restore
 #else
-        public string IssueTypeId { get; set; }
+        public string IssueTypeId { get => _explicitNullValueIssueTypeId; set { _explicitNullValueIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeId"); else _explicitNullProperties?.Remove("issueTypeId"); } }
+        private string _explicitNullValueIssueTypeId = default!;
 #endif
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue? Value { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue Value { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue _explicitNullValueValue = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -39,7 +54,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +78,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("isAnyIssueType", IsAnyIssueType);
             writer.WriteStringValue("issueTypeId", IssueTypeId);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue>("value", Value);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue>("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

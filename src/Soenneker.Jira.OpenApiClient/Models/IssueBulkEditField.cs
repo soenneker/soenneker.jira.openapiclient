@@ -11,72 +11,105 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class IssueBulkEditField : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("fieldOptions") is { } nullNodeFieldOptions && nullNodeFieldOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldOptions = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isRequired") is { } nullNodeIsRequired && nullNodeIsRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsRequired = null;
+            if (parseNode.GetChildNode("multiSelectFieldOptions") is { } nullNodeMultiSelectFieldOptions && nullNodeMultiSelectFieldOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiSelectFieldOptions = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("searchUrl") is { } nullNodeSearchUrl && nullNodeSearchUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchUrl = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("unavailableMessage") is { } nullNodeUnavailableMessage && nullNodeUnavailableMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnavailableMessage = null;
+        }
+
         /// <summary>Description of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>A list of options related to the field, applicable in contexts where multiple selections are allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkOperationsFieldOption>? FieldOptions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkOperationsFieldOption>? FieldOptions { get => _explicitNullValueFieldOptions; set { _explicitNullValueFieldOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldOptions"); else _explicitNullProperties?.Remove("fieldOptions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkOperationsFieldOption>? _explicitNullValueFieldOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkOperationsFieldOption> FieldOptions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkOperationsFieldOption> FieldOptions { get => _explicitNullValueFieldOptions; set { _explicitNullValueFieldOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldOptions"); else _explicitNullProperties?.Remove("fieldOptions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkOperationsFieldOption> _explicitNullValueFieldOptions = default!;
 #endif
         /// <summary>The unique ID of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Indicates whether the field is mandatory for the operation.</summary>
-        public bool? IsRequired { get; set; }
+        public bool? IsRequired { get => _explicitNullValueIsRequired; set { _explicitNullValueIsRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isRequired"); else _explicitNullProperties?.Remove("isRequired"); } }
+        private bool? _explicitNullValueIsRequired = default!;
         /// <summary>Specifies supported actions (like add, replace, remove) on multi-select fields via an enum.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditFieldMultiSelectFieldOptionsItem?>? MultiSelectFieldOptions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditFieldMultiSelectFieldOptionsItem?>? MultiSelectFieldOptions { get => _explicitNullValueMultiSelectFieldOptions; set { _explicitNullValueMultiSelectFieldOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectFieldOptions"); else _explicitNullProperties?.Remove("multiSelectFieldOptions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditFieldMultiSelectFieldOptionsItem?>? _explicitNullValueMultiSelectFieldOptions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditFieldMultiSelectFieldOptionsItem?> MultiSelectFieldOptions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditFieldMultiSelectFieldOptionsItem?> MultiSelectFieldOptions { get => _explicitNullValueMultiSelectFieldOptions; set { _explicitNullValueMultiSelectFieldOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiSelectFieldOptions"); else _explicitNullProperties?.Remove("multiSelectFieldOptions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditFieldMultiSelectFieldOptionsItem?> _explicitNullValueMultiSelectFieldOptions = default!;
 #endif
         /// <summary>The display name of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>A URL to fetch additional data for the field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SearchUrl { get; set; }
+        public string? SearchUrl { get => _explicitNullValueSearchUrl; set { _explicitNullValueSearchUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchUrl"); else _explicitNullProperties?.Remove("searchUrl"); } }
+        private string? _explicitNullValueSearchUrl = default!;
 #nullable restore
 #else
-        public string SearchUrl { get; set; }
+        public string SearchUrl { get => _explicitNullValueSearchUrl; set { _explicitNullValueSearchUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("searchUrl"); else _explicitNullProperties?.Remove("searchUrl"); } }
+        private string _explicitNullValueSearchUrl = default!;
 #endif
         /// <summary>The type of the field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>A message indicating why the field is unavailable for editing.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnavailableMessage { get; set; }
+        public string? UnavailableMessage { get => _explicitNullValueUnavailableMessage; set { _explicitNullValueUnavailableMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unavailableMessage"); else _explicitNullProperties?.Remove("unavailableMessage"); } }
+        private string? _explicitNullValueUnavailableMessage = default!;
 #nullable restore
 #else
-        public string UnavailableMessage { get; set; }
+        public string UnavailableMessage { get => _explicitNullValueUnavailableMessage; set { _explicitNullValueUnavailableMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unavailableMessage"); else _explicitNullProperties?.Remove("unavailableMessage"); } }
+        private string _explicitNullValueUnavailableMessage = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -86,7 +119,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditField CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditField();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditField(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,7 +155,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("searchUrl", SearchUrl);
             writer.WriteStringValue("type", Type);
-            writer.WriteStringValue("unavailableMessage", UnavailableMessage);
+            writer.WriteStringValue("unavailableMessage", UnavailableMessage);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

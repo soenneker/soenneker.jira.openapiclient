@@ -12,11 +12,22 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CustomFieldReplacement : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("customFieldId") is { } nullNodeCustomFieldId && nullNodeCustomFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFieldId = null;
+            if (parseNode.GetChildNode("moveTo") is { } nullNodeMoveTo && nullNodeMoveTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveTo = null;
+        }
+
         /// <summary>The ID of the custom field in which to replace the version number.</summary>
-        public long? CustomFieldId { get; set; }
+        public long? CustomFieldId { get => _explicitNullValueCustomFieldId; set { _explicitNullValueCustomFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customFieldId"); else _explicitNullProperties?.Remove("customFieldId"); } }
+        private long? _explicitNullValueCustomFieldId = default!;
         /// <summary>The version number to use as a replacement for the deleted version.</summary>
-        public long? MoveTo { get; set; }
+        public long? MoveTo { get => _explicitNullValueMoveTo; set { _explicitNullValueMoveTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moveTo"); else _explicitNullProperties?.Remove("moveTo"); } }
+        private long? _explicitNullValueMoveTo = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -25,7 +36,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.CustomFieldReplacement(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +58,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("customFieldId", CustomFieldId);
-            writer.WriteLongValue("moveTo", MoveTo);
+            writer.WriteLongValue("moveTo", MoveTo);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

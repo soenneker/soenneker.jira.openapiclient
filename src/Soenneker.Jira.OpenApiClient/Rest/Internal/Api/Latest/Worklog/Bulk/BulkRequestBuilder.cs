@@ -51,7 +51,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Internal.Api.Latest.Worklog.Bulk
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.BulkWorklogKeyResponseBean>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.BulkWorklogKeyResponseBean.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.BulkWorklogKeyResponseBean>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.BulkWorklogKeyResponseBean.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns worklog details for a list of issue ID and worklog ID pairs.This is an internal API for bulk fetching worklogs by their issue and worklog IDs. Worklogs that don&apos;t exist will be filtered out from the response.The returned list of worklogs is limited to 1000 items.**[Permissions](#permissions) required:** This is an internal service-to-service API that requires ASAP authentication. No user permission checks are performed as this bypasses normal user context.

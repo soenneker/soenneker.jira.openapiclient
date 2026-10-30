@@ -11,14 +11,24 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ProjectRoleActorsUpdateBean : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("categorisedActors") is { } nullNodeCategorisedActors && nullNodeCategorisedActors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CategorisedActors = null;
+        }
+
         /// <summary>The actors to add to the project role.Add groups using: *  `atlassian-group-role-actor` and a list of group names. *  `atlassian-group-role-actor-id` and a list of group IDs.As a group&apos;s name can change, use of `atlassian-group-role-actor-id` is recommended. For example, `&quot;atlassian-group-role-actor-id&quot;:[&quot;eef79f81-0b89-4fca-a736-4be531a10869&quot;,&quot;77f6ab39-e755-4570-a6ae-2d7a8df0bcb8&quot;]`.Add users using `atlassian-user-role-actor` and a list of account IDs. For example, `&quot;atlassian-user-role-actor&quot;:[&quot;12345678-9abc-def1-2345-6789abcdef12&quot;, &quot;abcdef12-3456-789a-bcde-f123456789ab&quot;]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty? CategorisedActors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty? CategorisedActors { get => _explicitNullValueCategorisedActors; set { _explicitNullValueCategorisedActors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categorisedActors"); else _explicitNullProperties?.Remove("categorisedActors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty? _explicitNullValueCategorisedActors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty CategorisedActors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty CategorisedActors { get => _explicitNullValueCategorisedActors; set { _explicitNullValueCategorisedActors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("categorisedActors"); else _explicitNullProperties?.Remove("categorisedActors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty _explicitNullValueCategorisedActors = default!;
 #endif
         /// <summary>The ID of the project role. Use [Get all project roles](#api-rest-api-3-role-get) to get a list of project role IDs.</summary>
         public long? Id { get; private set; }
@@ -30,7 +40,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,7 +61,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty>("categorisedActors", CategorisedActors);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectRoleActorsUpdateBeanCategorisedActorsProperty>("categorisedActors", CategorisedActors);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

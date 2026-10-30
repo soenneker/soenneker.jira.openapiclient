@@ -51,7 +51,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.AtlassianConnect.One.Migration.Workf
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowRulesSearchDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns configurations for workflow transition rules migrated from server to cloud and owned by the calling Connect app.

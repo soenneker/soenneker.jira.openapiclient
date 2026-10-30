@@ -12,45 +12,70 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AvailableWorkflowSystemRule : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("incompatibleRuleKeys") is { } nullNodeIncompatibleRuleKeys && nullNodeIncompatibleRuleKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncompatibleRuleKeys = null;
+            if (parseNode.GetChildNode("isAvailableForInitialTransition") is { } nullNodeIsAvailableForInitialTransition && nullNodeIsAvailableForInitialTransition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAvailableForInitialTransition = null;
+            if (parseNode.GetChildNode("isVisible") is { } nullNodeIsVisible && nullNodeIsVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsVisible = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("ruleKey") is { } nullNodeRuleKey && nullNodeRuleKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleKey = null;
+            if (parseNode.GetChildNode("ruleType") is { } nullNodeRuleType && nullNodeRuleType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleType = null;
+        }
+
         /// <summary>The rule description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>List of rules that conflict with this one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IncompatibleRuleKeys { get; set; }
+        public List<string>? IncompatibleRuleKeys { get => _explicitNullValueIncompatibleRuleKeys; set { _explicitNullValueIncompatibleRuleKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incompatibleRuleKeys"); else _explicitNullProperties?.Remove("incompatibleRuleKeys"); } }
+        private List<string>? _explicitNullValueIncompatibleRuleKeys = default!;
 #nullable restore
 #else
-        public List<string> IncompatibleRuleKeys { get; set; }
+        public List<string> IncompatibleRuleKeys { get => _explicitNullValueIncompatibleRuleKeys; set { _explicitNullValueIncompatibleRuleKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incompatibleRuleKeys"); else _explicitNullProperties?.Remove("incompatibleRuleKeys"); } }
+        private List<string> _explicitNullValueIncompatibleRuleKeys = default!;
 #endif
         /// <summary>Whether the rule can be added added to an initial transition.</summary>
-        public bool? IsAvailableForInitialTransition { get; set; }
+        public bool? IsAvailableForInitialTransition { get => _explicitNullValueIsAvailableForInitialTransition; set { _explicitNullValueIsAvailableForInitialTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAvailableForInitialTransition"); else _explicitNullProperties?.Remove("isAvailableForInitialTransition"); } }
+        private bool? _explicitNullValueIsAvailableForInitialTransition = default!;
         /// <summary>Whether the rule is visible.</summary>
-        public bool? IsVisible { get; set; }
+        public bool? IsVisible { get => _explicitNullValueIsVisible; set { _explicitNullValueIsVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isVisible"); else _explicitNullProperties?.Remove("isVisible"); } }
+        private bool? _explicitNullValueIsVisible = default!;
         /// <summary>The rule name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The rule key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleKey { get; set; }
+        public string? RuleKey { get => _explicitNullValueRuleKey; set { _explicitNullValueRuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleKey"); else _explicitNullProperties?.Remove("ruleKey"); } }
+        private string? _explicitNullValueRuleKey = default!;
 #nullable restore
 #else
-        public string RuleKey { get; set; }
+        public string RuleKey { get => _explicitNullValueRuleKey; set { _explicitNullValueRuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleKey"); else _explicitNullProperties?.Remove("ruleKey"); } }
+        private string _explicitNullValueRuleKey = default!;
 #endif
         /// <summary>The rule type.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRuleRuleType? RuleType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRuleRuleType? RuleType { get => _explicitNullValueRuleType; set { _explicitNullValueRuleType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleType"); else _explicitNullProperties?.Remove("ruleType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRuleRuleType? _explicitNullValueRuleType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -59,7 +84,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,7 +116,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteBoolValue("isVisible", IsVisible);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("ruleKey", RuleKey);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRuleRuleType>("ruleType", RuleType);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRuleRuleType>("ruleType", RuleType);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

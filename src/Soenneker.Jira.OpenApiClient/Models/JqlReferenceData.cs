@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JqlReferenceData : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("jqlReservedWords") is { } nullNodeJqlReservedWords && nullNodeJqlReservedWords.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JqlReservedWords = null;
+            if (parseNode.GetChildNode("visibleFieldNames") is { } nullNodeVisibleFieldNames && nullNodeVisibleFieldNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibleFieldNames = null;
+            if (parseNode.GetChildNode("visibleFunctionNames") is { } nullNodeVisibleFunctionNames && nullNodeVisibleFunctionNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VisibleFunctionNames = null;
+        }
+
         /// <summary>List of JQL query reserved words.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? JqlReservedWords { get; set; }
+        public List<string>? JqlReservedWords { get => _explicitNullValueJqlReservedWords; set { _explicitNullValueJqlReservedWords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jqlReservedWords"); else _explicitNullProperties?.Remove("jqlReservedWords"); } }
+        private List<string>? _explicitNullValueJqlReservedWords = default!;
 #nullable restore
 #else
-        public List<string> JqlReservedWords { get; set; }
+        public List<string> JqlReservedWords { get => _explicitNullValueJqlReservedWords; set { _explicitNullValueJqlReservedWords = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jqlReservedWords"); else _explicitNullProperties?.Remove("jqlReservedWords"); } }
+        private List<string> _explicitNullValueJqlReservedWords = default!;
 #endif
         /// <summary>List of fields usable in JQL queries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldReferenceData>? VisibleFieldNames { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldReferenceData>? VisibleFieldNames { get => _explicitNullValueVisibleFieldNames; set { _explicitNullValueVisibleFieldNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibleFieldNames"); else _explicitNullProperties?.Remove("visibleFieldNames"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.FieldReferenceData>? _explicitNullValueVisibleFieldNames = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldReferenceData> VisibleFieldNames { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.FieldReferenceData> VisibleFieldNames { get => _explicitNullValueVisibleFieldNames; set { _explicitNullValueVisibleFieldNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibleFieldNames"); else _explicitNullProperties?.Remove("visibleFieldNames"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.FieldReferenceData> _explicitNullValueVisibleFieldNames = default!;
 #endif
         /// <summary>List of functions usable in JQL queries.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData>? VisibleFunctionNames { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData>? VisibleFunctionNames { get => _explicitNullValueVisibleFunctionNames; set { _explicitNullValueVisibleFunctionNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibleFunctionNames"); else _explicitNullProperties?.Remove("visibleFunctionNames"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData>? _explicitNullValueVisibleFunctionNames = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData> VisibleFunctionNames { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData> VisibleFunctionNames { get => _explicitNullValueVisibleFunctionNames; set { _explicitNullValueVisibleFunctionNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibleFunctionNames"); else _explicitNullProperties?.Remove("visibleFunctionNames"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData> _explicitNullValueVisibleFunctionNames = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.JqlReferenceData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.JqlReferenceData();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.JqlReferenceData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("jqlReservedWords", JqlReservedWords);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.FieldReferenceData>("visibleFieldNames", VisibleFieldNames);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData>("visibleFunctionNames", VisibleFunctionNames);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.FunctionReferenceData>("visibleFunctionNames", VisibleFunctionNames);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

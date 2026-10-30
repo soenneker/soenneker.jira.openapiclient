@@ -12,16 +12,28 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ContextDefaultValues : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contextId") is { } nullNodeContextId && nullNodeContextId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextId = null;
+            if (parseNode.GetChildNode("defaultValues") is { } nullNodeDefaultValues && nullNodeDefaultValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValues = null;
+        }
+
         /// <summary>The ID of the context.</summary>
-        public long? ContextId { get; set; }
+        public long? ContextId { get => _explicitNullValueContextId; set { _explicitNullValueContextId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contextId"); else _explicitNullProperties?.Remove("contextId"); } }
+        private long? _explicitNullValueContextId = default!;
         /// <summary>Per-issue-type default values for this context. May contain a single entry for unconverted contexts, or one entry per issue type for converted contexts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue>? DefaultValues { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue>? DefaultValues { get => _explicitNullValueDefaultValues; set { _explicitNullValueDefaultValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValues"); else _explicitNullProperties?.Remove("defaultValues"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue>? _explicitNullValueDefaultValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue> DefaultValues { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue> DefaultValues { get => _explicitNullValueDefaultValues; set { _explicitNullValueDefaultValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValues"); else _explicitNullProperties?.Remove("defaultValues"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue> _explicitNullValueDefaultValues = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -31,7 +43,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ContextDefaultValues CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ContextDefaultValues();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ContextDefaultValues(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,7 +65,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteLongValue("contextId", ContextId);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue>("defaultValues", DefaultValues);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue>("defaultValues", DefaultValues);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

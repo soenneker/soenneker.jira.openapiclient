@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class DetailedErrorCollection : ApiException, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("errorMessages") is { } nullNodeErrorMessages && nullNodeErrorMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessages = null;
+            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+        }
+
         /// <summary>Map of objects representing additional details for an error</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionDetailsProperty? Details { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionDetailsProperty? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionDetailsProperty? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionDetailsProperty Details { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionDetailsProperty Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionDetailsProperty _explicitNullValueDetails = default!;
 #endif
         /// <summary>The list of error messages produced by this operation. For example, &quot;input parameter &apos;key&apos; must be provided&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ErrorMessages { get; set; }
+        public List<string>? ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
+        private List<string>? _explicitNullValueErrorMessages = default!;
 #nullable restore
 #else
-        public List<string> ErrorMessages { get; set; }
+        public List<string> ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
+        private List<string> _explicitNullValueErrorMessages = default!;
 #endif
         /// <summary>The list of errors by parameter returned by the operation. For example,&quot;projectKey&quot;: &quot;Project keys must start with an uppercase letter, followed by one or more uppercase alphanumeric characters.&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty? Errors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty Errors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty _explicitNullValueErrors = default!;
 #endif
         /// <summary>The primary error message.</summary>
         public override string Message { get => base.Message; }
@@ -47,7 +63,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollection CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollection();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollection(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,7 +87,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionDetailsProperty>("details", Details);
             writer.WriteCollectionOfPrimitiveValues<string>("errorMessages", ErrorMessages);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty>("errors", Errors);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.DetailedErrorCollectionErrorsProperty>("errors", Errors);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SaveTemplateRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("templateDescription") is { } nullNodeTemplateDescription && nullNodeTemplateDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateDescription = null;
+            if (parseNode.GetChildNode("templateFromProjectRequest") is { } nullNodeTemplateFromProjectRequest && nullNodeTemplateFromProjectRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateFromProjectRequest = null;
+            if (parseNode.GetChildNode("templateName") is { } nullNodeTemplateName && nullNodeTemplateName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateName = null;
+        }
+
         /// <summary>The description of the template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateDescription { get; set; }
+        public string? TemplateDescription { get => _explicitNullValueTemplateDescription; set { _explicitNullValueTemplateDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDescription"); else _explicitNullProperties?.Remove("templateDescription"); } }
+        private string? _explicitNullValueTemplateDescription = default!;
 #nullable restore
 #else
-        public string TemplateDescription { get; set; }
+        public string TemplateDescription { get => _explicitNullValueTemplateDescription; set { _explicitNullValueTemplateDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateDescription"); else _explicitNullProperties?.Remove("templateDescription"); } }
+        private string _explicitNullValueTemplateDescription = default!;
 #endif
         /// <summary>The request details to generate template from a project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SaveProjectTemplateRequest? TemplateFromProjectRequest { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SaveProjectTemplateRequest? TemplateFromProjectRequest { get => _explicitNullValueTemplateFromProjectRequest; set { _explicitNullValueTemplateFromProjectRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateFromProjectRequest"); else _explicitNullProperties?.Remove("templateFromProjectRequest"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SaveProjectTemplateRequest? _explicitNullValueTemplateFromProjectRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SaveProjectTemplateRequest TemplateFromProjectRequest { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SaveProjectTemplateRequest TemplateFromProjectRequest { get => _explicitNullValueTemplateFromProjectRequest; set { _explicitNullValueTemplateFromProjectRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateFromProjectRequest"); else _explicitNullProperties?.Remove("templateFromProjectRequest"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SaveProjectTemplateRequest _explicitNullValueTemplateFromProjectRequest = default!;
 #endif
         /// <summary>The name of the template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateName { get; set; }
+        public string? TemplateName { get => _explicitNullValueTemplateName; set { _explicitNullValueTemplateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateName"); else _explicitNullProperties?.Remove("templateName"); } }
+        private string? _explicitNullValueTemplateName = default!;
 #nullable restore
 #else
-        public string TemplateName { get; set; }
+        public string TemplateName { get => _explicitNullValueTemplateName; set { _explicitNullValueTemplateName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templateName"); else _explicitNullProperties?.Remove("templateName"); } }
+        private string _explicitNullValueTemplateName = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SaveTemplateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SaveTemplateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SaveTemplateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("templateDescription", TemplateDescription);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SaveProjectTemplateRequest>("templateFromProjectRequest", TemplateFromProjectRequest);
-            writer.WriteStringValue("templateName", TemplateName);
+            writer.WriteStringValue("templateName", TemplateName);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

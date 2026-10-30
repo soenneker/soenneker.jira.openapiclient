@@ -11,40 +11,61 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkFetchIssueRequestBean : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("fieldsByKeys") is { } nullNodeFieldsByKeys && nullNodeFieldsByKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldsByKeys = null;
+            if (parseNode.GetChildNode("issueIdsOrKeys") is { } nullNodeIssueIdsOrKeys && nullNodeIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIdsOrKeys = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+        }
+
         /// <summary>Use [expand](#expansion) to include additional information about issues in the response. Note that, unlike the majority of instances where `expand` is specified, `expand` is defined as a list of values. The expand options are: *  `renderedFields` Returns field values rendered in HTML format. *  `names` Returns the display name of each field. *  `schema` Returns the schema describing a field type. *  `transitions` Returns all possible transitions for the issue. *  `operations` Returns all possible operations for the issue. *  `editmeta` Returns information about how each field can be edited. *  `changelog` Returns a list of recent updates to an issue, sorted by date, starting from the most recent. This returns a maximum of 40 changelogs. If you require more, please refer to [Bulk fetch changelogs](#api-rest-api-3-changelog-bulkfetch-post). *  `versionedRepresentations` Instead of `fields`, returns `versionedRepresentations` a JSON array containing each version of a field&apos;s value, with the highest numbered item representing the most recent version.To request up to 1000 issues in a single call, do not include `changelog`, `editmeta`, `operations`, `renderedFields`, `transitions`, or `versionedRepresentations` in `expand`. Requests that include any of these can include at most 100 issues; larger requests are rejected with a 400 error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Expand { get; set; }
+        public List<string>? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string>? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public List<string> Expand { get; set; }
+        public List<string> Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private List<string> _explicitNullValueExpand = default!;
 #endif
         /// <summary>A list of fields to return for each issue, use it to retrieve a subset of fields. This parameter accepts a comma-separated list. Expand options include: *  `*all` Returns all fields. *  `*navigable` Returns navigable fields. *  Any issue field, prefixed with a minus to exclude.The default is `*navigable`.Examples: *  `summary,comment` Returns the summary and comments fields only. *  `-description` Returns all navigable (default) fields except description. *  `*all,-comment` Returns all fields except comments.Multiple `fields` parameters can be included in a request.Note: All navigable fields are returned by default. This differs from [GET issue](#api-rest-api-3-issue-issueIdOrKey-get) where the default is all fields.To request up to 1000 issues in a single call, explicitly list the fields you need: at least one field must be a positive include (a request containing only exclusions is not eligible), the `*all` and `*navigable` wildcards and the default navigable field set are not eligible for the higher limit, no more than 100 fields may be listed, and none of the included fields returns multiple values (for example `comment`, `worklog`, or `attachment`). Requests that do not meet these conditions can include at most 100 issues; larger requests are rejected with a 400 error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Fields { get; set; }
+        public List<string>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<string>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<string> Fields { get; set; }
+        public List<string> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<string> _explicitNullValueFields = default!;
 #endif
         /// <summary>Reference fields by their key (rather than ID). The default is `false`.</summary>
-        public bool? FieldsByKeys { get; set; }
+        public bool? FieldsByKeys { get => _explicitNullValueFieldsByKeys; set { _explicitNullValueFieldsByKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsByKeys"); else _explicitNullProperties?.Remove("fieldsByKeys"); } }
+        private bool? _explicitNullValueFieldsByKeys = default!;
         /// <summary>An array of issue IDs or issue keys to fetch. You can mix issue IDs and keys in the same query. You can request up to 100 issues per call. Requests can include up to 1000 issues per call when they meet all of the conditions described for the `fields` and `expand` parameters. Requests that exceed the applicable limit are rejected with a 400 error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IssueIdsOrKeys { get; set; }
+        public List<string>? IssueIdsOrKeys { get => _explicitNullValueIssueIdsOrKeys; set { _explicitNullValueIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIdsOrKeys"); else _explicitNullProperties?.Remove("issueIdsOrKeys"); } }
+        private List<string>? _explicitNullValueIssueIdsOrKeys = default!;
 #nullable restore
 #else
-        public List<string> IssueIdsOrKeys { get; set; }
+        public List<string> IssueIdsOrKeys { get => _explicitNullValueIssueIdsOrKeys; set { _explicitNullValueIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIdsOrKeys"); else _explicitNullProperties?.Remove("issueIdsOrKeys"); } }
+        private List<string> _explicitNullValueIssueIdsOrKeys = default!;
 #endif
         /// <summary>A list of issue property keys of issue properties to be included in the results. A maximum of 5 issue property keys can be specified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Properties { get; set; }
+        public List<string>? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<string>? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public List<string> Properties { get; set; }
+        public List<string> Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<string> _explicitNullValueProperties = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +75,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkFetchIssueRequestBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkFetchIssueRequestBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkFetchIssueRequestBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,7 +103,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("fields", Fields);
             writer.WriteBoolValue("fieldsByKeys", FieldsByKeys);
             writer.WriteCollectionOfPrimitiveValues<string>("issueIdsOrKeys", IssueIdsOrKeys);
-            writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
+            writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

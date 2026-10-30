@@ -12,46 +12,68 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowElementReference : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("propertyKey") is { } nullNodePropertyKey && nullNodePropertyKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PropertyKey = null;
+            if (parseNode.GetChildNode("ruleId") is { } nullNodeRuleId && nullNodeRuleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleId = null;
+            if (parseNode.GetChildNode("statusMappingReference") is { } nullNodeStatusMappingReference && nullNodeStatusMappingReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappingReference = null;
+            if (parseNode.GetChildNode("statusReference") is { } nullNodeStatusReference && nullNodeStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusReference = null;
+            if (parseNode.GetChildNode("transitionId") is { } nullNodeTransitionId && nullNodeTransitionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionId = null;
+        }
+
         /// <summary>A property key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PropertyKey { get; set; }
+        public string? PropertyKey { get => _explicitNullValuePropertyKey; set { _explicitNullValuePropertyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyKey"); else _explicitNullProperties?.Remove("propertyKey"); } }
+        private string? _explicitNullValuePropertyKey = default!;
 #nullable restore
 #else
-        public string PropertyKey { get; set; }
+        public string PropertyKey { get => _explicitNullValuePropertyKey; set { _explicitNullValuePropertyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("propertyKey"); else _explicitNullProperties?.Remove("propertyKey"); } }
+        private string _explicitNullValuePropertyKey = default!;
 #endif
         /// <summary>A rule ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleId { get; set; }
+        public string? RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleId"); else _explicitNullProperties?.Remove("ruleId"); } }
+        private string? _explicitNullValueRuleId = default!;
 #nullable restore
 #else
-        public string RuleId { get; set; }
+        public string RuleId { get => _explicitNullValueRuleId; set { _explicitNullValueRuleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleId"); else _explicitNullProperties?.Remove("ruleId"); } }
+        private string _explicitNullValueRuleId = default!;
 #endif
         /// <summary>A project and issueType ID pair that identifies a status mapping.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair? StatusMappingReference { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair? StatusMappingReference { get => _explicitNullValueStatusMappingReference; set { _explicitNullValueStatusMappingReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingReference"); else _explicitNullProperties?.Remove("statusMappingReference"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair? _explicitNullValueStatusMappingReference = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair StatusMappingReference { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair StatusMappingReference { get => _explicitNullValueStatusMappingReference; set { _explicitNullValueStatusMappingReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingReference"); else _explicitNullProperties?.Remove("statusMappingReference"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair _explicitNullValueStatusMappingReference = default!;
 #endif
         /// <summary>A status reference.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusReference { get; set; }
+        public string? StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
+        private string? _explicitNullValueStatusReference = default!;
 #nullable restore
 #else
-        public string StatusReference { get; set; }
+        public string StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
+        private string _explicitNullValueStatusReference = default!;
 #endif
         /// <summary>A transition ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransitionId { get; set; }
+        public string? TransitionId { get => _explicitNullValueTransitionId; set { _explicitNullValueTransitionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionId"); else _explicitNullProperties?.Remove("transitionId"); } }
+        private string? _explicitNullValueTransitionId = default!;
 #nullable restore
 #else
-        public string TransitionId { get; set; }
+        public string TransitionId { get => _explicitNullValueTransitionId; set { _explicitNullValueTransitionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionId"); else _explicitNullProperties?.Remove("transitionId"); } }
+        private string _explicitNullValueTransitionId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +83,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowElementReference CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowElementReference();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowElementReference(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -89,7 +111,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("ruleId", RuleId);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair>("statusMappingReference", StatusMappingReference);
             writer.WriteStringValue("statusReference", StatusReference);
-            writer.WriteStringValue("transitionId", TransitionId);
+            writer.WriteStringValue("transitionId", TransitionId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

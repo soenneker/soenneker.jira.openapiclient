@@ -49,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Group.Member
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanUserDetails>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanUserDetails.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanUserDetails>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanUserDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns a [paginated](#pagination) list of all users in a group.Note that users are ordered by username, however the username is not returned in the results due to privacy reasons.**[Permissions](#permissions) required:** either of: *  *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg). *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).

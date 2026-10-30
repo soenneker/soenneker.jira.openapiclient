@@ -12,39 +12,68 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkingDaysConfig : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("friday") is { } nullNodeFriday && nullNodeFriday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Friday = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("monday") is { } nullNodeMonday && nullNodeMonday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Monday = null;
+            if (parseNode.GetChildNode("nonWorkingDays") is { } nullNodeNonWorkingDays && nullNodeNonWorkingDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NonWorkingDays = null;
+            if (parseNode.GetChildNode("saturday") is { } nullNodeSaturday && nullNodeSaturday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Saturday = null;
+            if (parseNode.GetChildNode("sunday") is { } nullNodeSunday && nullNodeSunday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sunday = null;
+            if (parseNode.GetChildNode("thursday") is { } nullNodeThursday && nullNodeThursday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thursday = null;
+            if (parseNode.GetChildNode("timezoneId") is { } nullNodeTimezoneId && nullNodeTimezoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimezoneId = null;
+            if (parseNode.GetChildNode("tuesday") is { } nullNodeTuesday && nullNodeTuesday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tuesday = null;
+            if (parseNode.GetChildNode("wednesday") is { } nullNodeWednesday && nullNodeWednesday.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Wednesday = null;
+        }
+
         /// <summary>The friday property</summary>
-        public bool? Friday { get; set; }
+        public bool? Friday { get => _explicitNullValueFriday; set { _explicitNullValueFriday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("friday"); else _explicitNullProperties?.Remove("friday"); } }
+        private bool? _explicitNullValueFriday = default!;
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The monday property</summary>
-        public bool? Monday { get; set; }
+        public bool? Monday { get => _explicitNullValueMonday; set { _explicitNullValueMonday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monday"); else _explicitNullProperties?.Remove("monday"); } }
+        private bool? _explicitNullValueMonday = default!;
         /// <summary>The nonWorkingDays property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.NonWorkingDay>? NonWorkingDays { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.NonWorkingDay>? NonWorkingDays { get => _explicitNullValueNonWorkingDays; set { _explicitNullValueNonWorkingDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonWorkingDays"); else _explicitNullProperties?.Remove("nonWorkingDays"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.NonWorkingDay>? _explicitNullValueNonWorkingDays = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.NonWorkingDay> NonWorkingDays { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.NonWorkingDay> NonWorkingDays { get => _explicitNullValueNonWorkingDays; set { _explicitNullValueNonWorkingDays = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nonWorkingDays"); else _explicitNullProperties?.Remove("nonWorkingDays"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.NonWorkingDay> _explicitNullValueNonWorkingDays = default!;
 #endif
         /// <summary>The saturday property</summary>
-        public bool? Saturday { get; set; }
+        public bool? Saturday { get => _explicitNullValueSaturday; set { _explicitNullValueSaturday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saturday"); else _explicitNullProperties?.Remove("saturday"); } }
+        private bool? _explicitNullValueSaturday = default!;
         /// <summary>The sunday property</summary>
-        public bool? Sunday { get; set; }
+        public bool? Sunday { get => _explicitNullValueSunday; set { _explicitNullValueSunday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sunday"); else _explicitNullProperties?.Remove("sunday"); } }
+        private bool? _explicitNullValueSunday = default!;
         /// <summary>The thursday property</summary>
-        public bool? Thursday { get; set; }
+        public bool? Thursday { get => _explicitNullValueThursday; set { _explicitNullValueThursday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thursday"); else _explicitNullProperties?.Remove("thursday"); } }
+        private bool? _explicitNullValueThursday = default!;
         /// <summary>The timezoneId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimezoneId { get; set; }
+        public string? TimezoneId { get => _explicitNullValueTimezoneId; set { _explicitNullValueTimezoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneId"); else _explicitNullProperties?.Remove("timezoneId"); } }
+        private string? _explicitNullValueTimezoneId = default!;
 #nullable restore
 #else
-        public string TimezoneId { get; set; }
+        public string TimezoneId { get => _explicitNullValueTimezoneId; set { _explicitNullValueTimezoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timezoneId"); else _explicitNullProperties?.Remove("timezoneId"); } }
+        private string _explicitNullValueTimezoneId = default!;
 #endif
         /// <summary>The tuesday property</summary>
-        public bool? Tuesday { get; set; }
+        public bool? Tuesday { get => _explicitNullValueTuesday; set { _explicitNullValueTuesday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tuesday"); else _explicitNullProperties?.Remove("tuesday"); } }
+        private bool? _explicitNullValueTuesday = default!;
         /// <summary>The wednesday property</summary>
-        public bool? Wednesday { get; set; }
+        public bool? Wednesday { get => _explicitNullValueWednesday; set { _explicitNullValueWednesday = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wednesday"); else _explicitNullProperties?.Remove("wednesday"); } }
+        private bool? _explicitNullValueWednesday = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,7 +82,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -91,7 +120,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteBoolValue("thursday", Thursday);
             writer.WriteStringValue("timezoneId", TimezoneId);
             writer.WriteBoolValue("tuesday", Tuesday);
-            writer.WriteBoolValue("wednesday", Wednesday);
+            writer.WriteBoolValue("wednesday", Wednesday);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

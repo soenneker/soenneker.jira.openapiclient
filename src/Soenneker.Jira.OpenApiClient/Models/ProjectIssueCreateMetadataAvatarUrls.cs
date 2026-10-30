@@ -12,38 +12,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectIssueCreateMetadataAvatarUrls : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("48x48") is { } nullNodeFourEightx48 && nullNodeFourEightx48.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FourEightx48 = null;
+            if (parseNode.GetChildNode("16x16") is { } nullNodeOneSixx16 && nullNodeOneSixx16.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OneSixx16 = null;
+            if (parseNode.GetChildNode("32x32") is { } nullNodeThreeTwox32 && nullNodeThreeTwox32.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreeTwox32 = null;
+            if (parseNode.GetChildNode("24x24") is { } nullNodeTwoFourx24 && nullNodeTwoFourx24.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwoFourx24 = null;
+        }
+
         /// <summary>The URL of the item&apos;s 48x48 pixel avatar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FourEightx48 { get; set; }
+        public string? FourEightx48 { get => _explicitNullValueFourEightx48; set { _explicitNullValueFourEightx48 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("48x48"); else _explicitNullProperties?.Remove("48x48"); } }
+        private string? _explicitNullValueFourEightx48 = default!;
 #nullable restore
 #else
-        public string FourEightx48 { get; set; }
+        public string FourEightx48 { get => _explicitNullValueFourEightx48; set { _explicitNullValueFourEightx48 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("48x48"); else _explicitNullProperties?.Remove("48x48"); } }
+        private string _explicitNullValueFourEightx48 = default!;
 #endif
         /// <summary>The URL of the item&apos;s 16x16 pixel avatar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OneSixx16 { get; set; }
+        public string? OneSixx16 { get => _explicitNullValueOneSixx16; set { _explicitNullValueOneSixx16 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("16x16"); else _explicitNullProperties?.Remove("16x16"); } }
+        private string? _explicitNullValueOneSixx16 = default!;
 #nullable restore
 #else
-        public string OneSixx16 { get; set; }
+        public string OneSixx16 { get => _explicitNullValueOneSixx16; set { _explicitNullValueOneSixx16 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("16x16"); else _explicitNullProperties?.Remove("16x16"); } }
+        private string _explicitNullValueOneSixx16 = default!;
 #endif
         /// <summary>The URL of the item&apos;s 32x32 pixel avatar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreeTwox32 { get; set; }
+        public string? ThreeTwox32 { get => _explicitNullValueThreeTwox32; set { _explicitNullValueThreeTwox32 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("32x32"); else _explicitNullProperties?.Remove("32x32"); } }
+        private string? _explicitNullValueThreeTwox32 = default!;
 #nullable restore
 #else
-        public string ThreeTwox32 { get; set; }
+        public string ThreeTwox32 { get => _explicitNullValueThreeTwox32; set { _explicitNullValueThreeTwox32 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("32x32"); else _explicitNullProperties?.Remove("32x32"); } }
+        private string _explicitNullValueThreeTwox32 = default!;
 #endif
         /// <summary>The URL of the item&apos;s 24x24 pixel avatar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TwoFourx24 { get; set; }
+        public string? TwoFourx24 { get => _explicitNullValueTwoFourx24; set { _explicitNullValueTwoFourx24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("24x24"); else _explicitNullProperties?.Remove("24x24"); } }
+        private string? _explicitNullValueTwoFourx24 = default!;
 #nullable restore
 #else
-        public string TwoFourx24 { get; set; }
+        public string TwoFourx24 { get => _explicitNullValueTwoFourx24; set { _explicitNullValueTwoFourx24 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("24x24"); else _explicitNullProperties?.Remove("24x24"); } }
+        private string _explicitNullValueTwoFourx24 = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ProjectIssueCreateMetadataAvatarUrls CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ProjectIssueCreateMetadataAvatarUrls();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ProjectIssueCreateMetadataAvatarUrls(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,7 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("48x48", FourEightx48);
             writer.WriteStringValue("16x16", OneSixx16);
             writer.WriteStringValue("32x32", ThreeTwox32);
-            writer.WriteStringValue("24x24", TwoFourx24);
+            writer.WriteStringValue("24x24", TwoFourx24);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

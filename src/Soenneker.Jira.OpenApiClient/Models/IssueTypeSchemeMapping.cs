@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueTypeSchemeMapping : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("issueTypeId") is { } nullNodeIssueTypeId && nullNodeIssueTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeId = null;
+            if (parseNode.GetChildNode("issueTypeSchemeId") is { } nullNodeIssueTypeSchemeId && nullNodeIssueTypeSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeSchemeId = null;
+        }
+
         /// <summary>The ID of the issue type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueTypeId { get; set; }
+        public string? IssueTypeId { get => _explicitNullValueIssueTypeId; set { _explicitNullValueIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeId"); else _explicitNullProperties?.Remove("issueTypeId"); } }
+        private string? _explicitNullValueIssueTypeId = default!;
 #nullable restore
 #else
-        public string IssueTypeId { get; set; }
+        public string IssueTypeId { get => _explicitNullValueIssueTypeId; set { _explicitNullValueIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeId"); else _explicitNullProperties?.Remove("issueTypeId"); } }
+        private string _explicitNullValueIssueTypeId = default!;
 #endif
         /// <summary>The ID of the issue type scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueTypeSchemeId { get; set; }
+        public string? IssueTypeSchemeId { get => _explicitNullValueIssueTypeSchemeId; set { _explicitNullValueIssueTypeSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeSchemeId"); else _explicitNullProperties?.Remove("issueTypeSchemeId"); } }
+        private string? _explicitNullValueIssueTypeSchemeId = default!;
 #nullable restore
 #else
-        public string IssueTypeSchemeId { get; set; }
+        public string IssueTypeSchemeId { get => _explicitNullValueIssueTypeSchemeId; set { _explicitNullValueIssueTypeSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeSchemeId"); else _explicitNullProperties?.Remove("issueTypeSchemeId"); } }
+        private string _explicitNullValueIssueTypeSchemeId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemeMapping CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemeMapping();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemeMapping(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("issueTypeId", IssueTypeId);
-            writer.WriteStringValue("issueTypeSchemeId", IssueTypeSchemeId);
+            writer.WriteStringValue("issueTypeSchemeId", IssueTypeSchemeId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

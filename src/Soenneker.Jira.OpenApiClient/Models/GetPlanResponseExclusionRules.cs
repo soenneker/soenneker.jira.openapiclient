@@ -12,48 +12,72 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetPlanResponseExclusionRules : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("issueIds") is { } nullNodeIssueIds && nullNodeIssueIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIds = null;
+            if (parseNode.GetChildNode("issueTypeIds") is { } nullNodeIssueTypeIds && nullNodeIssueTypeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeIds = null;
+            if (parseNode.GetChildNode("numberOfDaysToShowCompletedIssues") is { } nullNodeNumberOfDaysToShowCompletedIssues && nullNodeNumberOfDaysToShowCompletedIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfDaysToShowCompletedIssues = null;
+            if (parseNode.GetChildNode("releaseIds") is { } nullNodeReleaseIds && nullNodeReleaseIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseIds = null;
+            if (parseNode.GetChildNode("workStatusCategoryIds") is { } nullNodeWorkStatusCategoryIds && nullNodeWorkStatusCategoryIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkStatusCategoryIds = null;
+            if (parseNode.GetChildNode("workStatusIds") is { } nullNodeWorkStatusIds && nullNodeWorkStatusIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkStatusIds = null;
+        }
+
         /// <summary>The IDs of the issues excluded from the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? IssueIds { get; set; }
+        public List<long?>? IssueIds { get => _explicitNullValueIssueIds; set { _explicitNullValueIssueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIds"); else _explicitNullProperties?.Remove("issueIds"); } }
+        private List<long?>? _explicitNullValueIssueIds = default!;
 #nullable restore
 #else
-        public List<long?> IssueIds { get; set; }
+        public List<long?> IssueIds { get => _explicitNullValueIssueIds; set { _explicitNullValueIssueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIds"); else _explicitNullProperties?.Remove("issueIds"); } }
+        private List<long?> _explicitNullValueIssueIds = default!;
 #endif
         /// <summary>The IDs of the issue types excluded from the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? IssueTypeIds { get; set; }
+        public List<long?>? IssueTypeIds { get => _explicitNullValueIssueTypeIds; set { _explicitNullValueIssueTypeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeIds"); else _explicitNullProperties?.Remove("issueTypeIds"); } }
+        private List<long?>? _explicitNullValueIssueTypeIds = default!;
 #nullable restore
 #else
-        public List<long?> IssueTypeIds { get; set; }
+        public List<long?> IssueTypeIds { get => _explicitNullValueIssueTypeIds; set { _explicitNullValueIssueTypeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeIds"); else _explicitNullProperties?.Remove("issueTypeIds"); } }
+        private List<long?> _explicitNullValueIssueTypeIds = default!;
 #endif
         /// <summary>Issues completed this number of days ago are excluded from the plan.</summary>
-        public int? NumberOfDaysToShowCompletedIssues { get; set; }
+        public int? NumberOfDaysToShowCompletedIssues { get => _explicitNullValueNumberOfDaysToShowCompletedIssues; set { _explicitNullValueNumberOfDaysToShowCompletedIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfDaysToShowCompletedIssues"); else _explicitNullProperties?.Remove("numberOfDaysToShowCompletedIssues"); } }
+        private int? _explicitNullValueNumberOfDaysToShowCompletedIssues = default!;
         /// <summary>The IDs of the releases excluded from the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? ReleaseIds { get; set; }
+        public List<long?>? ReleaseIds { get => _explicitNullValueReleaseIds; set { _explicitNullValueReleaseIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseIds"); else _explicitNullProperties?.Remove("releaseIds"); } }
+        private List<long?>? _explicitNullValueReleaseIds = default!;
 #nullable restore
 #else
-        public List<long?> ReleaseIds { get; set; }
+        public List<long?> ReleaseIds { get => _explicitNullValueReleaseIds; set { _explicitNullValueReleaseIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releaseIds"); else _explicitNullProperties?.Remove("releaseIds"); } }
+        private List<long?> _explicitNullValueReleaseIds = default!;
 #endif
         /// <summary>The IDs of the work status categories excluded from the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? WorkStatusCategoryIds { get; set; }
+        public List<long?>? WorkStatusCategoryIds { get => _explicitNullValueWorkStatusCategoryIds; set { _explicitNullValueWorkStatusCategoryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workStatusCategoryIds"); else _explicitNullProperties?.Remove("workStatusCategoryIds"); } }
+        private List<long?>? _explicitNullValueWorkStatusCategoryIds = default!;
 #nullable restore
 #else
-        public List<long?> WorkStatusCategoryIds { get; set; }
+        public List<long?> WorkStatusCategoryIds { get => _explicitNullValueWorkStatusCategoryIds; set { _explicitNullValueWorkStatusCategoryIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workStatusCategoryIds"); else _explicitNullProperties?.Remove("workStatusCategoryIds"); } }
+        private List<long?> _explicitNullValueWorkStatusCategoryIds = default!;
 #endif
         /// <summary>The IDs of the work statuses excluded from the plan.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? WorkStatusIds { get; set; }
+        public List<long?>? WorkStatusIds { get => _explicitNullValueWorkStatusIds; set { _explicitNullValueWorkStatusIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workStatusIds"); else _explicitNullProperties?.Remove("workStatusIds"); } }
+        private List<long?>? _explicitNullValueWorkStatusIds = default!;
 #nullable restore
 #else
-        public List<long?> WorkStatusIds { get; set; }
+        public List<long?> WorkStatusIds { get => _explicitNullValueWorkStatusIds; set { _explicitNullValueWorkStatusIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workStatusIds"); else _explicitNullProperties?.Remove("workStatusIds"); } }
+        private List<long?> _explicitNullValueWorkStatusIds = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +87,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.GetPlanResponseExclusionRules CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.GetPlanResponseExclusionRules();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.GetPlanResponseExclusionRules(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,7 +117,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteIntValue("numberOfDaysToShowCompletedIssues", NumberOfDaysToShowCompletedIssues);
             writer.WriteCollectionOfPrimitiveValues<long?>("releaseIds", ReleaseIds);
             writer.WriteCollectionOfPrimitiveValues<long?>("workStatusCategoryIds", WorkStatusCategoryIds);
-            writer.WriteCollectionOfPrimitiveValues<long?>("workStatusIds", WorkStatusIds);
+            writer.WriteCollectionOfPrimitiveValues<long?>("workStatusIds", WorkStatusIds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

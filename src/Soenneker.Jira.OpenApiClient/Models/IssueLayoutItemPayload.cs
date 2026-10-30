@@ -12,27 +12,44 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueLayoutItemPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("itemKey") is { } nullNodeItemKey && nullNodeItemKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemKey = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("sectionType") is { } nullNodeSectionType && nullNodeSectionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SectionType = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? ItemKey { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? ItemKey { get => _explicitNullValueItemKey; set { _explicitNullValueItemKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemKey"); else _explicitNullProperties?.Remove("itemKey"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueItemKey = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier ItemKey { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier ItemKey { get => _explicitNullValueItemKey; set { _explicitNullValueItemKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemKey"); else _explicitNullProperties?.Remove("itemKey"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueItemKey = default!;
 #endif
         /// <summary>Additional properties for this item. This field is only used when the type is FIELD.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadPropertiesProperty? Properties { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadPropertiesProperty? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadPropertiesProperty? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadPropertiesProperty Properties { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadPropertiesProperty Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadPropertiesProperty _explicitNullValueProperties = default!;
 #endif
         /// <summary>The item section type</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadSectionType? SectionType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadSectionType? SectionType { get => _explicitNullValueSectionType; set { _explicitNullValueSectionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sectionType"); else _explicitNullProperties?.Remove("sectionType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadSectionType? _explicitNullValueSectionType = default!;
         /// <summary>The item type. Currently only support FIELD</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.FieldType? Type { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.FieldType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.FieldType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -41,7 +58,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +84,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("itemKey", ItemKey);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadPropertiesProperty>("properties", Properties);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLayoutItemPayloadSectionType>("sectionType", SectionType);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.FieldType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.FieldType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

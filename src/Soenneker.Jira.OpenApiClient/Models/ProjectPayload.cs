@@ -12,72 +12,105 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fieldLayoutSchemeId") is { } nullNodeFieldLayoutSchemeId && nullNodeFieldLayoutSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldLayoutSchemeId = null;
+            if (parseNode.GetChildNode("issueSecuritySchemeId") is { } nullNodeIssueSecuritySchemeId && nullNodeIssueSecuritySchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueSecuritySchemeId = null;
+            if (parseNode.GetChildNode("issueTypeSchemeId") is { } nullNodeIssueTypeSchemeId && nullNodeIssueTypeSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeSchemeId = null;
+            if (parseNode.GetChildNode("issueTypeScreenSchemeId") is { } nullNodeIssueTypeScreenSchemeId && nullNodeIssueTypeScreenSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeScreenSchemeId = null;
+            if (parseNode.GetChildNode("notificationSchemeId") is { } nullNodeNotificationSchemeId && nullNodeNotificationSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationSchemeId = null;
+            if (parseNode.GetChildNode("pcri") is { } nullNodePcri && nullNodePcri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pcri = null;
+            if (parseNode.GetChildNode("permissionSchemeId") is { } nullNodePermissionSchemeId && nullNodePermissionSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PermissionSchemeId = null;
+            if (parseNode.GetChildNode("projectTypeKey") is { } nullNodeProjectTypeKey && nullNodeProjectTypeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectTypeKey = null;
+            if (parseNode.GetChildNode("workflowSchemeId") is { } nullNodeWorkflowSchemeId && nullNodeWorkflowSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowSchemeId = null;
+        }
+
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? FieldLayoutSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? FieldLayoutSchemeId { get => _explicitNullValueFieldLayoutSchemeId; set { _explicitNullValueFieldLayoutSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldLayoutSchemeId"); else _explicitNullProperties?.Remove("fieldLayoutSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueFieldLayoutSchemeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier FieldLayoutSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier FieldLayoutSchemeId { get => _explicitNullValueFieldLayoutSchemeId; set { _explicitNullValueFieldLayoutSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldLayoutSchemeId"); else _explicitNullProperties?.Remove("fieldLayoutSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueFieldLayoutSchemeId = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? IssueSecuritySchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? IssueSecuritySchemeId { get => _explicitNullValueIssueSecuritySchemeId; set { _explicitNullValueIssueSecuritySchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecuritySchemeId"); else _explicitNullProperties?.Remove("issueSecuritySchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueIssueSecuritySchemeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier IssueSecuritySchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier IssueSecuritySchemeId { get => _explicitNullValueIssueSecuritySchemeId; set { _explicitNullValueIssueSecuritySchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecuritySchemeId"); else _explicitNullProperties?.Remove("issueSecuritySchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueIssueSecuritySchemeId = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? IssueTypeSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? IssueTypeSchemeId { get => _explicitNullValueIssueTypeSchemeId; set { _explicitNullValueIssueTypeSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeSchemeId"); else _explicitNullProperties?.Remove("issueTypeSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueIssueTypeSchemeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier IssueTypeSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier IssueTypeSchemeId { get => _explicitNullValueIssueTypeSchemeId; set { _explicitNullValueIssueTypeSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeSchemeId"); else _explicitNullProperties?.Remove("issueTypeSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueIssueTypeSchemeId = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? IssueTypeScreenSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? IssueTypeScreenSchemeId { get => _explicitNullValueIssueTypeScreenSchemeId; set { _explicitNullValueIssueTypeScreenSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScreenSchemeId"); else _explicitNullProperties?.Remove("issueTypeScreenSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueIssueTypeScreenSchemeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier IssueTypeScreenSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier IssueTypeScreenSchemeId { get => _explicitNullValueIssueTypeScreenSchemeId; set { _explicitNullValueIssueTypeScreenSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScreenSchemeId"); else _explicitNullProperties?.Remove("issueTypeScreenSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueIssueTypeScreenSchemeId = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? NotificationSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? NotificationSchemeId { get => _explicitNullValueNotificationSchemeId; set { _explicitNullValueNotificationSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSchemeId"); else _explicitNullProperties?.Remove("notificationSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueNotificationSchemeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier NotificationSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier NotificationSchemeId { get => _explicitNullValueNotificationSchemeId; set { _explicitNullValueNotificationSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSchemeId"); else _explicitNullProperties?.Remove("notificationSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueNotificationSchemeId = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? Pcri { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? Pcri { get => _explicitNullValuePcri; set { _explicitNullValuePcri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcri"); else _explicitNullProperties?.Remove("pcri"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValuePcri = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier Pcri { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier Pcri { get => _explicitNullValuePcri; set { _explicitNullValuePcri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcri"); else _explicitNullProperties?.Remove("pcri"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValuePcri = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? PermissionSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? PermissionSchemeId { get => _explicitNullValuePermissionSchemeId; set { _explicitNullValuePermissionSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionSchemeId"); else _explicitNullProperties?.Remove("permissionSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValuePermissionSchemeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier PermissionSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier PermissionSchemeId { get => _explicitNullValuePermissionSchemeId; set { _explicitNullValuePermissionSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissionSchemeId"); else _explicitNullProperties?.Remove("permissionSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValuePermissionSchemeId = default!;
 #endif
         /// <summary>The [project type](https://confluence.atlassian.com/x/GwiiLQ#Jiraapplicationsoverview-Productfeaturesandprojecttypes), which defines the application-specific feature set. If you don&apos;t specify the project template you have to specify the project type.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectPayloadProjectTypeKey? ProjectTypeKey { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectPayloadProjectTypeKey? ProjectTypeKey { get => _explicitNullValueProjectTypeKey; set { _explicitNullValueProjectTypeKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectTypeKey"); else _explicitNullProperties?.Remove("projectTypeKey"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectPayloadProjectTypeKey? _explicitNullValueProjectTypeKey = default!;
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? WorkflowSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? WorkflowSchemeId { get => _explicitNullValueWorkflowSchemeId; set { _explicitNullValueWorkflowSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowSchemeId"); else _explicitNullProperties?.Remove("workflowSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValueWorkflowSchemeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier WorkflowSchemeId { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier WorkflowSchemeId { get => _explicitNullValueWorkflowSchemeId; set { _explicitNullValueWorkflowSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowSchemeId"); else _explicitNullProperties?.Remove("workflowSchemeId"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValueWorkflowSchemeId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -87,7 +120,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ProjectPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -123,7 +156,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("pcri", Pcri);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("permissionSchemeId", PermissionSchemeId);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectPayloadProjectTypeKey>("projectTypeKey", ProjectTypeKey);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("workflowSchemeId", WorkflowSchemeId);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("workflowSchemeId", WorkflowSchemeId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

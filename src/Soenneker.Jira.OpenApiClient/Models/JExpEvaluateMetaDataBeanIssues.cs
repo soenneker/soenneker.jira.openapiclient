@@ -12,14 +12,24 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JExpEvaluateMetaDataBeanIssues : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("jql") is { } nullNodeJql && nullNodeJql.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jql = null;
+        }
+
         /// <summary>The description of the page of issues loaded by the provided JQL query.This bean will be replacing IssuesJqlMetaDataBean bean as part of new `evaluate` endpoint</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean? Jql { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean? Jql { get => _explicitNullValueJql; set { _explicitNullValueJql = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jql"); else _explicitNullProperties?.Remove("jql"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean? _explicitNullValueJql = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean Jql { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean Jql { get => _explicitNullValueJql; set { _explicitNullValueJql = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jql"); else _explicitNullProperties?.Remove("jql"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean _explicitNullValueJql = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -29,7 +39,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateMetaDataBeanIssues CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateMetaDataBeanIssues();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateMetaDataBeanIssues(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +59,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean>("jql", Jql);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateIssuesJqlMetaDataBean>("jql", Jql);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

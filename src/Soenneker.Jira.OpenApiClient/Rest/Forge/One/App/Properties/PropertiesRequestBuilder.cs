@@ -66,6 +66,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Forge.One.App.Properties
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.GetForgeAppPropertyKeys403Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.GetForgeAppPropertyKeys200Response>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.GetForgeAppPropertyKeys200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

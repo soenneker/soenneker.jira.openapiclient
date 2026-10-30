@@ -80,7 +80,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issuesecurityschemes
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemes>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemes.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemes>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemes.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a security scheme with security scheme levels and levels&apos; members. You can create up to 100 security scheme levels and security scheme levels&apos; members per request.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
@@ -92,6 +92,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issuesecurityschemes
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.LimitExceededResponseBean">When receiving a 422 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemeId?> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.CreateIssueSecuritySchemeDetails body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -108,6 +109,9 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issuesecurityschemes
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "422", global::Soenneker.Jira.OpenApiClient.Models.LimitExceededResponseBean.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemeId>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.SecuritySchemeId.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

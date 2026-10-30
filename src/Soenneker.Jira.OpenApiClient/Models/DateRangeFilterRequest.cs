@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DateRangeFilterRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dateAfter") is { } nullNodeDateAfter && nullNodeDateAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateAfter = null;
+            if (parseNode.GetChildNode("dateBefore") is { } nullNodeDateBefore && nullNodeDateBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateBefore = null;
+        }
+
         /// <summary>List issues archived after a specified date, passed in the YYYY-MM-DD format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DateAfter { get; set; }
+        public string? DateAfter { get => _explicitNullValueDateAfter; set { _explicitNullValueDateAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateAfter"); else _explicitNullProperties?.Remove("dateAfter"); } }
+        private string? _explicitNullValueDateAfter = default!;
 #nullable restore
 #else
-        public string DateAfter { get; set; }
+        public string DateAfter { get => _explicitNullValueDateAfter; set { _explicitNullValueDateAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateAfter"); else _explicitNullProperties?.Remove("dateAfter"); } }
+        private string _explicitNullValueDateAfter = default!;
 #endif
         /// <summary>List issues archived before a specified date provided in the YYYY-MM-DD format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DateBefore { get; set; }
+        public string? DateBefore { get => _explicitNullValueDateBefore; set { _explicitNullValueDateBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateBefore"); else _explicitNullProperties?.Remove("dateBefore"); } }
+        private string? _explicitNullValueDateBefore = default!;
 #nullable restore
 #else
-        public string DateBefore { get; set; }
+        public string DateBefore { get => _explicitNullValueDateBefore; set { _explicitNullValueDateBefore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateBefore"); else _explicitNullProperties?.Remove("dateBefore"); } }
+        private string _explicitNullValueDateBefore = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("dateAfter", DateAfter);
-            writer.WriteStringValue("dateBefore", DateBefore);
+            writer.WriteStringValue("dateBefore", DateBefore);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

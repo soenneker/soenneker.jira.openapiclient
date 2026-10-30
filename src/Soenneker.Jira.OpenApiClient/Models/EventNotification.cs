@@ -12,74 +12,109 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class EventNotification : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emailAddress") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("field") is { } nullNodeField && nullNodeField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Field = null;
+            if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("notificationType") is { } nullNodeNotificationType && nullNodeNotificationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationType = null;
+            if (parseNode.GetChildNode("parameter") is { } nullNodeParameter && nullNodeParameter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Parameter = null;
+            if (parseNode.GetChildNode("projectRole") is { } nullNodeProjectRole && nullNodeProjectRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectRole = null;
+            if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>The email address.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get; set; }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailAddress"); else _explicitNullProperties?.Remove("emailAddress"); } }
+        private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailAddress"); else _explicitNullProperties?.Remove("emailAddress"); } }
+        private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>Expand options that include additional event notification details in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Expand { get; set; }
+        public string? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private string? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public string Expand { get; set; }
+        public string Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private string _explicitNullValueExpand = default!;
 #endif
         /// <summary>The custom user or group field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationField? Field { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationField? Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationField? _explicitNullValueField = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationField Field { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationField Field { get => _explicitNullValueField; set { _explicitNullValueField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field"); else _explicitNullProperties?.Remove("field"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationField _explicitNullValueField = default!;
 #endif
         /// <summary>The specified group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationGroup? Group { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationGroup? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationGroup? _explicitNullValueGroup = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationGroup Group { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationGroup Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationGroup _explicitNullValueGroup = default!;
 #endif
         /// <summary>The ID of the notification.</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>Identifies the recipients of the notification.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationNotificationType? NotificationType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationNotificationType? NotificationType { get => _explicitNullValueNotificationType; set { _explicitNullValueNotificationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationType"); else _explicitNullProperties?.Remove("notificationType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationNotificationType? _explicitNullValueNotificationType = default!;
         /// <summary>As a group&apos;s name can change, use of `recipient` is recommended. The identifier associated with the `notificationType` value that defines the receiver of the notification, where the receiver isn&apos;t implied by `notificationType` value. So, when `notificationType` is: *  `User` The `parameter` is the user account ID. *  `Group` The `parameter` is the group name. *  `ProjectRole` The `parameter` is the project role ID. *  `UserCustomField` The `parameter` is the ID of the custom field. *  `GroupCustomField` The `parameter` is the ID of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Parameter { get; set; }
+        public string? Parameter { get => _explicitNullValueParameter; set { _explicitNullValueParameter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameter"); else _explicitNullProperties?.Remove("parameter"); } }
+        private string? _explicitNullValueParameter = default!;
 #nullable restore
 #else
-        public string Parameter { get; set; }
+        public string Parameter { get => _explicitNullValueParameter; set { _explicitNullValueParameter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameter"); else _explicitNullProperties?.Remove("parameter"); } }
+        private string _explicitNullValueParameter = default!;
 #endif
         /// <summary>The specified project role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole? ProjectRole { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole? ProjectRole { get => _explicitNullValueProjectRole; set { _explicitNullValueProjectRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectRole"); else _explicitNullProperties?.Remove("projectRole"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole? _explicitNullValueProjectRole = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole ProjectRole { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole ProjectRole { get => _explicitNullValueProjectRole; set { _explicitNullValueProjectRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectRole"); else _explicitNullProperties?.Remove("projectRole"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole _explicitNullValueProjectRole = default!;
 #endif
         /// <summary>The identifier associated with the `notificationType` value that defines the receiver of the notification, where the receiver isn&apos;t implied by the `notificationType` value. So, when `notificationType` is: *  `User`, `recipient` is the user account ID. *  `Group`, `recipient` is the group ID. *  `ProjectRole`, `recipient` is the project role ID. *  `UserCustomField`, `recipient` is the ID of the custom field. *  `GroupCustomField`, `recipient` is the ID of the custom field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipient { get; set; }
+        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        private string? _explicitNullValueRecipient = default!;
 #nullable restore
 #else
-        public string Recipient { get; set; }
+        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        private string _explicitNullValueRecipient = default!;
 #endif
         /// <summary>The specified user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser? User { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser User { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -89,7 +124,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.EventNotification CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.EventNotification();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.EventNotification(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -127,7 +162,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("parameter", Parameter);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.EventNotificationProjectRole>("projectRole", ProjectRole);
             writer.WriteStringValue("recipient", Recipient);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser>("user", User);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.EventNotificationUser>("user", User);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

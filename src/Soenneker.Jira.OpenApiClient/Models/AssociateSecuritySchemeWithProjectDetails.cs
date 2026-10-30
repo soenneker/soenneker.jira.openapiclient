@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AssociateSecuritySchemeWithProjectDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("oldToNewSecurityLevelMappings") is { } nullNodeOldToNewSecurityLevelMappings && nullNodeOldToNewSecurityLevelMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldToNewSecurityLevelMappings = null;
+            if (parseNode.GetChildNode("projectId") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("schemeId") is { } nullNodeSchemeId && nullNodeSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SchemeId = null;
+        }
+
         /// <summary>The list of scheme levels which should be remapped to new levels of the issue security scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean>? OldToNewSecurityLevelMappings { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean>? OldToNewSecurityLevelMappings { get => _explicitNullValueOldToNewSecurityLevelMappings; set { _explicitNullValueOldToNewSecurityLevelMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldToNewSecurityLevelMappings"); else _explicitNullProperties?.Remove("oldToNewSecurityLevelMappings"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean>? _explicitNullValueOldToNewSecurityLevelMappings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean> OldToNewSecurityLevelMappings { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean> OldToNewSecurityLevelMappings { get => _explicitNullValueOldToNewSecurityLevelMappings; set { _explicitNullValueOldToNewSecurityLevelMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldToNewSecurityLevelMappings"); else _explicitNullProperties?.Remove("oldToNewSecurityLevelMappings"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean> _explicitNullValueOldToNewSecurityLevelMappings = default!;
 #endif
         /// <summary>The ID of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get; set; }
+        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        private string? _explicitNullValueProjectId = default!;
 #nullable restore
 #else
-        public string ProjectId { get; set; }
+        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        private string _explicitNullValueProjectId = default!;
 #endif
         /// <summary>The ID of the issue security scheme. Providing null will clear the association with the issue security scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SchemeId { get; set; }
+        public string? SchemeId { get => _explicitNullValueSchemeId; set { _explicitNullValueSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeId"); else _explicitNullProperties?.Remove("schemeId"); } }
+        private string? _explicitNullValueSchemeId = default!;
 #nullable restore
 #else
-        public string SchemeId { get; set; }
+        public string SchemeId { get => _explicitNullValueSchemeId; set { _explicitNullValueSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeId"); else _explicitNullProperties?.Remove("schemeId"); } }
+        private string _explicitNullValueSchemeId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.AssociateSecuritySchemeWithProjectDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.AssociateSecuritySchemeWithProjectDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.AssociateSecuritySchemeWithProjectDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean>("oldToNewSecurityLevelMappings", OldToNewSecurityLevelMappings);
             writer.WriteStringValue("projectId", ProjectId);
-            writer.WriteStringValue("schemeId", SchemeId);
+            writer.WriteStringValue("schemeId", SchemeId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

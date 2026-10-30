@@ -51,7 +51,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Permissions.Project
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PermittedProjects>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PermittedProjects.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PermittedProjects>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PermittedProjects.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns all the projects where the user is granted a list of project permissions.This operation can be accessed anonymously.**[Permissions](#permissions) required:** None.

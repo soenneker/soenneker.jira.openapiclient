@@ -12,76 +12,118 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApplicationRole : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultGroups") is { } nullNodeDefaultGroups && nullNodeDefaultGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultGroups = null;
+            if (parseNode.GetChildNode("defaultGroupsDetails") is { } nullNodeDefaultGroupsDetails && nullNodeDefaultGroupsDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultGroupsDetails = null;
+            if (parseNode.GetChildNode("defined") is { } nullNodeDefined && nullNodeDefined.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Defined = null;
+            if (parseNode.GetChildNode("groupDetails") is { } nullNodeGroupDetails && nullNodeGroupDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupDetails = null;
+            if (parseNode.GetChildNode("groups") is { } nullNodeGroups && nullNodeGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Groups = null;
+            if (parseNode.GetChildNode("hasUnlimitedSeats") is { } nullNodeHasUnlimitedSeats && nullNodeHasUnlimitedSeats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasUnlimitedSeats = null;
+            if (parseNode.GetChildNode("key") is { } nullNodeKey && nullNodeKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Key = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("numberOfSeats") is { } nullNodeNumberOfSeats && nullNodeNumberOfSeats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfSeats = null;
+            if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
+            if (parseNode.GetChildNode("remainingSeats") is { } nullNodeRemainingSeats && nullNodeRemainingSeats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemainingSeats = null;
+            if (parseNode.GetChildNode("selectedByDefault") is { } nullNodeSelectedByDefault && nullNodeSelectedByDefault.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedByDefault = null;
+            if (parseNode.GetChildNode("userCount") is { } nullNodeUserCount && nullNodeUserCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCount = null;
+            if (parseNode.GetChildNode("userCountDescription") is { } nullNodeUserCountDescription && nullNodeUserCountDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserCountDescription = null;
+        }
+
         /// <summary>The groups that are granted default access for this application role. As a group&apos;s name can change, use of `defaultGroupsDetails` is recommended to identify a groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? DefaultGroups { get; set; }
+        public List<string>? DefaultGroups { get => _explicitNullValueDefaultGroups; set { _explicitNullValueDefaultGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultGroups"); else _explicitNullProperties?.Remove("defaultGroups"); } }
+        private List<string>? _explicitNullValueDefaultGroups = default!;
 #nullable restore
 #else
-        public List<string> DefaultGroups { get; set; }
+        public List<string> DefaultGroups { get => _explicitNullValueDefaultGroups; set { _explicitNullValueDefaultGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultGroups"); else _explicitNullProperties?.Remove("defaultGroups"); } }
+        private List<string> _explicitNullValueDefaultGroups = default!;
 #endif
         /// <summary>The groups that are granted default access for this application role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? DefaultGroupsDetails { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? DefaultGroupsDetails { get => _explicitNullValueDefaultGroupsDetails; set { _explicitNullValueDefaultGroupsDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultGroupsDetails"); else _explicitNullProperties?.Remove("defaultGroupsDetails"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? _explicitNullValueDefaultGroupsDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> DefaultGroupsDetails { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> DefaultGroupsDetails { get => _explicitNullValueDefaultGroupsDetails; set { _explicitNullValueDefaultGroupsDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultGroupsDetails"); else _explicitNullProperties?.Remove("defaultGroupsDetails"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> _explicitNullValueDefaultGroupsDetails = default!;
 #endif
         /// <summary>Deprecated.</summary>
-        public bool? Defined { get; set; }
+        public bool? Defined { get => _explicitNullValueDefined; set { _explicitNullValueDefined = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defined"); else _explicitNullProperties?.Remove("defined"); } }
+        private bool? _explicitNullValueDefined = default!;
         /// <summary>The groups associated with the application role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? GroupDetails { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? GroupDetails { get => _explicitNullValueGroupDetails; set { _explicitNullValueGroupDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupDetails"); else _explicitNullProperties?.Remove("groupDetails"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? _explicitNullValueGroupDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> GroupDetails { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> GroupDetails { get => _explicitNullValueGroupDetails; set { _explicitNullValueGroupDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupDetails"); else _explicitNullProperties?.Remove("groupDetails"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> _explicitNullValueGroupDetails = default!;
 #endif
         /// <summary>The groups associated with the application role. As a group&apos;s name can change, use of `groupDetails` is recommended to identify a groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Groups { get; set; }
+        public List<string>? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private List<string>? _explicitNullValueGroups = default!;
 #nullable restore
 #else
-        public List<string> Groups { get; set; }
+        public List<string> Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private List<string> _explicitNullValueGroups = default!;
 #endif
         /// <summary>The hasUnlimitedSeats property</summary>
-        public bool? HasUnlimitedSeats { get; set; }
+        public bool? HasUnlimitedSeats { get => _explicitNullValueHasUnlimitedSeats; set { _explicitNullValueHasUnlimitedSeats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasUnlimitedSeats"); else _explicitNullProperties?.Remove("hasUnlimitedSeats"); } }
+        private bool? _explicitNullValueHasUnlimitedSeats = default!;
         /// <summary>The key of the application role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Key { get; set; }
+        public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string? _explicitNullValueKey = default!;
 #nullable restore
 #else
-        public string Key { get; set; }
+        public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
+        private string _explicitNullValueKey = default!;
 #endif
         /// <summary>The display name of the application role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The maximum count of users on your license.</summary>
-        public int? NumberOfSeats { get; set; }
+        public int? NumberOfSeats { get => _explicitNullValueNumberOfSeats; set { _explicitNullValueNumberOfSeats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numberOfSeats"); else _explicitNullProperties?.Remove("numberOfSeats"); } }
+        private int? _explicitNullValueNumberOfSeats = default!;
         /// <summary>Indicates if the application role belongs to Jira platform (`jira-core`).</summary>
-        public bool? Platform { get; set; }
+        public bool? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
+        private bool? _explicitNullValuePlatform = default!;
         /// <summary>The count of users remaining on your license.</summary>
-        public int? RemainingSeats { get; set; }
+        public int? RemainingSeats { get => _explicitNullValueRemainingSeats; set { _explicitNullValueRemainingSeats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remainingSeats"); else _explicitNullProperties?.Remove("remainingSeats"); } }
+        private int? _explicitNullValueRemainingSeats = default!;
         /// <summary>Determines whether this application role should be selected by default on user creation.</summary>
-        public bool? SelectedByDefault { get; set; }
+        public bool? SelectedByDefault { get => _explicitNullValueSelectedByDefault; set { _explicitNullValueSelectedByDefault = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedByDefault"); else _explicitNullProperties?.Remove("selectedByDefault"); } }
+        private bool? _explicitNullValueSelectedByDefault = default!;
         /// <summary>The number of users counting against your license.</summary>
-        public int? UserCount { get; set; }
+        public int? UserCount { get => _explicitNullValueUserCount; set { _explicitNullValueUserCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userCount"); else _explicitNullProperties?.Remove("userCount"); } }
+        private int? _explicitNullValueUserCount = default!;
         /// <summary>The [type of users](https://confluence.atlassian.com/x/lRW3Ng) being counted against your license.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserCountDescription { get; set; }
+        public string? UserCountDescription { get => _explicitNullValueUserCountDescription; set { _explicitNullValueUserCountDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userCountDescription"); else _explicitNullProperties?.Remove("userCountDescription"); } }
+        private string? _explicitNullValueUserCountDescription = default!;
 #nullable restore
 #else
-        public string UserCountDescription { get; set; }
+        public string UserCountDescription { get => _explicitNullValueUserCountDescription; set { _explicitNullValueUserCountDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userCountDescription"); else _explicitNullProperties?.Remove("userCountDescription"); } }
+        private string _explicitNullValueUserCountDescription = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -91,7 +133,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ApplicationRole CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ApplicationRole();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ApplicationRole(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -137,7 +179,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteIntValue("remainingSeats", RemainingSeats);
             writer.WriteBoolValue("selectedByDefault", SelectedByDefault);
             writer.WriteIntValue("userCount", UserCount);
-            writer.WriteStringValue("userCountDescription", UserCountDescription);
+            writer.WriteStringValue("userCountDescription", UserCountDescription);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

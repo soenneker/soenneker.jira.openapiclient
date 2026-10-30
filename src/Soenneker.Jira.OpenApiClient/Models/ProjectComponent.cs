@@ -12,7 +12,20 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectComponent : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assigneeType") is { } nullNodeAssigneeType && nullNodeAssigneeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeType = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("leadAccountId") is { } nullNodeLeadAccountId && nullNodeLeadAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadAccountId = null;
+            if (parseNode.GetChildNode("leadUserName") is { } nullNodeLeadUserName && nullNodeLeadUserName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LeadUserName = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("project") is { } nullNodeProject && nullNodeProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Project = null;
+        }
+
         /// <summary>Compass component&apos;s ID. Can&apos;t be updated. Not required for creating a Project Component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,14 +43,17 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public global::Soenneker.Jira.OpenApiClient.Models.ProjectComponentAssignee Assignee { get; private set; }
 #endif
         /// <summary>The nominal user type used to determine the assignee for issues created with this component. See `realAssigneeType` for details on how the type of the user, and hence the user, assigned to issues is determined. Can take the following values: *  `PROJECT_LEAD` the assignee to any issues created with this component is nominally the lead for the project the component is in. *  `COMPONENT_LEAD` the assignee to any issues created with this component is nominally the lead for the component. *  `UNASSIGNED` an assignee is not set for issues created with this component. *  `PROJECT_DEFAULT` the assignee to any issues created with this component is nominally the default assignee for the project that the component is in.Default value: `PROJECT_DEFAULT`.  Optional when creating or updating a component.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectComponentAssigneeType? AssigneeType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectComponentAssigneeType? AssigneeType { get => _explicitNullValueAssigneeType; set { _explicitNullValueAssigneeType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigneeType"); else _explicitNullProperties?.Remove("assigneeType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectComponentAssigneeType? _explicitNullValueAssigneeType = default!;
         /// <summary>The description for the component. Optional when creating or updating a component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The unique identifier for the component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -60,18 +76,22 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The accountId of the component&apos;s lead user. The accountId uniquely identifies the user across all Atlassian products. For example, *5b10ac8d82e05b22cc7d4ef5*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadAccountId { get; set; }
+        public string? LeadAccountId { get => _explicitNullValueLeadAccountId; set { _explicitNullValueLeadAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadAccountId"); else _explicitNullProperties?.Remove("leadAccountId"); } }
+        private string? _explicitNullValueLeadAccountId = default!;
 #nullable restore
 #else
-        public string LeadAccountId { get; set; }
+        public string LeadAccountId { get => _explicitNullValueLeadAccountId; set { _explicitNullValueLeadAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadAccountId"); else _explicitNullProperties?.Remove("leadAccountId"); } }
+        private string _explicitNullValueLeadAccountId = default!;
 #endif
         /// <summary>This property is no longer available and will be removed from the documentation soon. See the [deprecation notice](https://developer.atlassian.com/cloud/jira/platform/deprecation-notice-user-privacy-api-migration-guide/) for details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LeadUserName { get; set; }
+        public string? LeadUserName { get => _explicitNullValueLeadUserName; set { _explicitNullValueLeadUserName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadUserName"); else _explicitNullProperties?.Remove("leadUserName"); } }
+        private string? _explicitNullValueLeadUserName = default!;
 #nullable restore
 #else
-        public string LeadUserName { get; set; }
+        public string LeadUserName { get => _explicitNullValueLeadUserName; set { _explicitNullValueLeadUserName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("leadUserName"); else _explicitNullProperties?.Remove("leadUserName"); } }
+        private string _explicitNullValueLeadUserName = default!;
 #endif
         /// <summary>Compass component&apos;s metadata. Can&apos;t be updated. Not required for creating a Project Component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,18 +104,22 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The unique name for the component in the project. Required when creating a component. Optional when updating a component. The maximum length is 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The key of the project the component is assigned to. Required when creating a component. Can&apos;t be updated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Project { get; set; }
+        public string? Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private string? _explicitNullValueProject = default!;
 #nullable restore
 #else
-        public string Project { get; set; }
+        public string Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private string _explicitNullValueProject = default!;
 #endif
         /// <summary>The ID of the project the component is assigned to.</summary>
         public long? ProjectId { get; private set; }
@@ -125,7 +149,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ProjectComponent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ProjectComponent();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ProjectComponent(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -165,7 +189,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("leadAccountId", LeadAccountId);
             writer.WriteStringValue("leadUserName", LeadUserName);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("project", Project);
+            writer.WriteStringValue("project", Project);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

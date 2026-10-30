@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowSchemeUpdateRequiredMappingsRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultWorkflowId") is { } nullNodeDefaultWorkflowId && nullNodeDefaultWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultWorkflowId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("workflowsForIssueTypes") is { } nullNodeWorkflowsForIssueTypes && nullNodeWorkflowsForIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowsForIssueTypes = null;
+        }
+
         /// <summary>The ID of the new default workflow for this workflow scheme. Only used in global-scoped workflow schemes. If it isn&apos;t specified, is set to *Jira Workflow (jira)*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultWorkflowId { get; set; }
+        public string? DefaultWorkflowId { get => _explicitNullValueDefaultWorkflowId; set { _explicitNullValueDefaultWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowId"); else _explicitNullProperties?.Remove("defaultWorkflowId"); } }
+        private string? _explicitNullValueDefaultWorkflowId = default!;
 #nullable restore
 #else
-        public string DefaultWorkflowId { get; set; }
+        public string DefaultWorkflowId { get => _explicitNullValueDefaultWorkflowId; set { _explicitNullValueDefaultWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowId"); else _explicitNullProperties?.Remove("defaultWorkflowId"); } }
+        private string _explicitNullValueDefaultWorkflowId = default!;
 #endif
         /// <summary>The ID of the workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The new workflow to issue type mappings for this workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>? WorkflowsForIssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>? WorkflowsForIssueTypes { get => _explicitNullValueWorkflowsForIssueTypes; set { _explicitNullValueWorkflowsForIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsForIssueTypes"); else _explicitNullProperties?.Remove("workflowsForIssueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>? _explicitNullValueWorkflowsForIssueTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation> WorkflowsForIssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation> WorkflowsForIssueTypes { get => _explicitNullValueWorkflowsForIssueTypes; set { _explicitNullValueWorkflowsForIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsForIssueTypes"); else _explicitNullProperties?.Remove("workflowsForIssueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation> _explicitNullValueWorkflowsForIssueTypes = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeUpdateRequiredMappingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeUpdateRequiredMappingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeUpdateRequiredMappingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("defaultWorkflowId", DefaultWorkflowId);
             writer.WriteStringValue("id", Id);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>("workflowsForIssueTypes", WorkflowsForIssueTypes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>("workflowsForIssueTypes", WorkflowsForIssueTypes);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

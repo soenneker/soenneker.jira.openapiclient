@@ -199,11 +199,13 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.FieldRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The fieldconfiguration property</summary>
+        [Obsolete("")]
         public global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Fieldconfiguration.FieldconfigurationRequestBuilder Fieldconfiguration
         {
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Fieldconfiguration.FieldconfigurationRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The fieldconfigurationscheme property</summary>
+        [Obsolete("")]
         public global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Fieldconfigurationscheme.FieldconfigurationschemeRequestBuilder Fieldconfigurationscheme
         {
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Fieldconfigurationscheme.FieldconfigurationschemeRequestBuilder(PathParameters, RequestAdapter);
@@ -399,6 +401,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Screenscheme.ScreenschemeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The search property</summary>
+        [Obsolete("")]
         public global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Search.SearchRequestBuilder Search
         {
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Search.SearchRequestBuilder(PathParameters, RequestAdapter);

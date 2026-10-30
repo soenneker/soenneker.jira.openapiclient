@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueTypeProjectCreatePayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("issueTypeHierarchy") is { } nullNodeIssueTypeHierarchy && nullNodeIssueTypeHierarchy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeHierarchy = null;
+            if (parseNode.GetChildNode("issueTypes") is { } nullNodeIssueTypes && nullNodeIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypes = null;
+            if (parseNode.GetChildNode("issueTypeScheme") is { } nullNodeIssueTypeScheme && nullNodeIssueTypeScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeScheme = null;
+        }
+
         /// <summary>Defines the issue type hierarhy to be created and used during this project creation. This will only add new levels if there isn&apos;t an existing level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeHierarchyPayload>? IssueTypeHierarchy { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeHierarchyPayload>? IssueTypeHierarchy { get => _explicitNullValueIssueTypeHierarchy; set { _explicitNullValueIssueTypeHierarchy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeHierarchy"); else _explicitNullProperties?.Remove("issueTypeHierarchy"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeHierarchyPayload>? _explicitNullValueIssueTypeHierarchy = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeHierarchyPayload> IssueTypeHierarchy { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeHierarchyPayload> IssueTypeHierarchy { get => _explicitNullValueIssueTypeHierarchy; set { _explicitNullValueIssueTypeHierarchy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeHierarchy"); else _explicitNullProperties?.Remove("issueTypeHierarchy"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeHierarchyPayload> _explicitNullValueIssueTypeHierarchy = default!;
 #endif
         /// <summary>Only needed if you want to create issue types, you can otherwise use the ids of issue types in the scheme configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypePayload>? IssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypePayload>? IssueTypes { get => _explicitNullValueIssueTypes; set { _explicitNullValueIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypes"); else _explicitNullProperties?.Remove("issueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypePayload>? _explicitNullValueIssueTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypePayload> IssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypePayload> IssueTypes { get => _explicitNullValueIssueTypes; set { _explicitNullValueIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypes"); else _explicitNullProperties?.Remove("issueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypePayload> _explicitNullValueIssueTypes = default!;
 #endif
         /// <summary>The payload for creating issue type schemes</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload? IssueTypeScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload? IssueTypeScheme { get => _explicitNullValueIssueTypeScheme; set { _explicitNullValueIssueTypeScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScheme"); else _explicitNullProperties?.Remove("issueTypeScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload? _explicitNullValueIssueTypeScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload IssueTypeScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload IssueTypeScheme { get => _explicitNullValueIssueTypeScheme; set { _explicitNullValueIssueTypeScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeScheme"); else _explicitNullProperties?.Remove("issueTypeScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload _explicitNullValueIssueTypeScheme = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,9 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueTypeProjectCreatePayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +87,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeHierarchyPayload>("issueTypeHierarchy", IssueTypeHierarchy);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.IssueTypePayload>("issueTypes", IssueTypes);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload>("issueTypeScheme", IssueTypeScheme);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeSchemePayload>("issueTypeScheme", IssueTypeScheme);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,27 +12,44 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RedactionPosition : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adfPointer") is { } nullNodeAdfPointer && nullNodeAdfPointer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdfPointer = null;
+            if (parseNode.GetChildNode("expectedText") is { } nullNodeExpectedText && nullNodeExpectedText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpectedText = null;
+            if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+        }
+
         /// <summary>The ADF pointer indicating the position of the text to be redacted. This is only required when redacting from rich text(ADF) fields. For plain text fields, this field can be omitted.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdfPointer { get; set; }
+        public string? AdfPointer { get => _explicitNullValueAdfPointer; set { _explicitNullValueAdfPointer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adfPointer"); else _explicitNullProperties?.Remove("adfPointer"); } }
+        private string? _explicitNullValueAdfPointer = default!;
 #nullable restore
 #else
-        public string AdfPointer { get; set; }
+        public string AdfPointer { get => _explicitNullValueAdfPointer; set { _explicitNullValueAdfPointer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adfPointer"); else _explicitNullProperties?.Remove("adfPointer"); } }
+        private string _explicitNullValueAdfPointer = default!;
 #endif
         /// <summary>The text which will be redacted, encoded using SHA256 hash and Base64 digest</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpectedText { get; set; }
+        public string? ExpectedText { get => _explicitNullValueExpectedText; set { _explicitNullValueExpectedText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expectedText"); else _explicitNullProperties?.Remove("expectedText"); } }
+        private string? _explicitNullValueExpectedText = default!;
 #nullable restore
 #else
-        public string ExpectedText { get; set; }
+        public string ExpectedText { get => _explicitNullValueExpectedText; set { _explicitNullValueExpectedText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expectedText"); else _explicitNullProperties?.Remove("expectedText"); } }
+        private string _explicitNullValueExpectedText = default!;
 #endif
         /// <summary>The start index(inclusive) for the redaction in specified content</summary>
-        public int? From { get; set; }
+        public int? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private int? _explicitNullValueFrom = default!;
         /// <summary>The ending index(exclusive) for the redaction in specified content</summary>
-        public int? To { get; set; }
+        public int? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private int? _explicitNullValueTo = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -41,7 +58,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +84,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("adfPointer", AdfPointer);
             writer.WriteStringValue("expectedText", ExpectedText);
             writer.WriteIntValue("from", From);
-            writer.WriteIntValue("to", To);
+            writer.WriteIntValue("to", To);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

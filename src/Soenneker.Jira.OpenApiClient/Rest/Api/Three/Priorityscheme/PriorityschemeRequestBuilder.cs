@@ -74,7 +74,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Priorityscheme
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanPrioritySchemeWithPaginatedPrioritiesAndProjects>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanPrioritySchemeWithPaginatedPrioritiesAndProjects.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanPrioritySchemeWithPaginatedPrioritiesAndProjects>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanPrioritySchemeWithPaginatedPrioritiesAndProjects.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a new priority scheme.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
@@ -98,6 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Priorityscheme
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "422", global::Soenneker.Jira.OpenApiClient.Models.LimitExceededResponseBean.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeId>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeId.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

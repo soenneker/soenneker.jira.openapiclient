@@ -11,48 +11,72 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowCapabilitiesBody : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("connectRules") is { } nullNodeConnectRules && nullNodeConnectRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectRules = null;
+            if (parseNode.GetChildNode("editorScope") is { } nullNodeEditorScope && nullNodeEditorScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditorScope = null;
+            if (parseNode.GetChildNode("forgeRules") is { } nullNodeForgeRules && nullNodeForgeRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForgeRules = null;
+            if (parseNode.GetChildNode("projectTypes") is { } nullNodeProjectTypes && nullNodeProjectTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectTypes = null;
+            if (parseNode.GetChildNode("systemRules") is { } nullNodeSystemRules && nullNodeSystemRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemRules = null;
+            if (parseNode.GetChildNode("triggerRules") is { } nullNodeTriggerRules && nullNodeTriggerRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerRules = null;
+        }
+
         /// <summary>The Connect provided ecosystem rules available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule>? ConnectRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule>? ConnectRules { get => _explicitNullValueConnectRules; set { _explicitNullValueConnectRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connectRules"); else _explicitNullProperties?.Remove("connectRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule>? _explicitNullValueConnectRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule> ConnectRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule> ConnectRules { get => _explicitNullValueConnectRules; set { _explicitNullValueConnectRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connectRules"); else _explicitNullProperties?.Remove("connectRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowConnectRule> _explicitNullValueConnectRules = default!;
 #endif
         /// <summary>The scope of the workflow capabilities. `GLOBAL` for company-managed projects and `PROJECT` for team-managed projects.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyEditorScope? EditorScope { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyEditorScope? EditorScope { get => _explicitNullValueEditorScope; set { _explicitNullValueEditorScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editorScope"); else _explicitNullProperties?.Remove("editorScope"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyEditorScope? _explicitNullValueEditorScope = default!;
         /// <summary>The Forge provided ecosystem rules available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowForgeRule>? ForgeRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowForgeRule>? ForgeRules { get => _explicitNullValueForgeRules; set { _explicitNullValueForgeRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forgeRules"); else _explicitNullProperties?.Remove("forgeRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowForgeRule>? _explicitNullValueForgeRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowForgeRule> ForgeRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowForgeRule> ForgeRules { get => _explicitNullValueForgeRules; set { _explicitNullValueForgeRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forgeRules"); else _explicitNullProperties?.Remove("forgeRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowForgeRule> _explicitNullValueForgeRules = default!;
 #endif
         /// <summary>The types of projects that this capability set is available for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyProjectTypesItem?>? ProjectTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyProjectTypesItem?>? ProjectTypes { get => _explicitNullValueProjectTypes; set { _explicitNullValueProjectTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectTypes"); else _explicitNullProperties?.Remove("projectTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyProjectTypesItem?>? _explicitNullValueProjectTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyProjectTypesItem?> ProjectTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyProjectTypesItem?> ProjectTypes { get => _explicitNullValueProjectTypes; set { _explicitNullValueProjectTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectTypes"); else _explicitNullProperties?.Remove("projectTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyProjectTypesItem?> _explicitNullValueProjectTypes = default!;
 #endif
         /// <summary>The Atlassian provided system rules available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule>? SystemRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule>? SystemRules { get => _explicitNullValueSystemRules; set { _explicitNullValueSystemRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("systemRules"); else _explicitNullProperties?.Remove("systemRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule>? _explicitNullValueSystemRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule> SystemRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule> SystemRules { get => _explicitNullValueSystemRules; set { _explicitNullValueSystemRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("systemRules"); else _explicitNullProperties?.Remove("systemRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule> _explicitNullValueSystemRules = default!;
 #endif
         /// <summary>The trigger rules available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers>? TriggerRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers>? TriggerRules { get => _explicitNullValueTriggerRules; set { _explicitNullValueTriggerRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerRules"); else _explicitNullProperties?.Remove("triggerRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers>? _explicitNullValueTriggerRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers> TriggerRules { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers> TriggerRules { get => _explicitNullValueTriggerRules; set { _explicitNullValueTriggerRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggerRules"); else _explicitNullProperties?.Remove("triggerRules"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers> _explicitNullValueTriggerRules = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +86,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBody CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBody();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBody(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,7 +116,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowForgeRule>("forgeRules", ForgeRules);
             writer.WriteCollectionOfEnumValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCapabilitiesBodyProjectTypesItem>("projectTypes", ProjectTypes);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowSystemRule>("systemRules", SystemRules);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers>("triggerRules", TriggerRules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers>("triggerRules", TriggerRules);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

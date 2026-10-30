@@ -11,33 +11,56 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetPlanOnlyTeamResponse : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("capacity") is { } nullNodeCapacity && nullNodeCapacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Capacity = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("issueSourceId") is { } nullNodeIssueSourceId && nullNodeIssueSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueSourceId = null;
+            if (parseNode.GetChildNode("memberAccountIds") is { } nullNodeMemberAccountIds && nullNodeMemberAccountIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberAccountIds = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("planningStyle") is { } nullNodePlanningStyle && nullNodePlanningStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanningStyle = null;
+            if (parseNode.GetChildNode("sprintLength") is { } nullNodeSprintLength && nullNodeSprintLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SprintLength = null;
+        }
+
         /// <summary>The capacity for the plan-only team.</summary>
-        public double? Capacity { get; set; }
+        public double? Capacity { get => _explicitNullValueCapacity; set { _explicitNullValueCapacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capacity"); else _explicitNullProperties?.Remove("capacity"); } }
+        private double? _explicitNullValueCapacity = default!;
         /// <summary>The plan-only team ID.</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The ID of the issue source for the plan-only team.</summary>
-        public long? IssueSourceId { get; set; }
+        public long? IssueSourceId { get => _explicitNullValueIssueSourceId; set { _explicitNullValueIssueSourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSourceId"); else _explicitNullProperties?.Remove("issueSourceId"); } }
+        private long? _explicitNullValueIssueSourceId = default!;
         /// <summary>The account IDs of the plan-only team members.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? MemberAccountIds { get; set; }
+        public List<string>? MemberAccountIds { get => _explicitNullValueMemberAccountIds; set { _explicitNullValueMemberAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberAccountIds"); else _explicitNullProperties?.Remove("memberAccountIds"); } }
+        private List<string>? _explicitNullValueMemberAccountIds = default!;
 #nullable restore
 #else
-        public List<string> MemberAccountIds { get; set; }
+        public List<string> MemberAccountIds { get => _explicitNullValueMemberAccountIds; set { _explicitNullValueMemberAccountIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("memberAccountIds"); else _explicitNullProperties?.Remove("memberAccountIds"); } }
+        private List<string> _explicitNullValueMemberAccountIds = default!;
 #endif
         /// <summary>The plan-only team name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The planning style for the plan-only team. This is &quot;Scrum&quot; or &quot;Kanban&quot;.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.GetPlanOnlyTeamResponsePlanningStyle? PlanningStyle { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.GetPlanOnlyTeamResponsePlanningStyle? PlanningStyle { get => _explicitNullValuePlanningStyle; set { _explicitNullValuePlanningStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("planningStyle"); else _explicitNullProperties?.Remove("planningStyle"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.GetPlanOnlyTeamResponsePlanningStyle? _explicitNullValuePlanningStyle = default!;
         /// <summary>The sprint length for the plan-only team.</summary>
-        public long? SprintLength { get; set; }
+        public long? SprintLength { get => _explicitNullValueSprintLength; set { _explicitNullValueSprintLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sprintLength"); else _explicitNullProperties?.Remove("sprintLength"); } }
+        private long? _explicitNullValueSprintLength = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -46,7 +69,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.GetPlanOnlyTeamResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.GetPlanOnlyTeamResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.GetPlanOnlyTeamResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +101,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("memberAccountIds", MemberAccountIds);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.GetPlanOnlyTeamResponsePlanningStyle>("planningStyle", PlanningStyle);
-            writer.WriteLongValue("sprintLength", SprintLength);
+            writer.WriteLongValue("sprintLength", SprintLength);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,38 +11,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowSchemeUpdateRequiredMappingsResponse : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("statuses") is { } nullNodeStatuses && nullNodeStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Statuses = null;
+            if (parseNode.GetChildNode("statusesPerWorkflow") is { } nullNodeStatusesPerWorkflow && nullNodeStatusesPerWorkflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusesPerWorkflow = null;
+            if (parseNode.GetChildNode("statusMappingsByIssueTypes") is { } nullNodeStatusMappingsByIssueTypes && nullNodeStatusMappingsByIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappingsByIssueTypes = null;
+            if (parseNode.GetChildNode("statusMappingsByWorkflows") is { } nullNodeStatusMappingsByWorkflows && nullNodeStatusMappingsByWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappingsByWorkflows = null;
+        }
+
         /// <summary>The details of the statuses in the associated workflows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusMetadata>? Statuses { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusMetadata>? Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.StatusMetadata>? _explicitNullValueStatuses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusMetadata> Statuses { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusMetadata> Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.StatusMetadata> _explicitNullValueStatuses = default!;
 #endif
         /// <summary>The statuses associated with each workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusesPerWorkflow>? StatusesPerWorkflow { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusesPerWorkflow>? StatusesPerWorkflow { get => _explicitNullValueStatusesPerWorkflow; set { _explicitNullValueStatusesPerWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusesPerWorkflow"); else _explicitNullProperties?.Remove("statusesPerWorkflow"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.StatusesPerWorkflow>? _explicitNullValueStatusesPerWorkflow = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusesPerWorkflow> StatusesPerWorkflow { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusesPerWorkflow> StatusesPerWorkflow { get => _explicitNullValueStatusesPerWorkflow; set { _explicitNullValueStatusesPerWorkflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusesPerWorkflow"); else _explicitNullProperties?.Remove("statusesPerWorkflow"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.StatusesPerWorkflow> _explicitNullValueStatusesPerWorkflow = default!;
 #endif
         /// <summary>The list of required status mappings by issue type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType>? StatusMappingsByIssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType>? StatusMappingsByIssueTypes { get => _explicitNullValueStatusMappingsByIssueTypes; set { _explicitNullValueStatusMappingsByIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByIssueTypes"); else _explicitNullProperties?.Remove("statusMappingsByIssueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType>? _explicitNullValueStatusMappingsByIssueTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType> StatusMappingsByIssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType> StatusMappingsByIssueTypes { get => _explicitNullValueStatusMappingsByIssueTypes; set { _explicitNullValueStatusMappingsByIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByIssueTypes"); else _explicitNullProperties?.Remove("statusMappingsByIssueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType> _explicitNullValueStatusMappingsByIssueTypes = default!;
 #endif
         /// <summary>The list of required status mappings by workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows>? StatusMappingsByWorkflows { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows>? StatusMappingsByWorkflows { get => _explicitNullValueStatusMappingsByWorkflows; set { _explicitNullValueStatusMappingsByWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByWorkflows"); else _explicitNullProperties?.Remove("statusMappingsByWorkflows"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows>? _explicitNullValueStatusMappingsByWorkflows = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows> StatusMappingsByWorkflows { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows> StatusMappingsByWorkflows { get => _explicitNullValueStatusMappingsByWorkflows; set { _explicitNullValueStatusMappingsByWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByWorkflows"); else _explicitNullProperties?.Remove("statusMappingsByWorkflows"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows> _explicitNullValueStatusMappingsByWorkflows = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +71,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeUpdateRequiredMappingsResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeUpdateRequiredMappingsResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeUpdateRequiredMappingsResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +97,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.StatusMetadata>("statuses", Statuses);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.StatusesPerWorkflow>("statusesPerWorkflow", StatusesPerWorkflow);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType>("statusMappingsByIssueTypes", StatusMappingsByIssueTypes);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows>("statusMappingsByWorkflows", StatusMappingsByWorkflows);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows>("statusMappingsByWorkflows", StatusMappingsByWorkflows);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

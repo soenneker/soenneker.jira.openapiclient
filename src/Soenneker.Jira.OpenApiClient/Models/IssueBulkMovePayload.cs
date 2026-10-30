@@ -12,16 +12,28 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueBulkMovePayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
+            if (parseNode.GetChildNode("targetToSourcesMapping") is { } nullNodeTargetToSourcesMapping && nullNodeTargetToSourcesMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetToSourcesMapping = null;
+        }
+
         /// <summary>A boolean value that indicates whether to send a bulk change notification when the issues are being moved.If `true`, dispatches a bulk notification email to users about the updates.</summary>
-        public bool? SendBulkNotification { get; set; }
+        public bool? SendBulkNotification { get => _explicitNullValueSendBulkNotification; set { _explicitNullValueSendBulkNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendBulkNotification"); else _explicitNullProperties?.Remove("sendBulkNotification"); } }
+        private bool? _explicitNullValueSendBulkNotification = default!;
         /// <summary>An object representing the mapping of issues and data related to destination entities, like fields and statuses, that are required during a bulk move.The key is a string that is created by concatenating the following three entities in order, separated by commas. The format is `&lt;project ID or key&gt;,&lt;issueType ID&gt;,&lt;parent ID or key&gt;`. It should be unique across mappings provided in the payload. If you provide multiple mappings for the same key, only one will be processed. However, the operation won&apos;t fail, so the error may be hard to track down. *  ***Destination project*** (Required): ID or key of the project to which the issues are being moved. *  ***Destination issueType*** (Required): ID of the issueType to which the issues are being moved. *  ***Destination parent ID or key*** (Optional): ID or key of the issue which will become the parent of the issues being moved. Only required when the destination issueType is a subtask.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty? TargetToSourcesMapping { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty? TargetToSourcesMapping { get => _explicitNullValueTargetToSourcesMapping; set { _explicitNullValueTargetToSourcesMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetToSourcesMapping"); else _explicitNullProperties?.Remove("targetToSourcesMapping"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty? _explicitNullValueTargetToSourcesMapping = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty TargetToSourcesMapping { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty TargetToSourcesMapping { get => _explicitNullValueTargetToSourcesMapping; set { _explicitNullValueTargetToSourcesMapping = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetToSourcesMapping"); else _explicitNullProperties?.Remove("targetToSourcesMapping"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty _explicitNullValueTargetToSourcesMapping = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayload"/> and sets the default values.
@@ -38,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("sendBulkNotification", SendBulkNotification);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty>("targetToSourcesMapping", TargetToSourcesMapping);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkMovePayloadTargetToSourcesMappingProperty>("targetToSourcesMapping", TargetToSourcesMapping);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,32 +12,50 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkChangelogRequestBean : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fieldIds") is { } nullNodeFieldIds && nullNodeFieldIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldIds = null;
+            if (parseNode.GetChildNode("issueIdsOrKeys") is { } nullNodeIssueIdsOrKeys && nullNodeIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIdsOrKeys = null;
+            if (parseNode.GetChildNode("maxResults") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
+            if (parseNode.GetChildNode("nextPageToken") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+        }
+
         /// <summary>List of field IDs to filter changelogs</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FieldIds { get; set; }
+        public List<string>? FieldIds { get => _explicitNullValueFieldIds; set { _explicitNullValueFieldIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldIds"); else _explicitNullProperties?.Remove("fieldIds"); } }
+        private List<string>? _explicitNullValueFieldIds = default!;
 #nullable restore
 #else
-        public List<string> FieldIds { get; set; }
+        public List<string> FieldIds { get => _explicitNullValueFieldIds; set { _explicitNullValueFieldIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldIds"); else _explicitNullProperties?.Remove("fieldIds"); } }
+        private List<string> _explicitNullValueFieldIds = default!;
 #endif
         /// <summary>List of issue IDs/keys to fetch changelogs for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IssueIdsOrKeys { get; set; }
+        public List<string>? IssueIdsOrKeys { get => _explicitNullValueIssueIdsOrKeys; set { _explicitNullValueIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIdsOrKeys"); else _explicitNullProperties?.Remove("issueIdsOrKeys"); } }
+        private List<string>? _explicitNullValueIssueIdsOrKeys = default!;
 #nullable restore
 #else
-        public List<string> IssueIdsOrKeys { get; set; }
+        public List<string> IssueIdsOrKeys { get => _explicitNullValueIssueIdsOrKeys; set { _explicitNullValueIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIdsOrKeys"); else _explicitNullProperties?.Remove("issueIdsOrKeys"); } }
+        private List<string> _explicitNullValueIssueIdsOrKeys = default!;
 #endif
         /// <summary>The maximum number of items to return per page</summary>
-        public int? MaxResults { get; set; }
+        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxResults"); else _explicitNullProperties?.Remove("maxResults"); } }
+        private int? _explicitNullValueMaxResults = default!;
         /// <summary>The cursor for pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get; set; }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get; set; }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.BulkChangelogRequestBean"/> and sets the default values.
@@ -54,7 +72,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkChangelogRequestBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkChangelogRequestBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkChangelogRequestBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,7 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("fieldIds", FieldIds);
             writer.WriteCollectionOfPrimitiveValues<string>("issueIdsOrKeys", IssueIdsOrKeys);
             writer.WriteIntValue("maxResults", MaxResults);
-            writer.WriteStringValue("nextPageToken", NextPageToken);
+            writer.WriteStringValue("nextPageToken", NextPageToken);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

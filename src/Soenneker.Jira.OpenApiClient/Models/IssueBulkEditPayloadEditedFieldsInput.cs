@@ -12,190 +12,266 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueBulkEditPayloadEditedFieldsInput : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cascadingSelectFields") is { } nullNodeCascadingSelectFields && nullNodeCascadingSelectFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CascadingSelectFields = null;
+            if (parseNode.GetChildNode("clearableNumberFields") is { } nullNodeClearableNumberFields && nullNodeClearableNumberFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClearableNumberFields = null;
+            if (parseNode.GetChildNode("colorFields") is { } nullNodeColorFields && nullNodeColorFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorFields = null;
+            if (parseNode.GetChildNode("datePickerFields") is { } nullNodeDatePickerFields && nullNodeDatePickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatePickerFields = null;
+            if (parseNode.GetChildNode("dateTimePickerFields") is { } nullNodeDateTimePickerFields && nullNodeDateTimePickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateTimePickerFields = null;
+            if (parseNode.GetChildNode("issueType") is { } nullNodeIssueType && nullNodeIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueType = null;
+            if (parseNode.GetChildNode("labelsFields") is { } nullNodeLabelsFields && nullNodeLabelsFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelsFields = null;
+            if (parseNode.GetChildNode("multipleGroupPickerFields") is { } nullNodeMultipleGroupPickerFields && nullNodeMultipleGroupPickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleGroupPickerFields = null;
+            if (parseNode.GetChildNode("multipleSelectClearableUserPickerFields") is { } nullNodeMultipleSelectClearableUserPickerFields && nullNodeMultipleSelectClearableUserPickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleSelectClearableUserPickerFields = null;
+            if (parseNode.GetChildNode("multipleSelectFields") is { } nullNodeMultipleSelectFields && nullNodeMultipleSelectFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleSelectFields = null;
+            if (parseNode.GetChildNode("multipleVersionPickerFields") is { } nullNodeMultipleVersionPickerFields && nullNodeMultipleVersionPickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultipleVersionPickerFields = null;
+            if (parseNode.GetChildNode("multiselectComponents") is { } nullNodeMultiselectComponents && nullNodeMultiselectComponents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MultiselectComponents = null;
+            if (parseNode.GetChildNode("originalEstimateField") is { } nullNodeOriginalEstimateField && nullNodeOriginalEstimateField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalEstimateField = null;
+            if (parseNode.GetChildNode("priority") is { } nullNodePriority && nullNodePriority.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priority = null;
+            if (parseNode.GetChildNode("richTextFields") is { } nullNodeRichTextFields && nullNodeRichTextFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichTextFields = null;
+            if (parseNode.GetChildNode("singleGroupPickerFields") is { } nullNodeSingleGroupPickerFields && nullNodeSingleGroupPickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleGroupPickerFields = null;
+            if (parseNode.GetChildNode("singleLineTextFields") is { } nullNodeSingleLineTextFields && nullNodeSingleLineTextFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleLineTextFields = null;
+            if (parseNode.GetChildNode("singleSelectClearableUserPickerFields") is { } nullNodeSingleSelectClearableUserPickerFields && nullNodeSingleSelectClearableUserPickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleSelectClearableUserPickerFields = null;
+            if (parseNode.GetChildNode("singleSelectFields") is { } nullNodeSingleSelectFields && nullNodeSingleSelectFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleSelectFields = null;
+            if (parseNode.GetChildNode("singleVersionPickerFields") is { } nullNodeSingleVersionPickerFields && nullNodeSingleVersionPickerFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SingleVersionPickerFields = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("timeTrackingField") is { } nullNodeTimeTrackingField && nullNodeTimeTrackingField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeTrackingField = null;
+            if (parseNode.GetChildNode("urlFields") is { } nullNodeUrlFields && nullNodeUrlFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlFields = null;
+        }
+
         /// <summary>Add or clear a cascading select field: *  To add, specify `optionId` for both parent and child. *  To clear the child, set its `optionId` to null. *  To clear both, set the parent&apos;s `optionId` to null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraCascadingSelectField>? CascadingSelectFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraCascadingSelectField>? CascadingSelectFields { get => _explicitNullValueCascadingSelectFields; set { _explicitNullValueCascadingSelectFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cascadingSelectFields"); else _explicitNullProperties?.Remove("cascadingSelectFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraCascadingSelectField>? _explicitNullValueCascadingSelectFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraCascadingSelectField> CascadingSelectFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraCascadingSelectField> CascadingSelectFields { get => _explicitNullValueCascadingSelectFields; set { _explicitNullValueCascadingSelectFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cascadingSelectFields"); else _explicitNullProperties?.Remove("cascadingSelectFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraCascadingSelectField> _explicitNullValueCascadingSelectFields = default!;
 #endif
         /// <summary>Add or clear a number field: *  To add, specify a numeric `value`. *  To clear, set `value` to `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraNumberField>? ClearableNumberFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraNumberField>? ClearableNumberFields { get => _explicitNullValueClearableNumberFields; set { _explicitNullValueClearableNumberFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clearableNumberFields"); else _explicitNullProperties?.Remove("clearableNumberFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraNumberField>? _explicitNullValueClearableNumberFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraNumberField> ClearableNumberFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraNumberField> ClearableNumberFields { get => _explicitNullValueClearableNumberFields; set { _explicitNullValueClearableNumberFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clearableNumberFields"); else _explicitNullProperties?.Remove("clearableNumberFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraNumberField> _explicitNullValueClearableNumberFields = default!;
 #endif
         /// <summary>Add or clear a color field: *  To add, specify the color `name`. Available colors are: `purple`, `blue`, `green`, `teal`, `yellow`, `orange`, `grey`, `dark purple`, `dark blue`, `dark green`, `dark teal`, `dark yellow`, `dark orange`, `dark grey`. *  To clear, set the color `name` to an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraColorField>? ColorFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraColorField>? ColorFields { get => _explicitNullValueColorFields; set { _explicitNullValueColorFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorFields"); else _explicitNullProperties?.Remove("colorFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraColorField>? _explicitNullValueColorFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraColorField> ColorFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraColorField> ColorFields { get => _explicitNullValueColorFields; set { _explicitNullValueColorFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorFields"); else _explicitNullProperties?.Remove("colorFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraColorField> _explicitNullValueColorFields = default!;
 #endif
         /// <summary>Add or clear a date picker field: *  To add, specify the date in `d/mmm/yy` format or ISO format `dd-mm-yyyy`. *  To clear, set `formattedDate` to an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateField>? DatePickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateField>? DatePickerFields { get => _explicitNullValueDatePickerFields; set { _explicitNullValueDatePickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datePickerFields"); else _explicitNullProperties?.Remove("datePickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateField>? _explicitNullValueDatePickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateField> DatePickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateField> DatePickerFields { get => _explicitNullValueDatePickerFields; set { _explicitNullValueDatePickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datePickerFields"); else _explicitNullProperties?.Remove("datePickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateField> _explicitNullValueDatePickerFields = default!;
 #endif
         /// <summary>Add or clear the planned start date and time: *  To add, specify the date and time in ISO format for `formattedDateTime`. *  To clear, provide an empty string for `formattedDateTime`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateTimeField>? DateTimePickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateTimeField>? DateTimePickerFields { get => _explicitNullValueDateTimePickerFields; set { _explicitNullValueDateTimePickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateTimePickerFields"); else _explicitNullProperties?.Remove("dateTimePickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateTimeField>? _explicitNullValueDateTimePickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateTimeField> DateTimePickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateTimeField> DateTimePickerFields { get => _explicitNullValueDateTimePickerFields; set { _explicitNullValueDateTimePickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dateTimePickerFields"); else _explicitNullProperties?.Remove("dateTimePickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraDateTimeField> _explicitNullValueDateTimePickerFields = default!;
 #endif
         /// <summary>Set the issue type field by providing an `issueTypeId`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsIssueType? IssueType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsIssueType? IssueType { get => _explicitNullValueIssueType; set { _explicitNullValueIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueType"); else _explicitNullProperties?.Remove("issueType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsIssueType? _explicitNullValueIssueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsIssueType IssueType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsIssueType IssueType { get => _explicitNullValueIssueType; set { _explicitNullValueIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueType"); else _explicitNullProperties?.Remove("issueType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsIssueType _explicitNullValueIssueType = default!;
 #endif
         /// <summary>Edit a labels field: *  Options include `ADD`, `REPLACE`, `REMOVE`, or `REMOVE_ALL` for bulk edits. *  To clear labels, use the `REMOVE_ALL` option with an empty `labels` array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField>? LabelsFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField>? LabelsFields { get => _explicitNullValueLabelsFields; set { _explicitNullValueLabelsFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labelsFields"); else _explicitNullProperties?.Remove("labelsFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField>? _explicitNullValueLabelsFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField> LabelsFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField> LabelsFields { get => _explicitNullValueLabelsFields; set { _explicitNullValueLabelsFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labelsFields"); else _explicitNullProperties?.Remove("labelsFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraLabelsField> _explicitNullValueLabelsFields = default!;
 #endif
         /// <summary>Add or clear a multi-group picker field: *  To add groups, provide an array of groups with `groupName`s. *  To clear all groups, use an empty `groups` array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleGroupPickerField>? MultipleGroupPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleGroupPickerField>? MultipleGroupPickerFields { get => _explicitNullValueMultipleGroupPickerFields; set { _explicitNullValueMultipleGroupPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleGroupPickerFields"); else _explicitNullProperties?.Remove("multipleGroupPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleGroupPickerField>? _explicitNullValueMultipleGroupPickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleGroupPickerField> MultipleGroupPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleGroupPickerField> MultipleGroupPickerFields { get => _explicitNullValueMultipleGroupPickerFields; set { _explicitNullValueMultipleGroupPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleGroupPickerFields"); else _explicitNullProperties?.Remove("multipleGroupPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleGroupPickerField> _explicitNullValueMultipleGroupPickerFields = default!;
 #endif
         /// <summary>Assign or unassign multiple users to/from a field: *  To assign, provide an array of user `accountId`s. *  To clear, set `users` to `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectUserPickerField>? MultipleSelectClearableUserPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectUserPickerField>? MultipleSelectClearableUserPickerFields { get => _explicitNullValueMultipleSelectClearableUserPickerFields; set { _explicitNullValueMultipleSelectClearableUserPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleSelectClearableUserPickerFields"); else _explicitNullProperties?.Remove("multipleSelectClearableUserPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectUserPickerField>? _explicitNullValueMultipleSelectClearableUserPickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectUserPickerField> MultipleSelectClearableUserPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectUserPickerField> MultipleSelectClearableUserPickerFields { get => _explicitNullValueMultipleSelectClearableUserPickerFields; set { _explicitNullValueMultipleSelectClearableUserPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleSelectClearableUserPickerFields"); else _explicitNullProperties?.Remove("multipleSelectClearableUserPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectUserPickerField> _explicitNullValueMultipleSelectClearableUserPickerFields = default!;
 #endif
         /// <summary>Add or clear a multi-select field: *  To add, provide an array of options with `optionId`s. *  To clear, use an empty `options` array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectField>? MultipleSelectFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectField>? MultipleSelectFields { get => _explicitNullValueMultipleSelectFields; set { _explicitNullValueMultipleSelectFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleSelectFields"); else _explicitNullProperties?.Remove("multipleSelectFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectField>? _explicitNullValueMultipleSelectFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectField> MultipleSelectFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectField> MultipleSelectFields { get => _explicitNullValueMultipleSelectFields; set { _explicitNullValueMultipleSelectFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleSelectFields"); else _explicitNullProperties?.Remove("multipleSelectFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleSelectField> _explicitNullValueMultipleSelectFields = default!;
 #endif
         /// <summary>Edit a multi-version picker field like Fix Versions/Affects Versions: *  Options include `ADD`, `REPLACE`, `REMOVE`, or `REMOVE_ALL` for bulk edits. *  To clear the field, use the `REMOVE_ALL` option with an empty `versions` array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleVersionPickerField>? MultipleVersionPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleVersionPickerField>? MultipleVersionPickerFields { get => _explicitNullValueMultipleVersionPickerFields; set { _explicitNullValueMultipleVersionPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleVersionPickerFields"); else _explicitNullProperties?.Remove("multipleVersionPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleVersionPickerField>? _explicitNullValueMultipleVersionPickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleVersionPickerField> MultipleVersionPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleVersionPickerField> MultipleVersionPickerFields { get => _explicitNullValueMultipleVersionPickerFields; set { _explicitNullValueMultipleVersionPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multipleVersionPickerFields"); else _explicitNullProperties?.Remove("multipleVersionPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraMultipleVersionPickerField> _explicitNullValueMultipleVersionPickerFields = default!;
 #endif
         /// <summary>Edit a multi select components field: *  Options include `ADD`, `REPLACE`, `REMOVE`, or `REMOVE_ALL` for bulk edits. *  To clear, use the `REMOVE_ALL` option with an empty `components` array.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents? MultiselectComponents { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents? MultiselectComponents { get => _explicitNullValueMultiselectComponents; set { _explicitNullValueMultiselectComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiselectComponents"); else _explicitNullProperties?.Remove("multiselectComponents"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents? _explicitNullValueMultiselectComponents = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents MultiselectComponents { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents MultiselectComponents { get => _explicitNullValueMultiselectComponents; set { _explicitNullValueMultiselectComponents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiselectComponents"); else _explicitNullProperties?.Remove("multiselectComponents"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsMultiselectComponents _explicitNullValueMultiselectComponents = default!;
 #endif
         /// <summary>Edit the original estimate field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsOriginalEstimateField? OriginalEstimateField { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsOriginalEstimateField? OriginalEstimateField { get => _explicitNullValueOriginalEstimateField; set { _explicitNullValueOriginalEstimateField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalEstimateField"); else _explicitNullProperties?.Remove("originalEstimateField"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsOriginalEstimateField? _explicitNullValueOriginalEstimateField = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsOriginalEstimateField OriginalEstimateField { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsOriginalEstimateField OriginalEstimateField { get => _explicitNullValueOriginalEstimateField; set { _explicitNullValueOriginalEstimateField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalEstimateField"); else _explicitNullProperties?.Remove("originalEstimateField"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsOriginalEstimateField _explicitNullValueOriginalEstimateField = default!;
 #endif
         /// <summary>Set the priority of an issue by specifying a `priorityId`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsPriority? Priority { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsPriority? Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsPriority? _explicitNullValuePriority = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsPriority Priority { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsPriority Priority { get => _explicitNullValuePriority; set { _explicitNullValuePriority = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priority"); else _explicitNullProperties?.Remove("priority"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsPriority _explicitNullValuePriority = default!;
 #endif
         /// <summary>Add or clear a rich text field: *  To add, provide `adfValue`. Note that rich text fields only support ADF values. *  To clear, use an empty `richText` object.For ADF format details, refer to: [Atlassian Document Format](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraRichTextField>? RichTextFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraRichTextField>? RichTextFields { get => _explicitNullValueRichTextFields; set { _explicitNullValueRichTextFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextFields"); else _explicitNullProperties?.Remove("richTextFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraRichTextField>? _explicitNullValueRichTextFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraRichTextField> RichTextFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraRichTextField> RichTextFields { get => _explicitNullValueRichTextFields; set { _explicitNullValueRichTextFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richTextFields"); else _explicitNullProperties?.Remove("richTextFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraRichTextField> _explicitNullValueRichTextFields = default!;
 #endif
         /// <summary>Add or clear a single group picker field: *  To add, specify the group with `groupName`. *  To clear, set `groupName` to an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleGroupPickerField>? SingleGroupPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleGroupPickerField>? SingleGroupPickerFields { get => _explicitNullValueSingleGroupPickerFields; set { _explicitNullValueSingleGroupPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleGroupPickerFields"); else _explicitNullProperties?.Remove("singleGroupPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleGroupPickerField>? _explicitNullValueSingleGroupPickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleGroupPickerField> SingleGroupPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleGroupPickerField> SingleGroupPickerFields { get => _explicitNullValueSingleGroupPickerFields; set { _explicitNullValueSingleGroupPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleGroupPickerFields"); else _explicitNullProperties?.Remove("singleGroupPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleGroupPickerField> _explicitNullValueSingleGroupPickerFields = default!;
 #endif
         /// <summary>Add or clear a single line text field: *  To add, provide the `text` value. *  To clear, set `text` to an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleLineTextField>? SingleLineTextFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleLineTextField>? SingleLineTextFields { get => _explicitNullValueSingleLineTextFields; set { _explicitNullValueSingleLineTextFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleLineTextFields"); else _explicitNullProperties?.Remove("singleLineTextFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleLineTextField>? _explicitNullValueSingleLineTextFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleLineTextField> SingleLineTextFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleLineTextField> SingleLineTextFields { get => _explicitNullValueSingleLineTextFields; set { _explicitNullValueSingleLineTextFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleLineTextFields"); else _explicitNullProperties?.Remove("singleLineTextFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleLineTextField> _explicitNullValueSingleLineTextFields = default!;
 #endif
         /// <summary>Edit assignment for single select user picker fields like Assignee/Reporter: *  To assign an issue, specify the user&apos;s `accountId`. *  To unassign an issue, set `user` to `null`. *  For automatic assignment, set `accountId` to `-1`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectUserPickerField>? SingleSelectClearableUserPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectUserPickerField>? SingleSelectClearableUserPickerFields { get => _explicitNullValueSingleSelectClearableUserPickerFields; set { _explicitNullValueSingleSelectClearableUserPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleSelectClearableUserPickerFields"); else _explicitNullProperties?.Remove("singleSelectClearableUserPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectUserPickerField>? _explicitNullValueSingleSelectClearableUserPickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectUserPickerField> SingleSelectClearableUserPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectUserPickerField> SingleSelectClearableUserPickerFields { get => _explicitNullValueSingleSelectClearableUserPickerFields; set { _explicitNullValueSingleSelectClearableUserPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleSelectClearableUserPickerFields"); else _explicitNullProperties?.Remove("singleSelectClearableUserPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectUserPickerField> _explicitNullValueSingleSelectClearableUserPickerFields = default!;
 #endif
         /// <summary>Add or clear a single select field: *  To add, specify the option with an `optionId`. *  To clear, pass an option with `optionId` as `-1`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectField>? SingleSelectFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectField>? SingleSelectFields { get => _explicitNullValueSingleSelectFields; set { _explicitNullValueSingleSelectFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleSelectFields"); else _explicitNullProperties?.Remove("singleSelectFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectField>? _explicitNullValueSingleSelectFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectField> SingleSelectFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectField> SingleSelectFields { get => _explicitNullValueSingleSelectFields; set { _explicitNullValueSingleSelectFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleSelectFields"); else _explicitNullProperties?.Remove("singleSelectFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleSelectField> _explicitNullValueSingleSelectFields = default!;
 #endif
         /// <summary>Add or clear a single version picker field: *  To add, specify the version with a `versionId`. *  To clear, set `versionId` to `-1`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleVersionPickerField>? SingleVersionPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleVersionPickerField>? SingleVersionPickerFields { get => _explicitNullValueSingleVersionPickerFields; set { _explicitNullValueSingleVersionPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleVersionPickerFields"); else _explicitNullProperties?.Remove("singleVersionPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleVersionPickerField>? _explicitNullValueSingleVersionPickerFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleVersionPickerField> SingleVersionPickerFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleVersionPickerField> SingleVersionPickerFields { get => _explicitNullValueSingleVersionPickerFields; set { _explicitNullValueSingleVersionPickerFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("singleVersionPickerFields"); else _explicitNullProperties?.Remove("singleVersionPickerFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleVersionPickerField> _explicitNullValueSingleVersionPickerFields = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraStatusInput? Status { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraStatusInput? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraStatusInput? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraStatusInput Status { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraStatusInput Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraStatusInput _explicitNullValueStatus = default!;
 #endif
         /// <summary>Edit the time tracking field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsTimeTrackingField? TimeTrackingField { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsTimeTrackingField? TimeTrackingField { get => _explicitNullValueTimeTrackingField; set { _explicitNullValueTimeTrackingField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeTrackingField"); else _explicitNullProperties?.Remove("timeTrackingField"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsTimeTrackingField? _explicitNullValueTimeTrackingField = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsTimeTrackingField TimeTrackingField { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsTimeTrackingField TimeTrackingField { get => _explicitNullValueTimeTrackingField; set { _explicitNullValueTimeTrackingField = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeTrackingField"); else _explicitNullProperties?.Remove("timeTrackingField"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsTimeTrackingField _explicitNullValueTimeTrackingField = default!;
 #endif
         /// <summary>Add or clear a URL field: *  To add, provide the `url` with the desired URL value. *  To clear, set `url` to an empty string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField>? UrlFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField>? UrlFields { get => _explicitNullValueUrlFields; set { _explicitNullValueUrlFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlFields"); else _explicitNullProperties?.Remove("urlFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField>? _explicitNullValueUrlFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField> UrlFields { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField> UrlFields { get => _explicitNullValueUrlFields; set { _explicitNullValueUrlFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("urlFields"); else _explicitNullProperties?.Remove("urlFields"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField> _explicitNullValueUrlFields = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -205,7 +281,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -269,7 +345,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JiraSingleVersionPickerField>("singleVersionPickerFields", SingleVersionPickerFields);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraStatusInput>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraIssueFieldsTimeTrackingField>("timeTrackingField", TimeTrackingField);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField>("urlFields", UrlFields);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JiraUrlField>("urlFields", UrlFields);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

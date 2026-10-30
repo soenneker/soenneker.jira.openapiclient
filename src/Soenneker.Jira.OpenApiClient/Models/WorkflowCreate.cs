@@ -12,54 +12,79 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowCreate : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("loopedTransitionContainerLayout") is { } nullNodeLoopedTransitionContainerLayout && nullNodeLoopedTransitionContainerLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LoopedTransitionContainerLayout = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("startPointLayout") is { } nullNodeStartPointLayout && nullNodeStartPointLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartPointLayout = null;
+            if (parseNode.GetChildNode("statuses") is { } nullNodeStatuses && nullNodeStatuses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Statuses = null;
+            if (parseNode.GetChildNode("transitions") is { } nullNodeTransitions && nullNodeTransitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transitions = null;
+        }
+
         /// <summary>The description of the workflow to create.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The starting point for the statuses in the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? LoopedTransitionContainerLayout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? LoopedTransitionContainerLayout { get => _explicitNullValueLoopedTransitionContainerLayout; set { _explicitNullValueLoopedTransitionContainerLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loopedTransitionContainerLayout"); else _explicitNullProperties?.Remove("loopedTransitionContainerLayout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? _explicitNullValueLoopedTransitionContainerLayout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout LoopedTransitionContainerLayout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout LoopedTransitionContainerLayout { get => _explicitNullValueLoopedTransitionContainerLayout; set { _explicitNullValueLoopedTransitionContainerLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loopedTransitionContainerLayout"); else _explicitNullProperties?.Remove("loopedTransitionContainerLayout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout _explicitNullValueLoopedTransitionContainerLayout = default!;
 #endif
         /// <summary>The name of the workflow to create.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The starting point for the statuses in the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? StartPointLayout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? StartPointLayout { get => _explicitNullValueStartPointLayout; set { _explicitNullValueStartPointLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startPointLayout"); else _explicitNullProperties?.Remove("startPointLayout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? _explicitNullValueStartPointLayout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout StartPointLayout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout StartPointLayout { get => _explicitNullValueStartPointLayout; set { _explicitNullValueStartPointLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startPointLayout"); else _explicitNullProperties?.Remove("startPointLayout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout _explicitNullValueStartPointLayout = default!;
 #endif
         /// <summary>The statuses associated with this workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdate>? Statuses { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdate>? Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdate>? _explicitNullValueStatuses = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdate> Statuses { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdate> Statuses { get => _explicitNullValueStatuses; set { _explicitNullValueStatuses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statuses"); else _explicitNullProperties?.Remove("statuses"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdate> _explicitNullValueStatuses = default!;
 #endif
         /// <summary>The transitions of this workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto>? Transitions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto>? Transitions { get => _explicitNullValueTransitions; set { _explicitNullValueTransitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitions"); else _explicitNullProperties?.Remove("transitions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto>? _explicitNullValueTransitions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto> Transitions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto> Transitions { get => _explicitNullValueTransitions; set { _explicitNullValueTransitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitions"); else _explicitNullProperties?.Remove("transitions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto> _explicitNullValueTransitions = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -69,7 +94,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreate CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreate();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreate(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,7 +124,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout>("startPointLayout", StartPointLayout);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdate>("statuses", Statuses);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto>("transitions", Transitions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.TransitionUpdateDto>("transitions", Transitions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

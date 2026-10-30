@@ -12,26 +12,43 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BoardColumnPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("maximumIssueConstraint") is { } nullNodeMaximumIssueConstraint && nullNodeMaximumIssueConstraint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumIssueConstraint = null;
+            if (parseNode.GetChildNode("minimumIssueConstraint") is { } nullNodeMinimumIssueConstraint && nullNodeMinimumIssueConstraint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumIssueConstraint = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("statusIds") is { } nullNodeStatusIds && nullNodeStatusIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusIds = null;
+        }
+
         /// <summary>The maximum issue constraint for the column</summary>
-        public long? MaximumIssueConstraint { get; set; }
+        public long? MaximumIssueConstraint { get => _explicitNullValueMaximumIssueConstraint; set { _explicitNullValueMaximumIssueConstraint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximumIssueConstraint"); else _explicitNullProperties?.Remove("maximumIssueConstraint"); } }
+        private long? _explicitNullValueMaximumIssueConstraint = default!;
         /// <summary>The minimum issue constraint for the column</summary>
-        public long? MinimumIssueConstraint { get; set; }
+        public long? MinimumIssueConstraint { get => _explicitNullValueMinimumIssueConstraint; set { _explicitNullValueMinimumIssueConstraint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimumIssueConstraint"); else _explicitNullProperties?.Remove("minimumIssueConstraint"); } }
+        private long? _explicitNullValueMinimumIssueConstraint = default!;
         /// <summary>The name of the column</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The status IDs for the column</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? StatusIds { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? StatusIds { get => _explicitNullValueStatusIds; set { _explicitNullValueStatusIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusIds"); else _explicitNullProperties?.Remove("statusIds"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>? _explicitNullValueStatusIds = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> StatusIds { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> StatusIds { get => _explicitNullValueStatusIds; set { _explicitNullValueStatusIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusIds"); else _explicitNullProperties?.Remove("statusIds"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier> _explicitNullValueStatusIds = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +58,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +84,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteLongValue("maximumIssueConstraint", MaximumIssueConstraint);
             writer.WriteLongValue("minimumIssueConstraint", MinimumIssueConstraint);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("statusIds", StatusIds);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier>("statusIds", StatusIds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

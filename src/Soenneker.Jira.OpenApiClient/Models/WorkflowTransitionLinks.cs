@@ -12,19 +12,33 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowTransitionLinks : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fromPort") is { } nullNodeFromPort && nullNodeFromPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPort = null;
+            if (parseNode.GetChildNode("fromStatusReference") is { } nullNodeFromStatusReference && nullNodeFromStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromStatusReference = null;
+            if (parseNode.GetChildNode("toPort") is { } nullNodeToPort && nullNodeToPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPort = null;
+        }
+
         /// <summary>The port that the transition starts from.</summary>
-        public int? FromPort { get; set; }
+        public int? FromPort { get => _explicitNullValueFromPort; set { _explicitNullValueFromPort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromPort"); else _explicitNullProperties?.Remove("fromPort"); } }
+        private int? _explicitNullValueFromPort = default!;
         /// <summary>The status that the transition starts from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromStatusReference { get; set; }
+        public string? FromStatusReference { get => _explicitNullValueFromStatusReference; set { _explicitNullValueFromStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromStatusReference"); else _explicitNullProperties?.Remove("fromStatusReference"); } }
+        private string? _explicitNullValueFromStatusReference = default!;
 #nullable restore
 #else
-        public string FromStatusReference { get; set; }
+        public string FromStatusReference { get => _explicitNullValueFromStatusReference; set { _explicitNullValueFromStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fromStatusReference"); else _explicitNullProperties?.Remove("fromStatusReference"); } }
+        private string _explicitNullValueFromStatusReference = default!;
 #endif
         /// <summary>The port that the transition goes to.</summary>
-        public int? ToPort { get; set; }
+        public int? ToPort { get => _explicitNullValueToPort; set { _explicitNullValueToPort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toPort"); else _explicitNullProperties?.Remove("toPort"); } }
+        private int? _explicitNullValueToPort = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -33,7 +47,9 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionLinks CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionLinks();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionLinks(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,7 +73,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("fromPort", FromPort);
             writer.WriteStringValue("fromStatusReference", FromStatusReference);
-            writer.WriteIntValue("toPort", ToPort);
+            writer.WriteIntValue("toPort", ToPort);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

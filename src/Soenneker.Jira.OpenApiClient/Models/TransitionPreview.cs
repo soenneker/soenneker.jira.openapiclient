@@ -12,96 +12,138 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TransitionPreview : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("conditions") is { } nullNodeConditions && nullNodeConditions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Conditions = null;
+            if (parseNode.GetChildNode("customIssueEventId") is { } nullNodeCustomIssueEventId && nullNodeCustomIssueEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomIssueEventId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("toStatusReference") is { } nullNodeToStatusReference && nullNodeToStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToStatusReference = null;
+            if (parseNode.GetChildNode("transitionScreen") is { } nullNodeTransitionScreen && nullNodeTransitionScreen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionScreen = null;
+            if (parseNode.GetChildNode("triggers") is { } nullNodeTriggers && nullNodeTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Triggers = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("validators") is { } nullNodeValidators && nullNodeValidators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validators = null;
+        }
+
         /// <summary>The post-functions of the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>? Actions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration> Actions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration> _explicitNullValueActions = default!;
 #endif
         /// <summary>Condition group configuration for workflow transitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.PreviewConditionGroupConfiguration? Conditions { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PreviewConditionGroupConfiguration? Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PreviewConditionGroupConfiguration? _explicitNullValueConditions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.PreviewConditionGroupConfiguration Conditions { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PreviewConditionGroupConfiguration Conditions { get => _explicitNullValueConditions; set { _explicitNullValueConditions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditions"); else _explicitNullProperties?.Remove("conditions"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PreviewConditionGroupConfiguration _explicitNullValueConditions = default!;
 #endif
         /// <summary>The custom issue event ID for the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomIssueEventId { get; set; }
+        public string? CustomIssueEventId { get => _explicitNullValueCustomIssueEventId; set { _explicitNullValueCustomIssueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customIssueEventId"); else _explicitNullProperties?.Remove("customIssueEventId"); } }
+        private string? _explicitNullValueCustomIssueEventId = default!;
 #nullable restore
 #else
-        public string CustomIssueEventId { get; set; }
+        public string CustomIssueEventId { get => _explicitNullValueCustomIssueEventId; set { _explicitNullValueCustomIssueEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customIssueEventId"); else _explicitNullProperties?.Remove("customIssueEventId"); } }
+        private string _explicitNullValueCustomIssueEventId = default!;
 #endif
         /// <summary>The description of the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The ID of the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The statuses the transition can start from, and the mapping of ports between the statuses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionLink>? Links { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionLink>? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.TransitionLink>? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionLink> Links { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.TransitionLink> Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.TransitionLink> _explicitNullValueLinks = default!;
 #endif
         /// <summary>The name of the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The status the transition goes to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToStatusReference { get; set; }
+        public string? ToStatusReference { get => _explicitNullValueToStatusReference; set { _explicitNullValueToStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toStatusReference"); else _explicitNullProperties?.Remove("toStatusReference"); } }
+        private string? _explicitNullValueToStatusReference = default!;
 #nullable restore
 #else
-        public string ToStatusReference { get; set; }
+        public string ToStatusReference { get => _explicitNullValueToStatusReference; set { _explicitNullValueToStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("toStatusReference"); else _explicitNullProperties?.Remove("toStatusReference"); } }
+        private string _explicitNullValueToStatusReference = default!;
 #endif
         /// <summary>Rule configuration for workflow transitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration? TransitionScreen { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration? TransitionScreen { get => _explicitNullValueTransitionScreen; set { _explicitNullValueTransitionScreen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionScreen"); else _explicitNullProperties?.Remove("transitionScreen"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration? _explicitNullValueTransitionScreen = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration TransitionScreen { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration TransitionScreen { get => _explicitNullValueTransitionScreen; set { _explicitNullValueTransitionScreen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionScreen"); else _explicitNullProperties?.Remove("transitionScreen"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration _explicitNullValueTransitionScreen = default!;
 #endif
         /// <summary>The triggers of the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewTrigger>? Triggers { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewTrigger>? Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.PreviewTrigger>? _explicitNullValueTriggers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewTrigger> Triggers { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewTrigger> Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.PreviewTrigger> _explicitNullValueTriggers = default!;
 #endif
         /// <summary>The transition type.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.TransitionPreviewType? Type { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.TransitionPreviewType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.TransitionPreviewType? _explicitNullValueType = default!;
         /// <summary>The validators of the transition.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>? Validators { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>? Validators { get => _explicitNullValueValidators; set { _explicitNullValueValidators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validators"); else _explicitNullProperties?.Remove("validators"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>? _explicitNullValueValidators = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration> Validators { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration> Validators { get => _explicitNullValueValidators; set { _explicitNullValueValidators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validators"); else _explicitNullProperties?.Remove("validators"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration> _explicitNullValueValidators = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -111,7 +153,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.TransitionPreview CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.TransitionPreview();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.TransitionPreview(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -153,7 +195,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>("transitionScreen", TransitionScreen);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.PreviewTrigger>("triggers", Triggers);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.TransitionPreviewType>("type", Type);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>("validators", Validators);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.PreviewRuleConfiguration>("validators", Validators);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

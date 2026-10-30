@@ -56,6 +56,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Forge.One.App.Properties.Item
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.DeleteForgeAppProperty403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -83,6 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Forge.One.App.Properties.Item
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.GetForgeAppProperty403Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.GetForgeAppProperty200Response>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.GetForgeAppProperty200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -110,6 +114,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Forge.One.App.Properties.Item
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.PutForgeAppProperty403Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.OperationMessage>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,93 +12,136 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BoardPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("boardFilterJQL") is { } nullNodeBoardFilterJQL && nullNodeBoardFilterJQL.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoardFilterJQL = null;
+            if (parseNode.GetChildNode("cardColorStrategy") is { } nullNodeCardColorStrategy && nullNodeCardColorStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardColorStrategy = null;
+            if (parseNode.GetChildNode("cardLayout") is { } nullNodeCardLayout && nullNodeCardLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLayout = null;
+            if (parseNode.GetChildNode("cardLayouts") is { } nullNodeCardLayouts && nullNodeCardLayouts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardLayouts = null;
+            if (parseNode.GetChildNode("columns") is { } nullNodeColumns && nullNodeColumns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Columns = null;
+            if (parseNode.GetChildNode("enableCardCover") is { } nullNodeEnableCardCover && nullNodeEnableCardCover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableCardCover = null;
+            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pcri") is { } nullNodePcri && nullNodePcri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pcri = null;
+            if (parseNode.GetChildNode("quickFilters") is { } nullNodeQuickFilters && nullNodeQuickFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QuickFilters = null;
+            if (parseNode.GetChildNode("supportsSprint") is { } nullNodeSupportsSprint && nullNodeSupportsSprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportsSprint = null;
+            if (parseNode.GetChildNode("swimlanes") is { } nullNodeSwimlanes && nullNodeSwimlanes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Swimlanes = null;
+            if (parseNode.GetChildNode("workingDaysConfig") is { } nullNodeWorkingDaysConfig && nullNodeWorkingDaysConfig.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkingDaysConfig = null;
+        }
+
         /// <summary>Takes in a JQL string to create a new filter. If no value is provided, it&apos;ll default to a JQL filter for the project creating</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoardFilterJQL { get; set; }
+        public string? BoardFilterJQL { get => _explicitNullValueBoardFilterJQL; set { _explicitNullValueBoardFilterJQL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boardFilterJQL"); else _explicitNullProperties?.Remove("boardFilterJQL"); } }
+        private string? _explicitNullValueBoardFilterJQL = default!;
 #nullable restore
 #else
-        public string BoardFilterJQL { get; set; }
+        public string BoardFilterJQL { get => _explicitNullValueBoardFilterJQL; set { _explicitNullValueBoardFilterJQL = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boardFilterJQL"); else _explicitNullProperties?.Remove("boardFilterJQL"); } }
+        private string _explicitNullValueBoardFilterJQL = default!;
 #endif
         /// <summary>Card color settings of the board</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.BoardPayloadCardColorStrategy? CardColorStrategy { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BoardPayloadCardColorStrategy? CardColorStrategy { get => _explicitNullValueCardColorStrategy; set { _explicitNullValueCardColorStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardColorStrategy"); else _explicitNullProperties?.Remove("cardColorStrategy"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BoardPayloadCardColorStrategy? _explicitNullValueCardColorStrategy = default!;
         /// <summary>Card layout configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.CardLayout? CardLayout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CardLayout? CardLayout { get => _explicitNullValueCardLayout; set { _explicitNullValueCardLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardLayout"); else _explicitNullProperties?.Remove("cardLayout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CardLayout? _explicitNullValueCardLayout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.CardLayout CardLayout { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.CardLayout CardLayout { get => _explicitNullValueCardLayout; set { _explicitNullValueCardLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardLayout"); else _explicitNullProperties?.Remove("cardLayout"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.CardLayout _explicitNullValueCardLayout = default!;
 #endif
         /// <summary>Card layout settings of the board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CardLayoutField>? CardLayouts { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CardLayoutField>? CardLayouts { get => _explicitNullValueCardLayouts; set { _explicitNullValueCardLayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardLayouts"); else _explicitNullProperties?.Remove("cardLayouts"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CardLayoutField>? _explicitNullValueCardLayouts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CardLayoutField> CardLayouts { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CardLayoutField> CardLayouts { get => _explicitNullValueCardLayouts; set { _explicitNullValueCardLayouts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardLayouts"); else _explicitNullProperties?.Remove("cardLayouts"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CardLayoutField> _explicitNullValueCardLayouts = default!;
 #endif
         /// <summary>The columns of the board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload>? Columns { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload>? Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload>? _explicitNullValueColumns = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload> Columns { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload> Columns { get => _explicitNullValueColumns; set { _explicitNullValueColumns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("columns"); else _explicitNullProperties?.Remove("columns"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BoardColumnPayload> _explicitNullValueColumns = default!;
 #endif
         /// <summary>Whether to enable the card cover option on this board</summary>
-        public bool? EnableCardCover { get; set; }
+        public bool? EnableCardCover { get => _explicitNullValueEnableCardCover; set { _explicitNullValueEnableCardCover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enableCardCover"); else _explicitNullProperties?.Remove("enableCardCover"); } }
+        private bool? _explicitNullValueEnableCardCover = default!;
         /// <summary>Feature settings for the board. Deprecated: use boardFeatures capability instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturePayload>? Features { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturePayload>? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturePayload>? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturePayload> Features { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturePayload> Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturePayload> _explicitNullValueFeatures = default!;
 #endif
         /// <summary>The name of the board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Every project-created entity has an ID that must be unique within the scope of the project creation. PCRI (Project Create Resource Identifier) is a standard format for creating IDs and references to other project entities. PCRI format is defined as follows: pcri:\[entityType\]:\[type\]:\[entityId\] entityType - the type of an entity, e.g. status, role, workflow type - PCRI type, either `id` - The ID of an entity that already exists in the target site, or `ref` - A unique reference to an entity that is being created entityId - entity identifier, if type is `id` - must be an existing entity ID that exists in the Jira site, if `ref` - must be unique across all entities in the scope of this project template creation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? Pcri { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? Pcri { get => _explicitNullValuePcri; set { _explicitNullValuePcri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcri"); else _explicitNullProperties?.Remove("pcri"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier? _explicitNullValuePcri = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier Pcri { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier Pcri { get => _explicitNullValuePcri; set { _explicitNullValuePcri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pcri"); else _explicitNullProperties?.Remove("pcri"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectCreateResourceIdentifier _explicitNullValuePcri = default!;
 #endif
         /// <summary>The quick filters for the board.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.QuickFilterPayload>? QuickFilters { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.QuickFilterPayload>? QuickFilters { get => _explicitNullValueQuickFilters; set { _explicitNullValueQuickFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quickFilters"); else _explicitNullProperties?.Remove("quickFilters"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.QuickFilterPayload>? _explicitNullValueQuickFilters = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.QuickFilterPayload> QuickFilters { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.QuickFilterPayload> QuickFilters { get => _explicitNullValueQuickFilters; set { _explicitNullValueQuickFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quickFilters"); else _explicitNullProperties?.Remove("quickFilters"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.QuickFilterPayload> _explicitNullValueQuickFilters = default!;
 #endif
         /// <summary>Whether sprints are supported on the board</summary>
-        public bool? SupportsSprint { get; set; }
+        public bool? SupportsSprint { get => _explicitNullValueSupportsSprint; set { _explicitNullValueSupportsSprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportsSprint"); else _explicitNullProperties?.Remove("supportsSprint"); } }
+        private bool? _explicitNullValueSupportsSprint = default!;
         /// <summary>The payload for customising a swimlanes on a board</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload? Swimlanes { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload? Swimlanes { get => _explicitNullValueSwimlanes; set { _explicitNullValueSwimlanes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swimlanes"); else _explicitNullProperties?.Remove("swimlanes"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload? _explicitNullValueSwimlanes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload Swimlanes { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload Swimlanes { get => _explicitNullValueSwimlanes; set { _explicitNullValueSwimlanes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swimlanes"); else _explicitNullProperties?.Remove("swimlanes"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload _explicitNullValueSwimlanes = default!;
 #endif
         /// <summary>Working days configuration</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig? WorkingDaysConfig { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig? WorkingDaysConfig { get => _explicitNullValueWorkingDaysConfig; set { _explicitNullValueWorkingDaysConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingDaysConfig"); else _explicitNullProperties?.Remove("workingDaysConfig"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig? _explicitNullValueWorkingDaysConfig = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig WorkingDaysConfig { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig WorkingDaysConfig { get => _explicitNullValueWorkingDaysConfig; set { _explicitNullValueWorkingDaysConfig = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workingDaysConfig"); else _explicitNullProperties?.Remove("workingDaysConfig"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig _explicitNullValueWorkingDaysConfig = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.BoardPayload"/> and sets the default values.
@@ -115,7 +158,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BoardPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BoardPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BoardPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -159,7 +202,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.QuickFilterPayload>("quickFilters", QuickFilters);
             writer.WriteBoolValue("supportsSprint", SupportsSprint);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SwimlanesPayload>("swimlanes", Swimlanes);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig>("workingDaysConfig", WorkingDaysConfig);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkingDaysConfig>("workingDaysConfig", WorkingDaysConfig);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

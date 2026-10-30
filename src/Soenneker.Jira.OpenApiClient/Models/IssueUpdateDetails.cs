@@ -12,48 +12,70 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueUpdateDetails : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("historyMetadata") is { } nullNodeHistoryMetadata && nullNodeHistoryMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HistoryMetadata = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("transition") is { } nullNodeTransition && nullNodeTransition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transition = null;
+            if (parseNode.GetChildNode("update") is { } nullNodeUpdate && nullNodeUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Update = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>List of issue screen fields to update, specifying the sub-field to update and its value for each field. This field provides a straightforward option when setting a sub-field. When multiple sub-fields or other operations are required, use `update`. Fields included in here cannot be included in `update`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsFieldsProperty? Fields { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsFieldsProperty? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsFieldsProperty? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsFieldsProperty Fields { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsFieldsProperty Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsFieldsProperty _explicitNullValueFields = default!;
 #endif
         /// <summary>Additional issue history details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsHistoryMetadata? HistoryMetadata { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsHistoryMetadata? HistoryMetadata { get => _explicitNullValueHistoryMetadata; set { _explicitNullValueHistoryMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyMetadata"); else _explicitNullProperties?.Remove("historyMetadata"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsHistoryMetadata? _explicitNullValueHistoryMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsHistoryMetadata HistoryMetadata { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsHistoryMetadata HistoryMetadata { get => _explicitNullValueHistoryMetadata; set { _explicitNullValueHistoryMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("historyMetadata"); else _explicitNullProperties?.Remove("historyMetadata"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsHistoryMetadata _explicitNullValueHistoryMetadata = default!;
 #endif
         /// <summary>Details of issue properties to be add or update.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty>? Properties { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty>? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty>? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty> Properties { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty> Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty> _explicitNullValueProperties = default!;
 #endif
         /// <summary>Details of a transition. Required when performing a transition, optional when creating or editing an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsTransition? Transition { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsTransition? Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsTransition? _explicitNullValueTransition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsTransition Transition { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsTransition Transition { get => _explicitNullValueTransition; set { _explicitNullValueTransition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transition"); else _explicitNullProperties?.Remove("transition"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsTransition _explicitNullValueTransition = default!;
 #endif
         /// <summary>A Map containing the field field name and a list of operations to perform on the issue screen field. Note that fields included in here cannot be included in `fields`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsUpdateProperty? Update { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsUpdateProperty? Update { get => _explicitNullValueUpdate; set { _explicitNullValueUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update"); else _explicitNullProperties?.Remove("update"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsUpdateProperty? _explicitNullValueUpdate = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsUpdateProperty Update { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsUpdateProperty Update { get => _explicitNullValueUpdate; set { _explicitNullValueUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update"); else _explicitNullProperties?.Remove("update"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsUpdateProperty _explicitNullValueUpdate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails"/> and sets the default values.
@@ -70,7 +92,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +121,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty>("properties", Properties);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsTransition>("transition", Transition);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetailsUpdateProperty>("update", Update);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

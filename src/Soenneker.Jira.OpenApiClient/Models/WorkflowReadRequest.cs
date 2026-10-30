@@ -11,30 +11,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowReadRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("projectAndIssueTypes") is { } nullNodeProjectAndIssueTypes && nullNodeProjectAndIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectAndIssueTypes = null;
+            if (parseNode.GetChildNode("workflowIds") is { } nullNodeWorkflowIds && nullNodeWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowIds = null;
+            if (parseNode.GetChildNode("workflowNames") is { } nullNodeWorkflowNames && nullNodeWorkflowNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowNames = null;
+        }
+
         /// <summary>The list of projects and issue types to query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair>? ProjectAndIssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair>? ProjectAndIssueTypes { get => _explicitNullValueProjectAndIssueTypes; set { _explicitNullValueProjectAndIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectAndIssueTypes"); else _explicitNullProperties?.Remove("projectAndIssueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair>? _explicitNullValueProjectAndIssueTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair> ProjectAndIssueTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair> ProjectAndIssueTypes { get => _explicitNullValueProjectAndIssueTypes; set { _explicitNullValueProjectAndIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectAndIssueTypes"); else _explicitNullProperties?.Remove("projectAndIssueTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair> _explicitNullValueProjectAndIssueTypes = default!;
 #endif
         /// <summary>The list of workflow IDs to query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WorkflowIds { get; set; }
+        public List<string>? WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
+        private List<string>? _explicitNullValueWorkflowIds = default!;
 #nullable restore
 #else
-        public List<string> WorkflowIds { get; set; }
+        public List<string> WorkflowIds { get => _explicitNullValueWorkflowIds; set { _explicitNullValueWorkflowIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowIds"); else _explicitNullProperties?.Remove("workflowIds"); } }
+        private List<string> _explicitNullValueWorkflowIds = default!;
 #endif
         /// <summary>The list of workflow names to query.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? WorkflowNames { get; set; }
+        public List<string>? WorkflowNames { get => _explicitNullValueWorkflowNames; set { _explicitNullValueWorkflowNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowNames"); else _explicitNullProperties?.Remove("workflowNames"); } }
+        private List<string>? _explicitNullValueWorkflowNames = default!;
 #nullable restore
 #else
-        public List<string> WorkflowNames { get; set; }
+        public List<string> WorkflowNames { get => _explicitNullValueWorkflowNames; set { _explicitNullValueWorkflowNames = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowNames"); else _explicitNullProperties?.Remove("workflowNames"); } }
+        private List<string> _explicitNullValueWorkflowNames = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +60,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowReadRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowReadRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowReadRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +84,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectAndIssueTypePair>("projectAndIssueTypes", ProjectAndIssueTypes);
             writer.WriteCollectionOfPrimitiveValues<string>("workflowIds", WorkflowIds);
-            writer.WriteCollectionOfPrimitiveValues<string>("workflowNames", WorkflowNames);
+            writer.WriteCollectionOfPrimitiveValues<string>("workflowNames", WorkflowNames);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

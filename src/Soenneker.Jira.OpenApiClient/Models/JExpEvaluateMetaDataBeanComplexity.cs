@@ -12,38 +12,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JExpEvaluateMetaDataBeanComplexity : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("beans") is { } nullNodeBeans && nullNodeBeans.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Beans = null;
+            if (parseNode.GetChildNode("expensiveOperations") is { } nullNodeExpensiveOperations && nullNodeExpensiveOperations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpensiveOperations = null;
+            if (parseNode.GetChildNode("primitiveValues") is { } nullNodePrimitiveValues && nullNodePrimitiveValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimitiveValues = null;
+            if (parseNode.GetChildNode("steps") is { } nullNodeSteps && nullNodeSteps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Steps = null;
+        }
+
         /// <summary>The number of Jira REST API beans returned in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans? Beans { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans? Beans { get => _explicitNullValueBeans; set { _explicitNullValueBeans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("beans"); else _explicitNullProperties?.Remove("beans"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans? _explicitNullValueBeans = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans Beans { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans Beans { get => _explicitNullValueBeans; set { _explicitNullValueBeans = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("beans"); else _explicitNullProperties?.Remove("beans"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans _explicitNullValueBeans = default!;
 #endif
         /// <summary>The number of expensive operations executed while evaluating the expression. Expensive operations are those that load additional data, such as entity properties, comments, or custom fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations? ExpensiveOperations { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations? ExpensiveOperations { get => _explicitNullValueExpensiveOperations; set { _explicitNullValueExpensiveOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expensiveOperations"); else _explicitNullProperties?.Remove("expensiveOperations"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations? _explicitNullValueExpensiveOperations = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations ExpensiveOperations { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations ExpensiveOperations { get => _explicitNullValueExpensiveOperations; set { _explicitNullValueExpensiveOperations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expensiveOperations"); else _explicitNullProperties?.Remove("expensiveOperations"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations _explicitNullValueExpensiveOperations = default!;
 #endif
         /// <summary>The number of primitive values returned in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanPrimitiveValues? PrimitiveValues { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanPrimitiveValues? PrimitiveValues { get => _explicitNullValuePrimitiveValues; set { _explicitNullValuePrimitiveValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primitiveValues"); else _explicitNullProperties?.Remove("primitiveValues"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanPrimitiveValues? _explicitNullValuePrimitiveValues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanPrimitiveValues PrimitiveValues { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanPrimitiveValues PrimitiveValues { get => _explicitNullValuePrimitiveValues; set { _explicitNullValuePrimitiveValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primitiveValues"); else _explicitNullProperties?.Remove("primitiveValues"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanPrimitiveValues _explicitNullValuePrimitiveValues = default!;
 #endif
         /// <summary>The number of steps it took to evaluate the expression, where a step is a high-level operation performed by the expression. A step is an operation such as arithmetic, accessing a property, accessing a context variable, or calling a function.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps? Steps { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps? Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps? _explicitNullValueSteps = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps Steps { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps _explicitNullValueSteps = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateMetaDataBeanComplexity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateMetaDataBeanComplexity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.JExpEvaluateMetaDataBeanComplexity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,7 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans>("beans", Beans);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations>("expensiveOperations", ExpensiveOperations);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanPrimitiveValues>("primitiveValues", PrimitiveValues);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps>("steps", Steps);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanSteps>("steps", Steps);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

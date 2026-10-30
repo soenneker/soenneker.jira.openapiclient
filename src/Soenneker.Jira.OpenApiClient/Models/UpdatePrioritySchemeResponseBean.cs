@@ -12,16 +12,26 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdatePrioritySchemeResponseBean : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("priorityScheme") is { } nullNodePriorityScheme && nullNodePriorityScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorityScheme = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>A priority scheme with paginated priorities and projects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects? PriorityScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects? PriorityScheme { get => _explicitNullValuePriorityScheme; set { _explicitNullValuePriorityScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityScheme"); else _explicitNullProperties?.Remove("priorityScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects? _explicitNullValuePriorityScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects PriorityScheme { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects PriorityScheme { get => _explicitNullValuePriorityScheme; set { _explicitNullValuePriorityScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityScheme"); else _explicitNullProperties?.Remove("priorityScheme"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects _explicitNullValuePriorityScheme = default!;
 #endif
         /// <summary>The in-progress issue migration task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -46,7 +56,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeResponseBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeResponseBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeResponseBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +78,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects>("priorityScheme", PriorityScheme);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

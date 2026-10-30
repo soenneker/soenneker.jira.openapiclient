@@ -11,32 +11,50 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SingleRedactionRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("contentItem") is { } nullNodeContentItem && nullNodeContentItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentItem = null;
+            if (parseNode.GetChildNode("externalId") is { } nullNodeExternalId && nullNodeExternalId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalId = null;
+            if (parseNode.GetChildNode("reason") is { } nullNodeReason && nullNodeReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reason = null;
+            if (parseNode.GetChildNode("redactionPosition") is { } nullNodeRedactionPosition && nullNodeRedactionPosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedactionPosition = null;
+        }
+
         /// <summary>Represents the content to redact</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ContentItem? ContentItem { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ContentItem? ContentItem { get => _explicitNullValueContentItem; set { _explicitNullValueContentItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentItem"); else _explicitNullProperties?.Remove("contentItem"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ContentItem? _explicitNullValueContentItem = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ContentItem ContentItem { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ContentItem ContentItem { get => _explicitNullValueContentItem; set { _explicitNullValueContentItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentItem"); else _explicitNullProperties?.Remove("contentItem"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ContentItem _explicitNullValueContentItem = default!;
 #endif
         /// <summary>Unique id for the redaction request; ID format should be of UUID</summary>
-        public Guid? ExternalId { get; set; }
+        public Guid? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
+        private Guid? _explicitNullValueExternalId = default!;
         /// <summary>The reason why the content is being redacted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Reason { get; set; }
+        public string? Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string? _explicitNullValueReason = default!;
 #nullable restore
 #else
-        public string Reason { get; set; }
+        public string Reason { get => _explicitNullValueReason; set { _explicitNullValueReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reason"); else _explicitNullProperties?.Remove("reason"); } }
+        private string _explicitNullValueReason = default!;
 #endif
         /// <summary>Represents the position of the redaction</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition? RedactionPosition { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition? RedactionPosition { get => _explicitNullValueRedactionPosition; set { _explicitNullValueRedactionPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redactionPosition"); else _explicitNullProperties?.Remove("redactionPosition"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition? _explicitNullValueRedactionPosition = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition RedactionPosition { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition RedactionPosition { get => _explicitNullValueRedactionPosition; set { _explicitNullValueRedactionPosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redactionPosition"); else _explicitNullProperties?.Remove("redactionPosition"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition _explicitNullValueRedactionPosition = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +64,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,7 +90,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ContentItem>("contentItem", ContentItem);
             writer.WriteGuidValue("externalId", ExternalId);
             writer.WriteStringValue("reason", Reason);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition>("redactionPosition", RedactionPosition);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.RedactionPosition>("redactionPosition", RedactionPosition);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,60 +11,91 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class SearchAndReconcileRequestBean : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("fields") is { } nullNodeFields && nullNodeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fields = null;
+            if (parseNode.GetChildNode("fieldsByKeys") is { } nullNodeFieldsByKeys && nullNodeFieldsByKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldsByKeys = null;
+            if (parseNode.GetChildNode("includeArchivedProjects") is { } nullNodeIncludeArchivedProjects && nullNodeIncludeArchivedProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeArchivedProjects = null;
+            if (parseNode.GetChildNode("jql") is { } nullNodeJql && nullNodeJql.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jql = null;
+            if (parseNode.GetChildNode("maxResults") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
+            if (parseNode.GetChildNode("nextPageToken") is { } nullNodeNextPageToken && nullNodeNextPageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextPageToken = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("reconcileIssues") is { } nullNodeReconcileIssues && nullNodeReconcileIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReconcileIssues = null;
+        }
+
         /// <summary>Use [expand](#expansion) to include additional information about issues in the response. Note that, unlike the majority of instances where `expand` is specified, `expand` is defined as a comma-delimited string of values. The expand options are: *  `renderedFields` Returns field values rendered in HTML format. *  `names` Returns the display name of each field. *  `schema` Returns the schema describing a field type. *  `transitions` Returns all possible transitions for the issue. *  `operations` Returns all possible operations for the issue. *  `editmeta` Returns information about how each field can be edited. *  `changelog` Returns a list of recent updates to an issue, sorted by date, starting from the most recent. *  `versionedRepresentations` Instead of `fields`, returns `versionedRepresentations` a JSON array containing each version of a field&apos;s value, with the highest numbered item representing the most recent version.Examples: `&quot;names,changelog&quot;` Returns the display name of each field as well as a list of recent updates to an issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Expand { get; set; }
+        public string? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private string? _explicitNullValueExpand = default!;
 #nullable restore
 #else
-        public string Expand { get; set; }
+        public string Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private string _explicitNullValueExpand = default!;
 #endif
         /// <summary>A list of fields to return for each issue. Use it to retrieve a subset of fields. This parameter accepts a comma-separated list. Expand options include: *  `*all` Returns all fields. *  `*navigable` Returns navigable fields. *  `id` Returns only issue IDs. *  Any issue field, prefixed with a dash to exclude.The default is `id`.Examples: *  `summary,comment` Returns the summary and comments fields only. *  `*all,-comment` Returns all fields except comments.Multiple `fields` parameters can be included in a request.Note: By default, this resource returns IDs only. This differs from [GET issue](#api-rest-api-3-issue-issueIdOrKey-get) where the default is all fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Fields { get; set; }
+        public List<string>? Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<string>? _explicitNullValueFields = default!;
 #nullable restore
 #else
-        public List<string> Fields { get; set; }
+        public List<string> Fields { get => _explicitNullValueFields; set { _explicitNullValueFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fields"); else _explicitNullProperties?.Remove("fields"); } }
+        private List<string> _explicitNullValueFields = default!;
 #endif
         /// <summary>Reference fields by their key (rather than ID). The default is `false`.</summary>
-        public bool? FieldsByKeys { get; set; }
+        public bool? FieldsByKeys { get => _explicitNullValueFieldsByKeys; set { _explicitNullValueFieldsByKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldsByKeys"); else _explicitNullProperties?.Remove("fieldsByKeys"); } }
+        private bool? _explicitNullValueFieldsByKeys = default!;
         /// <summary>Whether to also return issues that belong to archived projects. Archived projects are excluded by default. Requires *Browse projects* permission on the archived project. The default is `false`.</summary>
-        public bool? IncludeArchivedProjects { get; set; }
+        public bool? IncludeArchivedProjects { get => _explicitNullValueIncludeArchivedProjects; set { _explicitNullValueIncludeArchivedProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeArchivedProjects"); else _explicitNullProperties?.Remove("includeArchivedProjects"); } }
+        private bool? _explicitNullValueIncludeArchivedProjects = default!;
         /// <summary>A [JQL](https://confluence.atlassian.com/x/egORLQ) expression. For performance reasons, this parameter requires a bounded query. A bounded query is a query with a search restriction. *  Example of an unbounded query: `order by key desc`. *  Example of a bounded query: `assignee = currentUser() order by key`.Additionally, `orderBy` clause can contain a maximum of 7 fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Jql { get; set; }
+        public string? Jql { get => _explicitNullValueJql; set { _explicitNullValueJql = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jql"); else _explicitNullProperties?.Remove("jql"); } }
+        private string? _explicitNullValueJql = default!;
 #nullable restore
 #else
-        public string Jql { get; set; }
+        public string Jql { get => _explicitNullValueJql; set { _explicitNullValueJql = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jql"); else _explicitNullProperties?.Remove("jql"); } }
+        private string _explicitNullValueJql = default!;
 #endif
         /// <summary>The maximum number of items to return per page. To manage page size, API may return fewer items per page where a large number of fields are requested. The greatest number of items returned per page is achieved when requesting `id` or `key` only. It returns max 5000 issues.</summary>
-        public int? MaxResults { get; set; }
+        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxResults"); else _explicitNullProperties?.Remove("maxResults"); } }
+        private int? _explicitNullValueMaxResults = default!;
         /// <summary>The token for a page to fetch that is not the first page. The first page has a `nextPageToken` of `null`. Use the `nextPageToken` to fetch the next page of issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextPageToken { get; set; }
+        public string? NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        private string? _explicitNullValueNextPageToken = default!;
 #nullable restore
 #else
-        public string NextPageToken { get; set; }
+        public string NextPageToken { get => _explicitNullValueNextPageToken; set { _explicitNullValueNextPageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nextPageToken"); else _explicitNullProperties?.Remove("nextPageToken"); } }
+        private string _explicitNullValueNextPageToken = default!;
 #endif
         /// <summary>A list of up to 5 issue properties to include in the results. This parameter accepts a comma-separated list.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Properties { get; set; }
+        public List<string>? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<string>? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public List<string> Properties { get; set; }
+        public List<string> Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<string> _explicitNullValueProperties = default!;
 #endif
         /// <summary>Strong consistency issue ids to be reconciled with search results. Accepts max 50 ids. This list of ids should be consistent with each paginated request across different pages.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? ReconcileIssues { get; set; }
+        public List<long?>? ReconcileIssues { get => _explicitNullValueReconcileIssues; set { _explicitNullValueReconcileIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reconcileIssues"); else _explicitNullProperties?.Remove("reconcileIssues"); } }
+        private List<long?>? _explicitNullValueReconcileIssues = default!;
 #nullable restore
 #else
-        public List<long?> ReconcileIssues { get; set; }
+        public List<long?> ReconcileIssues { get => _explicitNullValueReconcileIssues; set { _explicitNullValueReconcileIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reconcileIssues"); else _explicitNullProperties?.Remove("reconcileIssues"); } }
+        private List<long?> _explicitNullValueReconcileIssues = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.SearchAndReconcileRequestBean"/> and sets the default values.
@@ -81,7 +112,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SearchAndReconcileRequestBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SearchAndReconcileRequestBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SearchAndReconcileRequestBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -117,7 +148,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteIntValue("maxResults", MaxResults);
             writer.WriteStringValue("nextPageToken", NextPageToken);
             writer.WriteCollectionOfPrimitiveValues<string>("properties", Properties);
-            writer.WriteCollectionOfPrimitiveValues<long?>("reconcileIssues", ReconcileIssues);
+            writer.WriteCollectionOfPrimitiveValues<long?>("reconcileIssues", ReconcileIssues);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

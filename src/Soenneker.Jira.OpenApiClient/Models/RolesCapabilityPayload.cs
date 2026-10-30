@@ -11,22 +11,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RolesCapabilityPayload : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("roles") is { } nullNodeRoles && nullNodeRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Roles = null;
+            if (parseNode.GetChildNode("roleToProjectActors") is { } nullNodeRoleToProjectActors && nullNodeRoleToProjectActors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleToProjectActors = null;
+        }
+
         /// <summary>The list of roles to create.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RolePayload>? Roles { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RolePayload>? Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RolePayload>? _explicitNullValueRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.RolePayload> Roles { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.RolePayload> Roles { get => _explicitNullValueRoles; set { _explicitNullValueRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roles"); else _explicitNullProperties?.Remove("roles"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.RolePayload> _explicitNullValueRoles = default!;
 #endif
         /// <summary>A map of role PCRI (can be ID or REF) to a list of user or group PCRI IDs to associate with the role and project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty? RoleToProjectActors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty? RoleToProjectActors { get => _explicitNullValueRoleToProjectActors; set { _explicitNullValueRoleToProjectActors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleToProjectActors"); else _explicitNullProperties?.Remove("roleToProjectActors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty? _explicitNullValueRoleToProjectActors = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty RoleToProjectActors { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty RoleToProjectActors { get => _explicitNullValueRoleToProjectActors; set { _explicitNullValueRoleToProjectActors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleToProjectActors"); else _explicitNullProperties?.Remove("roleToProjectActors"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty _explicitNullValueRoleToProjectActors = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,9 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +73,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RolePayload>("roles", Roles);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty>("roleToProjectActors", RoleToProjectActors);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.RolesCapabilityPayloadRoleToProjectActorsProperty>("roleToProjectActors", RoleToProjectActors);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

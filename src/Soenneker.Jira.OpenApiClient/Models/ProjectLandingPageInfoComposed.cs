@@ -12,70 +12,106 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ProjectLandingPageInfoComposed : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("attributes") is { } nullNodeAttributes && nullNodeAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attributes = null;
+            if (parseNode.GetChildNode("boardId") is { } nullNodeBoardId && nullNodeBoardId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoardId = null;
+            if (parseNode.GetChildNode("boardName") is { } nullNodeBoardName && nullNodeBoardName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BoardName = null;
+            if (parseNode.GetChildNode("projectKey") is { } nullNodeProjectKey && nullNodeProjectKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectKey = null;
+            if (parseNode.GetChildNode("projectType") is { } nullNodeProjectType && nullNodeProjectType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectType = null;
+            if (parseNode.GetChildNode("queueCategory") is { } nullNodeQueueCategory && nullNodeQueueCategory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueCategory = null;
+            if (parseNode.GetChildNode("queueId") is { } nullNodeQueueId && nullNodeQueueId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueId = null;
+            if (parseNode.GetChildNode("queueName") is { } nullNodeQueueName && nullNodeQueueName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueName = null;
+            if (parseNode.GetChildNode("simpleBoard") is { } nullNodeSimpleBoard && nullNodeSimpleBoard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SimpleBoard = null;
+            if (parseNode.GetChildNode("simplified") is { } nullNodeSimplified && nullNodeSimplified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Simplified = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoAttributesProperty? Attributes { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoAttributesProperty? Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoAttributesProperty? _explicitNullValueAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoAttributesProperty Attributes { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoAttributesProperty Attributes { get => _explicitNullValueAttributes; set { _explicitNullValueAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attributes"); else _explicitNullProperties?.Remove("attributes"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoAttributesProperty _explicitNullValueAttributes = default!;
 #endif
         /// <summary>The boardId property</summary>
-        public long? BoardId { get; set; }
+        public long? BoardId { get => _explicitNullValueBoardId; set { _explicitNullValueBoardId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boardId"); else _explicitNullProperties?.Remove("boardId"); } }
+        private long? _explicitNullValueBoardId = default!;
         /// <summary>The boardName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BoardName { get; set; }
+        public string? BoardName { get => _explicitNullValueBoardName; set { _explicitNullValueBoardName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boardName"); else _explicitNullProperties?.Remove("boardName"); } }
+        private string? _explicitNullValueBoardName = default!;
 #nullable restore
 #else
-        public string BoardName { get; set; }
+        public string BoardName { get => _explicitNullValueBoardName; set { _explicitNullValueBoardName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("boardName"); else _explicitNullProperties?.Remove("boardName"); } }
+        private string _explicitNullValueBoardName = default!;
 #endif
         /// <summary>The projectKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectKey { get; set; }
+        public string? ProjectKey { get => _explicitNullValueProjectKey; set { _explicitNullValueProjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectKey"); else _explicitNullProperties?.Remove("projectKey"); } }
+        private string? _explicitNullValueProjectKey = default!;
 #nullable restore
 #else
-        public string ProjectKey { get; set; }
+        public string ProjectKey { get => _explicitNullValueProjectKey; set { _explicitNullValueProjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectKey"); else _explicitNullProperties?.Remove("projectKey"); } }
+        private string _explicitNullValueProjectKey = default!;
 #endif
         /// <summary>The projectType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectType { get; set; }
+        public string? ProjectType { get => _explicitNullValueProjectType; set { _explicitNullValueProjectType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectType"); else _explicitNullProperties?.Remove("projectType"); } }
+        private string? _explicitNullValueProjectType = default!;
 #nullable restore
 #else
-        public string ProjectType { get; set; }
+        public string ProjectType { get => _explicitNullValueProjectType; set { _explicitNullValueProjectType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectType"); else _explicitNullProperties?.Remove("projectType"); } }
+        private string _explicitNullValueProjectType = default!;
 #endif
         /// <summary>The queueCategory property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QueueCategory { get; set; }
+        public string? QueueCategory { get => _explicitNullValueQueueCategory; set { _explicitNullValueQueueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueCategory"); else _explicitNullProperties?.Remove("queueCategory"); } }
+        private string? _explicitNullValueQueueCategory = default!;
 #nullable restore
 #else
-        public string QueueCategory { get; set; }
+        public string QueueCategory { get => _explicitNullValueQueueCategory; set { _explicitNullValueQueueCategory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueCategory"); else _explicitNullProperties?.Remove("queueCategory"); } }
+        private string _explicitNullValueQueueCategory = default!;
 #endif
         /// <summary>The queueId property</summary>
-        public long? QueueId { get; set; }
+        public long? QueueId { get => _explicitNullValueQueueId; set { _explicitNullValueQueueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueId"); else _explicitNullProperties?.Remove("queueId"); } }
+        private long? _explicitNullValueQueueId = default!;
         /// <summary>The queueName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? QueueName { get; set; }
+        public string? QueueName { get => _explicitNullValueQueueName; set { _explicitNullValueQueueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueName"); else _explicitNullProperties?.Remove("queueName"); } }
+        private string? _explicitNullValueQueueName = default!;
 #nullable restore
 #else
-        public string QueueName { get; set; }
+        public string QueueName { get => _explicitNullValueQueueName; set { _explicitNullValueQueueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queueName"); else _explicitNullProperties?.Remove("queueName"); } }
+        private string _explicitNullValueQueueName = default!;
 #endif
         /// <summary>The simpleBoard property</summary>
-        public bool? SimpleBoard { get; set; }
+        public bool? SimpleBoard { get => _explicitNullValueSimpleBoard; set { _explicitNullValueSimpleBoard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simpleBoard"); else _explicitNullProperties?.Remove("simpleBoard"); } }
+        private bool? _explicitNullValueSimpleBoard = default!;
         /// <summary>The simplified property</summary>
-        public bool? Simplified { get; set; }
+        public bool? Simplified { get => _explicitNullValueSimplified; set { _explicitNullValueSimplified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("simplified"); else _explicitNullProperties?.Remove("simplified"); } }
+        private bool? _explicitNullValueSimplified = default!;
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -85,7 +121,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ProjectLandingPageInfoComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -125,7 +161,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("queueName", QueueName);
             writer.WriteBoolValue("simpleBoard", SimpleBoard);
             writer.WriteBoolValue("simplified", Simplified);
-            writer.WriteStringValue("url", Url);
+            writer.WriteStringValue("url", Url);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

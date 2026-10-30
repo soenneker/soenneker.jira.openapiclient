@@ -11,22 +11,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class OldToNewSecurityLevelMappingsBean : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("newLevelId") is { } nullNodeNewLevelId && nullNodeNewLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLevelId = null;
+            if (parseNode.GetChildNode("oldLevelId") is { } nullNodeOldLevelId && nullNodeOldLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldLevelId = null;
+        }
+
         /// <summary>The new issue security level ID. Providing null will clear the assigned old level from issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewLevelId { get; set; }
+        public string? NewLevelId { get => _explicitNullValueNewLevelId; set { _explicitNullValueNewLevelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newLevelId"); else _explicitNullProperties?.Remove("newLevelId"); } }
+        private string? _explicitNullValueNewLevelId = default!;
 #nullable restore
 #else
-        public string NewLevelId { get; set; }
+        public string NewLevelId { get => _explicitNullValueNewLevelId; set { _explicitNullValueNewLevelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newLevelId"); else _explicitNullProperties?.Remove("newLevelId"); } }
+        private string _explicitNullValueNewLevelId = default!;
 #endif
         /// <summary>The old issue security level ID. Providing null will remap all issues without any assigned levels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OldLevelId { get; set; }
+        public string? OldLevelId { get => _explicitNullValueOldLevelId; set { _explicitNullValueOldLevelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldLevelId"); else _explicitNullProperties?.Remove("oldLevelId"); } }
+        private string? _explicitNullValueOldLevelId = default!;
 #nullable restore
 #else
-        public string OldLevelId { get; set; }
+        public string OldLevelId { get => _explicitNullValueOldLevelId; set { _explicitNullValueOldLevelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldLevelId"); else _explicitNullProperties?.Remove("oldLevelId"); } }
+        private string _explicitNullValueOldLevelId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.OldToNewSecurityLevelMappingsBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +71,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("newLevelId", NewLevelId);
-            writer.WriteStringValue("oldLevelId", OldLevelId);
+            writer.WriteStringValue("oldLevelId", OldLevelId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

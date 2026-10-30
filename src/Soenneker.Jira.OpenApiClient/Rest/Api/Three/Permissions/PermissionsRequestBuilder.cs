@@ -61,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Permissions
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.Permissions>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.Permissions.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.Permissions>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.Permissions.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns all permissions, including: *  global permissions. *  project permissions. *  global permissions added by plugins.This operation can be accessed anonymously.**[Permissions](#permissions) required:** None.

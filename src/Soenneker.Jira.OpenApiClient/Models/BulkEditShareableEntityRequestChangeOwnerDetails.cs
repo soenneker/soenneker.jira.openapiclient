@@ -12,16 +12,28 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkEditShareableEntityRequestChangeOwnerDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("autofixName") is { } nullNodeAutofixName && nullNodeAutofixName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutofixName = null;
+            if (parseNode.GetChildNode("newOwner") is { } nullNodeNewOwner && nullNodeNewOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewOwner = null;
+        }
+
         /// <summary>Whether the name is fixed automatically if it&apos;s duplicated after changing owner.</summary>
-        public bool? AutofixName { get; set; }
+        public bool? AutofixName { get => _explicitNullValueAutofixName; set { _explicitNullValueAutofixName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autofixName"); else _explicitNullProperties?.Remove("autofixName"); } }
+        private bool? _explicitNullValueAutofixName = default!;
         /// <summary>The account id of the new owner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewOwner { get; set; }
+        public string? NewOwner { get => _explicitNullValueNewOwner; set { _explicitNullValueNewOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newOwner"); else _explicitNullProperties?.Remove("newOwner"); } }
+        private string? _explicitNullValueNewOwner = default!;
 #nullable restore
 #else
-        public string NewOwner { get; set; }
+        public string NewOwner { get => _explicitNullValueNewOwner; set { _explicitNullValueNewOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newOwner"); else _explicitNullProperties?.Remove("newOwner"); } }
+        private string _explicitNullValueNewOwner = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -31,7 +43,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkEditShareableEntityRequestChangeOwnerDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -53,7 +65,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("autofixName", AutofixName);
-            writer.WriteStringValue("newOwner", NewOwner);
+            writer.WriteStringValue("newOwner", NewOwner);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

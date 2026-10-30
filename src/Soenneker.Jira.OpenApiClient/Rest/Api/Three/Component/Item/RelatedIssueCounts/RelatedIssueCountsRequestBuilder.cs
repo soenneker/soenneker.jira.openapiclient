@@ -49,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Component.Item.RelatedIssu
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.ComponentIssuesCount>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.ComponentIssuesCount.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.ComponentIssuesCount>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.ComponentIssuesCount.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the counts of issues assigned to the component.This operation can be accessed anonymously.**Deprecation notice:** The required OAuth 2.0 scopes will be updated on June 15, 2024. *  **Classic**: `read:jira-work` *  **Granular**: `read:field:jira`, `read:project.component:jira`**[Permissions](#permissions) required:** None.

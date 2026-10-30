@@ -12,47 +12,74 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class JiraExpressionEvalRequestBeanContext : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("board") is { } nullNodeBoard && nullNodeBoard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Board = null;
+            if (parseNode.GetChildNode("custom") is { } nullNodeCustom && nullNodeCustom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Custom = null;
+            if (parseNode.GetChildNode("customerRequest") is { } nullNodeCustomerRequest && nullNodeCustomerRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomerRequest = null;
+            if (parseNode.GetChildNode("issue") is { } nullNodeIssue && nullNodeIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Issue = null;
+            if (parseNode.GetChildNode("issues") is { } nullNodeIssues && nullNodeIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Issues = null;
+            if (parseNode.GetChildNode("project") is { } nullNodeProject && nullNodeProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Project = null;
+            if (parseNode.GetChildNode("serviceDesk") is { } nullNodeServiceDesk && nullNodeServiceDesk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDesk = null;
+            if (parseNode.GetChildNode("sprint") is { } nullNodeSprint && nullNodeSprint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sprint = null;
+        }
+
         /// <summary>The ID of the board that is available under the `board` variable when evaluating the expression.</summary>
-        public long? Board { get; set; }
+        public long? Board { get => _explicitNullValueBoard; set { _explicitNullValueBoard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("board"); else _explicitNullProperties?.Remove("board"); } }
+        private long? _explicitNullValueBoard = default!;
         /// <summary>Custom context variables and their types. These variable types are available for use in a custom context: *  `user`: A [user](https://developer.atlassian.com/cloud/jira/platform/jira-expressions-type-reference#user) specified as an Atlassian account ID. *  `issue`: An [issue](https://developer.atlassian.com/cloud/jira/platform/jira-expressions-type-reference#issue) specified by ID or key. All the fields of the issue object are available in the Jira expression. *  `json`: A JSON object containing custom content. *  `list`: A JSON list of `user`, `issue`, or `json` variable types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomContextVariable>? Custom { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomContextVariable>? Custom { get => _explicitNullValueCustom; set { _explicitNullValueCustom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom"); else _explicitNullProperties?.Remove("custom"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CustomContextVariable>? _explicitNullValueCustom = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomContextVariable> Custom { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.CustomContextVariable> Custom { get => _explicitNullValueCustom; set { _explicitNullValueCustom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom"); else _explicitNullProperties?.Remove("custom"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.CustomContextVariable> _explicitNullValueCustom = default!;
 #endif
         /// <summary>The ID of the customer request that is available under the `customerRequest` variable when evaluating the expression. This is the same as the ID of the underlying Jira issue, but the customer request context variable will have a different type.</summary>
-        public long? CustomerRequest { get; set; }
+        public long? CustomerRequest { get => _explicitNullValueCustomerRequest; set { _explicitNullValueCustomerRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customerRequest"); else _explicitNullProperties?.Remove("customerRequest"); } }
+        private long? _explicitNullValueCustomerRequest = default!;
         /// <summary>The issue that is available under the `issue` variable when evaluating the expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssue? Issue { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssue? Issue { get => _explicitNullValueIssue; set { _explicitNullValueIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue"); else _explicitNullProperties?.Remove("issue"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssue? _explicitNullValueIssue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssue Issue { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssue Issue { get => _explicitNullValueIssue; set { _explicitNullValueIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue"); else _explicitNullProperties?.Remove("issue"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssue _explicitNullValueIssue = default!;
 #endif
         /// <summary>The collection of issues that is available under the `issues` variable when evaluating the expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssues? Issues { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssues? Issues { get => _explicitNullValueIssues; set { _explicitNullValueIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues"); else _explicitNullProperties?.Remove("issues"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssues? _explicitNullValueIssues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssues Issues { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssues Issues { get => _explicitNullValueIssues; set { _explicitNullValueIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues"); else _explicitNullProperties?.Remove("issues"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssues _explicitNullValueIssues = default!;
 #endif
         /// <summary>The project that is available under the `project` variable when evaluating the expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanProject? Project { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanProject? Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanProject? _explicitNullValueProject = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanProject Project { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanProject Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanProject _explicitNullValueProject = default!;
 #endif
         /// <summary>The ID of the service desk that is available under the `serviceDesk` variable when evaluating the expression.</summary>
-        public long? ServiceDesk { get; set; }
+        public long? ServiceDesk { get => _explicitNullValueServiceDesk; set { _explicitNullValueServiceDesk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serviceDesk"); else _explicitNullProperties?.Remove("serviceDesk"); } }
+        private long? _explicitNullValueServiceDesk = default!;
         /// <summary>The ID of the sprint that is available under the `sprint` variable when evaluating the expression.</summary>
-        public long? Sprint { get; set; }
+        public long? Sprint { get => _explicitNullValueSprint; set { _explicitNullValueSprint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sprint"); else _explicitNullProperties?.Remove("sprint"); } }
+        private long? _explicitNullValueSprint = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -61,7 +88,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalRequestBeanContext CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalRequestBeanContext();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalRequestBeanContext(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -95,7 +122,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanIssues>("issues", Issues);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionEvalContextBeanProject>("project", Project);
             writer.WriteLongValue("serviceDesk", ServiceDesk);
-            writer.WriteLongValue("sprint", Sprint);
+            writer.WriteLongValue("sprint", Sprint);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

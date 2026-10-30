@@ -12,29 +12,48 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SuggestedMappingsRequestBean : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("maxResults") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
+            if (parseNode.GetChildNode("priorities") is { } nullNodePriorities && nullNodePriorities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priorities = null;
+            if (parseNode.GetChildNode("projects") is { } nullNodeProjects && nullNodeProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projects = null;
+            if (parseNode.GetChildNode("schemeId") is { } nullNodeSchemeId && nullNodeSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SchemeId = null;
+            if (parseNode.GetChildNode("startAt") is { } nullNodeStartAt && nullNodeStartAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartAt = null;
+        }
+
         /// <summary>The maximum number of results that could be on the page.</summary>
-        public int? MaxResults { get; set; }
+        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maxResults"); else _explicitNullProperties?.Remove("maxResults"); } }
+        private int? _explicitNullValueMaxResults = default!;
         /// <summary>The priority changes in the scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities? Priorities { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities? Priorities { get => _explicitNullValuePriorities; set { _explicitNullValuePriorities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorities"); else _explicitNullProperties?.Remove("priorities"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities? _explicitNullValuePriorities = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities Priorities { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities Priorities { get => _explicitNullValuePriorities; set { _explicitNullValuePriorities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorities"); else _explicitNullProperties?.Remove("priorities"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities _explicitNullValuePriorities = default!;
 #endif
         /// <summary>The project changes in the scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanProjects? Projects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanProjects? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanProjects? _explicitNullValueProjects = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanProjects Projects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanProjects Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanProjects _explicitNullValueProjects = default!;
 #endif
         /// <summary>The id of the priority scheme.</summary>
-        public long? SchemeId { get; set; }
+        public long? SchemeId { get => _explicitNullValueSchemeId; set { _explicitNullValueSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemeId"); else _explicitNullProperties?.Remove("schemeId"); } }
+        private long? _explicitNullValueSchemeId = default!;
         /// <summary>The index of the first item returned on the page.</summary>
-        public long? StartAt { get; set; }
+        public long? StartAt { get => _explicitNullValueStartAt; set { _explicitNullValueStartAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startAt"); else _explicitNullProperties?.Remove("startAt"); } }
+        private long? _explicitNullValueStartAt = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -43,7 +62,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -71,7 +90,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities>("priorities", Priorities);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanProjects>("projects", Projects);
             writer.WriteLongValue("schemeId", SchemeId);
-            writer.WriteLongValue("startAt", StartAt);
+            writer.WriteLongValue("startAt", StartAt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

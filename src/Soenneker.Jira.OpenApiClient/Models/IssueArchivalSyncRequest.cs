@@ -12,14 +12,24 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueArchivalSyncRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("issueIdsOrKeys") is { } nullNodeIssueIdsOrKeys && nullNodeIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIdsOrKeys = null;
+        }
+
         /// <summary>The issueIdsOrKeys property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IssueIdsOrKeys { get; set; }
+        public List<string>? IssueIdsOrKeys { get => _explicitNullValueIssueIdsOrKeys; set { _explicitNullValueIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIdsOrKeys"); else _explicitNullProperties?.Remove("issueIdsOrKeys"); } }
+        private List<string>? _explicitNullValueIssueIdsOrKeys = default!;
 #nullable restore
 #else
-        public List<string> IssueIdsOrKeys { get; set; }
+        public List<string> IssueIdsOrKeys { get => _explicitNullValueIssueIdsOrKeys; set { _explicitNullValueIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIdsOrKeys"); else _explicitNullProperties?.Remove("issueIdsOrKeys"); } }
+        private List<string> _explicitNullValueIssueIdsOrKeys = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -29,7 +39,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +59,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("issueIdsOrKeys", IssueIdsOrKeys);
+            writer.WriteCollectionOfPrimitiveValues<string>("issueIdsOrKeys", IssueIdsOrKeys);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

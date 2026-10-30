@@ -57,7 +57,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflow.History
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowHistoryReadResponseDto>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowHistoryReadResponseDto.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowHistoryReadResponseDto>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowHistoryReadResponseDto.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns a workflow and related statuses for a specified workflow id and version number.**Note:** Stored workflow data expires after 60 days. Additionally, no data from before the 30th of October 2025 is available.**[Permissions](#permissions) required:** *  *Administer Jira* global permission to access all, including project-scoped, workflows *  At least one of the *Administer projects* and *View (read-only) workflow* project permissions to access project-scoped workflows

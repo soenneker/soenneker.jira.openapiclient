@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WorkflowRules : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("conditionsTree") is { } nullNodeConditionsTree && nullNodeConditionsTree.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionsTree = null;
+            if (parseNode.GetChildNode("postFunctions") is { } nullNodePostFunctions && nullNodePostFunctions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostFunctions = null;
+            if (parseNode.GetChildNode("validators") is { } nullNodeValidators && nullNodeValidators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validators = null;
+        }
+
         /// <summary>The workflow transition rule conditions tree.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCondition? ConditionsTree { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCondition? ConditionsTree { get => _explicitNullValueConditionsTree; set { _explicitNullValueConditionsTree = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionsTree"); else _explicitNullProperties?.Remove("conditionsTree"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowCondition? _explicitNullValueConditionsTree = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCondition ConditionsTree { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCondition ConditionsTree { get => _explicitNullValueConditionsTree; set { _explicitNullValueConditionsTree = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionsTree"); else _explicitNullProperties?.Remove("conditionsTree"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowCondition _explicitNullValueConditionsTree = default!;
 #endif
         /// <summary>The workflow post functions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>? PostFunctions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>? PostFunctions { get => _explicitNullValuePostFunctions; set { _explicitNullValuePostFunctions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postFunctions"); else _explicitNullProperties?.Remove("postFunctions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>? _explicitNullValuePostFunctions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule> PostFunctions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule> PostFunctions { get => _explicitNullValuePostFunctions; set { _explicitNullValuePostFunctions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("postFunctions"); else _explicitNullProperties?.Remove("postFunctions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule> _explicitNullValuePostFunctions = default!;
 #endif
         /// <summary>The workflow validators.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>? Validators { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>? Validators { get => _explicitNullValueValidators; set { _explicitNullValueValidators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validators"); else _explicitNullProperties?.Remove("validators"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>? _explicitNullValueValidators = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule> Validators { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule> Validators { get => _explicitNullValueValidators; set { _explicitNullValueValidators = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validators"); else _explicitNullProperties?.Remove("validators"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule> _explicitNullValueValidators = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowRules CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowRules();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowRules(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCondition>("conditionsTree", ConditionsTree);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>("postFunctions", PostFunctions);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>("validators", Validators);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowTransitionRule>("validators", Validators);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

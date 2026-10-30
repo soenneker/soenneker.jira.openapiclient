@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueFieldOptionConfigurationScope : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("global") is { } nullNodeGlobal && nullNodeGlobal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Global = null;
+            if (parseNode.GetChildNode("projects") is { } nullNodeProjects && nullNodeProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projects = null;
+            if (parseNode.GetChildNode("projects2") is { } nullNodeProjects2 && nullNodeProjects2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projects2 = null;
+        }
+
         /// <summary>Defines the behavior of the option within the global context. If this property is set, even if set to an empty object, then the option is available in all projects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionScopeBeanGlobal? Global { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionScopeBeanGlobal? Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionScopeBeanGlobal? _explicitNullValueGlobal = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionScopeBeanGlobal Global { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionScopeBeanGlobal Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionScopeBeanGlobal _explicitNullValueGlobal = default!;
 #endif
         /// <summary>DEPRECATED</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Projects { get; set; }
+        public List<long?>? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private List<long?>? _explicitNullValueProjects = default!;
 #nullable restore
 #else
-        public List<long?> Projects { get; set; }
+        public List<long?> Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private List<long?> _explicitNullValueProjects = default!;
 #endif
         /// <summary>Defines the projects in which the option is available and the behavior of the option within each project. Specify one object per project. The behavior of the option in a project context overrides the behavior in the global context.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean>? Projects2 { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean>? Projects2 { get => _explicitNullValueProjects2; set { _explicitNullValueProjects2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects2"); else _explicitNullProperties?.Remove("projects2"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean>? _explicitNullValueProjects2 = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean> Projects2 { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean> Projects2 { get => _explicitNullValueProjects2; set { _explicitNullValueProjects2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects2"); else _explicitNullProperties?.Remove("projects2"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean> _explicitNullValueProjects2 = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionConfigurationScope CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionConfigurationScope();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionConfigurationScope(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueFieldOptionScopeBeanGlobal>("global", Global);
             writer.WriteCollectionOfPrimitiveValues<long?>("projects", Projects);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean>("projects2", Projects2);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.ProjectScopeBean>("projects2", Projects2);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

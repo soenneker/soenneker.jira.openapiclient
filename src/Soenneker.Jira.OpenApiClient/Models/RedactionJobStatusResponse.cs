@@ -11,17 +11,29 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class RedactionJobStatusResponse : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bulkRedactionResponse") is { } nullNodeBulkRedactionResponse && nullNodeBulkRedactionResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkRedactionResponse = null;
+            if (parseNode.GetChildNode("jobStatus") is { } nullNodeJobStatus && nullNodeJobStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobStatus = null;
+        }
+
         /// <summary>The bulkRedactionResponse property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionResponse? BulkRedactionResponse { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionResponse? BulkRedactionResponse { get => _explicitNullValueBulkRedactionResponse; set { _explicitNullValueBulkRedactionResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulkRedactionResponse"); else _explicitNullProperties?.Remove("bulkRedactionResponse"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionResponse? _explicitNullValueBulkRedactionResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionResponse BulkRedactionResponse { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionResponse BulkRedactionResponse { get => _explicitNullValueBulkRedactionResponse; set { _explicitNullValueBulkRedactionResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulkRedactionResponse"); else _explicitNullProperties?.Remove("bulkRedactionResponse"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionResponse _explicitNullValueBulkRedactionResponse = default!;
 #endif
         /// <summary>The jobStatus property</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponseJobStatus? JobStatus { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponseJobStatus? JobStatus { get => _explicitNullValueJobStatus; set { _explicitNullValueJobStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobStatus"); else _explicitNullProperties?.Remove("jobStatus"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponseJobStatus? _explicitNullValueJobStatus = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +42,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +64,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionResponse>("bulkRedactionResponse", BulkRedactionResponse);
-            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponseJobStatus>("jobStatus", JobStatus);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.RedactionJobStatusResponseJobStatus>("jobStatus", JobStatus);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

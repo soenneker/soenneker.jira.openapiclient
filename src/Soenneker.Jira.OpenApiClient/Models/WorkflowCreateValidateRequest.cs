@@ -11,22 +11,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class WorkflowCreateValidateRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("payload") is { } nullNodePayload && nullNodePayload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Payload = null;
+            if (parseNode.GetChildNode("validationOptions") is { } nullNodeValidationOptions && nullNodeValidationOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationOptions = null;
+        }
+
         /// <summary>The create workflows payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateRequest? Payload { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateRequest? Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateRequest? _explicitNullValuePayload = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateRequest Payload { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateRequest Payload { get => _explicitNullValuePayload; set { _explicitNullValuePayload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload"); else _explicitNullProperties?.Remove("payload"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateRequest _explicitNullValuePayload = default!;
 #endif
         /// <summary>The level of validation to return from the API. If no values are provided, the default would return `WARNING` and `ERROR` level validation results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate? ValidationOptions { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate? ValidationOptions { get => _explicitNullValueValidationOptions; set { _explicitNullValueValidationOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validationOptions"); else _explicitNullProperties?.Remove("validationOptions"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate? _explicitNullValueValidationOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate ValidationOptions { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate ValidationOptions { get => _explicitNullValueValidationOptions; set { _explicitNullValueValidationOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validationOptions"); else _explicitNullProperties?.Remove("validationOptions"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate _explicitNullValueValidationOptions = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateValidateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateValidateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateValidateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +71,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowCreateRequest>("payload", Payload);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate>("validationOptions", ValidationOptions);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ValidationOptionsForCreate>("validationOptions", ValidationOptions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

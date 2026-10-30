@@ -49,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Autocompletedata.Sugge
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.AutoCompleteSuggestions>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.AutoCompleteSuggestions.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.AutoCompleteSuggestions>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.AutoCompleteSuggestions.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the JQL search auto complete suggestions for a field.Suggestions can be obtained by providing: *  `fieldName` to get a list of all values for the field. *  `fieldName` and `fieldValue` to get a list of values containing the text in `fieldValue`. *  `fieldName` and `predicateName` to get a list of all predicate values for the field. *  `fieldName`, `predicateName`, and `predicateValue` to get a list of predicate values containing the text in `predicateValue`.This operation can be accessed anonymously.**[Permissions](#permissions) required:** None.

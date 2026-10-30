@@ -12,35 +12,55 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UserGroups : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callback") is { } nullNodeCallback && nullNodeCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Callback = null;
+            if (parseNode.GetChildNode("items") is { } nullNodeItems && nullNodeItems.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Items = null;
+            if (parseNode.GetChildNode("max-results") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
+            if (parseNode.GetChildNode("pagingCallback") is { } nullNodePagingCallback && nullNodePagingCallback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagingCallback = null;
+            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+        }
+
         /// <summary>The callback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName? Callback { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName? Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback"); else _explicitNullProperties?.Remove("callback"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName? _explicitNullValueCallback = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName Callback { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName Callback { get => _explicitNullValueCallback; set { _explicitNullValueCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback"); else _explicitNullProperties?.Remove("callback"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName _explicitNullValueCallback = default!;
 #endif
         /// <summary>The items property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? Items { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.GroupName>? _explicitNullValueItems = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> Items { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> Items { get => _explicitNullValueItems; set { _explicitNullValueItems = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("items"); else _explicitNullProperties?.Remove("items"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.GroupName> _explicitNullValueItems = default!;
 #endif
         /// <summary>The maxResults property</summary>
-        public int? MaxResults { get; set; }
+        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max-results"); else _explicitNullProperties?.Remove("max-results"); } }
+        private int? _explicitNullValueMaxResults = default!;
         /// <summary>The pagingCallback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName? PagingCallback { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName? PagingCallback { get => _explicitNullValuePagingCallback; set { _explicitNullValuePagingCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagingCallback"); else _explicitNullProperties?.Remove("pagingCallback"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName? _explicitNullValuePagingCallback = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName PagingCallback { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName PagingCallback { get => _explicitNullValuePagingCallback; set { _explicitNullValuePagingCallback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pagingCallback"); else _explicitNullProperties?.Remove("pagingCallback"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName _explicitNullValuePagingCallback = default!;
 #endif
         /// <summary>The size property</summary>
-        public int? Size { get; set; }
+        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private int? _explicitNullValueSize = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -49,7 +69,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.UserGroups CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.UserGroups();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.UserGroups(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,7 +97,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.GroupName>("items", Items);
             writer.WriteIntValue("max-results", MaxResults);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName>("pagingCallback", PagingCallback);
-            writer.WriteIntValue("size", Size);
+            writer.WriteIntValue("size", Size);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

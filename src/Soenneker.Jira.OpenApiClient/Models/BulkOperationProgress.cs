@@ -11,40 +11,68 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkOperationProgress : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("created") is { } nullNodeCreated && nullNodeCreated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Created = null;
+            if (parseNode.GetChildNode("failedAccessibleIssues") is { } nullNodeFailedAccessibleIssues && nullNodeFailedAccessibleIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedAccessibleIssues = null;
+            if (parseNode.GetChildNode("invalidOrInaccessibleIssueCount") is { } nullNodeInvalidOrInaccessibleIssueCount && nullNodeInvalidOrInaccessibleIssueCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvalidOrInaccessibleIssueCount = null;
+            if (parseNode.GetChildNode("processedAccessibleIssues") is { } nullNodeProcessedAccessibleIssues && nullNodeProcessedAccessibleIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProcessedAccessibleIssues = null;
+            if (parseNode.GetChildNode("progressPercent") is { } nullNodeProgressPercent && nullNodeProgressPercent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProgressPercent = null;
+            if (parseNode.GetChildNode("started") is { } nullNodeStarted && nullNodeStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Started = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("submittedBy") is { } nullNodeSubmittedBy && nullNodeSubmittedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubmittedBy = null;
+            if (parseNode.GetChildNode("totalIssueCount") is { } nullNodeTotalIssueCount && nullNodeTotalIssueCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalIssueCount = null;
+            if (parseNode.GetChildNode("updated") is { } nullNodeUpdated && nullNodeUpdated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Updated = null;
+        }
+
         /// <summary>A timestamp of when the task was submitted.</summary>
-        public DateTimeOffset? Created { get; set; }
+        public DateTimeOffset? Created { get => _explicitNullValueCreated; set { _explicitNullValueCreated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created"); else _explicitNullProperties?.Remove("created"); } }
+        private DateTimeOffset? _explicitNullValueCreated = default!;
         /// <summary>Map of issue IDs for which the operation failed and that the user has permission to view, to their one or more reasons for failure. These reasons are open-ended text descriptions of the error and are not selected from a predefined list of standard reasons.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressFailedAccessibleIssuesProperty? FailedAccessibleIssues { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressFailedAccessibleIssuesProperty? FailedAccessibleIssues { get => _explicitNullValueFailedAccessibleIssues; set { _explicitNullValueFailedAccessibleIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failedAccessibleIssues"); else _explicitNullProperties?.Remove("failedAccessibleIssues"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressFailedAccessibleIssuesProperty? _explicitNullValueFailedAccessibleIssues = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressFailedAccessibleIssuesProperty FailedAccessibleIssues { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressFailedAccessibleIssuesProperty FailedAccessibleIssues { get => _explicitNullValueFailedAccessibleIssues; set { _explicitNullValueFailedAccessibleIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failedAccessibleIssues"); else _explicitNullProperties?.Remove("failedAccessibleIssues"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressFailedAccessibleIssuesProperty _explicitNullValueFailedAccessibleIssues = default!;
 #endif
         /// <summary>The number of issues that are either invalid or issues that the user doesn&apos;t have permission to view, regardless of the success or failure of the operation.</summary>
-        public int? InvalidOrInaccessibleIssueCount { get; set; }
+        public int? InvalidOrInaccessibleIssueCount { get => _explicitNullValueInvalidOrInaccessibleIssueCount; set { _explicitNullValueInvalidOrInaccessibleIssueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalidOrInaccessibleIssueCount"); else _explicitNullProperties?.Remove("invalidOrInaccessibleIssueCount"); } }
+        private int? _explicitNullValueInvalidOrInaccessibleIssueCount = default!;
         /// <summary>List of issue IDs for which the operation was successful and that the user has permission to view.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? ProcessedAccessibleIssues { get; set; }
+        public List<long?>? ProcessedAccessibleIssues { get => _explicitNullValueProcessedAccessibleIssues; set { _explicitNullValueProcessedAccessibleIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processedAccessibleIssues"); else _explicitNullProperties?.Remove("processedAccessibleIssues"); } }
+        private List<long?>? _explicitNullValueProcessedAccessibleIssues = default!;
 #nullable restore
 #else
-        public List<long?> ProcessedAccessibleIssues { get; set; }
+        public List<long?> ProcessedAccessibleIssues { get => _explicitNullValueProcessedAccessibleIssues; set { _explicitNullValueProcessedAccessibleIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processedAccessibleIssues"); else _explicitNullProperties?.Remove("processedAccessibleIssues"); } }
+        private List<long?> _explicitNullValueProcessedAccessibleIssues = default!;
 #endif
         /// <summary>Progress of the task as a percentage.</summary>
-        public long? ProgressPercent { get; set; }
+        public long? ProgressPercent { get => _explicitNullValueProgressPercent; set { _explicitNullValueProgressPercent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("progressPercent"); else _explicitNullProperties?.Remove("progressPercent"); } }
+        private long? _explicitNullValueProgressPercent = default!;
         /// <summary>A timestamp of when the task was started.</summary>
-        public DateTimeOffset? Started { get; set; }
+        public DateTimeOffset? Started { get => _explicitNullValueStarted; set { _explicitNullValueStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started"); else _explicitNullProperties?.Remove("started"); } }
+        private DateTimeOffset? _explicitNullValueStarted = default!;
         /// <summary>The status of the task.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressStatus? Status { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressStatus? _explicitNullValueStatus = default!;
         /// <summary>A user with details as permitted by the user&apos;s Atlassian Account privacy settings. However, be aware of these exceptions: *  User record deleted from Atlassian: This occurs as the result of a right to be forgotten request. In this case, `displayName` provides an indication and other parameters have default values or are blank (for example, email is blank). *  User record corrupted: This occurs as a results of events such as a server import and can only happen to deleted users. In this case, `accountId` returns *unknown* and all other parameters have fallback values. *  User record unavailable: This usually occurs due to an internal service outage. In this case, all parameters have fallback values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.User? SubmittedBy { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.User? SubmittedBy { get => _explicitNullValueSubmittedBy; set { _explicitNullValueSubmittedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submittedBy"); else _explicitNullProperties?.Remove("submittedBy"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.User? _explicitNullValueSubmittedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.User SubmittedBy { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.User SubmittedBy { get => _explicitNullValueSubmittedBy; set { _explicitNullValueSubmittedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submittedBy"); else _explicitNullProperties?.Remove("submittedBy"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.User _explicitNullValueSubmittedBy = default!;
 #endif
         /// <summary>The ID of the task.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,9 +83,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public string TaskId { get; private set; }
 #endif
         /// <summary>The number of issues that the bulk operation was attempted on.</summary>
-        public int? TotalIssueCount { get; set; }
+        public int? TotalIssueCount { get => _explicitNullValueTotalIssueCount; set { _explicitNullValueTotalIssueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalIssueCount"); else _explicitNullProperties?.Remove("totalIssueCount"); } }
+        private int? _explicitNullValueTotalIssueCount = default!;
         /// <summary>A timestamp of when the task progress was last updated.</summary>
-        public DateTimeOffset? Updated { get; set; }
+        public DateTimeOffset? Updated { get => _explicitNullValueUpdated; set { _explicitNullValueUpdated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated"); else _explicitNullProperties?.Remove("updated"); } }
+        private DateTimeOffset? _explicitNullValueUpdated = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -66,7 +96,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgress CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgress();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgress(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -105,7 +135,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgressStatus>("status", Status);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.User>("submittedBy", SubmittedBy);
             writer.WriteIntValue("totalIssueCount", TotalIssueCount);
-            writer.WriteDateTimeOffsetValue("updated", Updated);
+            writer.WriteDateTimeOffsetValue("updated", Updated);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

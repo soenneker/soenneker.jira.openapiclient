@@ -12,32 +12,50 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BulkStartUniformAgentSessionsRequest : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("agentId") is { } nullNodeAgentId && nullNodeAgentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentId = null;
+            if (parseNode.GetChildNode("clientMutationId") is { } nullNodeClientMutationId && nullNodeClientMutationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientMutationId = null;
+            if (parseNode.GetChildNode("issueIds") is { } nullNodeIssueIds && nullNodeIssueIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIds = null;
+            if (parseNode.GetChildNode("userPrompt") is { } nullNodeUserPrompt && nullNodeUserPrompt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserPrompt = null;
+        }
+
         /// <summary>Rovo agent ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentId { get; set; }
+        public string? AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
+        private string? _explicitNullValueAgentId = default!;
 #nullable restore
 #else
-        public string AgentId { get; set; }
+        public string AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agentId"); else _explicitNullProperties?.Remove("agentId"); } }
+        private string _explicitNullValueAgentId = default!;
 #endif
         /// <summary>Caller-supplied UUID.</summary>
-        public Guid? ClientMutationId { get; set; }
+        public Guid? ClientMutationId { get => _explicitNullValueClientMutationId; set { _explicitNullValueClientMutationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clientMutationId"); else _explicitNullProperties?.Remove("clientMutationId"); } }
+        private Guid? _explicitNullValueClientMutationId = default!;
         /// <summary>Between 1 and 50 numeric issue-ID strings. IDs must be unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IssueIds { get; set; }
+        public List<string>? IssueIds { get => _explicitNullValueIssueIds; set { _explicitNullValueIssueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIds"); else _explicitNullProperties?.Remove("issueIds"); } }
+        private List<string>? _explicitNullValueIssueIds = default!;
 #nullable restore
 #else
-        public List<string> IssueIds { get; set; }
+        public List<string> IssueIds { get => _explicitNullValueIssueIds; set { _explicitNullValueIssueIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIds"); else _explicitNullProperties?.Remove("issueIds"); } }
+        private List<string> _explicitNullValueIssueIds = default!;
 #endif
         /// <summary>Optional prompt applied to every issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserPrompt { get; set; }
+        public string? UserPrompt { get => _explicitNullValueUserPrompt; set { _explicitNullValueUserPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userPrompt"); else _explicitNullProperties?.Remove("userPrompt"); } }
+        private string? _explicitNullValueUserPrompt = default!;
 #nullable restore
 #else
-        public string UserPrompt { get; set; }
+        public string UserPrompt { get => _explicitNullValueUserPrompt; set { _explicitNullValueUserPrompt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userPrompt"); else _explicitNullProperties?.Remove("userPrompt"); } }
+        private string _explicitNullValueUserPrompt = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +65,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkStartUniformAgentSessionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkStartUniformAgentSessionsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkStartUniformAgentSessionsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,7 +91,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("agentId", AgentId);
             writer.WriteGuidValue("clientMutationId", ClientMutationId);
             writer.WriteCollectionOfPrimitiveValues<string>("issueIds", IssueIds);
-            writer.WriteStringValue("userPrompt", UserPrompt);
+            writer.WriteStringValue("userPrompt", UserPrompt);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

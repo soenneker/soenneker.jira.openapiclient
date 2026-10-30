@@ -55,6 +55,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.AtlassianConnect.One.Migration.Item.
             {
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.TaskProgress>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.TaskProgress.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -81,6 +83,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.AtlassianConnect.One.Migration.Item.
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Jira.OpenApiClient.Models.OperationMessage.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -42,18 +42,18 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Fields
         /// <summary>
         /// Remove fields associated with field association schemes.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesSuccessResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse?> DeleteAsync(global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesSuccessResponse?> DeleteAsync(global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse> DeleteAsync(global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesSuccessResponse> DeleteAsync(global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -61,24 +61,26 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Fields
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesSuccessResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update fields associated with field association schemes.**Request body limits:** a single request can update associations for at most **100 fields** (the top-level field ID keys of the request body), and each field association item may reference at most 50 field schemes. Exceeding a limit returns a 400 response with an error such as &quot;The fieldIds must contain no more than 100 items.&quot;**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesSuccessResponse"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesSuccessResponse?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesSuccessResponse> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -86,8 +88,10 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Fields
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesSuccessResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesSuccessResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Remove fields associated with field association schemes.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).

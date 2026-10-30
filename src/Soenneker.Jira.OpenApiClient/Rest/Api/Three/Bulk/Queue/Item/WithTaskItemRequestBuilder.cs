@@ -55,6 +55,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Bulk.Queue.Item
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.BulkOperationErrorResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.BulkOperationErrorResponse.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgress>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.BulkOperationProgress.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

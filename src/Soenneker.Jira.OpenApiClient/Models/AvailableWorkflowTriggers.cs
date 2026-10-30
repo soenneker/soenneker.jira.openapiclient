@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AvailableWorkflowTriggers : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("availableTypes") is { } nullNodeAvailableTypes && nullNodeAvailableTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvailableTypes = null;
+            if (parseNode.GetChildNode("ruleKey") is { } nullNodeRuleKey && nullNodeRuleKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuleKey = null;
+        }
+
         /// <summary>The list of available trigger types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggerTypes>? AvailableTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggerTypes>? AvailableTypes { get => _explicitNullValueAvailableTypes; set { _explicitNullValueAvailableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableTypes"); else _explicitNullProperties?.Remove("availableTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggerTypes>? _explicitNullValueAvailableTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggerTypes> AvailableTypes { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggerTypes> AvailableTypes { get => _explicitNullValueAvailableTypes; set { _explicitNullValueAvailableTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availableTypes"); else _explicitNullProperties?.Remove("availableTypes"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggerTypes> _explicitNullValueAvailableTypes = default!;
 #endif
         /// <summary>The rule key of the rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuleKey { get; set; }
+        public string? RuleKey { get => _explicitNullValueRuleKey; set { _explicitNullValueRuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleKey"); else _explicitNullProperties?.Remove("ruleKey"); } }
+        private string? _explicitNullValueRuleKey = default!;
 #nullable restore
 #else
-        public string RuleKey { get; set; }
+        public string RuleKey { get => _explicitNullValueRuleKey; set { _explicitNullValueRuleKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ruleKey"); else _explicitNullProperties?.Remove("ruleKey"); } }
+        private string _explicitNullValueRuleKey = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggers(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.AvailableWorkflowTriggerTypes>("availableTypes", AvailableTypes);
-            writer.WriteStringValue("ruleKey", RuleKey);
+            writer.WriteStringValue("ruleKey", RuleKey);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

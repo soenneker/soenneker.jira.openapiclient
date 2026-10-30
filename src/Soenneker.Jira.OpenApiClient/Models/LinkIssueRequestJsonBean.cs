@@ -11,38 +11,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class LinkIssueRequestJsonBean : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("inwardIssue") is { } nullNodeInwardIssue && nullNodeInwardIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InwardIssue = null;
+            if (parseNode.GetChildNode("outwardIssue") is { } nullNodeOutwardIssue && nullNodeOutwardIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OutwardIssue = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>A comment.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.Comment? Comment { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Comment? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Comment? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.Comment Comment { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Comment Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Comment _explicitNullValueComment = default!;
 #endif
         /// <summary>The ID or key of a linked issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue? InwardIssue { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue? InwardIssue { get => _explicitNullValueInwardIssue; set { _explicitNullValueInwardIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inwardIssue"); else _explicitNullProperties?.Remove("inwardIssue"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue? _explicitNullValueInwardIssue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue InwardIssue { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue InwardIssue { get => _explicitNullValueInwardIssue; set { _explicitNullValueInwardIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inwardIssue"); else _explicitNullProperties?.Remove("inwardIssue"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue _explicitNullValueInwardIssue = default!;
 #endif
         /// <summary>The ID or key of a linked issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue? OutwardIssue { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue? OutwardIssue { get => _explicitNullValueOutwardIssue; set { _explicitNullValueOutwardIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outwardIssue"); else _explicitNullProperties?.Remove("outwardIssue"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue? _explicitNullValueOutwardIssue = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue OutwardIssue { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue OutwardIssue { get => _explicitNullValueOutwardIssue; set { _explicitNullValueOutwardIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outwardIssue"); else _explicitNullProperties?.Remove("outwardIssue"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue _explicitNullValueOutwardIssue = default!;
 #endif
         /// <summary>This object is used as follows: *  In the [ issueLink](#api-rest-api-3-issueLink-post) resource it defines and reports on the type of link between the issues. Find a list of issue link types with [Get issue link types](#api-rest-api-3-issueLinkType-get). *  In the [ issueLinkType](#api-rest-api-3-issueLinkType-post) resource it defines and reports on issue link types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType? Type { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType Type { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +71,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.LinkIssueRequestJsonBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.LinkIssueRequestJsonBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.LinkIssueRequestJsonBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +97,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.Comment>("comment", Comment);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue>("inwardIssue", InwardIssue);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.LinkedIssue>("outwardIssue", OutwardIssue);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueLinkType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

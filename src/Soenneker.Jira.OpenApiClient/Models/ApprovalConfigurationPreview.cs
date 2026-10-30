@@ -12,30 +12,46 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApprovalConfigurationPreview : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("transitionApproved") is { } nullNodeTransitionApproved && nullNodeTransitionApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionApproved = null;
+            if (parseNode.GetChildNode("transitionRejected") is { } nullNodeTransitionRejected && nullNodeTransitionRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionRejected = null;
+        }
+
         /// <summary>The active approval configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Active { get; set; }
+        public string? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private string? _explicitNullValueActive = default!;
 #nullable restore
 #else
-        public string Active { get; set; }
+        public string Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private string _explicitNullValueActive = default!;
 #endif
         /// <summary>The transition ID for approved state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransitionApproved { get; set; }
+        public string? TransitionApproved { get => _explicitNullValueTransitionApproved; set { _explicitNullValueTransitionApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionApproved"); else _explicitNullProperties?.Remove("transitionApproved"); } }
+        private string? _explicitNullValueTransitionApproved = default!;
 #nullable restore
 #else
-        public string TransitionApproved { get; set; }
+        public string TransitionApproved { get => _explicitNullValueTransitionApproved; set { _explicitNullValueTransitionApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionApproved"); else _explicitNullProperties?.Remove("transitionApproved"); } }
+        private string _explicitNullValueTransitionApproved = default!;
 #endif
         /// <summary>The transition ID for rejected state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransitionRejected { get; set; }
+        public string? TransitionRejected { get => _explicitNullValueTransitionRejected; set { _explicitNullValueTransitionRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionRejected"); else _explicitNullProperties?.Remove("transitionRejected"); } }
+        private string? _explicitNullValueTransitionRejected = default!;
 #nullable restore
 #else
-        public string TransitionRejected { get; set; }
+        public string TransitionRejected { get => _explicitNullValueTransitionRejected; set { _explicitNullValueTransitionRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionRejected"); else _explicitNullProperties?.Remove("transitionRejected"); } }
+        private string _explicitNullValueTransitionRejected = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationPreview CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationPreview();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationPreview(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("active", Active);
             writer.WriteStringValue("transitionApproved", TransitionApproved);
-            writer.WriteStringValue("transitionRejected", TransitionRejected);
+            writer.WriteStringValue("transitionRejected", TransitionRejected);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

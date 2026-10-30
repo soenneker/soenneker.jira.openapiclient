@@ -12,100 +12,146 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ServerInformation : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("baseUrl") is { } nullNodeBaseUrl && nullNodeBaseUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseUrl = null;
+            if (parseNode.GetChildNode("buildDate") is { } nullNodeBuildDate && nullNodeBuildDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildDate = null;
+            if (parseNode.GetChildNode("buildNumber") is { } nullNodeBuildNumber && nullNodeBuildNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildNumber = null;
+            if (parseNode.GetChildNode("deploymentType") is { } nullNodeDeploymentType && nullNodeDeploymentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentType = null;
+            if (parseNode.GetChildNode("displayUrl") is { } nullNodeDisplayUrl && nullNodeDisplayUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayUrl = null;
+            if (parseNode.GetChildNode("displayUrlConfluence") is { } nullNodeDisplayUrlConfluence && nullNodeDisplayUrlConfluence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayUrlConfluence = null;
+            if (parseNode.GetChildNode("displayUrlServicedeskHelpCenter") is { } nullNodeDisplayUrlServicedeskHelpCenter && nullNodeDisplayUrlServicedeskHelpCenter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayUrlServicedeskHelpCenter = null;
+            if (parseNode.GetChildNode("healthChecks") is { } nullNodeHealthChecks && nullNodeHealthChecks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HealthChecks = null;
+            if (parseNode.GetChildNode("scmInfo") is { } nullNodeScmInfo && nullNodeScmInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScmInfo = null;
+            if (parseNode.GetChildNode("serverTime") is { } nullNodeServerTime && nullNodeServerTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerTime = null;
+            if (parseNode.GetChildNode("serverTimeZone") is { } nullNodeServerTimeZone && nullNodeServerTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerTimeZone = null;
+            if (parseNode.GetChildNode("serverTitle") is { } nullNodeServerTitle && nullNodeServerTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerTitle = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+            if (parseNode.GetChildNode("versionNumbers") is { } nullNodeVersionNumbers && nullNodeVersionNumbers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VersionNumbers = null;
+        }
+
         /// <summary>The base URL of the Jira instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BaseUrl { get; set; }
+        public string? BaseUrl { get => _explicitNullValueBaseUrl; set { _explicitNullValueBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baseUrl"); else _explicitNullProperties?.Remove("baseUrl"); } }
+        private string? _explicitNullValueBaseUrl = default!;
 #nullable restore
 #else
-        public string BaseUrl { get; set; }
+        public string BaseUrl { get => _explicitNullValueBaseUrl; set { _explicitNullValueBaseUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("baseUrl"); else _explicitNullProperties?.Remove("baseUrl"); } }
+        private string _explicitNullValueBaseUrl = default!;
 #endif
         /// <summary>The timestamp when the Jira version was built.</summary>
-        public DateTimeOffset? BuildDate { get; set; }
+        public DateTimeOffset? BuildDate { get => _explicitNullValueBuildDate; set { _explicitNullValueBuildDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildDate"); else _explicitNullProperties?.Remove("buildDate"); } }
+        private DateTimeOffset? _explicitNullValueBuildDate = default!;
         /// <summary>The build number of the Jira version.</summary>
-        public int? BuildNumber { get; set; }
+        public int? BuildNumber { get => _explicitNullValueBuildNumber; set { _explicitNullValueBuildNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildNumber"); else _explicitNullProperties?.Remove("buildNumber"); } }
+        private int? _explicitNullValueBuildNumber = default!;
         /// <summary>The type of server deployment. This is always returned as *Cloud*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeploymentType { get; set; }
+        public string? DeploymentType { get => _explicitNullValueDeploymentType; set { _explicitNullValueDeploymentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentType"); else _explicitNullProperties?.Remove("deploymentType"); } }
+        private string? _explicitNullValueDeploymentType = default!;
 #nullable restore
 #else
-        public string DeploymentType { get; set; }
+        public string DeploymentType { get => _explicitNullValueDeploymentType; set { _explicitNullValueDeploymentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploymentType"); else _explicitNullProperties?.Remove("deploymentType"); } }
+        private string _explicitNullValueDeploymentType = default!;
 #endif
         /// <summary>The display URL of the Jira instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayUrl { get; set; }
+        public string? DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayUrl"); else _explicitNullProperties?.Remove("displayUrl"); } }
+        private string? _explicitNullValueDisplayUrl = default!;
 #nullable restore
 #else
-        public string DisplayUrl { get; set; }
+        public string DisplayUrl { get => _explicitNullValueDisplayUrl; set { _explicitNullValueDisplayUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayUrl"); else _explicitNullProperties?.Remove("displayUrl"); } }
+        private string _explicitNullValueDisplayUrl = default!;
 #endif
         /// <summary>The display URL of Confluence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayUrlConfluence { get; set; }
+        public string? DisplayUrlConfluence { get => _explicitNullValueDisplayUrlConfluence; set { _explicitNullValueDisplayUrlConfluence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayUrlConfluence"); else _explicitNullProperties?.Remove("displayUrlConfluence"); } }
+        private string? _explicitNullValueDisplayUrlConfluence = default!;
 #nullable restore
 #else
-        public string DisplayUrlConfluence { get; set; }
+        public string DisplayUrlConfluence { get => _explicitNullValueDisplayUrlConfluence; set { _explicitNullValueDisplayUrlConfluence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayUrlConfluence"); else _explicitNullProperties?.Remove("displayUrlConfluence"); } }
+        private string _explicitNullValueDisplayUrlConfluence = default!;
 #endif
         /// <summary>The display URL of the Servicedesk Help Center.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayUrlServicedeskHelpCenter { get; set; }
+        public string? DisplayUrlServicedeskHelpCenter { get => _explicitNullValueDisplayUrlServicedeskHelpCenter; set { _explicitNullValueDisplayUrlServicedeskHelpCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayUrlServicedeskHelpCenter"); else _explicitNullProperties?.Remove("displayUrlServicedeskHelpCenter"); } }
+        private string? _explicitNullValueDisplayUrlServicedeskHelpCenter = default!;
 #nullable restore
 #else
-        public string DisplayUrlServicedeskHelpCenter { get; set; }
+        public string DisplayUrlServicedeskHelpCenter { get => _explicitNullValueDisplayUrlServicedeskHelpCenter; set { _explicitNullValueDisplayUrlServicedeskHelpCenter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayUrlServicedeskHelpCenter"); else _explicitNullProperties?.Remove("displayUrlServicedeskHelpCenter"); } }
+        private string _explicitNullValueDisplayUrlServicedeskHelpCenter = default!;
 #endif
         /// <summary>Jira instance health check results. Deprecated and no longer returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.HealthCheckResult>? HealthChecks { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.HealthCheckResult>? HealthChecks { get => _explicitNullValueHealthChecks; set { _explicitNullValueHealthChecks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("healthChecks"); else _explicitNullProperties?.Remove("healthChecks"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.HealthCheckResult>? _explicitNullValueHealthChecks = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.HealthCheckResult> HealthChecks { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.HealthCheckResult> HealthChecks { get => _explicitNullValueHealthChecks; set { _explicitNullValueHealthChecks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("healthChecks"); else _explicitNullProperties?.Remove("healthChecks"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.HealthCheckResult> _explicitNullValueHealthChecks = default!;
 #endif
         /// <summary>The unique identifier of the Jira version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ScmInfo { get; set; }
+        public string? ScmInfo { get => _explicitNullValueScmInfo; set { _explicitNullValueScmInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scmInfo"); else _explicitNullProperties?.Remove("scmInfo"); } }
+        private string? _explicitNullValueScmInfo = default!;
 #nullable restore
 #else
-        public string ScmInfo { get; set; }
+        public string ScmInfo { get => _explicitNullValueScmInfo; set { _explicitNullValueScmInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scmInfo"); else _explicitNullProperties?.Remove("scmInfo"); } }
+        private string _explicitNullValueScmInfo = default!;
 #endif
         /// <summary>The time in Jira when this request was responded to.</summary>
-        public DateTimeOffset? ServerTime { get; set; }
+        public DateTimeOffset? ServerTime { get => _explicitNullValueServerTime; set { _explicitNullValueServerTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverTime"); else _explicitNullProperties?.Remove("serverTime"); } }
+        private DateTimeOffset? _explicitNullValueServerTime = default!;
         /// <summary>The default timezone of the Jira server. In a format known as Olson Time Zones, IANA Time Zones or TZ Database Time Zones.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerTimeZone { get; set; }
+        public string? ServerTimeZone { get => _explicitNullValueServerTimeZone; set { _explicitNullValueServerTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverTimeZone"); else _explicitNullProperties?.Remove("serverTimeZone"); } }
+        private string? _explicitNullValueServerTimeZone = default!;
 #nullable restore
 #else
-        public string ServerTimeZone { get; set; }
+        public string ServerTimeZone { get => _explicitNullValueServerTimeZone; set { _explicitNullValueServerTimeZone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverTimeZone"); else _explicitNullProperties?.Remove("serverTimeZone"); } }
+        private string _explicitNullValueServerTimeZone = default!;
 #endif
         /// <summary>The name of the Jira instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerTitle { get; set; }
+        public string? ServerTitle { get => _explicitNullValueServerTitle; set { _explicitNullValueServerTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverTitle"); else _explicitNullProperties?.Remove("serverTitle"); } }
+        private string? _explicitNullValueServerTitle = default!;
 #nullable restore
 #else
-        public string ServerTitle { get; set; }
+        public string ServerTitle { get => _explicitNullValueServerTitle; set { _explicitNullValueServerTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("serverTitle"); else _explicitNullProperties?.Remove("serverTitle"); } }
+        private string _explicitNullValueServerTitle = default!;
 #endif
         /// <summary>The version of Jira.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>The major, minor, and revision version numbers of the Jira version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? VersionNumbers { get; set; }
+        public List<int?>? VersionNumbers { get => _explicitNullValueVersionNumbers; set { _explicitNullValueVersionNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionNumbers"); else _explicitNullProperties?.Remove("versionNumbers"); } }
+        private List<int?>? _explicitNullValueVersionNumbers = default!;
 #nullable restore
 #else
-        public List<int?> VersionNumbers { get; set; }
+        public List<int?> VersionNumbers { get => _explicitNullValueVersionNumbers; set { _explicitNullValueVersionNumbers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versionNumbers"); else _explicitNullProperties?.Remove("versionNumbers"); } }
+        private List<int?> _explicitNullValueVersionNumbers = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -115,7 +161,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ServerInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ServerInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ServerInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -161,7 +207,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("serverTimeZone", ServerTimeZone);
             writer.WriteStringValue("serverTitle", ServerTitle);
             writer.WriteStringValue("version", Version);
-            writer.WriteCollectionOfPrimitiveValues<int?>("versionNumbers", VersionNumbers);
+            writer.WriteCollectionOfPrimitiveValues<int?>("versionNumbers", VersionNumbers);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,17 +12,29 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueBulkDeletePayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is { } nullNodeSelectedIssueIdsOrKeys && nullNodeSelectedIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedIssueIdsOrKeys = null;
+            if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
+        }
+
         /// <summary>List of issue IDs or keys which are to be bulk deleted. These IDs or keys can be from different projects and issue types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SelectedIssueIdsOrKeys { get; set; }
+        public List<string>? SelectedIssueIdsOrKeys { get => _explicitNullValueSelectedIssueIdsOrKeys; set { _explicitNullValueSelectedIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedIssueIdsOrKeys"); else _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); } }
+        private List<string>? _explicitNullValueSelectedIssueIdsOrKeys = default!;
 #nullable restore
 #else
-        public List<string> SelectedIssueIdsOrKeys { get; set; }
+        public List<string> SelectedIssueIdsOrKeys { get => _explicitNullValueSelectedIssueIdsOrKeys; set { _explicitNullValueSelectedIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedIssueIdsOrKeys"); else _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); } }
+        private List<string> _explicitNullValueSelectedIssueIdsOrKeys = default!;
 #endif
         /// <summary>A boolean value that indicates whether to send a bulk change notification when the issues are being deleted.If `true`, dispatches a bulk notification email to users about the updates.</summary>
-        public bool? SendBulkNotification { get; set; }
+        public bool? SendBulkNotification { get => _explicitNullValueSendBulkNotification; set { _explicitNullValueSendBulkNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendBulkNotification"); else _explicitNullProperties?.Remove("sendBulkNotification"); } }
+        private bool? _explicitNullValueSendBulkNotification = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.IssueBulkDeletePayload"/> and sets the default values.
         /// </summary>
@@ -38,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueBulkDeletePayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkDeletePayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkDeletePayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("selectedIssueIdsOrKeys", SelectedIssueIdsOrKeys);
-            writer.WriteBoolValue("sendBulkNotification", SendBulkNotification);
+            writer.WriteBoolValue("sendBulkNotification", SendBulkNotification);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

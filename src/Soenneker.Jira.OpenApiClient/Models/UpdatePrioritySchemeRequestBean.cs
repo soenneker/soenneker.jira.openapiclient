@@ -12,48 +12,72 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class UpdatePrioritySchemeRequestBean : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("defaultPriorityId") is { } nullNodeDefaultPriorityId && nullNodeDefaultPriorityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultPriorityId = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("mappings") is { } nullNodeMappings && nullNodeMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mappings = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("priorities") is { } nullNodePriorities && nullNodePriorities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Priorities = null;
+            if (parseNode.GetChildNode("projects") is { } nullNodeProjects && nullNodeProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projects = null;
+        }
+
         /// <summary>The default priority of the scheme.</summary>
-        public long? DefaultPriorityId { get; set; }
+        public long? DefaultPriorityId { get => _explicitNullValueDefaultPriorityId; set { _explicitNullValueDefaultPriorityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultPriorityId"); else _explicitNullProperties?.Remove("defaultPriorityId"); } }
+        private long? _explicitNullValueDefaultPriorityId = default!;
         /// <summary>The description of the priority scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Instructions to migrate the priorities of issues.`in` mappings are used to migrate the priorities of issues to priorities used within the priority scheme.`out` mappings are used to migrate the priorities of issues to priorities not used within the priority scheme. *  When **priorities** are **added** to the priority scheme, no mapping needs to be provided as the new priorities are not used by any issues. *  When **priorities** are **removed** from the priority scheme, issues that are using those priorities must be migrated to new priorities used by the priority scheme.         *  An `in` mapping must be provided for each of these priorities. *  When **projects** are **added** to the priority scheme, the priorities of issues in those projects might need to be migrated to new priorities used by the priority scheme. This can occur when the current scheme does not use all the priorities in the project(s)&apos; priority scheme(s).         *  An `in` mapping must be provided for each of these priorities. *  When **projects** are **removed** from the priority scheme, the priorities of issues in those projects might need to be migrated to new priorities within the **Default Priority Scheme** that are not used by the priority scheme. This can occur when the **Default Priority Scheme** does not use all the priorities within the current scheme.         *  An `out` mapping must be provided for each of these priorities.For more information on `in` and `out` mappings, see the child properties documentation for the `PriorityMapping` object below.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanMappings? Mappings { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanMappings? Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanMappings? _explicitNullValueMappings = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanMappings Mappings { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanMappings Mappings { get => _explicitNullValueMappings; set { _explicitNullValueMappings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappings"); else _explicitNullProperties?.Remove("mappings"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanMappings _explicitNullValueMappings = default!;
 #endif
         /// <summary>The name of the priority scheme. Must be unique.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The priorities in the scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanPriorities? Priorities { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanPriorities? Priorities { get => _explicitNullValuePriorities; set { _explicitNullValuePriorities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorities"); else _explicitNullProperties?.Remove("priorities"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanPriorities? _explicitNullValuePriorities = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanPriorities Priorities { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanPriorities Priorities { get => _explicitNullValuePriorities; set { _explicitNullValuePriorities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorities"); else _explicitNullProperties?.Remove("priorities"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanPriorities _explicitNullValuePriorities = default!;
 #endif
         /// <summary>The projects in the scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects? Projects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects? _explicitNullValueProjects = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects Projects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects _explicitNullValueProjects = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +87,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBean CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBean();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBean(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,7 +117,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanMappings>("mappings", Mappings);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanPriorities>("priorities", Priorities);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects>("projects", Projects);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.UpdatePrioritySchemeRequestBeanProjects>("projects", Projects);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

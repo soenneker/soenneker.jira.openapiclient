@@ -11,46 +11,68 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class Errors : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("issueIsSubtask") is { } nullNodeIssueIsSubtask && nullNodeIssueIsSubtask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIsSubtask = null;
+            if (parseNode.GetChildNode("issuesInArchivedProjects") is { } nullNodeIssuesInArchivedProjects && nullNodeIssuesInArchivedProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesInArchivedProjects = null;
+            if (parseNode.GetChildNode("issuesInUnlicensedProjects") is { } nullNodeIssuesInUnlicensedProjects && nullNodeIssuesInUnlicensedProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesInUnlicensedProjects = null;
+            if (parseNode.GetChildNode("issuesNotFound") is { } nullNodeIssuesNotFound && nullNodeIssuesNotFound.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesNotFound = null;
+            if (parseNode.GetChildNode("userDoesNotHavePermission") is { } nullNodeUserDoesNotHavePermission && nullNodeUserDoesNotHavePermission.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserDoesNotHavePermission = null;
+        }
+
         /// <summary>The issueIsSubtask property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssueIsSubtask { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssueIsSubtask { get => _explicitNullValueIssueIsSubtask; set { _explicitNullValueIssueIsSubtask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIsSubtask"); else _explicitNullProperties?.Remove("issueIsSubtask"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error? _explicitNullValueIssueIsSubtask = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.Error IssueIsSubtask { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error IssueIsSubtask { get => _explicitNullValueIssueIsSubtask; set { _explicitNullValueIssueIsSubtask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueIsSubtask"); else _explicitNullProperties?.Remove("issueIsSubtask"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error _explicitNullValueIssueIsSubtask = default!;
 #endif
         /// <summary>The issuesInArchivedProjects property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssuesInArchivedProjects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssuesInArchivedProjects { get => _explicitNullValueIssuesInArchivedProjects; set { _explicitNullValueIssuesInArchivedProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesInArchivedProjects"); else _explicitNullProperties?.Remove("issuesInArchivedProjects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error? _explicitNullValueIssuesInArchivedProjects = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.Error IssuesInArchivedProjects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error IssuesInArchivedProjects { get => _explicitNullValueIssuesInArchivedProjects; set { _explicitNullValueIssuesInArchivedProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesInArchivedProjects"); else _explicitNullProperties?.Remove("issuesInArchivedProjects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error _explicitNullValueIssuesInArchivedProjects = default!;
 #endif
         /// <summary>The issuesInUnlicensedProjects property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssuesInUnlicensedProjects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssuesInUnlicensedProjects { get => _explicitNullValueIssuesInUnlicensedProjects; set { _explicitNullValueIssuesInUnlicensedProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesInUnlicensedProjects"); else _explicitNullProperties?.Remove("issuesInUnlicensedProjects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error? _explicitNullValueIssuesInUnlicensedProjects = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.Error IssuesInUnlicensedProjects { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error IssuesInUnlicensedProjects { get => _explicitNullValueIssuesInUnlicensedProjects; set { _explicitNullValueIssuesInUnlicensedProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesInUnlicensedProjects"); else _explicitNullProperties?.Remove("issuesInUnlicensedProjects"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error _explicitNullValueIssuesInUnlicensedProjects = default!;
 #endif
         /// <summary>The issuesNotFound property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssuesNotFound { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error? IssuesNotFound { get => _explicitNullValueIssuesNotFound; set { _explicitNullValueIssuesNotFound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesNotFound"); else _explicitNullProperties?.Remove("issuesNotFound"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error? _explicitNullValueIssuesNotFound = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.Error IssuesNotFound { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error IssuesNotFound { get => _explicitNullValueIssuesNotFound; set { _explicitNullValueIssuesNotFound = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuesNotFound"); else _explicitNullProperties?.Remove("issuesNotFound"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error _explicitNullValueIssuesNotFound = default!;
 #endif
         /// <summary>The userDoesNotHavePermission property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.Error? UserDoesNotHavePermission { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error? UserDoesNotHavePermission { get => _explicitNullValueUserDoesNotHavePermission; set { _explicitNullValueUserDoesNotHavePermission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userDoesNotHavePermission"); else _explicitNullProperties?.Remove("userDoesNotHavePermission"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error? _explicitNullValueUserDoesNotHavePermission = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.Error UserDoesNotHavePermission { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.Error UserDoesNotHavePermission { get => _explicitNullValueUserDoesNotHavePermission; set { _explicitNullValueUserDoesNotHavePermission = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userDoesNotHavePermission"); else _explicitNullProperties?.Remove("userDoesNotHavePermission"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.Error _explicitNullValueUserDoesNotHavePermission = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -60,7 +82,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.Errors CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.Errors();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.Errors(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,7 +110,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.Error>("issuesInArchivedProjects", IssuesInArchivedProjects);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.Error>("issuesInUnlicensedProjects", IssuesInUnlicensedProjects);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.Error>("issuesNotFound", IssuesNotFound);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.Error>("userDoesNotHavePermission", UserDoesNotHavePermission);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.Error>("userDoesNotHavePermission", UserDoesNotHavePermission);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,7 +11,7 @@
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version": "1001.0.0-SNAPSHOT-f6465463661722583daccffab8c9da1746fe0520"
+    "version": "1001.0.0-SNAPSHOT-d794cfb4c7554a89092e2f32783da3a72153f3f0"
   },
   "servers": [
     {
@@ -3770,6 +3770,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetCommentPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetCommentProperty200ResponseSchema"
                 }
               }
@@ -3780,6 +3783,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetCommentPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetCommentProperty201ResponseSchema"
                 }
               }
@@ -4661,9 +4667,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MinimalFieldSchemeToFieldsResponse"
+                  "$ref": "#/components/schemas/RemoveFieldsAssociatedWithSchemesSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10002,\u0022success\u0022:true}]}"
+                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10002,\u0022success\u0022:true}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/MinimalFieldSchemeToFieldsResponse"
+                }
               }
             }
           },
@@ -4672,6 +4681,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/RemoveFieldsAssociatedWithSchemesSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/RemoveFieldsAssociatedWithSchemes204ResponseSchema"
                 }
               }
@@ -4682,9 +4694,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MinimalFieldSchemeToFieldsResponse"
+                  "$ref": "#/components/schemas/RemoveFieldsAssociatedWithSchemesSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022error\u0022:\u0022Scheme 10001 doesn\u0027t exist\u0022,\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:false}]}"
+                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022error\u0022:\u0022Scheme 10001 doesn\u0027t exist\u0022,\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:false}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/MinimalFieldSchemeToFieldsResponse"
+                }
               }
             }
           },
@@ -4799,9 +4814,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FieldSchemeToFieldsResponse"
+                  "$ref": "#/components/schemas/UpdateFieldsAssociatedWithSchemesSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true,\u0022workTypeIds\u0022:[1,2]},{\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10002,\u0022success\u0022:true,\u0022workTypeIds\u0022:[]}]}"
+                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true,\u0022workTypeIds\u0022:[1,2]},{\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10002,\u0022success\u0022:true,\u0022workTypeIds\u0022:[]}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/FieldSchemeToFieldsResponse"
+                }
               }
             }
           },
@@ -4810,6 +4828,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/UpdateFieldsAssociatedWithSchemesSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/UpdateFieldsAssociatedWithSchemes204ResponseSchema"
                 }
               }
@@ -4820,9 +4841,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FieldSchemeToFieldsResponse"
+                  "$ref": "#/components/schemas/UpdateFieldsAssociatedWithSchemesSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true,\u0022workTypeIds\u0022:[1]},{\u0022error\u0022:\u0022Scheme 10001 doesn\u0027t exist\u0022,\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:false,\u0022workTypeIds\u0022:[2]}]}"
+                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true,\u0022workTypeIds\u0022:[1]},{\u0022error\u0022:\u0022Scheme 10001 doesn\u0027t exist\u0022,\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:false,\u0022workTypeIds\u0022:[2]}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/FieldSchemeToFieldsResponse"
+                }
               }
             }
           },
@@ -4946,6 +4970,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/RemoveFieldAssociationSchemeItemParametersSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/RemoveFieldAssociationSchemeItemParameters204ResponseSchema"
                 }
               }
@@ -4956,9 +4983,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RemoveFieldParametersResult"
+                  "$ref": "#/components/schemas/RemoveFieldAssociationSchemeItemParametersSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022error\u0022:{\u0022code\u0022:\u0022FIELD_IS_NOT_ASSOCIATED\u0022,\u0022message\u0022:\u0022The field \u0027customfield_10000\u0027 is not associated with the scheme \u002710000\u0027.\u0022},\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:false,\u0022workTypeIds\u0022:[1,2]},{\u0022fieldId\u0022:\u0022description\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:true,\u0022workTypeIds\u0022:[3]}]}"
+                "example": "{\u0022results\u0022:[{\u0022error\u0022:{\u0022code\u0022:\u0022FIELD_IS_NOT_ASSOCIATED\u0022,\u0022message\u0022:\u0022The field \u0027customfield_10000\u0027 is not associated with the scheme \u002710000\u0027.\u0022},\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:false,\u0022workTypeIds\u0022:[1,2]},{\u0022fieldId\u0022:\u0022description\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:true,\u0022workTypeIds\u0022:[3]}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/RemoveFieldParametersResult"
+                }
               }
             }
           },
@@ -5094,9 +5124,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateFieldSchemeParametersResponse"
+                  "$ref": "#/components/schemas/UpdateFieldAssociationSchemeItemParametersSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10002,\u0022success\u0022:true,\u0022workTypeId\u0022:10001}]}"
+                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10002,\u0022success\u0022:true,\u0022workTypeId\u0022:10001}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/UpdateFieldSchemeParametersResponse"
+                }
               }
             }
           },
@@ -5105,6 +5138,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/UpdateFieldAssociationSchemeItemParametersSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/UpdateFieldAssociationSchemeItemParameters204ResponseSchema"
                 }
               }
@@ -5115,9 +5151,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UpdateFieldSchemeParametersResponse"
+                  "$ref": "#/components/schemas/UpdateFieldAssociationSchemeItemParametersSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022error\u0022:\u0022Scheme 10001 doesn\u0027t exist\u0022,\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:false,\u0022workTypeId\u0022:10001}]}"
+                "example": "{\u0022results\u0022:[{\u0022fieldId\u0022:\u0022customfield_10000\u0022,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022error\u0022:\u0022Scheme 10001 doesn\u0027t exist\u0022,\u0022fieldId\u0022:\u0022customfield_10001\u0022,\u0022schemeId\u0022:10001,\u0022success\u0022:false,\u0022workTypeId\u0022:10001}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/UpdateFieldSchemeParametersResponse"
+                }
               }
             }
           },
@@ -5355,9 +5394,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FieldSchemeToProjectsResponse"
+                  "$ref": "#/components/schemas/AssociateProjectsToFieldAssociationSchemesSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022projectId\u0022:10001,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022projectId\u0022:10002,\u0022schemeId\u0022:10001,\u0022success\u0022:true}]}"
+                "example": "{\u0022results\u0022:[{\u0022projectId\u0022:10001,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022projectId\u0022:10002,\u0022schemeId\u0022:10001,\u0022success\u0022:true}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/FieldSchemeToProjectsResponse"
+                }
               }
             }
           },
@@ -5366,6 +5408,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/AssociateProjectsToFieldAssociationSchemesSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/AssociateProjectsToFieldAssociationSchemes204ResponseSchema"
                 }
               }
@@ -5376,9 +5421,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/FieldSchemeToProjectsResponse"
+                  "$ref": "#/components/schemas/AssociateProjectsToFieldAssociationSchemesSuccessResponse"
                 },
-                "example": "{\u0022results\u0022:[{\u0022projectId\u0022:10001,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022error\u0022:\u0022Project #10001 doesn\u0027t exist\u0022,\u0022projectId\u0022:10002,\u0022schemeId\u0022:10001,\u0022success\u0022:false}]}"
+                "example": "{\u0022results\u0022:[{\u0022projectId\u0022:10001,\u0022schemeId\u0022:10000,\u0022success\u0022:true},{\u0022error\u0022:\u0022Project #10001 doesn\u0027t exist\u0022,\u0022projectId\u0022:10002,\u0022schemeId\u0022:10001,\u0022success\u0022:false}]}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/FieldSchemeToProjectsResponse"
+                }
               }
             }
           },
@@ -6357,9 +6405,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TimeTrackingProvider"
+                  "$ref": "#/components/schemas/GetSelectedTimeTrackingImplementationSuccessResponse"
                 },
-                "example": "{\u0022key\u0022:\u0022Jira\u0022,\u0022name\u0022:\u0022JIRA provided time tracking\u0022,\u0022url\u0022:\u0022/example/config/url\u0022}"
+                "example": "{\u0022key\u0022:\u0022Jira\u0022,\u0022name\u0022:\u0022JIRA provided time tracking\u0022,\u0022url\u0022:\u0022/example/config/url\u0022}",
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/TimeTrackingProvider"
+                }
               }
             }
           },
@@ -6368,6 +6419,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/GetSelectedTimeTrackingImplementationSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetSelectedTimeTrackingImplementation204ResponseSchema"
                 }
               }
@@ -8205,6 +8259,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetDashboardItemPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetDashboardItemProperty200ResponseSchema"
                 }
               }
@@ -8215,6 +8272,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetDashboardItemPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetDashboardItemProperty201ResponseSchema"
                 }
               }
@@ -21443,6 +21503,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/EditIssueSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/EditIssue200ResponseSchema"
                 }
               }
@@ -21453,6 +21516,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/EditIssueSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/EditIssue204ResponseSchema"
                 }
               }
@@ -22922,6 +22988,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetIssuePropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetIssueProperty200ResponseSchema"
                 }
               }
@@ -22932,6 +23001,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetIssuePropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetIssueProperty201ResponseSchema"
                 }
               }
@@ -25559,6 +25631,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetWorklogPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetWorklogProperty200ResponseSchema"
                 }
               }
@@ -25569,6 +25644,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetWorklogPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetWorklogProperty201ResponseSchema"
                 }
               }
@@ -26539,6 +26617,16 @@
                   "$ref": "#/components/schemas/ErrorCollection"
                 },
                 "example": "{\u0022errorMessages\u0022:[\u0022You are not authorized to perform this action. Administrator privileges are required.\u0022],\u0022errors\u0022:{}}"
+              }
+            }
+          },
+          "422": {
+            "description": "Returned if the number of issue security levels requested exceeds the limit for an issue security scheme.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LimitExceededResponseBean"
+                }
               }
             }
           }
@@ -29253,6 +29341,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetIssueTypePropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetIssueTypeProperty200ResponseSchema"
                 }
               }
@@ -29263,6 +29354,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetIssueTypePropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetIssueTypeProperty201ResponseSchema"
                 }
               }
@@ -32077,6 +32171,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/UpdatePrecomputationsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/JqlFunctionPrecomputationUpdateResponse"
                 }
               }
@@ -32087,6 +32184,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/UpdatePrecomputationsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/UpdatePrecomputations204ResponseSchema"
                 }
               }
@@ -34706,6 +34806,16 @@
           },
           "403": {
             "description": "Returned if the user does not have the necessary permission or the feature is not available in the Jira plan."
+          },
+          "422": {
+            "description": "Returned if the limit on grants per permission is breached while creating the new permission scheme. The limit applies to each permission separately rather than to the scheme as a whole, and the response body identifies the permission that breached it. No permission scheme is created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LimitExceededResponseBean"
+                }
+              }
+            }
           }
         },
         "security": [
@@ -42855,6 +42965,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetProjectPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetProjectProperty200ResponseSchema"
                 }
               }
@@ -42865,6 +42978,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetProjectPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetProjectProperty201ResponseSchema"
                 }
               }
@@ -51914,21 +52030,37 @@
             "content": {
               "*/*": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/StreamingResponseBody"
                 }
               },
               "image/png": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "image/svg\u002Bxml": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               }
@@ -52109,21 +52241,37 @@
             "content": {
               "*/*": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/StreamingResponseBody"
                 }
               },
               "image/png": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "image/svg\u002Bxml": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               }
@@ -52331,21 +52479,37 @@
             "content": {
               "*/*": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/StreamingResponseBody"
                 }
               },
               "image/png": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "image/svg\u002Bxml": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               }
@@ -54459,6 +54623,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetUserPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetUserProperty200ResponseSchema"
                 }
               }
@@ -54469,6 +54636,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/SetUserPropertySuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SetUserProperty201ResponseSchema"
                 }
               }
@@ -109427,6 +109597,156 @@
           "SprintProperty"
         ],
         "type": "string"
+      },
+      "SetCommentPropertySuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/SetCommentProperty200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/SetCommentProperty201ResponseSchema"
+          }
+        ]
+      },
+      "RemoveFieldsAssociatedWithSchemesSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/MinimalFieldSchemeToFieldsResponse"
+          },
+          {
+            "$ref": "#/components/schemas/RemoveFieldsAssociatedWithSchemes204ResponseSchema"
+          }
+        ]
+      },
+      "UpdateFieldsAssociatedWithSchemesSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/FieldSchemeToFieldsResponse"
+          },
+          {
+            "$ref": "#/components/schemas/UpdateFieldsAssociatedWithSchemes204ResponseSchema"
+          }
+        ]
+      },
+      "RemoveFieldAssociationSchemeItemParametersSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/RemoveFieldAssociationSchemeItemParameters204ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/RemoveFieldParametersResult"
+          }
+        ]
+      },
+      "UpdateFieldAssociationSchemeItemParametersSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/UpdateFieldSchemeParametersResponse"
+          },
+          {
+            "$ref": "#/components/schemas/UpdateFieldAssociationSchemeItemParameters204ResponseSchema"
+          }
+        ]
+      },
+      "AssociateProjectsToFieldAssociationSchemesSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/FieldSchemeToProjectsResponse"
+          },
+          {
+            "$ref": "#/components/schemas/AssociateProjectsToFieldAssociationSchemes204ResponseSchema"
+          }
+        ]
+      },
+      "GetSelectedTimeTrackingImplementationSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/TimeTrackingProvider"
+          },
+          {
+            "$ref": "#/components/schemas/GetSelectedTimeTrackingImplementation204ResponseSchema"
+          }
+        ]
+      },
+      "SetDashboardItemPropertySuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/SetDashboardItemProperty200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/SetDashboardItemProperty201ResponseSchema"
+          }
+        ]
+      },
+      "EditIssueSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/EditIssue200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/EditIssue204ResponseSchema"
+          }
+        ]
+      },
+      "SetIssuePropertySuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/SetIssueProperty200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/SetIssueProperty201ResponseSchema"
+          }
+        ]
+      },
+      "SetWorklogPropertySuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/SetWorklogProperty200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/SetWorklogProperty201ResponseSchema"
+          }
+        ]
+      },
+      "SetIssueTypePropertySuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/SetIssueTypeProperty200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/SetIssueTypeProperty201ResponseSchema"
+          }
+        ]
+      },
+      "UpdatePrecomputationsSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/JqlFunctionPrecomputationUpdateResponse"
+          },
+          {
+            "$ref": "#/components/schemas/UpdatePrecomputations204ResponseSchema"
+          }
+        ]
+      },
+      "SetProjectPropertySuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/SetProjectProperty200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/SetProjectProperty201ResponseSchema"
+          }
+        ]
+      },
+      "SetUserPropertySuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/SetUserProperty200ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/SetUserProperty201ResponseSchema"
+          }
+        ]
       }
     },
     "securitySchemes": {

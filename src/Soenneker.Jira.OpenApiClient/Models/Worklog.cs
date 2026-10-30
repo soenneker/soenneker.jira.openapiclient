@@ -12,7 +12,20 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Worklog : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("started") is { } nullNodeStarted && nullNodeStarted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Started = null;
+            if (parseNode.GetChildNode("timeSpent") is { } nullNodeTimeSpent && nullNodeTimeSpent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeSpent = null;
+            if (parseNode.GetChildNode("timeSpentSeconds") is { } nullNodeTimeSpentSeconds && nullNodeTimeSpentSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeSpentSeconds = null;
+            if (parseNode.GetChildNode("visibility") is { } nullNodeVisibility && nullNodeVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visibility = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Details of the user who created the worklog.</summary>
@@ -26,10 +39,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>A comment about the worklog in [Atlassian Document Format](https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/). Optional when creating or updating a worklog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Comment { get; set; }
+        public UntypedNode? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private UntypedNode? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public UntypedNode Comment { get; set; }
+        public UntypedNode Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private UntypedNode _explicitNullValueComment = default!;
 #endif
         /// <summary>The datetime on which the worklog was created.</summary>
         public DateTimeOffset? Created { get; private set; }
@@ -52,10 +67,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>Details of properties for the worklog. Optional when creating or updating a worklog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty>? Properties { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty>? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty>? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty> Properties { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty> Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.EntityProperty> _explicitNullValueProperties = default!;
 #endif
         /// <summary>The URL of the worklog item.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -66,17 +83,21 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public string Self { get; private set; }
 #endif
         /// <summary>The datetime on which the worklog effort was started. Required when creating a worklog. Optional when updating a worklog.</summary>
-        public DateTimeOffset? Started { get; set; }
+        public DateTimeOffset? Started { get => _explicitNullValueStarted; set { _explicitNullValueStarted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started"); else _explicitNullProperties?.Remove("started"); } }
+        private DateTimeOffset? _explicitNullValueStarted = default!;
         /// <summary>The time spent working on the issue as days (\#d), hours (\#h), or minutes (\#m or \#). Required when creating a worklog if `timeSpentSeconds` isn&apos;t provided. Optional when updating a worklog. Cannot be provided if `timeSpentSecond` is provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TimeSpent { get; set; }
+        public string? TimeSpent { get => _explicitNullValueTimeSpent; set { _explicitNullValueTimeSpent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeSpent"); else _explicitNullProperties?.Remove("timeSpent"); } }
+        private string? _explicitNullValueTimeSpent = default!;
 #nullable restore
 #else
-        public string TimeSpent { get; set; }
+        public string TimeSpent { get => _explicitNullValueTimeSpent; set { _explicitNullValueTimeSpent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeSpent"); else _explicitNullProperties?.Remove("timeSpent"); } }
+        private string _explicitNullValueTimeSpent = default!;
 #endif
         /// <summary>The time in seconds spent working on the issue. Required when creating a worklog if `timeSpent` isn&apos;t provided. Optional when updating a worklog. Cannot be provided if `timeSpent` is provided.</summary>
-        public long? TimeSpentSeconds { get; set; }
+        public long? TimeSpentSeconds { get => _explicitNullValueTimeSpentSeconds; set { _explicitNullValueTimeSpentSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeSpentSeconds"); else _explicitNullProperties?.Remove("timeSpentSeconds"); } }
+        private long? _explicitNullValueTimeSpentSeconds = default!;
         /// <summary>Details of the user who last updated the worklog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,10 +111,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>Details about any restrictions in the visibility of the worklog. Optional when creating or updating a worklog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorklogVisibility? Visibility { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorklogVisibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorklogVisibility? _explicitNullValueVisibility = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorklogVisibility Visibility { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorklogVisibility Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.WorklogVisibility _explicitNullValueVisibility = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.Worklog"/> and sets the default values.
@@ -110,7 +133,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.Worklog CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.Worklog();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.Worklog(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -148,6 +171,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("timeSpent", TimeSpent);
             writer.WriteLongValue("timeSpentSeconds", TimeSpentSeconds);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorklogVisibility>("visibility", Visibility);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

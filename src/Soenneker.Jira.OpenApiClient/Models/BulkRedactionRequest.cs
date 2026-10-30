@@ -11,14 +11,24 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkRedactionRequest : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("redactions") is { } nullNodeRedactions && nullNodeRedactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Redactions = null;
+        }
+
         /// <summary>The redactions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest>? Redactions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest>? Redactions { get => _explicitNullValueRedactions; set { _explicitNullValueRedactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redactions"); else _explicitNullProperties?.Remove("redactions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest>? _explicitNullValueRedactions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest> Redactions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest> Redactions { get => _explicitNullValueRedactions; set { _explicitNullValueRedactions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redactions"); else _explicitNullProperties?.Remove("redactions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest> _explicitNullValueRedactions = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -28,7 +38,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkRedactionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,7 +58,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest>("redactions", Redactions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.SingleRedactionRequest>("redactions", Redactions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

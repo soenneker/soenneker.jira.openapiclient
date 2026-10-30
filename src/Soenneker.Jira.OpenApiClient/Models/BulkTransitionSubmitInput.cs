@@ -11,22 +11,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class BulkTransitionSubmitInput : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is { } nullNodeSelectedIssueIdsOrKeys && nullNodeSelectedIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedIssueIdsOrKeys = null;
+            if (parseNode.GetChildNode("transitionId") is { } nullNodeTransitionId && nullNodeTransitionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionId = null;
+        }
+
         /// <summary>List of all the issue IDs or keys that are to be bulk transitioned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SelectedIssueIdsOrKeys { get; set; }
+        public List<string>? SelectedIssueIdsOrKeys { get => _explicitNullValueSelectedIssueIdsOrKeys; set { _explicitNullValueSelectedIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedIssueIdsOrKeys"); else _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); } }
+        private List<string>? _explicitNullValueSelectedIssueIdsOrKeys = default!;
 #nullable restore
 #else
-        public List<string> SelectedIssueIdsOrKeys { get; set; }
+        public List<string> SelectedIssueIdsOrKeys { get => _explicitNullValueSelectedIssueIdsOrKeys; set { _explicitNullValueSelectedIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedIssueIdsOrKeys"); else _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); } }
+        private List<string> _explicitNullValueSelectedIssueIdsOrKeys = default!;
 #endif
         /// <summary>The ID of the transition that is to be performed on the issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransitionId { get; set; }
+        public string? TransitionId { get => _explicitNullValueTransitionId; set { _explicitNullValueTransitionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionId"); else _explicitNullProperties?.Remove("transitionId"); } }
+        private string? _explicitNullValueTransitionId = default!;
 #nullable restore
 #else
-        public string TransitionId { get; set; }
+        public string TransitionId { get => _explicitNullValueTransitionId; set { _explicitNullValueTransitionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionId"); else _explicitNullProperties?.Remove("transitionId"); } }
+        private string _explicitNullValueTransitionId = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +71,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("selectedIssueIdsOrKeys", SelectedIssueIdsOrKeys);
-            writer.WriteStringValue("transitionId", TransitionId);
+            writer.WriteStringValue("transitionId", TransitionId);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

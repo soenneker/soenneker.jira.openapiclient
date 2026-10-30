@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "44DC724F9248A086B320B28C6106813BF1BBF7D6D69569BE658C2CE05F374A3E43EAAD0984EE168A9EEC6025BFB0E4370E974B8F1C8CA3BE6D413B66B1800AE2",
+  "descriptionHash": "83646811002EEB1A162F1BE449DF9F8DE49A92C1C505C680EABBD304753D3CFAF3F26894FEBD3A504203F07468371403F5836892BC1498327211DC753D2AB356",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "JiraOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Jira.OpenApiClient",

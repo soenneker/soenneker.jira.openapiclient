@@ -12,17 +12,29 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueBulkTransitionPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bulkTransitionInputs") is { } nullNodeBulkTransitionInputs && nullNodeBulkTransitionInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkTransitionInputs = null;
+            if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
+        }
+
         /// <summary>List of objects and each object has two properties: *  Issues that will be bulk transitioned. *  TransitionId that corresponds to a specific transition of issues that share the same workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput>? BulkTransitionInputs { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput>? BulkTransitionInputs { get => _explicitNullValueBulkTransitionInputs; set { _explicitNullValueBulkTransitionInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulkTransitionInputs"); else _explicitNullProperties?.Remove("bulkTransitionInputs"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput>? _explicitNullValueBulkTransitionInputs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput> BulkTransitionInputs { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput> BulkTransitionInputs { get => _explicitNullValueBulkTransitionInputs; set { _explicitNullValueBulkTransitionInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulkTransitionInputs"); else _explicitNullProperties?.Remove("bulkTransitionInputs"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput> _explicitNullValueBulkTransitionInputs = default!;
 #endif
         /// <summary>A boolean value that indicates whether to send a bulk change notification when the issues are being transitioned.If `true`, dispatches a bulk notification email to users about the updates.</summary>
-        public bool? SendBulkNotification { get; set; }
+        public bool? SendBulkNotification { get => _explicitNullValueSendBulkNotification; set { _explicitNullValueSendBulkNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendBulkNotification"); else _explicitNullProperties?.Remove("sendBulkNotification"); } }
+        private bool? _explicitNullValueSendBulkNotification = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.IssueBulkTransitionPayload"/> and sets the default values.
         /// </summary>
@@ -38,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueBulkTransitionPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkTransitionPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkTransitionPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.BulkTransitionSubmitInput>("bulkTransitionInputs", BulkTransitionInputs);
-            writer.WriteBoolValue("sendBulkNotification", SendBulkNotification);
+            writer.WriteBoolValue("sendBulkNotification", SendBulkNotification);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

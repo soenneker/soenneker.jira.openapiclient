@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ConvertedJqlQueries : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("queriesWithUnknownUsers") is { } nullNodeQueriesWithUnknownUsers && nullNodeQueriesWithUnknownUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueriesWithUnknownUsers = null;
+            if (parseNode.GetChildNode("queryStrings") is { } nullNodeQueryStrings && nullNodeQueryStrings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryStrings = null;
+        }
+
         /// <summary>List of queries containing user information that could not be mapped to an existing user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers>? QueriesWithUnknownUsers { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers>? QueriesWithUnknownUsers { get => _explicitNullValueQueriesWithUnknownUsers; set { _explicitNullValueQueriesWithUnknownUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queriesWithUnknownUsers"); else _explicitNullProperties?.Remove("queriesWithUnknownUsers"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers>? _explicitNullValueQueriesWithUnknownUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers> QueriesWithUnknownUsers { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers> QueriesWithUnknownUsers { get => _explicitNullValueQueriesWithUnknownUsers; set { _explicitNullValueQueriesWithUnknownUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queriesWithUnknownUsers"); else _explicitNullProperties?.Remove("queriesWithUnknownUsers"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers> _explicitNullValueQueriesWithUnknownUsers = default!;
 #endif
         /// <summary>The list of converted query strings with account IDs in place of user identifiers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? QueryStrings { get; set; }
+        public List<string>? QueryStrings { get => _explicitNullValueQueryStrings; set { _explicitNullValueQueryStrings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryStrings"); else _explicitNullProperties?.Remove("queryStrings"); } }
+        private List<string>? _explicitNullValueQueryStrings = default!;
 #nullable restore
 #else
-        public List<string> QueryStrings { get; set; }
+        public List<string> QueryStrings { get => _explicitNullValueQueryStrings; set { _explicitNullValueQueryStrings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queryStrings"); else _explicitNullProperties?.Remove("queryStrings"); } }
+        private List<string> _explicitNullValueQueryStrings = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ConvertedJqlQueries CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ConvertedJqlQueries();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ConvertedJqlQueries(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryWithUnknownUsers>("queriesWithUnknownUsers", QueriesWithUnknownUsers);
-            writer.WriteCollectionOfPrimitiveValues<string>("queryStrings", QueryStrings);
+            writer.WriteCollectionOfPrimitiveValues<string>("queryStrings", QueryStrings);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

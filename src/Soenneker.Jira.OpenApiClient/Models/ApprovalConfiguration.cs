@@ -12,58 +12,87 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ApprovalConfiguration : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("conditionType") is { } nullNodeConditionType && nullNodeConditionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionType = null;
+            if (parseNode.GetChildNode("conditionValue") is { } nullNodeConditionValue && nullNodeConditionValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionValue = null;
+            if (parseNode.GetChildNode("exclude") is { } nullNodeExclude && nullNodeExclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exclude = null;
+            if (parseNode.GetChildNode("fieldId") is { } nullNodeFieldId && nullNodeFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldId = null;
+            if (parseNode.GetChildNode("prePopulatedFieldId") is { } nullNodePrePopulatedFieldId && nullNodePrePopulatedFieldId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrePopulatedFieldId = null;
+            if (parseNode.GetChildNode("transitionApproved") is { } nullNodeTransitionApproved && nullNodeTransitionApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionApproved = null;
+            if (parseNode.GetChildNode("transitionRejected") is { } nullNodeTransitionRejected && nullNodeTransitionRejected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionRejected = null;
+        }
+
         /// <summary>Whether the approval configuration is active.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationActive? Active { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationActive? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationActive? _explicitNullValueActive = default!;
         /// <summary>How the required approval count is calculated. It may be configured to require a specific number of approvals, or approval by a percentage of approvers. If the approvers source field is Approver groups, you can configure how many approvals per group are required for the request to be approved. The number will be the same across all groups.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationConditionType? ConditionType { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationConditionType? ConditionType { get => _explicitNullValueConditionType; set { _explicitNullValueConditionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionType"); else _explicitNullProperties?.Remove("conditionType"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationConditionType? _explicitNullValueConditionType = default!;
         /// <summary>The number or percentage of approvals required for a request to be approved. If `conditionType` is `number`, the value must be 20 or less. If `conditionType` is `percent`, the value must be 100 or less.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConditionValue { get; set; }
+        public string? ConditionValue { get => _explicitNullValueConditionValue; set { _explicitNullValueConditionValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionValue"); else _explicitNullProperties?.Remove("conditionValue"); } }
+        private string? _explicitNullValueConditionValue = default!;
 #nullable restore
 #else
-        public string ConditionValue { get; set; }
+        public string ConditionValue { get => _explicitNullValueConditionValue; set { _explicitNullValueConditionValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conditionValue"); else _explicitNullProperties?.Remove("conditionValue"); } }
+        private string _explicitNullValueConditionValue = default!;
 #endif
         /// <summary>A list of roles that should be excluded as possible approvers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationExcludeItem?>? Exclude { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationExcludeItem?>? Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationExcludeItem?>? _explicitNullValueExclude = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationExcludeItem?> Exclude { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationExcludeItem?> Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfigurationExcludeItem?> _explicitNullValueExclude = default!;
 #endif
         /// <summary>The custom field ID of the &quot;Approvers&quot; or &quot;Approver Groups&quot; field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FieldId { get; set; }
+        public string? FieldId { get => _explicitNullValueFieldId; set { _explicitNullValueFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldId"); else _explicitNullProperties?.Remove("fieldId"); } }
+        private string? _explicitNullValueFieldId = default!;
 #nullable restore
 #else
-        public string FieldId { get; set; }
+        public string FieldId { get => _explicitNullValueFieldId; set { _explicitNullValueFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldId"); else _explicitNullProperties?.Remove("fieldId"); } }
+        private string _explicitNullValueFieldId = default!;
 #endif
         /// <summary>The custom field ID of the field used to pre-populate the Approver field. Only supports the &quot;Affected Services&quot; field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrePopulatedFieldId { get; set; }
+        public string? PrePopulatedFieldId { get => _explicitNullValuePrePopulatedFieldId; set { _explicitNullValuePrePopulatedFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prePopulatedFieldId"); else _explicitNullProperties?.Remove("prePopulatedFieldId"); } }
+        private string? _explicitNullValuePrePopulatedFieldId = default!;
 #nullable restore
 #else
-        public string PrePopulatedFieldId { get; set; }
+        public string PrePopulatedFieldId { get => _explicitNullValuePrePopulatedFieldId; set { _explicitNullValuePrePopulatedFieldId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prePopulatedFieldId"); else _explicitNullProperties?.Remove("prePopulatedFieldId"); } }
+        private string _explicitNullValuePrePopulatedFieldId = default!;
 #endif
         /// <summary>The numeric ID of the transition to be executed if the request is approved.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransitionApproved { get; set; }
+        public string? TransitionApproved { get => _explicitNullValueTransitionApproved; set { _explicitNullValueTransitionApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionApproved"); else _explicitNullProperties?.Remove("transitionApproved"); } }
+        private string? _explicitNullValueTransitionApproved = default!;
 #nullable restore
 #else
-        public string TransitionApproved { get; set; }
+        public string TransitionApproved { get => _explicitNullValueTransitionApproved; set { _explicitNullValueTransitionApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionApproved"); else _explicitNullProperties?.Remove("transitionApproved"); } }
+        private string _explicitNullValueTransitionApproved = default!;
 #endif
         /// <summary>The numeric ID of the transition to be executed if the request is declined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TransitionRejected { get; set; }
+        public string? TransitionRejected { get => _explicitNullValueTransitionRejected; set { _explicitNullValueTransitionRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionRejected"); else _explicitNullProperties?.Remove("transitionRejected"); } }
+        private string? _explicitNullValueTransitionRejected = default!;
 #nullable restore
 #else
-        public string TransitionRejected { get; set; }
+        public string TransitionRejected { get => _explicitNullValueTransitionRejected; set { _explicitNullValueTransitionRejected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transitionRejected"); else _explicitNullProperties?.Remove("transitionRejected"); } }
+        private string _explicitNullValueTransitionRejected = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -73,7 +102,9 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -107,7 +138,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("fieldId", FieldId);
             writer.WriteStringValue("prePopulatedFieldId", PrePopulatedFieldId);
             writer.WriteStringValue("transitionApproved", TransitionApproved);
-            writer.WriteStringValue("transitionRejected", TransitionRejected);
+            writer.WriteStringValue("transitionRejected", TransitionRejected);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

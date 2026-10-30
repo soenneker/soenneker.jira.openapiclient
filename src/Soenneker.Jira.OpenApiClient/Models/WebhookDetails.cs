@@ -12,38 +12,57 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WebhookDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("events") is { } nullNodeEvents && nullNodeEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Events = null;
+            if (parseNode.GetChildNode("fieldIdsFilter") is { } nullNodeFieldIdsFilter && nullNodeFieldIdsFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldIdsFilter = null;
+            if (parseNode.GetChildNode("issuePropertyKeysFilter") is { } nullNodeIssuePropertyKeysFilter && nullNodeIssuePropertyKeysFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuePropertyKeysFilter = null;
+            if (parseNode.GetChildNode("jqlFilter") is { } nullNodeJqlFilter && nullNodeJqlFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JqlFilter = null;
+        }
+
         /// <summary>The Jira events that trigger the webhook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WebhookDetailsEventsItem?>? Events { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WebhookDetailsEventsItem?>? Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WebhookDetailsEventsItem?>? _explicitNullValueEvents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WebhookDetailsEventsItem?> Events { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WebhookDetailsEventsItem?> Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.WebhookDetailsEventsItem?> _explicitNullValueEvents = default!;
 #endif
         /// <summary>A list of field IDs. When the issue changelog contains any of the fields, the webhook `jira:issue_updated` is sent. If this parameter is not present, the app is notified about all field updates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FieldIdsFilter { get; set; }
+        public List<string>? FieldIdsFilter { get => _explicitNullValueFieldIdsFilter; set { _explicitNullValueFieldIdsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldIdsFilter"); else _explicitNullProperties?.Remove("fieldIdsFilter"); } }
+        private List<string>? _explicitNullValueFieldIdsFilter = default!;
 #nullable restore
 #else
-        public List<string> FieldIdsFilter { get; set; }
+        public List<string> FieldIdsFilter { get => _explicitNullValueFieldIdsFilter; set { _explicitNullValueFieldIdsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldIdsFilter"); else _explicitNullProperties?.Remove("fieldIdsFilter"); } }
+        private List<string> _explicitNullValueFieldIdsFilter = default!;
 #endif
         /// <summary>A list of issue property keys. A change of those issue properties triggers the `issue_property_set` or `issue_property_deleted` webhooks. If this parameter is not present, the app is notified about all issue property updates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IssuePropertyKeysFilter { get; set; }
+        public List<string>? IssuePropertyKeysFilter { get => _explicitNullValueIssuePropertyKeysFilter; set { _explicitNullValueIssuePropertyKeysFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuePropertyKeysFilter"); else _explicitNullProperties?.Remove("issuePropertyKeysFilter"); } }
+        private List<string>? _explicitNullValueIssuePropertyKeysFilter = default!;
 #nullable restore
 #else
-        public List<string> IssuePropertyKeysFilter { get; set; }
+        public List<string> IssuePropertyKeysFilter { get => _explicitNullValueIssuePropertyKeysFilter; set { _explicitNullValueIssuePropertyKeysFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuePropertyKeysFilter"); else _explicitNullProperties?.Remove("issuePropertyKeysFilter"); } }
+        private List<string> _explicitNullValueIssuePropertyKeysFilter = default!;
 #endif
         /// <summary>The JQL filter that specifies which issues the webhook is sent for. Only a subset of JQL can be used. The supported elements are: *  Fields: `issueKey`, `project`, `issuetype`, `status`, `assignee`, `reporter`, `issue.property`, and `cf[id]`. For custom fields (`cf[id]`), only the epic label custom field is supported.&quot;. *  Operators: `=`, `!=`, `IN`, and `NOT IN`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JqlFilter { get; set; }
+        public string? JqlFilter { get => _explicitNullValueJqlFilter; set { _explicitNullValueJqlFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jqlFilter"); else _explicitNullProperties?.Remove("jqlFilter"); } }
+        private string? _explicitNullValueJqlFilter = default!;
 #nullable restore
 #else
-        public string JqlFilter { get; set; }
+        public string JqlFilter { get => _explicitNullValueJqlFilter; set { _explicitNullValueJqlFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jqlFilter"); else _explicitNullProperties?.Remove("jqlFilter"); } }
+        private string _explicitNullValueJqlFilter = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +72,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.WebhookDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.WebhookDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.WebhookDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,7 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.Jira.OpenApiClient.Models.WebhookDetailsEventsItem>("events", Events);
             writer.WriteCollectionOfPrimitiveValues<string>("fieldIdsFilter", FieldIdsFilter);
             writer.WriteCollectionOfPrimitiveValues<string>("issuePropertyKeysFilter", IssuePropertyKeysFilter);
-            writer.WriteStringValue("jqlFilter", JqlFilter);
+            writer.WriteStringValue("jqlFilter", JqlFilter);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

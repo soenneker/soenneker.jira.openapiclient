@@ -12,24 +12,39 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class FilterDetails : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("editPermissions") is { } nullNodeEditPermissions && nullNodeEditPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditPermissions = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("sharePermissions") is { } nullNodeSharePermissions && nullNodeSharePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharePermissions = null;
+        }
+
         /// <summary>\[Experimental\] Approximate last used time. Returns the date and time when the filter was last used. Returns `null` if the filter hasn&apos;t been used after tracking was enabled. For performance reasons, timestamps aren&apos;t updated in real time and therefore may not be exactly accurate.</summary>
         public DateTimeOffset? ApproximateLastUsed { get; private set; }
         /// <summary>The description of the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The groups and projects that can edit the filter. This can be specified when updating a filter, but not when creating a filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>? EditPermissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>? EditPermissions { get => _explicitNullValueEditPermissions; set { _explicitNullValueEditPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editPermissions"); else _explicitNullProperties?.Remove("editPermissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>? _explicitNullValueEditPermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission> EditPermissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission> EditPermissions { get => _explicitNullValueEditPermissions; set { _explicitNullValueEditPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editPermissions"); else _explicitNullProperties?.Remove("editPermissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission> _explicitNullValueEditPermissions = default!;
 #endif
         /// <summary>Expand options that include additional filter details in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -62,10 +77,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The name of the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The user who owns the filter. Defaults to the creator of the filter, however, Jira administrators can change the owner of a shared filter in the admin settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,10 +111,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The groups and projects that the filter is shared with. This can be specified when updating a filter, but not when creating a filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>? SharePermissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>? SharePermissions { get => _explicitNullValueSharePermissions; set { _explicitNullValueSharePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharePermissions"); else _explicitNullProperties?.Remove("sharePermissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>? _explicitNullValueSharePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission> SharePermissions { get; set; }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission> SharePermissions { get => _explicitNullValueSharePermissions; set { _explicitNullValueSharePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharePermissions"); else _explicitNullProperties?.Remove("sharePermissions"); } }
+        private List<global::Soenneker.Jira.OpenApiClient.Models.SharePermission> _explicitNullValueSharePermissions = default!;
 #endif
         /// <summary>The users that are subscribed to the filter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -123,7 +142,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.FilterDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.FilterDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.FilterDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -160,7 +179,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>("editPermissions", EditPermissions);
             writer.WriteStringValue("name", Name);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>("sharePermissions", SharePermissions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.SharePermission>("sharePermissions", SharePermissions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

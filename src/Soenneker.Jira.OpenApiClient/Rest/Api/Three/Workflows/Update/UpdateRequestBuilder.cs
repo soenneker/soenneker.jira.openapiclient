@@ -57,7 +57,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflows.Update
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowUpdateResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowUpdateResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowUpdateResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowUpdateResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update workflows and related statuses.**[Permissions](#permissions) required:** *  *Administer Jira* project permission to create all, including global-scoped, workflows *  *Administer projects* project permissions to create project-scoped workflows

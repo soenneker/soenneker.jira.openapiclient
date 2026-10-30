@@ -35,6 +35,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Context.ContextRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The contexts property</summary>
+        [Obsolete("")]
         public global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Contexts.ContextsRequestBuilder Contexts
         {
             get => new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Contexts.ContextsRequestBuilder(PathParameters, RequestAdapter);
@@ -102,6 +103,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollection.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             await RequestAdapter.SendNoContentAsync(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -122,7 +125,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes a custom field. The custom field is deleted whether it is in the trash or not. See [Edit or delete a custom field](https://confluence.atlassian.com/x/Z44fOw) for more information on trashing and deleting custom fields.This operation is [asynchronous](#async). Follow the `location` link in the response to determine the status of the task and use [Get task](#api-rest-api-3-task-taskId-get) to obtain subsequent updates.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).

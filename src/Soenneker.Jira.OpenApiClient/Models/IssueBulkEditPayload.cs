@@ -12,33 +12,51 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class IssueBulkEditPayload : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("editedFieldsInput") is { } nullNodeEditedFieldsInput && nullNodeEditedFieldsInput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditedFieldsInput = null;
+            if (parseNode.GetChildNode("selectedActions") is { } nullNodeSelectedActions && nullNodeSelectedActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedActions = null;
+            if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is { } nullNodeSelectedIssueIdsOrKeys && nullNodeSelectedIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedIssueIdsOrKeys = null;
+            if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
+        }
+
         /// <summary>An object that defines the values to be updated in specified fields of an issue. The structure and content of this parameter vary depending on the type of field being edited. Although the order is not significant, ensure that field IDs align with those in selectedActions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput? EditedFieldsInput { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput? EditedFieldsInput { get => _explicitNullValueEditedFieldsInput; set { _explicitNullValueEditedFieldsInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editedFieldsInput"); else _explicitNullProperties?.Remove("editedFieldsInput"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput? _explicitNullValueEditedFieldsInput = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput EditedFieldsInput { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput EditedFieldsInput { get => _explicitNullValueEditedFieldsInput; set { _explicitNullValueEditedFieldsInput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editedFieldsInput"); else _explicitNullProperties?.Remove("editedFieldsInput"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput _explicitNullValueEditedFieldsInput = default!;
 #endif
         /// <summary>List of all the field IDs that are to be bulk edited. Each field ID in this list corresponds to a specific attribute of an issue that is set to be modified in the bulk edit operation. The relevant field ID can be obtained by calling the Bulk Edit Get Fields REST API (documentation available on this page itself).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SelectedActions { get; set; }
+        public List<string>? SelectedActions { get => _explicitNullValueSelectedActions; set { _explicitNullValueSelectedActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedActions"); else _explicitNullProperties?.Remove("selectedActions"); } }
+        private List<string>? _explicitNullValueSelectedActions = default!;
 #nullable restore
 #else
-        public List<string> SelectedActions { get; set; }
+        public List<string> SelectedActions { get => _explicitNullValueSelectedActions; set { _explicitNullValueSelectedActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedActions"); else _explicitNullProperties?.Remove("selectedActions"); } }
+        private List<string> _explicitNullValueSelectedActions = default!;
 #endif
         /// <summary>List of issue IDs or keys which are to be bulk edited. These IDs or keys can be from different projects and issue types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SelectedIssueIdsOrKeys { get; set; }
+        public List<string>? SelectedIssueIdsOrKeys { get => _explicitNullValueSelectedIssueIdsOrKeys; set { _explicitNullValueSelectedIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedIssueIdsOrKeys"); else _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); } }
+        private List<string>? _explicitNullValueSelectedIssueIdsOrKeys = default!;
 #nullable restore
 #else
-        public List<string> SelectedIssueIdsOrKeys { get; set; }
+        public List<string> SelectedIssueIdsOrKeys { get => _explicitNullValueSelectedIssueIdsOrKeys; set { _explicitNullValueSelectedIssueIdsOrKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selectedIssueIdsOrKeys"); else _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); } }
+        private List<string> _explicitNullValueSelectedIssueIdsOrKeys = default!;
 #endif
         /// <summary>A boolean value that indicates whether to send a bulk change notification when the issues are being edited.If `true`, dispatches a bulk notification email to users about the updates.</summary>
-        public bool? SendBulkNotification { get; set; }
+        public bool? SendBulkNotification { get => _explicitNullValueSendBulkNotification; set { _explicitNullValueSendBulkNotification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sendBulkNotification"); else _explicitNullProperties?.Remove("sendBulkNotification"); } }
+        private bool? _explicitNullValueSendBulkNotification = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayload"/> and sets the default values.
         /// </summary>
@@ -54,7 +72,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayload CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayload();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayload(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,7 +98,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.IssueBulkEditPayloadEditedFieldsInput>("editedFieldsInput", EditedFieldsInput);
             writer.WriteCollectionOfPrimitiveValues<string>("selectedActions", SelectedActions);
             writer.WriteCollectionOfPrimitiveValues<string>("selectedIssueIdsOrKeys", SelectedIssueIdsOrKeys);
-            writer.WriteBoolValue("sendBulkNotification", SendBulkNotification);
+            writer.WriteBoolValue("sendBulkNotification", SendBulkNotification);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

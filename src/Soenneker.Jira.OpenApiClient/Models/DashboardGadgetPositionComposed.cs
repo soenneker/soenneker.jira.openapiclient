@@ -12,11 +12,22 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class DashboardGadgetPositionComposed : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("The column position of the gadget.") is { } nullNodeTheColumnPositionOfTheGadget && nullNodeTheColumnPositionOfTheGadget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TheColumnPositionOfTheGadget = null;
+            if (parseNode.GetChildNode("The row position of the gadget.") is { } nullNodeTheRowPositionOfTheGadget && nullNodeTheRowPositionOfTheGadget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TheRowPositionOfTheGadget = null;
+        }
+
         /// <summary>The TheColumnPositionOfTheGadget property</summary>
-        public int? TheColumnPositionOfTheGadget { get; set; }
+        public int? TheColumnPositionOfTheGadget { get => _explicitNullValueTheColumnPositionOfTheGadget; set { _explicitNullValueTheColumnPositionOfTheGadget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("The column position of the gadget."); else _explicitNullProperties?.Remove("The column position of the gadget."); } }
+        private int? _explicitNullValueTheColumnPositionOfTheGadget = default!;
         /// <summary>The TheRowPositionOfTheGadget property</summary>
-        public int? TheRowPositionOfTheGadget { get; set; }
+        public int? TheRowPositionOfTheGadget { get => _explicitNullValueTheRowPositionOfTheGadget; set { _explicitNullValueTheRowPositionOfTheGadget = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("The row position of the gadget."); else _explicitNullProperties?.Remove("The row position of the gadget."); } }
+        private int? _explicitNullValueTheRowPositionOfTheGadget = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -25,7 +36,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.DashboardGadgetPositionComposed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.DashboardGadgetPositionComposed();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.DashboardGadgetPositionComposed(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +58,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("The column position of the gadget.", TheColumnPositionOfTheGadget);
-            writer.WriteIntValue("The row position of the gadget.", TheRowPositionOfTheGadget);
+            writer.WriteIntValue("The row position of the gadget.", TheRowPositionOfTheGadget);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,14 +12,26 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ComponentWithIssueCount : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assignee") is { } nullNodeAssignee && nullNodeAssignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assignee = null;
+            if (parseNode.GetChildNode("lead") is { } nullNodeLead && nullNodeLead.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lead = null;
+            if (parseNode.GetChildNode("realAssignee") is { } nullNodeRealAssignee && nullNodeRealAssignee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RealAssignee = null;
+        }
+
         /// <summary>The details of the user associated with `assigneeType`, if any. See `realAssignee` for details of the user assigned to issues created with this component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssignee? Assignee { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssignee? Assignee { get => _explicitNullValueAssignee; set { _explicitNullValueAssignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee"); else _explicitNullProperties?.Remove("assignee"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssignee? _explicitNullValueAssignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssignee Assignee { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssignee Assignee { get => _explicitNullValueAssignee; set { _explicitNullValueAssignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee"); else _explicitNullProperties?.Remove("assignee"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssignee _explicitNullValueAssignee = default!;
 #endif
         /// <summary>The nominal user type used to determine the assignee for issues created with this component. See `realAssigneeType` for details on how the type of the user, and hence the user, assigned to issues is determined. Takes the following values: *  `PROJECT_LEAD` the assignee to any issues created with this component is nominally the lead for the project the component is in. *  `COMPONENT_LEAD` the assignee to any issues created with this component is nominally the lead for the component. *  `UNASSIGNED` an assignee is not set for issues created with this component. *  `PROJECT_DEFAULT` the assignee to any issues created with this component is nominally the default assignee for the project that the component is in.</summary>
         public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssigneeType? AssigneeType { get; private set; }
@@ -46,10 +58,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The user details for the component&apos;s lead user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountLead? Lead { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountLead? Lead { get => _explicitNullValueLead; set { _explicitNullValueLead = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead"); else _explicitNullProperties?.Remove("lead"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountLead? _explicitNullValueLead = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountLead Lead { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountLead Lead { get => _explicitNullValueLead; set { _explicitNullValueLead = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lead"); else _explicitNullProperties?.Remove("lead"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountLead _explicitNullValueLead = default!;
 #endif
         /// <summary>The name for the component.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -72,10 +86,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The user assigned to issues created with this component, when `assigneeType` does not identify a valid assignee.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee? RealAssignee { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee? RealAssignee { get => _explicitNullValueRealAssignee; set { _explicitNullValueRealAssignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("realAssignee"); else _explicitNullProperties?.Remove("realAssignee"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee? _explicitNullValueRealAssignee = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee RealAssignee { get; set; }
+        public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee RealAssignee { get => _explicitNullValueRealAssignee; set { _explicitNullValueRealAssignee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("realAssignee"); else _explicitNullProperties?.Remove("realAssignee"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee _explicitNullValueRealAssignee = default!;
 #endif
         /// <summary>The type of the assignee that is assigned to issues created with this component, when an assignee cannot be set from the `assigneeType`. For example, `assigneeType` is set to `COMPONENT_LEAD` but no component lead is set. This property is set to one of the following values: *  `PROJECT_LEAD` when `assigneeType` is `PROJECT_LEAD` and the project lead has permission to be assigned issues in the project that the component is in. *  `COMPONENT_LEAD` when `assignee`Type is `COMPONENT_LEAD` and the component lead has permission to be assigned issues in the project that the component is in. *  `UNASSIGNED` when `assigneeType` is `UNASSIGNED` and Jira is configured to allow unassigned issues. *  `PROJECT_DEFAULT` when none of the preceding cases are true.</summary>
         public global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssigneeType? RealAssigneeType { get; private set; }
@@ -95,7 +111,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCount CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCount();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCount(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,7 +145,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountAssignee>("assignee", Assignee);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountLead>("lead", Lead);
-            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee>("realAssignee", RealAssignee);
+            writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ComponentWithIssueCountRealAssignee>("realAssignee", RealAssignee);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

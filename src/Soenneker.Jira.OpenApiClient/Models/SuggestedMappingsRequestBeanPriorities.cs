@@ -12,22 +12,35 @@ namespace Soenneker.Jira.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SuggestedMappingsRequestBeanPriorities : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("add") is { } nullNodeAdd && nullNodeAdd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Add = null;
+            if (parseNode.GetChildNode("remove") is { } nullNodeRemove && nullNodeRemove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Remove = null;
+        }
+
         /// <summary>The ids of priorities being removed from the scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Add { get; set; }
+        public List<long?>? Add { get => _explicitNullValueAdd; set { _explicitNullValueAdd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add"); else _explicitNullProperties?.Remove("add"); } }
+        private List<long?>? _explicitNullValueAdd = default!;
 #nullable restore
 #else
-        public List<long?> Add { get; set; }
+        public List<long?> Add { get => _explicitNullValueAdd; set { _explicitNullValueAdd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add"); else _explicitNullProperties?.Remove("add"); } }
+        private List<long?> _explicitNullValueAdd = default!;
 #endif
         /// <summary>The ids of priorities being removed from the scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<long?>? Remove { get; set; }
+        public List<long?>? Remove { get => _explicitNullValueRemove; set { _explicitNullValueRemove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove"); else _explicitNullProperties?.Remove("remove"); } }
+        private List<long?>? _explicitNullValueRemove = default!;
 #nullable restore
 #else
-        public List<long?> Remove { get; set; }
+        public List<long?> Remove { get => _explicitNullValueRemove; set { _explicitNullValueRemove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove"); else _explicitNullProperties?.Remove("remove"); } }
+        private List<long?> _explicitNullValueRemove = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +50,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.SuggestedMappingsRequestBeanPriorities(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<long?>("add", Add);
-            writer.WriteCollectionOfPrimitiveValues<long?>("remove", Remove);
+            writer.WriteCollectionOfPrimitiveValues<long?>("remove", Remove);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }
