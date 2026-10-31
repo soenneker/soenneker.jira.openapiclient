@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("timeRemaining") is { } nullNodeTimeRemaining && nullNodeTimeRemaining.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeRemaining = null;
+            if (parseNode.GetChildNode("timeRemaining") is null) { _explicitNullValueTimeRemaining = default!; _explicitNullProperties?.Remove("timeRemaining"); }
+            else if (parseNode.GetChildNode("timeRemaining") is { } nullNodeTimeRemaining && nullNodeTimeRemaining.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeRemaining = null;
         }
 
         /// <summary>The timeRemaining property</summary>

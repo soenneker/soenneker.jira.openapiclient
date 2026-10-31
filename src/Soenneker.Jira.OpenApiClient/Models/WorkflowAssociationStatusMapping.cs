@@ -17,8 +17,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("newStatusId") is { } nullNodeNewStatusId && nullNodeNewStatusId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewStatusId = null;
-            if (parseNode.GetChildNode("oldStatusId") is { } nullNodeOldStatusId && nullNodeOldStatusId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldStatusId = null;
+            if (parseNode.GetChildNode("newStatusId") is null) { _explicitNullValueNewStatusId = default!; _explicitNullProperties?.Remove("newStatusId"); }
+            else if (parseNode.GetChildNode("newStatusId") is { } nullNodeNewStatusId && nullNodeNewStatusId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewStatusId = null;
+            if (parseNode.GetChildNode("oldStatusId") is null) { _explicitNullValueOldStatusId = default!; _explicitNullProperties?.Remove("oldStatusId"); }
+            else if (parseNode.GetChildNode("oldStatusId") is { } nullNodeOldStatusId && nullNodeOldStatusId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldStatusId = null;
         }
 
         /// <summary>The newStatusId property</summary>

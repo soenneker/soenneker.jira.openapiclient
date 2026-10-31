@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("issueTypeMappings") is { } nullNodeIssueTypeMappings && nullNodeIssueTypeMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeMappings = null;
+            if (parseNode.GetChildNode("issueTypeMappings") is null) { _explicitNullValueIssueTypeMappings = default!; _explicitNullProperties?.Remove("issueTypeMappings"); }
+            else if (parseNode.GetChildNode("issueTypeMappings") is { } nullNodeIssueTypeMappings && nullNodeIssueTypeMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeMappings = null;
         }
 
         /// <summary>The list of issue type to screen scheme mappings. A *default* entry cannot be specified because a default entry is added when an issue type screen scheme is created.</summary>

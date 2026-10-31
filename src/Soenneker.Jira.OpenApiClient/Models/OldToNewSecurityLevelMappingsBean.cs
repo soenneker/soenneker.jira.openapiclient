@@ -17,8 +17,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("newLevelId") is { } nullNodeNewLevelId && nullNodeNewLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLevelId = null;
-            if (parseNode.GetChildNode("oldLevelId") is { } nullNodeOldLevelId && nullNodeOldLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldLevelId = null;
+            if (parseNode.GetChildNode("newLevelId") is null) { _explicitNullValueNewLevelId = default!; _explicitNullProperties?.Remove("newLevelId"); }
+            else if (parseNode.GetChildNode("newLevelId") is { } nullNodeNewLevelId && nullNodeNewLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLevelId = null;
+            if (parseNode.GetChildNode("oldLevelId") is null) { _explicitNullValueOldLevelId = default!; _explicitNullProperties?.Remove("oldLevelId"); }
+            else if (parseNode.GetChildNode("oldLevelId") is { } nullNodeOldLevelId && nullNodeOldLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldLevelId = null;
         }
 
         /// <summary>The new issue security level ID. Providing null will clear the assigned old level from issues.</summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("defaultLevelId") is { } nullNodeDefaultLevelId && nullNodeDefaultLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultLevelId = null;
-            if (parseNode.GetChildNode("issueSecuritySchemeId") is { } nullNodeIssueSecuritySchemeId && nullNodeIssueSecuritySchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueSecuritySchemeId = null;
+            if (parseNode.GetChildNode("defaultLevelId") is null) { _explicitNullValueDefaultLevelId = default!; _explicitNullProperties?.Remove("defaultLevelId"); }
+            else if (parseNode.GetChildNode("defaultLevelId") is { } nullNodeDefaultLevelId && nullNodeDefaultLevelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultLevelId = null;
+            if (parseNode.GetChildNode("issueSecuritySchemeId") is null) { _explicitNullValueIssueSecuritySchemeId = default!; _explicitNullProperties?.Remove("issueSecuritySchemeId"); }
+            else if (parseNode.GetChildNode("issueSecuritySchemeId") is { } nullNodeIssueSecuritySchemeId && nullNodeIssueSecuritySchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueSecuritySchemeId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The ID of the issue security level to set as default for the specified scheme. Providing null will reset the default level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultLevelId { get => _explicitNullValueDefaultLevelId; set { _explicitNullValueDefaultLevelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultLevelId"); else _explicitNullProperties?.Remove("defaultLevelId"); } }
+        public string? DefaultLevelId { get => _explicitNullValueDefaultLevelId; set { _explicitNullValueDefaultLevelId = value; AdditionalData?.Remove("defaultLevelId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultLevelId"); else _explicitNullProperties?.Remove("defaultLevelId"); } }
         private string? _explicitNullValueDefaultLevelId = default!;
 #nullable restore
 #else
-        public string DefaultLevelId { get => _explicitNullValueDefaultLevelId; set { _explicitNullValueDefaultLevelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultLevelId"); else _explicitNullProperties?.Remove("defaultLevelId"); } }
+        public string DefaultLevelId { get => _explicitNullValueDefaultLevelId; set { _explicitNullValueDefaultLevelId = value; AdditionalData?.Remove("defaultLevelId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultLevelId"); else _explicitNullProperties?.Remove("defaultLevelId"); } }
         private string _explicitNullValueDefaultLevelId = default!;
 #endif
         /// <summary>The ID of the issue security scheme to set default level for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueSecuritySchemeId { get => _explicitNullValueIssueSecuritySchemeId; set { _explicitNullValueIssueSecuritySchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecuritySchemeId"); else _explicitNullProperties?.Remove("issueSecuritySchemeId"); } }
+        public string? IssueSecuritySchemeId { get => _explicitNullValueIssueSecuritySchemeId; set { _explicitNullValueIssueSecuritySchemeId = value; AdditionalData?.Remove("issueSecuritySchemeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecuritySchemeId"); else _explicitNullProperties?.Remove("issueSecuritySchemeId"); } }
         private string? _explicitNullValueIssueSecuritySchemeId = default!;
 #nullable restore
 #else
-        public string IssueSecuritySchemeId { get => _explicitNullValueIssueSecuritySchemeId; set { _explicitNullValueIssueSecuritySchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecuritySchemeId"); else _explicitNullProperties?.Remove("issueSecuritySchemeId"); } }
+        public string IssueSecuritySchemeId { get => _explicitNullValueIssueSecuritySchemeId; set { _explicitNullValueIssueSecuritySchemeId = value; AdditionalData?.Remove("issueSecuritySchemeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueSecuritySchemeId"); else _explicitNullProperties?.Remove("issueSecuritySchemeId"); } }
         private string _explicitNullValueIssueSecuritySchemeId = default!;
 #endif
         /// <summary>

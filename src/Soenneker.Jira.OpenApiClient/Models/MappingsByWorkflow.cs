@@ -18,9 +18,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("newWorkflowId") is { } nullNodeNewWorkflowId && nullNodeNewWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewWorkflowId = null;
-            if (parseNode.GetChildNode("oldWorkflowId") is { } nullNodeOldWorkflowId && nullNodeOldWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldWorkflowId = null;
-            if (parseNode.GetChildNode("statusMappings") is { } nullNodeStatusMappings && nullNodeStatusMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappings = null;
+            if (parseNode.GetChildNode("newWorkflowId") is null) { _explicitNullValueNewWorkflowId = default!; _explicitNullProperties?.Remove("newWorkflowId"); }
+            else if (parseNode.GetChildNode("newWorkflowId") is { } nullNodeNewWorkflowId && nullNodeNewWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewWorkflowId = null;
+            if (parseNode.GetChildNode("oldWorkflowId") is null) { _explicitNullValueOldWorkflowId = default!; _explicitNullProperties?.Remove("oldWorkflowId"); }
+            else if (parseNode.GetChildNode("oldWorkflowId") is { } nullNodeOldWorkflowId && nullNodeOldWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldWorkflowId = null;
+            if (parseNode.GetChildNode("statusMappings") is null) { _explicitNullValueStatusMappings = default!; _explicitNullProperties?.Remove("statusMappings"); }
+            else if (parseNode.GetChildNode("statusMappings") is { } nullNodeStatusMappings && nullNodeStatusMappings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappings = null;
         }
 
         /// <summary>The ID of the new workflow.</summary>

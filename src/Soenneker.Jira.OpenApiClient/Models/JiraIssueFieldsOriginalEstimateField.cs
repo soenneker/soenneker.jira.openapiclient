@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("originalEstimateField") is { } nullNodeOriginalEstimateField && nullNodeOriginalEstimateField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalEstimateField = null;
+            if (parseNode.GetChildNode("originalEstimateField") is null) { _explicitNullValueOriginalEstimateField = default!; _explicitNullProperties?.Remove("originalEstimateField"); }
+            else if (parseNode.GetChildNode("originalEstimateField") is { } nullNodeOriginalEstimateField && nullNodeOriginalEstimateField.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalEstimateField = null;
         }
 
         /// <summary>The originalEstimateField property</summary>

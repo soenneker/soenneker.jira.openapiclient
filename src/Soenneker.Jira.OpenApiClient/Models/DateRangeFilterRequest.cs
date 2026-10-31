@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("dateAfter") is { } nullNodeDateAfter && nullNodeDateAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateAfter = null;
-            if (parseNode.GetChildNode("dateBefore") is { } nullNodeDateBefore && nullNodeDateBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateBefore = null;
+            if (parseNode.GetChildNode("dateAfter") is null) { _explicitNullValueDateAfter = default!; _explicitNullProperties?.Remove("dateAfter"); }
+            else if (parseNode.GetChildNode("dateAfter") is { } nullNodeDateAfter && nullNodeDateAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateAfter = null;
+            if (parseNode.GetChildNode("dateBefore") is null) { _explicitNullValueDateBefore = default!; _explicitNullProperties?.Remove("dateBefore"); }
+            else if (parseNode.GetChildNode("dateBefore") is { } nullNodeDateBefore && nullNodeDateBefore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateBefore = null;
         }
 
         /// <summary>List issues archived after a specified date, passed in the YYYY-MM-DD format.</summary>

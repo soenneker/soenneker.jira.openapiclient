@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("clientMutationId") is { } nullNodeClientMutationId && nullNodeClientMutationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientMutationId = null;
-            if (parseNode.GetChildNode("invocations") is { } nullNodeInvocations && nullNodeInvocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invocations = null;
+            if (parseNode.GetChildNode("clientMutationId") is null) { _explicitNullValueClientMutationId = default!; _explicitNullProperties?.Remove("clientMutationId"); }
+            else if (parseNode.GetChildNode("clientMutationId") is { } nullNodeClientMutationId && nullNodeClientMutationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientMutationId = null;
+            if (parseNode.GetChildNode("invocations") is null) { _explicitNullValueInvocations = default!; _explicitNullProperties?.Remove("invocations"); }
+            else if (parseNode.GetChildNode("invocations") is { } nullNodeInvocations && nullNodeInvocations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invocations = null;
         }
 
         /// <summary>Caller-supplied UUID</summary>

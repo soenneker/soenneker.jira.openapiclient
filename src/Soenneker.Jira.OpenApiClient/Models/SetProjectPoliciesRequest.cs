@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("policyIds") is { } nullNodePolicyIds && nullNodePolicyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyIds = null;
+            if (parseNode.GetChildNode("policyIds") is null) { _explicitNullValuePolicyIds = default!; _explicitNullProperties?.Remove("policyIds"); }
+            else if (parseNode.GetChildNode("policyIds") is { } nullNodePolicyIds && nullNodePolicyIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyIds = null;
         }
 
         /// <summary>The policyIds property</summary>

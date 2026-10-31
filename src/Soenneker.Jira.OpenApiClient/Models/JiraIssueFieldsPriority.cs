@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("priorityId") is { } nullNodePriorityId && nullNodePriorityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorityId = null;
+            if (parseNode.GetChildNode("priorityId") is null) { _explicitNullValuePriorityId = default!; _explicitNullProperties?.Remove("priorityId"); }
+            else if (parseNode.GetChildNode("priorityId") is { } nullNodePriorityId && nullNodePriorityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorityId = null;
         }
 
         /// <summary>The priorityId property</summary>

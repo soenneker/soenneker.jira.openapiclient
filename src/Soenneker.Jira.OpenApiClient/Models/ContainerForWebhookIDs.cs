@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("webhookIds") is { } nullNodeWebhookIds && nullNodeWebhookIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookIds = null;
+            if (parseNode.GetChildNode("webhookIds") is null) { _explicitNullValueWebhookIds = default!; _explicitNullProperties?.Remove("webhookIds"); }
+            else if (parseNode.GetChildNode("webhookIds") is { } nullNodeWebhookIds && nullNodeWebhookIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebhookIds = null;
         }
 
         /// <summary>A list of webhook IDs.</summary>

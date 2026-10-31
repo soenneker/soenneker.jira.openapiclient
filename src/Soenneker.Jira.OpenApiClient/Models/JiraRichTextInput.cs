@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("adfValue") is { } nullNodeAdfValue && nullNodeAdfValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdfValue = null;
+            if (parseNode.GetChildNode("adfValue") is null) { _explicitNullValueAdfValue = default!; _explicitNullProperties?.Remove("adfValue"); }
+            else if (parseNode.GetChildNode("adfValue") is { } nullNodeAdfValue && nullNodeAdfValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdfValue = null;
         }
 
         /// <summary>The adfValue property</summary>

@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("editPermissions") is { } nullNodeEditPermissions && nullNodeEditPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditPermissions = null;
-            if (parseNode.GetChildNode("sharePermissions") is { } nullNodeSharePermissions && nullNodeSharePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharePermissions = null;
+            if (parseNode.GetChildNode("editPermissions") is null) { _explicitNullValueEditPermissions = default!; _explicitNullProperties?.Remove("editPermissions"); }
+            else if (parseNode.GetChildNode("editPermissions") is { } nullNodeEditPermissions && nullNodeEditPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditPermissions = null;
+            if (parseNode.GetChildNode("sharePermissions") is null) { _explicitNullValueSharePermissions = default!; _explicitNullProperties?.Remove("sharePermissions"); }
+            else if (parseNode.GetChildNode("sharePermissions") is { } nullNodeSharePermissions && nullNodeSharePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharePermissions = null;
         }
 
         /// <summary>The edit permissions for the shareable entities.</summary>

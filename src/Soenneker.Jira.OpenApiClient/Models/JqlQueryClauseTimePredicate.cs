@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("operand") is { } nullNodeOperand && nullNodeOperand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operand = null;
-            if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
+            if (parseNode.GetChildNode("operand") is null) { _explicitNullValueOperand = default!; _explicitNullProperties?.Remove("operand"); }
+            else if (parseNode.GetChildNode("operand") is { } nullNodeOperand && nullNodeOperand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operand = null;
+            if (parseNode.GetChildNode("operator") is null) { _explicitNullValueOperator = default!; _explicitNullProperties?.Remove("operator"); }
+            else if (parseNode.GetChildNode("operator") is { } nullNodeOperator && nullNodeOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operator = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,15 +29,15 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>Details of an operand in a JQL clause.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand? Operand { get => _explicitNullValueOperand; set { _explicitNullValueOperand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operand"); else _explicitNullProperties?.Remove("operand"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand? Operand { get => _explicitNullValueOperand; set { _explicitNullValueOperand = value; AdditionalData?.Remove("operand"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operand"); else _explicitNullProperties?.Remove("operand"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand? _explicitNullValueOperand = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand Operand { get => _explicitNullValueOperand; set { _explicitNullValueOperand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operand"); else _explicitNullProperties?.Remove("operand"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand Operand { get => _explicitNullValueOperand; set { _explicitNullValueOperand = value; AdditionalData?.Remove("operand"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operand"); else _explicitNullProperties?.Remove("operand"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand _explicitNullValueOperand = default!;
 #endif
         /// <summary>The operator between the field and the operand.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicateOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicateOperator? Operator { get => _explicitNullValueOperator; set { _explicitNullValueOperator = value; AdditionalData?.Remove("operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operator"); else _explicitNullProperties?.Remove("operator"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicateOperator? _explicitNullValueOperator = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicate"/> and sets the default values.
@@ -63,7 +65,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "operand", n => { Operand = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand>(global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseOperand.CreateFromDiscriminatorValue); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicateOperator>(); } },
+                { "operator", n => { var parsed = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.JqlQueryClauseTimePredicateOperator>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueOperator = default; _explicitNullProperties?.Remove("operator"); AdditionalData["operator"] = unknown; } else { Operator = parsed; AdditionalData.Remove("operator"); } } },
             };
         }
         /// <summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("defaultValues") is { } nullNodeDefaultValues && nullNodeDefaultValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValues = null;
+            if (parseNode.GetChildNode("defaultValues") is null) { _explicitNullValueDefaultValues = default!; _explicitNullProperties?.Remove("defaultValues"); }
+            else if (parseNode.GetChildNode("defaultValues") is { } nullNodeDefaultValues && nullNodeDefaultValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValues = null;
         }
 
         /// <summary>The default values to update.</summary>

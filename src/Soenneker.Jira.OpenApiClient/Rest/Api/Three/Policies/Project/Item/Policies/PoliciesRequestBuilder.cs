@@ -44,7 +44,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Policies.Project.Item.Poli
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="System.Collections.Generic.List{global::Soenneker.Jira.OpenApiClient.Models.PolicyApplicationViolation}">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.OpenApi.Generated.OpenApiRawError">When receiving a 409 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<UntypedNode?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.SetProjectPoliciesRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -62,7 +62,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Policies.Project.Item.Poli
                 { "401", global::Soenneker.Jira.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Jira.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Jira.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Jira.OpenApiClient.Models.PolicyApplicationViolation.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

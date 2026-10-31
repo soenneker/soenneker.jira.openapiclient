@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("createMetaIssueType") is { } nullNodeCreateMetaIssueType && nullNodeCreateMetaIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateMetaIssueType = null;
+            if (parseNode.GetChildNode("createMetaIssueType") is null) { _explicitNullValueCreateMetaIssueType = default!; _explicitNullProperties?.Remove("createMetaIssueType"); }
+            else if (parseNode.GetChildNode("createMetaIssueType") is { } nullNodeCreateMetaIssueType && nullNodeCreateMetaIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateMetaIssueType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The createMetaIssueType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIssueCreateMetadata>? CreateMetaIssueType { get => _explicitNullValueCreateMetaIssueType; set { _explicitNullValueCreateMetaIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createMetaIssueType"); else _explicitNullProperties?.Remove("createMetaIssueType"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIssueCreateMetadata>? CreateMetaIssueType { get => _explicitNullValueCreateMetaIssueType; set { _explicitNullValueCreateMetaIssueType = value; AdditionalData?.Remove("createMetaIssueType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createMetaIssueType"); else _explicitNullProperties?.Remove("createMetaIssueType"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIssueCreateMetadata>? _explicitNullValueCreateMetaIssueType = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIssueCreateMetadata> CreateMetaIssueType { get => _explicitNullValueCreateMetaIssueType; set { _explicitNullValueCreateMetaIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createMetaIssueType"); else _explicitNullProperties?.Remove("createMetaIssueType"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIssueCreateMetadata> CreateMetaIssueType { get => _explicitNullValueCreateMetaIssueType; set { _explicitNullValueCreateMetaIssueType = value; AdditionalData?.Remove("createMetaIssueType"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createMetaIssueType"); else _explicitNullProperties?.Remove("createMetaIssueType"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeIssueCreateMetadata> _explicitNullValueCreateMetaIssueType = default!;
 #endif
         /// <summary>The list of CreateMetaIssueType.</summary>

@@ -18,9 +18,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("mappingsByIssueTypeOverride") is { } nullNodeMappingsByIssueTypeOverride && nullNodeMappingsByIssueTypeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappingsByIssueTypeOverride = null;
-            if (parseNode.GetChildNode("projectId") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
-            if (parseNode.GetChildNode("targetSchemeId") is { } nullNodeTargetSchemeId && nullNodeTargetSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetSchemeId = null;
+            if (parseNode.GetChildNode("mappingsByIssueTypeOverride") is null) { _explicitNullValueMappingsByIssueTypeOverride = default!; _explicitNullProperties?.Remove("mappingsByIssueTypeOverride"); }
+            else if (parseNode.GetChildNode("mappingsByIssueTypeOverride") is { } nullNodeMappingsByIssueTypeOverride && nullNodeMappingsByIssueTypeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MappingsByIssueTypeOverride = null;
+            if (parseNode.GetChildNode("projectId") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("projectId"); }
+            else if (parseNode.GetChildNode("projectId") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("targetSchemeId") is null) { _explicitNullValueTargetSchemeId = default!; _explicitNullProperties?.Remove("targetSchemeId"); }
+            else if (parseNode.GetChildNode("targetSchemeId") is { } nullNodeTargetSchemeId && nullNodeTargetSchemeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetSchemeId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The mappings for migrating issues from old statuses to new statuses when switching from one workflow scheme to another. This field is required if any statuses in the current project&apos;s workflows would no longer exist in the target workflow scheme. Each mapping defines how to update issues from an old status to the corresponding new status in the issue’s new workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? MappingsByIssueTypeOverride { get => _explicitNullValueMappingsByIssueTypeOverride; set { _explicitNullValueMappingsByIssueTypeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("mappingsByIssueTypeOverride"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? MappingsByIssueTypeOverride { get => _explicitNullValueMappingsByIssueTypeOverride; set { _explicitNullValueMappingsByIssueTypeOverride = value; AdditionalData?.Remove("mappingsByIssueTypeOverride"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("mappingsByIssueTypeOverride"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? _explicitNullValueMappingsByIssueTypeOverride = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> MappingsByIssueTypeOverride { get => _explicitNullValueMappingsByIssueTypeOverride; set { _explicitNullValueMappingsByIssueTypeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("mappingsByIssueTypeOverride"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> MappingsByIssueTypeOverride { get => _explicitNullValueMappingsByIssueTypeOverride; set { _explicitNullValueMappingsByIssueTypeOverride = value; AdditionalData?.Remove("mappingsByIssueTypeOverride"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("mappingsByIssueTypeOverride"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> _explicitNullValueMappingsByIssueTypeOverride = default!;
 #endif
         /// <summary>The ID of the project to switch the workflow scheme for</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("projectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
         private string? _explicitNullValueProjectId = default!;
 #nullable restore
 #else
-        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
+        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("projectId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectId"); else _explicitNullProperties?.Remove("projectId"); } }
         private string _explicitNullValueProjectId = default!;
 #endif
         /// <summary>The ID of the target workflow scheme to switch to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetSchemeId { get => _explicitNullValueTargetSchemeId; set { _explicitNullValueTargetSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetSchemeId"); else _explicitNullProperties?.Remove("targetSchemeId"); } }
+        public string? TargetSchemeId { get => _explicitNullValueTargetSchemeId; set { _explicitNullValueTargetSchemeId = value; AdditionalData?.Remove("targetSchemeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetSchemeId"); else _explicitNullProperties?.Remove("targetSchemeId"); } }
         private string? _explicitNullValueTargetSchemeId = default!;
 #nullable restore
 #else
-        public string TargetSchemeId { get => _explicitNullValueTargetSchemeId; set { _explicitNullValueTargetSchemeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetSchemeId"); else _explicitNullProperties?.Remove("targetSchemeId"); } }
+        public string TargetSchemeId { get => _explicitNullValueTargetSchemeId; set { _explicitNullValueTargetSchemeId = value; AdditionalData?.Remove("targetSchemeId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetSchemeId"); else _explicitNullProperties?.Remove("targetSchemeId"); } }
         private string _explicitNullValueTargetSchemeId = default!;
 #endif
         /// <summary>

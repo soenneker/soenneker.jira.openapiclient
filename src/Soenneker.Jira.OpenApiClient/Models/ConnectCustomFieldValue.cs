@@ -18,69 +18,77 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fieldID") is { } nullNodeFieldID && nullNodeFieldID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldID = null;
-            if (parseNode.GetChildNode("issueID") is { } nullNodeIssueID && nullNodeIssueID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueID = null;
-            if (parseNode.GetChildNode("number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
-            if (parseNode.GetChildNode("optionID") is { } nullNodeOptionID && nullNodeOptionID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionID = null;
-            if (parseNode.GetChildNode("richText") is { } nullNodeRichText && nullNodeRichText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichText = null;
-            if (parseNode.GetChildNode("string") is { } nullNodeString && nullNodeString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) String = null;
-            if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
-            if (parseNode.GetChildNode("_type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("fieldID") is null) { _explicitNullValueFieldID = default!; _explicitNullProperties?.Remove("fieldID"); }
+            else if (parseNode.GetChildNode("fieldID") is { } nullNodeFieldID && nullNodeFieldID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldID = null;
+            if (parseNode.GetChildNode("issueID") is null) { _explicitNullValueIssueID = default!; _explicitNullProperties?.Remove("issueID"); }
+            else if (parseNode.GetChildNode("issueID") is { } nullNodeIssueID && nullNodeIssueID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueID = null;
+            if (parseNode.GetChildNode("number") is null) { _explicitNullValueNumber = default!; _explicitNullProperties?.Remove("number"); }
+            else if (parseNode.GetChildNode("number") is { } nullNodeNumber && nullNodeNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Number = null;
+            if (parseNode.GetChildNode("optionID") is null) { _explicitNullValueOptionID = default!; _explicitNullProperties?.Remove("optionID"); }
+            else if (parseNode.GetChildNode("optionID") is { } nullNodeOptionID && nullNodeOptionID.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OptionID = null;
+            if (parseNode.GetChildNode("richText") is null) { _explicitNullValueRichText = default!; _explicitNullProperties?.Remove("richText"); }
+            else if (parseNode.GetChildNode("richText") is { } nullNodeRichText && nullNodeRichText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RichText = null;
+            if (parseNode.GetChildNode("string") is null) { _explicitNullValueString = default!; _explicitNullProperties?.Remove("string"); }
+            else if (parseNode.GetChildNode("string") is { } nullNodeString && nullNodeString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) String = null;
+            if (parseNode.GetChildNode("text") is null) { _explicitNullValueText = default!; _explicitNullProperties?.Remove("text"); }
+            else if (parseNode.GetChildNode("text") is { } nullNodeText && nullNodeText.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Text = null;
+            if (parseNode.GetChildNode("_type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("_type"); }
+            else if (parseNode.GetChildNode("_type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom field ID.</summary>
-        public int? FieldID { get => _explicitNullValueFieldID; set { _explicitNullValueFieldID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldID"); else _explicitNullProperties?.Remove("fieldID"); } }
+        public int? FieldID { get => _explicitNullValueFieldID; set { _explicitNullValueFieldID = value; AdditionalData?.Remove("fieldID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fieldID"); else _explicitNullProperties?.Remove("fieldID"); } }
         private int? _explicitNullValueFieldID = default!;
         /// <summary>The issue ID.</summary>
-        public int? IssueID { get => _explicitNullValueIssueID; set { _explicitNullValueIssueID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueID"); else _explicitNullProperties?.Remove("issueID"); } }
+        public int? IssueID { get => _explicitNullValueIssueID; set { _explicitNullValueIssueID = value; AdditionalData?.Remove("issueID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueID"); else _explicitNullProperties?.Remove("issueID"); } }
         private int? _explicitNullValueIssueID = default!;
         /// <summary>The value of number type custom field when `_type` is `NumberIssueField`.</summary>
-        public double? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number"); else _explicitNullProperties?.Remove("number"); } }
+        public double? Number { get => _explicitNullValueNumber; set { _explicitNullValueNumber = value; AdditionalData?.Remove("number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number"); else _explicitNullProperties?.Remove("number"); } }
         private double? _explicitNullValueNumber = default!;
         /// <summary>The value of single select and multiselect custom field type when `_type` is `SingleSelectIssueField` or `MultiSelectIssueField`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OptionID { get => _explicitNullValueOptionID; set { _explicitNullValueOptionID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionID"); else _explicitNullProperties?.Remove("optionID"); } }
+        public string? OptionID { get => _explicitNullValueOptionID; set { _explicitNullValueOptionID = value; AdditionalData?.Remove("optionID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionID"); else _explicitNullProperties?.Remove("optionID"); } }
         private string? _explicitNullValueOptionID = default!;
 #nullable restore
 #else
-        public string OptionID { get => _explicitNullValueOptionID; set { _explicitNullValueOptionID = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionID"); else _explicitNullProperties?.Remove("optionID"); } }
+        public string OptionID { get => _explicitNullValueOptionID; set { _explicitNullValueOptionID = value; AdditionalData?.Remove("optionID"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("optionID"); else _explicitNullProperties?.Remove("optionID"); } }
         private string _explicitNullValueOptionID = default!;
 #endif
         /// <summary>The value of richText type custom field when `_type` is `RichTextIssueField`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
+        public string? RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; AdditionalData?.Remove("richText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
         private string? _explicitNullValueRichText = default!;
 #nullable restore
 #else
-        public string RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
+        public string RichText { get => _explicitNullValueRichText; set { _explicitNullValueRichText = value; AdditionalData?.Remove("richText"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("richText"); else _explicitNullProperties?.Remove("richText"); } }
         private string _explicitNullValueRichText = default!;
 #endif
         /// <summary>The value of string type custom field when `_type` is `StringIssueField`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? String { get => _explicitNullValueString; set { _explicitNullValueString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string"); else _explicitNullProperties?.Remove("string"); } }
+        public string? String { get => _explicitNullValueString; set { _explicitNullValueString = value; AdditionalData?.Remove("string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string"); else _explicitNullProperties?.Remove("string"); } }
         private string? _explicitNullValueString = default!;
 #nullable restore
 #else
-        public string String { get => _explicitNullValueString; set { _explicitNullValueString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string"); else _explicitNullProperties?.Remove("string"); } }
+        public string String { get => _explicitNullValueString; set { _explicitNullValueString = value; AdditionalData?.Remove("string"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string"); else _explicitNullProperties?.Remove("string"); } }
         private string _explicitNullValueString = default!;
 #endif
         /// <summary>The value of of text custom field type when `_type` is `TextIssueField`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string? _explicitNullValueText = default!;
 #nullable restore
 #else
-        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
+        public string Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
         private string _explicitNullValueText = default!;
 #endif
         /// <summary>The type of custom field.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.ConnectCustomFieldValueType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_type"); else _explicitNullProperties?.Remove("_type"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.ConnectCustomFieldValueType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_type"); else _explicitNullProperties?.Remove("_type"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.ConnectCustomFieldValueType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.ConnectCustomFieldValue"/> and sets the default values.
@@ -114,7 +122,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
                 { "richText", n => { RichText = n.GetStringValue(); } },
                 { "string", n => { String = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
-                { "_type", n => { Type = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.ConnectCustomFieldValueType>(); } },
+                { "_type", n => { var parsed = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.ConnectCustomFieldValueType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("_type"); AdditionalData["_type"] = unknown; } else { Type = parsed; AdditionalData.Remove("_type"); } } },
             };
         }
         /// <summary>

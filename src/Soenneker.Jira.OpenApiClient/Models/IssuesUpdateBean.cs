@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("issueUpdates") is { } nullNodeIssueUpdates && nullNodeIssueUpdates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueUpdates = null;
+            if (parseNode.GetChildNode("issueUpdates") is null) { _explicitNullValueIssueUpdates = default!; _explicitNullProperties?.Remove("issueUpdates"); }
+            else if (parseNode.GetChildNode("issueUpdates") is { } nullNodeIssueUpdates && nullNodeIssueUpdates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueUpdates = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The issueUpdates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails>? IssueUpdates { get => _explicitNullValueIssueUpdates; set { _explicitNullValueIssueUpdates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueUpdates"); else _explicitNullProperties?.Remove("issueUpdates"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails>? IssueUpdates { get => _explicitNullValueIssueUpdates; set { _explicitNullValueIssueUpdates = value; AdditionalData?.Remove("issueUpdates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueUpdates"); else _explicitNullProperties?.Remove("issueUpdates"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails>? _explicitNullValueIssueUpdates = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails> IssueUpdates { get => _explicitNullValueIssueUpdates; set { _explicitNullValueIssueUpdates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueUpdates"); else _explicitNullProperties?.Remove("issueUpdates"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails> IssueUpdates { get => _explicitNullValueIssueUpdates; set { _explicitNullValueIssueUpdates = value; AdditionalData?.Remove("issueUpdates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueUpdates"); else _explicitNullProperties?.Remove("issueUpdates"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails> _explicitNullValueIssueUpdates = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("redactions") is { } nullNodeRedactions && nullNodeRedactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Redactions = null;
+            if (parseNode.GetChildNode("redactions") is null) { _explicitNullValueRedactions = default!; _explicitNullProperties?.Remove("redactions"); }
+            else if (parseNode.GetChildNode("redactions") is { } nullNodeRedactions && nullNodeRedactions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Redactions = null;
         }
 
         /// <summary>The redactions property</summary>

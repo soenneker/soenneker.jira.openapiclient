@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("defaultValues") is { } nullNodeDefaultValues && nullNodeDefaultValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValues = null;
+            if (parseNode.GetChildNode("defaultValues") is null) { _explicitNullValueDefaultValues = default!; _explicitNullProperties?.Remove("defaultValues"); }
+            else if (parseNode.GetChildNode("defaultValues") is { } nullNodeDefaultValues && nullNodeDefaultValues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultValues = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>List of objects with issue security scheme ID and new default level ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.DefaultLevelValue>? DefaultValues { get => _explicitNullValueDefaultValues; set { _explicitNullValueDefaultValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValues"); else _explicitNullProperties?.Remove("defaultValues"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.DefaultLevelValue>? DefaultValues { get => _explicitNullValueDefaultValues; set { _explicitNullValueDefaultValues = value; AdditionalData?.Remove("defaultValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValues"); else _explicitNullProperties?.Remove("defaultValues"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.DefaultLevelValue>? _explicitNullValueDefaultValues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.DefaultLevelValue> DefaultValues { get => _explicitNullValueDefaultValues; set { _explicitNullValueDefaultValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValues"); else _explicitNullProperties?.Remove("defaultValues"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.DefaultLevelValue> DefaultValues { get => _explicitNullValueDefaultValues; set { _explicitNullValueDefaultValues = value; AdditionalData?.Remove("defaultValues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValues"); else _explicitNullProperties?.Remove("defaultValues"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.DefaultLevelValue> _explicitNullValueDefaultValues = default!;
 #endif
         /// <summary>

@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("boards") is { } nullNodeBoards && nullNodeBoards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Boards = null;
+            if (parseNode.GetChildNode("boards") is null) { _explicitNullValueBoards = default!; _explicitNullProperties?.Remove("boards"); }
+            else if (parseNode.GetChildNode("boards") is { } nullNodeBoards && nullNodeBoards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Boards = null;
         }
 
         /// <summary>The boards to be associated with the project.</summary>

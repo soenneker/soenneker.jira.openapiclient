@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("convertedQuery") is { } nullNodeConvertedQuery && nullNodeConvertedQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConvertedQuery = null;
-            if (parseNode.GetChildNode("originalQuery") is { } nullNodeOriginalQuery && nullNodeOriginalQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalQuery = null;
+            if (parseNode.GetChildNode("convertedQuery") is null) { _explicitNullValueConvertedQuery = default!; _explicitNullProperties?.Remove("convertedQuery"); }
+            else if (parseNode.GetChildNode("convertedQuery") is { } nullNodeConvertedQuery && nullNodeConvertedQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConvertedQuery = null;
+            if (parseNode.GetChildNode("originalQuery") is null) { _explicitNullValueOriginalQuery = default!; _explicitNullProperties?.Remove("originalQuery"); }
+            else if (parseNode.GetChildNode("originalQuery") is { } nullNodeOriginalQuery && nullNodeOriginalQuery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalQuery = null;
         }
 
         /// <summary>The converted query, with accountIDs instead of user identifiers, or &apos;unknown&apos; for users that could not be found</summary>

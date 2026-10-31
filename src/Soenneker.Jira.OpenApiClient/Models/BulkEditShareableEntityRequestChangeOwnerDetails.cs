@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("autofixName") is { } nullNodeAutofixName && nullNodeAutofixName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutofixName = null;
-            if (parseNode.GetChildNode("newOwner") is { } nullNodeNewOwner && nullNodeNewOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewOwner = null;
+            if (parseNode.GetChildNode("autofixName") is null) { _explicitNullValueAutofixName = default!; _explicitNullProperties?.Remove("autofixName"); }
+            else if (parseNode.GetChildNode("autofixName") is { } nullNodeAutofixName && nullNodeAutofixName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutofixName = null;
+            if (parseNode.GetChildNode("newOwner") is null) { _explicitNullValueNewOwner = default!; _explicitNullProperties?.Remove("newOwner"); }
+            else if (parseNode.GetChildNode("newOwner") is { } nullNodeNewOwner && nullNodeNewOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewOwner = null;
         }
 
         /// <summary>Whether the name is fixed automatically if it&apos;s duplicated after changing owner.</summary>

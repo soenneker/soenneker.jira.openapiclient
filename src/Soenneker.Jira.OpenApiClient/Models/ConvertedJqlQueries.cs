@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("queriesWithUnknownUsers") is { } nullNodeQueriesWithUnknownUsers && nullNodeQueriesWithUnknownUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueriesWithUnknownUsers = null;
-            if (parseNode.GetChildNode("queryStrings") is { } nullNodeQueryStrings && nullNodeQueryStrings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryStrings = null;
+            if (parseNode.GetChildNode("queriesWithUnknownUsers") is null) { _explicitNullValueQueriesWithUnknownUsers = default!; _explicitNullProperties?.Remove("queriesWithUnknownUsers"); }
+            else if (parseNode.GetChildNode("queriesWithUnknownUsers") is { } nullNodeQueriesWithUnknownUsers && nullNodeQueriesWithUnknownUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueriesWithUnknownUsers = null;
+            if (parseNode.GetChildNode("queryStrings") is null) { _explicitNullValueQueryStrings = default!; _explicitNullProperties?.Remove("queryStrings"); }
+            else if (parseNode.GetChildNode("queryStrings") is { } nullNodeQueryStrings && nullNodeQueryStrings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueryStrings = null;
         }
 
         /// <summary>List of queries containing user information that could not be mapped to an existing user</summary>

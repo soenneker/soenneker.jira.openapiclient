@@ -18,13 +18,14 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("keyword") is { } nullNodeKeyword && nullNodeKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keyword = null;
+            if (parseNode.GetChildNode("keyword") is null) { _explicitNullValueKeyword = default!; _explicitNullProperties?.Remove("keyword"); }
+            else if (parseNode.GetChildNode("keyword") is { } nullNodeKeyword && nullNodeKeyword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Keyword = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The keyword that is the operand value.</summary>
-        public global::Soenneker.Jira.OpenApiClient.Models.EmptyKeyword? Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.EmptyKeyword? Keyword { get => _explicitNullValueKeyword; set { _explicitNullValueKeyword = value; AdditionalData?.Remove("keyword"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keyword"); else _explicitNullProperties?.Remove("keyword"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.EmptyKeyword? _explicitNullValueKeyword = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Jira.OpenApiClient.Models.KeywordOperand"/> and sets the default values.
@@ -51,7 +52,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "keyword", n => { Keyword = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.EmptyKeyword>(); } },
+                { "keyword", n => { var parsed = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.EmptyKeyword>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueKeyword = default; _explicitNullProperties?.Remove("keyword"); AdditionalData["keyword"] = unknown; } else { Keyword = parsed; AdditionalData.Remove("keyword"); } } },
             };
         }
         /// <summary>

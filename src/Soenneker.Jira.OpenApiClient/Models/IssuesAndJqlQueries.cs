@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("issueIds") is { } nullNodeIssueIds && nullNodeIssueIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIds = null;
-            if (parseNode.GetChildNode("jqls") is { } nullNodeJqls && nullNodeJqls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jqls = null;
+            if (parseNode.GetChildNode("issueIds") is null) { _explicitNullValueIssueIds = default!; _explicitNullProperties?.Remove("issueIds"); }
+            else if (parseNode.GetChildNode("issueIds") is { } nullNodeIssueIds && nullNodeIssueIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIds = null;
+            if (parseNode.GetChildNode("jqls") is null) { _explicitNullValueJqls = default!; _explicitNullProperties?.Remove("jqls"); }
+            else if (parseNode.GetChildNode("jqls") is { } nullNodeJqls && nullNodeJqls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jqls = null;
         }
 
         /// <summary>A list of up to 50 issue IDs.</summary>

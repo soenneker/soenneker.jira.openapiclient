@@ -18,9 +18,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fromPort") is { } nullNodeFromPort && nullNodeFromPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPort = null;
-            if (parseNode.GetChildNode("fromStatusReference") is { } nullNodeFromStatusReference && nullNodeFromStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromStatusReference = null;
-            if (parseNode.GetChildNode("toPort") is { } nullNodeToPort && nullNodeToPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPort = null;
+            if (parseNode.GetChildNode("fromPort") is null) { _explicitNullValueFromPort = default!; _explicitNullProperties?.Remove("fromPort"); }
+            else if (parseNode.GetChildNode("fromPort") is { } nullNodeFromPort && nullNodeFromPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromPort = null;
+            if (parseNode.GetChildNode("fromStatusReference") is null) { _explicitNullValueFromStatusReference = default!; _explicitNullProperties?.Remove("fromStatusReference"); }
+            else if (parseNode.GetChildNode("fromStatusReference") is { } nullNodeFromStatusReference && nullNodeFromStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromStatusReference = null;
+            if (parseNode.GetChildNode("toPort") is null) { _explicitNullValueToPort = default!; _explicitNullProperties?.Remove("toPort"); }
+            else if (parseNode.GetChildNode("toPort") is { } nullNodeToPort && nullNodeToPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToPort = null;
         }
 
         /// <summary>The port that the transition starts from.</summary>

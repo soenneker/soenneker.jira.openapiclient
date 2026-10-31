@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("priorityScheme") is { } nullNodePriorityScheme && nullNodePriorityScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorityScheme = null;
+            if (parseNode.GetChildNode("priorityScheme") is null) { _explicitNullValuePriorityScheme = default!; _explicitNullProperties?.Remove("priorityScheme"); }
+            else if (parseNode.GetChildNode("priorityScheme") is { } nullNodePriorityScheme && nullNodePriorityScheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PriorityScheme = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>A priority scheme with paginated priorities and projects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects? PriorityScheme { get => _explicitNullValuePriorityScheme; set { _explicitNullValuePriorityScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityScheme"); else _explicitNullProperties?.Remove("priorityScheme"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects? PriorityScheme { get => _explicitNullValuePriorityScheme; set { _explicitNullValuePriorityScheme = value; AdditionalData?.Remove("priorityScheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityScheme"); else _explicitNullProperties?.Remove("priorityScheme"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects? _explicitNullValuePriorityScheme = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects PriorityScheme { get => _explicitNullValuePriorityScheme; set { _explicitNullValuePriorityScheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityScheme"); else _explicitNullProperties?.Remove("priorityScheme"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects PriorityScheme { get => _explicitNullValuePriorityScheme; set { _explicitNullValuePriorityScheme = value; AdditionalData?.Remove("priorityScheme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("priorityScheme"); else _explicitNullProperties?.Remove("priorityScheme"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.PrioritySchemeWithPaginatedPrioritiesAndProjects _explicitNullValuePriorityScheme = default!;
 #endif
         /// <summary>The in-progress issue migration task.</summary>

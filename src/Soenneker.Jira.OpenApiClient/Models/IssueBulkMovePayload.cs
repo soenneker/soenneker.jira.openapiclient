@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
-            if (parseNode.GetChildNode("targetToSourcesMapping") is { } nullNodeTargetToSourcesMapping && nullNodeTargetToSourcesMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetToSourcesMapping = null;
+            if (parseNode.GetChildNode("sendBulkNotification") is null) { _explicitNullValueSendBulkNotification = default!; _explicitNullProperties?.Remove("sendBulkNotification"); }
+            else if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
+            if (parseNode.GetChildNode("targetToSourcesMapping") is null) { _explicitNullValueTargetToSourcesMapping = default!; _explicitNullProperties?.Remove("targetToSourcesMapping"); }
+            else if (parseNode.GetChildNode("targetToSourcesMapping") is { } nullNodeTargetToSourcesMapping && nullNodeTargetToSourcesMapping.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetToSourcesMapping = null;
         }
 
         /// <summary>A boolean value that indicates whether to send a bulk change notification when the issues are being moved.If `true`, dispatches a bulk notification email to users about the updates.</summary>

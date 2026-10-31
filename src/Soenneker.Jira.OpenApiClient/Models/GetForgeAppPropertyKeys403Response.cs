@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("errorMessages") is { } nullNodeErrorMessages && nullNodeErrorMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessages = null;
+            if (parseNode.GetChildNode("errorMessages") is null) { _explicitNullValueErrorMessages = default!; _explicitNullProperties?.Remove("errorMessages"); }
+            else if (parseNode.GetChildNode("errorMessages") is { } nullNodeErrorMessages && nullNodeErrorMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessages = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The errorMessages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
+        public List<string>? ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; AdditionalData?.Remove("errorMessages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
         private List<string>? _explicitNullValueErrorMessages = default!;
 #nullable restore
 #else
-        public List<string> ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
+        public List<string> ErrorMessages { get => _explicitNullValueErrorMessages; set { _explicitNullValueErrorMessages = value; AdditionalData?.Remove("errorMessages"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessages"); else _explicitNullProperties?.Remove("errorMessages"); } }
         private List<string> _explicitNullValueErrorMessages = default!;
 #endif
         /// <summary>The primary error message.</summary>

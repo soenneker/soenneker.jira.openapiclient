@@ -17,8 +17,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is { } nullNodeSelectedIssueIdsOrKeys && nullNodeSelectedIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedIssueIdsOrKeys = null;
-            if (parseNode.GetChildNode("transitionId") is { } nullNodeTransitionId && nullNodeTransitionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionId = null;
+            if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is null) { _explicitNullValueSelectedIssueIdsOrKeys = default!; _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); }
+            else if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is { } nullNodeSelectedIssueIdsOrKeys && nullNodeSelectedIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedIssueIdsOrKeys = null;
+            if (parseNode.GetChildNode("transitionId") is null) { _explicitNullValueTransitionId = default!; _explicitNullProperties?.Remove("transitionId"); }
+            else if (parseNode.GetChildNode("transitionId") is { } nullNodeTransitionId && nullNodeTransitionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TransitionId = null;
         }
 
         /// <summary>List of all the issue IDs or keys that are to be bulk transitioned.</summary>

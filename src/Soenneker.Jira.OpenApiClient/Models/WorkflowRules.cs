@@ -18,9 +18,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("conditionsTree") is { } nullNodeConditionsTree && nullNodeConditionsTree.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionsTree = null;
-            if (parseNode.GetChildNode("postFunctions") is { } nullNodePostFunctions && nullNodePostFunctions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostFunctions = null;
-            if (parseNode.GetChildNode("validators") is { } nullNodeValidators && nullNodeValidators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validators = null;
+            if (parseNode.GetChildNode("conditionsTree") is null) { _explicitNullValueConditionsTree = default!; _explicitNullProperties?.Remove("conditionsTree"); }
+            else if (parseNode.GetChildNode("conditionsTree") is { } nullNodeConditionsTree && nullNodeConditionsTree.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConditionsTree = null;
+            if (parseNode.GetChildNode("postFunctions") is null) { _explicitNullValuePostFunctions = default!; _explicitNullProperties?.Remove("postFunctions"); }
+            else if (parseNode.GetChildNode("postFunctions") is { } nullNodePostFunctions && nullNodePostFunctions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostFunctions = null;
+            if (parseNode.GetChildNode("validators") is null) { _explicitNullValueValidators = default!; _explicitNullProperties?.Remove("validators"); }
+            else if (parseNode.GetChildNode("validators") is { } nullNodeValidators && nullNodeValidators.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Validators = null;
         }
 
         /// <summary>The workflow transition rule conditions tree.</summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fieldIdsOrKeys") is { } nullNodeFieldIdsOrKeys && nullNodeFieldIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldIdsOrKeys = null;
+            if (parseNode.GetChildNode("fieldIdsOrKeys") is null) { _explicitNullValueFieldIdsOrKeys = default!; _explicitNullProperties?.Remove("fieldIdsOrKeys"); }
+            else if (parseNode.GetChildNode("fieldIdsOrKeys") is { } nullNodeFieldIdsOrKeys && nullNodeFieldIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldIdsOrKeys = null;
         }
 
         /// <summary>List of IDs or keys of the custom fields. It can be a mix of IDs and keys in the same query.</summary>

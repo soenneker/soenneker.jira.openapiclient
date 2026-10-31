@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("objectItem") is { } nullNodeObjectItem && nullNodeObjectItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectItem = null;
+            if (parseNode.GetChildNode("objectItem") is null) { _explicitNullValueObjectItem = default!; _explicitNullProperties?.Remove("objectItem"); }
+            else if (parseNode.GetChildNode("objectItem") is { } nullNodeObjectItem && nullNodeObjectItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ObjectItem = null;
         }
 
         /// <summary>The list of items associated with the changed record.</summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("updateResults") is { } nullNodeUpdateResults && nullNodeUpdateResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateResults = null;
+            if (parseNode.GetChildNode("updateResults") is null) { _explicitNullValueUpdateResults = default!; _explicitNullProperties?.Remove("updateResults"); }
+            else if (parseNode.GetChildNode("updateResults") is { } nullNodeUpdateResults && nullNodeUpdateResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateResults = null;
         }
 
         /// <summary>A list of workflows.</summary>

@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("changelogIds") is { } nullNodeChangelogIds && nullNodeChangelogIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChangelogIds = null;
+            if (parseNode.GetChildNode("changelogIds") is null) { _explicitNullValueChangelogIds = default!; _explicitNullProperties?.Remove("changelogIds"); }
+            else if (parseNode.GetChildNode("changelogIds") is { } nullNodeChangelogIds && nullNodeChangelogIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChangelogIds = null;
         }
 
         /// <summary>The list of changelog IDs.</summary>

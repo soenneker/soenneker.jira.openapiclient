@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("formattedDateTime") is { } nullNodeFormattedDateTime && nullNodeFormattedDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormattedDateTime = null;
+            if (parseNode.GetChildNode("formattedDateTime") is null) { _explicitNullValueFormattedDateTime = default!; _explicitNullProperties?.Remove("formattedDateTime"); }
+            else if (parseNode.GetChildNode("formattedDateTime") is { } nullNodeFormattedDateTime && nullNodeFormattedDateTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormattedDateTime = null;
         }
 
         /// <summary>The formattedDateTime property</summary>

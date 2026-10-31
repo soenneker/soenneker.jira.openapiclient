@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("The column position of the gadget.") is { } nullNodeTheColumnPositionOfTheGadget && nullNodeTheColumnPositionOfTheGadget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TheColumnPositionOfTheGadget = null;
-            if (parseNode.GetChildNode("The row position of the gadget.") is { } nullNodeTheRowPositionOfTheGadget && nullNodeTheRowPositionOfTheGadget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TheRowPositionOfTheGadget = null;
+            if (parseNode.GetChildNode("The column position of the gadget.") is null) { _explicitNullValueTheColumnPositionOfTheGadget = default!; _explicitNullProperties?.Remove("The column position of the gadget."); }
+            else if (parseNode.GetChildNode("The column position of the gadget.") is { } nullNodeTheColumnPositionOfTheGadget && nullNodeTheColumnPositionOfTheGadget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TheColumnPositionOfTheGadget = null;
+            if (parseNode.GetChildNode("The row position of the gadget.") is null) { _explicitNullValueTheRowPositionOfTheGadget = default!; _explicitNullProperties?.Remove("The row position of the gadget."); }
+            else if (parseNode.GetChildNode("The row position of the gadget.") is { } nullNodeTheRowPositionOfTheGadget && nullNodeTheRowPositionOfTheGadget.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TheRowPositionOfTheGadget = null;
         }
 
         /// <summary>The TheColumnPositionOfTheGadget property</summary>

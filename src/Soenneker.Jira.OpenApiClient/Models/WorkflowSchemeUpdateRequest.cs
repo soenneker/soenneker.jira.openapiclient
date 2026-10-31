@@ -18,14 +18,22 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("defaultWorkflowId") is { } nullNodeDefaultWorkflowId && nullNodeDefaultWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultWorkflowId = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("statusMappingsByIssueTypeOverride") is { } nullNodeStatusMappingsByIssueTypeOverride && nullNodeStatusMappingsByIssueTypeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappingsByIssueTypeOverride = null;
-            if (parseNode.GetChildNode("statusMappingsByWorkflows") is { } nullNodeStatusMappingsByWorkflows && nullNodeStatusMappingsByWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappingsByWorkflows = null;
-            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
-            if (parseNode.GetChildNode("workflowsForIssueTypes") is { } nullNodeWorkflowsForIssueTypes && nullNodeWorkflowsForIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowsForIssueTypes = null;
+            if (parseNode.GetChildNode("defaultWorkflowId") is null) { _explicitNullValueDefaultWorkflowId = default!; _explicitNullProperties?.Remove("defaultWorkflowId"); }
+            else if (parseNode.GetChildNode("defaultWorkflowId") is { } nullNodeDefaultWorkflowId && nullNodeDefaultWorkflowId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultWorkflowId = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("statusMappingsByIssueTypeOverride") is null) { _explicitNullValueStatusMappingsByIssueTypeOverride = default!; _explicitNullProperties?.Remove("statusMappingsByIssueTypeOverride"); }
+            else if (parseNode.GetChildNode("statusMappingsByIssueTypeOverride") is { } nullNodeStatusMappingsByIssueTypeOverride && nullNodeStatusMappingsByIssueTypeOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappingsByIssueTypeOverride = null;
+            if (parseNode.GetChildNode("statusMappingsByWorkflows") is null) { _explicitNullValueStatusMappingsByWorkflows = default!; _explicitNullProperties?.Remove("statusMappingsByWorkflows"); }
+            else if (parseNode.GetChildNode("statusMappingsByWorkflows") is { } nullNodeStatusMappingsByWorkflows && nullNodeStatusMappingsByWorkflows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMappingsByWorkflows = null;
+            if (parseNode.GetChildNode("version") is null) { _explicitNullValueVersion = default!; _explicitNullProperties?.Remove("version"); }
+            else if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+            if (parseNode.GetChildNode("workflowsForIssueTypes") is null) { _explicitNullValueWorkflowsForIssueTypes = default!; _explicitNullProperties?.Remove("workflowsForIssueTypes"); }
+            else if (parseNode.GetChildNode("workflowsForIssueTypes") is { } nullNodeWorkflowsForIssueTypes && nullNodeWorkflowsForIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowsForIssueTypes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,81 +41,81 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The ID of the workflow for issue types without having a mapping defined in this workflow scheme. Only used in global-scoped workflow schemes. If the `defaultWorkflowId` isn&apos;t specified, this is set to *Jira Workflow (jira)*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultWorkflowId { get => _explicitNullValueDefaultWorkflowId; set { _explicitNullValueDefaultWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowId"); else _explicitNullProperties?.Remove("defaultWorkflowId"); } }
+        public string? DefaultWorkflowId { get => _explicitNullValueDefaultWorkflowId; set { _explicitNullValueDefaultWorkflowId = value; AdditionalData?.Remove("defaultWorkflowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowId"); else _explicitNullProperties?.Remove("defaultWorkflowId"); } }
         private string? _explicitNullValueDefaultWorkflowId = default!;
 #nullable restore
 #else
-        public string DefaultWorkflowId { get => _explicitNullValueDefaultWorkflowId; set { _explicitNullValueDefaultWorkflowId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowId"); else _explicitNullProperties?.Remove("defaultWorkflowId"); } }
+        public string DefaultWorkflowId { get => _explicitNullValueDefaultWorkflowId; set { _explicitNullValueDefaultWorkflowId = value; AdditionalData?.Remove("defaultWorkflowId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultWorkflowId"); else _explicitNullProperties?.Remove("defaultWorkflowId"); } }
         private string _explicitNullValueDefaultWorkflowId = default!;
 #endif
         /// <summary>The new description for this workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The ID of this workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>The new name for this workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Overrides, for the selected issue types, any status mappings provided in `statusMappingsByWorkflows`. Status mappings are required when the new workflow for an issue type doesn&apos;t contain all statuses that the old workflow has. Status mappings can be provided by a combination of `statusMappingsByWorkflows` and `statusMappingsByIssueTypeOverride`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? StatusMappingsByIssueTypeOverride { get => _explicitNullValueStatusMappingsByIssueTypeOverride; set { _explicitNullValueStatusMappingsByIssueTypeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("statusMappingsByIssueTypeOverride"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? StatusMappingsByIssueTypeOverride { get => _explicitNullValueStatusMappingsByIssueTypeOverride; set { _explicitNullValueStatusMappingsByIssueTypeOverride = value; AdditionalData?.Remove("statusMappingsByIssueTypeOverride"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("statusMappingsByIssueTypeOverride"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride>? _explicitNullValueStatusMappingsByIssueTypeOverride = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> StatusMappingsByIssueTypeOverride { get => _explicitNullValueStatusMappingsByIssueTypeOverride; set { _explicitNullValueStatusMappingsByIssueTypeOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("statusMappingsByIssueTypeOverride"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> StatusMappingsByIssueTypeOverride { get => _explicitNullValueStatusMappingsByIssueTypeOverride; set { _explicitNullValueStatusMappingsByIssueTypeOverride = value; AdditionalData?.Remove("statusMappingsByIssueTypeOverride"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByIssueTypeOverride"); else _explicitNullProperties?.Remove("statusMappingsByIssueTypeOverride"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByIssueTypeOverride> _explicitNullValueStatusMappingsByIssueTypeOverride = default!;
 #endif
         /// <summary>The status mappings by workflows. Status mappings are required when the new workflow for an issue type doesn&apos;t contain all statuses that the old workflow has. Status mappings can be provided by a combination of `statusMappingsByWorkflows` and `statusMappingsByIssueTypeOverride`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByWorkflow>? StatusMappingsByWorkflows { get => _explicitNullValueStatusMappingsByWorkflows; set { _explicitNullValueStatusMappingsByWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByWorkflows"); else _explicitNullProperties?.Remove("statusMappingsByWorkflows"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByWorkflow>? StatusMappingsByWorkflows { get => _explicitNullValueStatusMappingsByWorkflows; set { _explicitNullValueStatusMappingsByWorkflows = value; AdditionalData?.Remove("statusMappingsByWorkflows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByWorkflows"); else _explicitNullProperties?.Remove("statusMappingsByWorkflows"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByWorkflow>? _explicitNullValueStatusMappingsByWorkflows = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByWorkflow> StatusMappingsByWorkflows { get => _explicitNullValueStatusMappingsByWorkflows; set { _explicitNullValueStatusMappingsByWorkflows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByWorkflows"); else _explicitNullProperties?.Remove("statusMappingsByWorkflows"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByWorkflow> StatusMappingsByWorkflows { get => _explicitNullValueStatusMappingsByWorkflows; set { _explicitNullValueStatusMappingsByWorkflows = value; AdditionalData?.Remove("statusMappingsByWorkflows"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusMappingsByWorkflows"); else _explicitNullProperties?.Remove("statusMappingsByWorkflows"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.MappingsByWorkflow> _explicitNullValueStatusMappingsByWorkflows = default!;
 #endif
         /// <summary>The current version details of this workflow scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.DocumentVersion? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.DocumentVersion? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.DocumentVersion? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.DocumentVersion Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.DocumentVersion Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.DocumentVersion _explicitNullValueVersion = default!;
 #endif
         /// <summary>Mappings from workflows to issue types.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>? WorkflowsForIssueTypes { get => _explicitNullValueWorkflowsForIssueTypes; set { _explicitNullValueWorkflowsForIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsForIssueTypes"); else _explicitNullProperties?.Remove("workflowsForIssueTypes"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>? WorkflowsForIssueTypes { get => _explicitNullValueWorkflowsForIssueTypes; set { _explicitNullValueWorkflowsForIssueTypes = value; AdditionalData?.Remove("workflowsForIssueTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsForIssueTypes"); else _explicitNullProperties?.Remove("workflowsForIssueTypes"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation>? _explicitNullValueWorkflowsForIssueTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation> WorkflowsForIssueTypes { get => _explicitNullValueWorkflowsForIssueTypes; set { _explicitNullValueWorkflowsForIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsForIssueTypes"); else _explicitNullProperties?.Remove("workflowsForIssueTypes"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation> WorkflowsForIssueTypes { get => _explicitNullValueWorkflowsForIssueTypes; set { _explicitNullValueWorkflowsForIssueTypes = value; AdditionalData?.Remove("workflowsForIssueTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflowsForIssueTypes"); else _explicitNullProperties?.Remove("workflowsForIssueTypes"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeAssociation> _explicitNullValueWorkflowsForIssueTypes = default!;
 #endif
         /// <summary>

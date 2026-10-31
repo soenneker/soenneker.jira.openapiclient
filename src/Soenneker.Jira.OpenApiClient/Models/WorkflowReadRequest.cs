@@ -17,9 +17,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("projectAndIssueTypes") is { } nullNodeProjectAndIssueTypes && nullNodeProjectAndIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectAndIssueTypes = null;
-            if (parseNode.GetChildNode("workflowIds") is { } nullNodeWorkflowIds && nullNodeWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowIds = null;
-            if (parseNode.GetChildNode("workflowNames") is { } nullNodeWorkflowNames && nullNodeWorkflowNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowNames = null;
+            if (parseNode.GetChildNode("projectAndIssueTypes") is null) { _explicitNullValueProjectAndIssueTypes = default!; _explicitNullProperties?.Remove("projectAndIssueTypes"); }
+            else if (parseNode.GetChildNode("projectAndIssueTypes") is { } nullNodeProjectAndIssueTypes && nullNodeProjectAndIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectAndIssueTypes = null;
+            if (parseNode.GetChildNode("workflowIds") is null) { _explicitNullValueWorkflowIds = default!; _explicitNullProperties?.Remove("workflowIds"); }
+            else if (parseNode.GetChildNode("workflowIds") is { } nullNodeWorkflowIds && nullNodeWorkflowIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowIds = null;
+            if (parseNode.GetChildNode("workflowNames") is null) { _explicitNullValueWorkflowNames = default!; _explicitNullProperties?.Remove("workflowNames"); }
+            else if (parseNode.GetChildNode("workflowNames") is { } nullNodeWorkflowNames && nullNodeWorkflowNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowNames = null;
         }
 
         /// <summary>The list of projects and issue types to query.</summary>

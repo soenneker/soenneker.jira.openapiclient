@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("issuetype") is { } nullNodeLinkedIssueFieldsIssuetype && nullNodeLinkedIssueFieldsIssuetype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedIssueFieldsIssuetype = null;
+            if (parseNode.GetChildNode("issuetype") is null) { _explicitNullValueLinkedIssueFieldsIssuetype = default!; _explicitNullProperties?.Remove("issuetype"); }
+            else if (parseNode.GetChildNode("issuetype") is { } nullNodeLinkedIssueFieldsIssuetype && nullNodeLinkedIssueFieldsIssuetype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkedIssueFieldsIssuetype = null;
         }
 
         /// <summary>The assignee of the linked issue.</summary>

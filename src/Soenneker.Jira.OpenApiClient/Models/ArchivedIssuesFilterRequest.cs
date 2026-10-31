@@ -18,11 +18,16 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("archivedBy") is { } nullNodeArchivedBy && nullNodeArchivedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedBy = null;
-            if (parseNode.GetChildNode("archivedDateRange") is { } nullNodeArchivedDateRange && nullNodeArchivedDateRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedDateRange = null;
-            if (parseNode.GetChildNode("issueTypes") is { } nullNodeIssueTypes && nullNodeIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypes = null;
-            if (parseNode.GetChildNode("projects") is { } nullNodeProjects && nullNodeProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projects = null;
-            if (parseNode.GetChildNode("reporters") is { } nullNodeReporters && nullNodeReporters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reporters = null;
+            if (parseNode.GetChildNode("archivedBy") is null) { _explicitNullValueArchivedBy = default!; _explicitNullProperties?.Remove("archivedBy"); }
+            else if (parseNode.GetChildNode("archivedBy") is { } nullNodeArchivedBy && nullNodeArchivedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedBy = null;
+            if (parseNode.GetChildNode("archivedDateRange") is null) { _explicitNullValueArchivedDateRange = default!; _explicitNullProperties?.Remove("archivedDateRange"); }
+            else if (parseNode.GetChildNode("archivedDateRange") is { } nullNodeArchivedDateRange && nullNodeArchivedDateRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchivedDateRange = null;
+            if (parseNode.GetChildNode("issueTypes") is null) { _explicitNullValueIssueTypes = default!; _explicitNullProperties?.Remove("issueTypes"); }
+            else if (parseNode.GetChildNode("issueTypes") is { } nullNodeIssueTypes && nullNodeIssueTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypes = null;
+            if (parseNode.GetChildNode("projects") is null) { _explicitNullValueProjects = default!; _explicitNullProperties?.Remove("projects"); }
+            else if (parseNode.GetChildNode("projects") is { } nullNodeProjects && nullNodeProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projects = null;
+            if (parseNode.GetChildNode("reporters") is null) { _explicitNullValueReporters = default!; _explicitNullProperties?.Remove("reporters"); }
+            else if (parseNode.GetChildNode("reporters") is { } nullNodeReporters && nullNodeReporters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reporters = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,51 +35,51 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>List archived issues archived by a specified account ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ArchivedBy { get => _explicitNullValueArchivedBy; set { _explicitNullValueArchivedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedBy"); else _explicitNullProperties?.Remove("archivedBy"); } }
+        public List<string>? ArchivedBy { get => _explicitNullValueArchivedBy; set { _explicitNullValueArchivedBy = value; AdditionalData?.Remove("archivedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedBy"); else _explicitNullProperties?.Remove("archivedBy"); } }
         private List<string>? _explicitNullValueArchivedBy = default!;
 #nullable restore
 #else
-        public List<string> ArchivedBy { get => _explicitNullValueArchivedBy; set { _explicitNullValueArchivedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedBy"); else _explicitNullProperties?.Remove("archivedBy"); } }
+        public List<string> ArchivedBy { get => _explicitNullValueArchivedBy; set { _explicitNullValueArchivedBy = value; AdditionalData?.Remove("archivedBy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedBy"); else _explicitNullProperties?.Remove("archivedBy"); } }
         private List<string> _explicitNullValueArchivedBy = default!;
 #endif
         /// <summary>List issues archived within a specified date range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest? ArchivedDateRange { get => _explicitNullValueArchivedDateRange; set { _explicitNullValueArchivedDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedDateRange"); else _explicitNullProperties?.Remove("archivedDateRange"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest? ArchivedDateRange { get => _explicitNullValueArchivedDateRange; set { _explicitNullValueArchivedDateRange = value; AdditionalData?.Remove("archivedDateRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedDateRange"); else _explicitNullProperties?.Remove("archivedDateRange"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest? _explicitNullValueArchivedDateRange = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest ArchivedDateRange { get => _explicitNullValueArchivedDateRange; set { _explicitNullValueArchivedDateRange = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedDateRange"); else _explicitNullProperties?.Remove("archivedDateRange"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest ArchivedDateRange { get => _explicitNullValueArchivedDateRange; set { _explicitNullValueArchivedDateRange = value; AdditionalData?.Remove("archivedDateRange"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archivedDateRange"); else _explicitNullProperties?.Remove("archivedDateRange"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest _explicitNullValueArchivedDateRange = default!;
 #endif
         /// <summary>List archived issues with a specified issue type ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IssueTypes { get => _explicitNullValueIssueTypes; set { _explicitNullValueIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypes"); else _explicitNullProperties?.Remove("issueTypes"); } }
+        public List<string>? IssueTypes { get => _explicitNullValueIssueTypes; set { _explicitNullValueIssueTypes = value; AdditionalData?.Remove("issueTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypes"); else _explicitNullProperties?.Remove("issueTypes"); } }
         private List<string>? _explicitNullValueIssueTypes = default!;
 #nullable restore
 #else
-        public List<string> IssueTypes { get => _explicitNullValueIssueTypes; set { _explicitNullValueIssueTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypes"); else _explicitNullProperties?.Remove("issueTypes"); } }
+        public List<string> IssueTypes { get => _explicitNullValueIssueTypes; set { _explicitNullValueIssueTypes = value; AdditionalData?.Remove("issueTypes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypes"); else _explicitNullProperties?.Remove("issueTypes"); } }
         private List<string> _explicitNullValueIssueTypes = default!;
 #endif
         /// <summary>List archived issues with a specified project key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        public List<string>? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; AdditionalData?.Remove("projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
         private List<string>? _explicitNullValueProjects = default!;
 #nullable restore
 #else
-        public List<string> Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        public List<string> Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; AdditionalData?.Remove("projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
         private List<string> _explicitNullValueProjects = default!;
 #endif
         /// <summary>List archived issues where the reporter is a specified account ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Reporters { get => _explicitNullValueReporters; set { _explicitNullValueReporters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reporters"); else _explicitNullProperties?.Remove("reporters"); } }
+        public List<string>? Reporters { get => _explicitNullValueReporters; set { _explicitNullValueReporters = value; AdditionalData?.Remove("reporters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reporters"); else _explicitNullProperties?.Remove("reporters"); } }
         private List<string>? _explicitNullValueReporters = default!;
 #nullable restore
 #else
-        public List<string> Reporters { get => _explicitNullValueReporters; set { _explicitNullValueReporters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reporters"); else _explicitNullProperties?.Remove("reporters"); } }
+        public List<string> Reporters { get => _explicitNullValueReporters; set { _explicitNullValueReporters = value; AdditionalData?.Remove("reporters"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reporters"); else _explicitNullProperties?.Remove("reporters"); } }
         private List<string> _explicitNullValueReporters = default!;
 #endif
         /// <summary>

@@ -56,6 +56,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(EditIssue200ResponseSchema != null || EditIssue204ResponseSchema != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(EditIssue200ResponseSchema, EditIssue204ResponseSchema);
@@ -70,8 +72,11 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (EditIssue200ResponseSchema == null && EditIssue204ResponseSchema == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (EditIssue200ResponseSchema != null && EditIssue204ResponseSchema == null) { if (EditIssue200ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, EditIssue200ResponseSchema); return; }
-            if (EditIssue204ResponseSchema != null && EditIssue200ResponseSchema == null) { if (EditIssue204ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, EditIssue204ResponseSchema); return; }
+            int selectedUnionBranches = 0;
+            if (EditIssue200ResponseSchema != null) selectedUnionBranches++;
+            if (EditIssue204ResponseSchema != null) selectedUnionBranches++;
+            if (EditIssue200ResponseSchema != null && selectedUnionBranches == 1) { if (EditIssue200ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, EditIssue200ResponseSchema); return; }
+            if (EditIssue204ResponseSchema != null && selectedUnionBranches == 1) { if (EditIssue204ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, EditIssue204ResponseSchema); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.EditIssue200ResponseSchema>(null, EditIssue200ResponseSchema, EditIssue204ResponseSchema);

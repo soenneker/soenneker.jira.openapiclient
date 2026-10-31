@@ -56,6 +56,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(SetProjectProperty200ResponseSchema != null || SetProjectProperty201ResponseSchema != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(SetProjectProperty200ResponseSchema, SetProjectProperty201ResponseSchema);
@@ -70,8 +72,11 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (SetProjectProperty200ResponseSchema == null && SetProjectProperty201ResponseSchema == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (SetProjectProperty200ResponseSchema != null && SetProjectProperty201ResponseSchema == null) { if (SetProjectProperty200ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SetProjectProperty200ResponseSchema); return; }
-            if (SetProjectProperty201ResponseSchema != null && SetProjectProperty200ResponseSchema == null) { if (SetProjectProperty201ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SetProjectProperty201ResponseSchema); return; }
+            int selectedUnionBranches = 0;
+            if (SetProjectProperty200ResponseSchema != null) selectedUnionBranches++;
+            if (SetProjectProperty201ResponseSchema != null) selectedUnionBranches++;
+            if (SetProjectProperty200ResponseSchema != null && selectedUnionBranches == 1) { if (SetProjectProperty200ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SetProjectProperty200ResponseSchema); return; }
+            if (SetProjectProperty201ResponseSchema != null && selectedUnionBranches == 1) { if (SetProjectProperty201ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, SetProjectProperty201ResponseSchema); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SetProjectProperty200ResponseSchema>(null, SetProjectProperty200ResponseSchema, SetProjectProperty201ResponseSchema);

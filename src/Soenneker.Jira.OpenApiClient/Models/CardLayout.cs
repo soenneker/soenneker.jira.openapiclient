@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("showDaysInColumn") is { } nullNodeShowDaysInColumn && nullNodeShowDaysInColumn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowDaysInColumn = null;
+            if (parseNode.GetChildNode("showDaysInColumn") is null) { _explicitNullValueShowDaysInColumn = default!; _explicitNullProperties?.Remove("showDaysInColumn"); }
+            else if (parseNode.GetChildNode("showDaysInColumn") is { } nullNodeShowDaysInColumn && nullNodeShowDaysInColumn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowDaysInColumn = null;
         }
 
         /// <summary>Whether to show days in column</summary>

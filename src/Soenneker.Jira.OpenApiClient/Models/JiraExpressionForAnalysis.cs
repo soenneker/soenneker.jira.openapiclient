@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contextVariables") is { } nullNodeContextVariables && nullNodeContextVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextVariables = null;
-            if (parseNode.GetChildNode("expressions") is { } nullNodeExpressions && nullNodeExpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expressions = null;
+            if (parseNode.GetChildNode("contextVariables") is null) { _explicitNullValueContextVariables = default!; _explicitNullProperties?.Remove("contextVariables"); }
+            else if (parseNode.GetChildNode("contextVariables") is { } nullNodeContextVariables && nullNodeContextVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextVariables = null;
+            if (parseNode.GetChildNode("expressions") is null) { _explicitNullValueExpressions = default!; _explicitNullProperties?.Remove("expressions"); }
+            else if (parseNode.GetChildNode("expressions") is { } nullNodeExpressions && nullNodeExpressions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expressions = null;
         }
 
         /// <summary>Context variables and their types. The type checker assumes that [common context variables](https://developer.atlassian.com/cloud/jira/platform/jira-expressions/#context-variables), such as `issue` or `project`, are available in context and sets their type. Use this property to override the default types or provide details of new variables.</summary>

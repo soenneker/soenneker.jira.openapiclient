@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("updateValueList") is { } nullNodeUpdateValueList && nullNodeUpdateValueList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateValueList = null;
+            if (parseNode.GetChildNode("updateValueList") is null) { _explicitNullValueUpdateValueList = default!; _explicitNullProperties?.Remove("updateValueList"); }
+            else if (parseNode.GetChildNode("updateValueList") is { } nullNodeUpdateValueList && nullNodeUpdateValueList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateValueList = null;
         }
 
         /// <summary>The list of custom field update details.</summary>

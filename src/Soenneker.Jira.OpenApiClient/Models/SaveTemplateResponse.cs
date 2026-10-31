@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("projectTemplateKey") is { } nullNodeProjectTemplateKey && nullNodeProjectTemplateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectTemplateKey = null;
+            if (parseNode.GetChildNode("projectTemplateKey") is null) { _explicitNullValueProjectTemplateKey = default!; _explicitNullProperties?.Remove("projectTemplateKey"); }
+            else if (parseNode.GetChildNode("projectTemplateKey") is { } nullNodeProjectTemplateKey && nullNodeProjectTemplateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectTemplateKey = null;
         }
 
         /// <summary>The projectTemplateKey property</summary>

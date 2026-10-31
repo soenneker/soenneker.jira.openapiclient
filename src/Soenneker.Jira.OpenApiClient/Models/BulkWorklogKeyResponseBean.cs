@@ -17,7 +17,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("worklogs") is { } nullNodeWorklogs && nullNodeWorklogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Worklogs = null;
+            if (parseNode.GetChildNode("worklogs") is null) { _explicitNullValueWorklogs = default!; _explicitNullProperties?.Remove("worklogs"); }
+            else if (parseNode.GetChildNode("worklogs") is { } nullNodeWorklogs && nullNodeWorklogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Worklogs = null;
         }
 
         /// <summary>A list of successfully retrieved worklogs with their issue and worklog IDs.</summary>

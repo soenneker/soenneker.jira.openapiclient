@@ -18,7 +18,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("notificationSchemeEvents") is { } nullNodeNotificationSchemeEvents && nullNodeNotificationSchemeEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationSchemeEvents = null;
+            if (parseNode.GetChildNode("notificationSchemeEvents") is null) { _explicitNullValueNotificationSchemeEvents = default!; _explicitNullProperties?.Remove("notificationSchemeEvents"); }
+            else if (parseNode.GetChildNode("notificationSchemeEvents") is { } nullNodeNotificationSchemeEvents && nullNodeNotificationSchemeEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationSchemeEvents = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The list of notifications which should be added to the notification scheme.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemeEventDetails>? NotificationSchemeEvents { get => _explicitNullValueNotificationSchemeEvents; set { _explicitNullValueNotificationSchemeEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSchemeEvents"); else _explicitNullProperties?.Remove("notificationSchemeEvents"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemeEventDetails>? NotificationSchemeEvents { get => _explicitNullValueNotificationSchemeEvents; set { _explicitNullValueNotificationSchemeEvents = value; AdditionalData?.Remove("notificationSchemeEvents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSchemeEvents"); else _explicitNullProperties?.Remove("notificationSchemeEvents"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemeEventDetails>? _explicitNullValueNotificationSchemeEvents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemeEventDetails> NotificationSchemeEvents { get => _explicitNullValueNotificationSchemeEvents; set { _explicitNullValueNotificationSchemeEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSchemeEvents"); else _explicitNullProperties?.Remove("notificationSchemeEvents"); } }
+        public List<global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemeEventDetails> NotificationSchemeEvents { get => _explicitNullValueNotificationSchemeEvents; set { _explicitNullValueNotificationSchemeEvents = value; AdditionalData?.Remove("notificationSchemeEvents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notificationSchemeEvents"); else _explicitNullProperties?.Remove("notificationSchemeEvents"); } }
         private List<global::Soenneker.Jira.OpenApiClient.Models.NotificationSchemeEventDetails> _explicitNullValueNotificationSchemeEvents = default!;
 #endif
         /// <summary>

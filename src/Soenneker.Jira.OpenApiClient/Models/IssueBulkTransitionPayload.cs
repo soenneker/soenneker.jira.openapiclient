@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bulkTransitionInputs") is { } nullNodeBulkTransitionInputs && nullNodeBulkTransitionInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkTransitionInputs = null;
-            if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
+            if (parseNode.GetChildNode("bulkTransitionInputs") is null) { _explicitNullValueBulkTransitionInputs = default!; _explicitNullProperties?.Remove("bulkTransitionInputs"); }
+            else if (parseNode.GetChildNode("bulkTransitionInputs") is { } nullNodeBulkTransitionInputs && nullNodeBulkTransitionInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkTransitionInputs = null;
+            if (parseNode.GetChildNode("sendBulkNotification") is null) { _explicitNullValueSendBulkNotification = default!; _explicitNullProperties?.Remove("sendBulkNotification"); }
+            else if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
         }
 
         /// <summary>List of objects and each object has two properties: *  Issues that will be bulk transitioned. *  TransitionId that corresponds to a specific transition of issues that share the same workflow.</summary>

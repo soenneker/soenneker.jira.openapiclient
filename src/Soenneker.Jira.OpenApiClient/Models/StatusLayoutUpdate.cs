@@ -18,10 +18,14 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("approvalConfiguration") is { } nullNodeApprovalConfiguration && nullNodeApprovalConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalConfiguration = null;
-            if (parseNode.GetChildNode("layout") is { } nullNodeLayout && nullNodeLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Layout = null;
-            if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
-            if (parseNode.GetChildNode("statusReference") is { } nullNodeStatusReference && nullNodeStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusReference = null;
+            if (parseNode.GetChildNode("approvalConfiguration") is null) { _explicitNullValueApprovalConfiguration = default!; _explicitNullProperties?.Remove("approvalConfiguration"); }
+            else if (parseNode.GetChildNode("approvalConfiguration") is { } nullNodeApprovalConfiguration && nullNodeApprovalConfiguration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalConfiguration = null;
+            if (parseNode.GetChildNode("layout") is null) { _explicitNullValueLayout = default!; _explicitNullProperties?.Remove("layout"); }
+            else if (parseNode.GetChildNode("layout") is { } nullNodeLayout && nullNodeLayout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Layout = null;
+            if (parseNode.GetChildNode("properties") is null) { _explicitNullValueProperties = default!; _explicitNullProperties?.Remove("properties"); }
+            else if (parseNode.GetChildNode("properties") is { } nullNodeProperties && nullNodeProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Properties = null;
+            if (parseNode.GetChildNode("statusReference") is null) { _explicitNullValueStatusReference = default!; _explicitNullProperties?.Remove("statusReference"); }
+            else if (parseNode.GetChildNode("statusReference") is { } nullNodeStatusReference && nullNodeStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,41 +33,41 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The approval configuration of a status within a workflow. Applies only to Jira Service Management approvals.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration? ApprovalConfiguration { get => _explicitNullValueApprovalConfiguration; set { _explicitNullValueApprovalConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalConfiguration"); else _explicitNullProperties?.Remove("approvalConfiguration"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration? ApprovalConfiguration { get => _explicitNullValueApprovalConfiguration; set { _explicitNullValueApprovalConfiguration = value; AdditionalData?.Remove("approvalConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalConfiguration"); else _explicitNullProperties?.Remove("approvalConfiguration"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration? _explicitNullValueApprovalConfiguration = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration ApprovalConfiguration { get => _explicitNullValueApprovalConfiguration; set { _explicitNullValueApprovalConfiguration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalConfiguration"); else _explicitNullProperties?.Remove("approvalConfiguration"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration ApprovalConfiguration { get => _explicitNullValueApprovalConfiguration; set { _explicitNullValueApprovalConfiguration = value; AdditionalData?.Remove("approvalConfiguration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvalConfiguration"); else _explicitNullProperties?.Remove("approvalConfiguration"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration _explicitNullValueApprovalConfiguration = default!;
 #endif
         /// <summary>The starting point for the statuses in the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; AdditionalData?.Remove("layout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout? _explicitNullValueLayout = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout Layout { get => _explicitNullValueLayout; set { _explicitNullValueLayout = value; AdditionalData?.Remove("layout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("layout"); else _explicitNullProperties?.Remove("layout"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout _explicitNullValueLayout = default!;
 #endif
         /// <summary>The properties for this status layout.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdatePropertiesProperty? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdatePropertiesProperty? Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdatePropertiesProperty? _explicitNullValueProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdatePropertiesProperty Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdatePropertiesProperty Properties { get => _explicitNullValueProperties; set { _explicitNullValueProperties = value; AdditionalData?.Remove("properties"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("properties"); else _explicitNullProperties?.Remove("properties"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.StatusLayoutUpdatePropertiesProperty _explicitNullValueProperties = default!;
 #endif
         /// <summary>A unique ID which the status will use to refer to this layout configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
+        public string? StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; AdditionalData?.Remove("statusReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
         private string? _explicitNullValueStatusReference = default!;
 #nullable restore
 #else
-        public string StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
+        public string StatusReference { get => _explicitNullValueStatusReference; set { _explicitNullValueStatusReference = value; AdditionalData?.Remove("statusReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("statusReference"); else _explicitNullProperties?.Remove("statusReference"); } }
         private string _explicitNullValueStatusReference = default!;
 #endif
         /// <summary>

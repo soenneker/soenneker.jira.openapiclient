@@ -47,9 +47,11 @@ namespace Soenneker.Jira.OpenApiClient.Models
             
             
             var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
-            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("results") != null))();
-            if (result.FieldSchemeToFieldsResponse == null && result.UpdateFieldsAssociatedWithSchemes204ResponseSchema == null && matchesUnionBranch0) result.FieldSchemeToFieldsResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse(), parseNode);
-            if (result.FieldSchemeToFieldsResponse == null && result.UpdateFieldsAssociatedWithSchemes204ResponseSchema == null && unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject) result.FieldSchemeToFieldsResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse(), parseNode);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => ((unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject)) && (unionPayload is not global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject shapeObject0 || (shapeObject0.GetValue() is var shapeMembers1 && (shapeMembers1.ContainsKey("results") && (!shapeMembers1.ContainsKey("results") || (((shapeMembers1["results"] is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray)))) && global::System.Linq.Enumerable.All(shapeMembers1.Keys, key => key == "results"))))))();
+            int matchingUnionBranches = 0;
+            if (matchesUnionBranch0) matchingUnionBranches++;
+            bool noSelectedUnionBranch = result.FieldSchemeToFieldsResponse == null && result.UpdateFieldsAssociatedWithSchemes204ResponseSchema == null;
+            if (noSelectedUnionBranch && matchesUnionBranch0 && matchingUnionBranches == 1) result.FieldSchemeToFieldsResponse = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse(), parseNode);
             if (result.FieldSchemeToFieldsResponse == null && result.UpdateFieldsAssociatedWithSchemes204ResponseSchema == null) result.UnrecognizedValue = unionPayload;
 return result;
         }
@@ -59,6 +61,8 @@ return result;
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawFields) { var fields = new global::System.Collections.Generic.Dictionary<string, global::System.Action<IParseNode>>(); foreach (var entry in rawFields.GetValue()) fields[entry.Key] = _ => { }; return fields; }
+
             if(FieldSchemeToFieldsResponse != null || UpdateFieldsAssociatedWithSchemes204ResponseSchema != null)
             {
                 return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(FieldSchemeToFieldsResponse, UpdateFieldsAssociatedWithSchemes204ResponseSchema);
@@ -73,8 +77,11 @@ return result;
         {
             if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
             if (FieldSchemeToFieldsResponse == null && UpdateFieldsAssociatedWithSchemes204ResponseSchema == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
-            if (FieldSchemeToFieldsResponse != null && UpdateFieldsAssociatedWithSchemes204ResponseSchema == null) { if (FieldSchemeToFieldsResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FieldSchemeToFieldsResponse); return; }
-            if (UpdateFieldsAssociatedWithSchemes204ResponseSchema != null && FieldSchemeToFieldsResponse == null) { if (UpdateFieldsAssociatedWithSchemes204ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateFieldsAssociatedWithSchemes204ResponseSchema); return; }
+            int selectedUnionBranches = 0;
+            if (FieldSchemeToFieldsResponse != null) selectedUnionBranches++;
+            if (UpdateFieldsAssociatedWithSchemes204ResponseSchema != null) selectedUnionBranches++;
+            if (FieldSchemeToFieldsResponse != null && selectedUnionBranches == 1) { if (FieldSchemeToFieldsResponse is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, FieldSchemeToFieldsResponse); return; }
+            if (UpdateFieldsAssociatedWithSchemes204ResponseSchema != null && selectedUnionBranches == 1) { if (UpdateFieldsAssociatedWithSchemes204ResponseSchema is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, UpdateFieldsAssociatedWithSchemes204ResponseSchema); return; }
 
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse>(null, FieldSchemeToFieldsResponse, UpdateFieldsAssociatedWithSchemes204ResponseSchema);

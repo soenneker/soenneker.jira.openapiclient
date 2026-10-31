@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("newStatusReference") is { } nullNodeNewStatusReference && nullNodeNewStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewStatusReference = null;
-            if (parseNode.GetChildNode("oldStatusReference") is { } nullNodeOldStatusReference && nullNodeOldStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldStatusReference = null;
+            if (parseNode.GetChildNode("newStatusReference") is null) { _explicitNullValueNewStatusReference = default!; _explicitNullProperties?.Remove("newStatusReference"); }
+            else if (parseNode.GetChildNode("newStatusReference") is { } nullNodeNewStatusReference && nullNodeNewStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewStatusReference = null;
+            if (parseNode.GetChildNode("oldStatusReference") is null) { _explicitNullValueOldStatusReference = default!; _explicitNullProperties?.Remove("oldStatusReference"); }
+            else if (parseNode.GetChildNode("oldStatusReference") is { } nullNodeOldStatusReference && nullNodeOldStatusReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldStatusReference = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The new status ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewStatusReference { get => _explicitNullValueNewStatusReference; set { _explicitNullValueNewStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newStatusReference"); else _explicitNullProperties?.Remove("newStatusReference"); } }
+        public string? NewStatusReference { get => _explicitNullValueNewStatusReference; set { _explicitNullValueNewStatusReference = value; AdditionalData?.Remove("newStatusReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newStatusReference"); else _explicitNullProperties?.Remove("newStatusReference"); } }
         private string? _explicitNullValueNewStatusReference = default!;
 #nullable restore
 #else
-        public string NewStatusReference { get => _explicitNullValueNewStatusReference; set { _explicitNullValueNewStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newStatusReference"); else _explicitNullProperties?.Remove("newStatusReference"); } }
+        public string NewStatusReference { get => _explicitNullValueNewStatusReference; set { _explicitNullValueNewStatusReference = value; AdditionalData?.Remove("newStatusReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("newStatusReference"); else _explicitNullProperties?.Remove("newStatusReference"); } }
         private string _explicitNullValueNewStatusReference = default!;
 #endif
         /// <summary>The old status ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OldStatusReference { get => _explicitNullValueOldStatusReference; set { _explicitNullValueOldStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldStatusReference"); else _explicitNullProperties?.Remove("oldStatusReference"); } }
+        public string? OldStatusReference { get => _explicitNullValueOldStatusReference; set { _explicitNullValueOldStatusReference = value; AdditionalData?.Remove("oldStatusReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldStatusReference"); else _explicitNullProperties?.Remove("oldStatusReference"); } }
         private string? _explicitNullValueOldStatusReference = default!;
 #nullable restore
 #else
-        public string OldStatusReference { get => _explicitNullValueOldStatusReference; set { _explicitNullValueOldStatusReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldStatusReference"); else _explicitNullProperties?.Remove("oldStatusReference"); } }
+        public string OldStatusReference { get => _explicitNullValueOldStatusReference; set { _explicitNullValueOldStatusReference = value; AdditionalData?.Remove("oldStatusReference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oldStatusReference"); else _explicitNullProperties?.Remove("oldStatusReference"); } }
         private string _explicitNullValueOldStatusReference = default!;
 #endif
         /// <summary>

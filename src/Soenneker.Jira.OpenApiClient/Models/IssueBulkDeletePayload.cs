@@ -18,8 +18,10 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is { } nullNodeSelectedIssueIdsOrKeys && nullNodeSelectedIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedIssueIdsOrKeys = null;
-            if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
+            if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is null) { _explicitNullValueSelectedIssueIdsOrKeys = default!; _explicitNullProperties?.Remove("selectedIssueIdsOrKeys"); }
+            else if (parseNode.GetChildNode("selectedIssueIdsOrKeys") is { } nullNodeSelectedIssueIdsOrKeys && nullNodeSelectedIssueIdsOrKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectedIssueIdsOrKeys = null;
+            if (parseNode.GetChildNode("sendBulkNotification") is null) { _explicitNullValueSendBulkNotification = default!; _explicitNullProperties?.Remove("sendBulkNotification"); }
+            else if (parseNode.GetChildNode("sendBulkNotification") is { } nullNodeSendBulkNotification && nullNodeSendBulkNotification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendBulkNotification = null;
         }
 
         /// <summary>List of issue IDs or keys which are to be bulk deleted. These IDs or keys can be from different projects and issue types.</summary>

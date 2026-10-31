@@ -18,47 +18,58 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("activityDescription") is { } nullNodeActivityDescription && nullNodeActivityDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityDescription = null;
-            if (parseNode.GetChildNode("activityDescriptionKey") is { } nullNodeActivityDescriptionKey && nullNodeActivityDescriptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityDescriptionKey = null;
-            if (parseNode.GetChildNode("actor") is { } nullNodeActor && nullNodeActor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actor = null;
-            if (parseNode.GetChildNode("cause") is { } nullNodeCause && nullNodeCause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cause = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("descriptionKey") is { } nullNodeDescriptionKey && nullNodeDescriptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionKey = null;
-            if (parseNode.GetChildNode("emailDescription") is { } nullNodeEmailDescription && nullNodeEmailDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailDescription = null;
-            if (parseNode.GetChildNode("emailDescriptionKey") is { } nullNodeEmailDescriptionKey && nullNodeEmailDescriptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailDescriptionKey = null;
-            if (parseNode.GetChildNode("extraData") is { } nullNodeExtraData && nullNodeExtraData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraData = null;
-            if (parseNode.GetChildNode("generator") is { } nullNodeGenerator && nullNodeGenerator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Generator = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("activityDescription") is null) { _explicitNullValueActivityDescription = default!; _explicitNullProperties?.Remove("activityDescription"); }
+            else if (parseNode.GetChildNode("activityDescription") is { } nullNodeActivityDescription && nullNodeActivityDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityDescription = null;
+            if (parseNode.GetChildNode("activityDescriptionKey") is null) { _explicitNullValueActivityDescriptionKey = default!; _explicitNullProperties?.Remove("activityDescriptionKey"); }
+            else if (parseNode.GetChildNode("activityDescriptionKey") is { } nullNodeActivityDescriptionKey && nullNodeActivityDescriptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActivityDescriptionKey = null;
+            if (parseNode.GetChildNode("actor") is null) { _explicitNullValueActor = default!; _explicitNullProperties?.Remove("actor"); }
+            else if (parseNode.GetChildNode("actor") is { } nullNodeActor && nullNodeActor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actor = null;
+            if (parseNode.GetChildNode("cause") is null) { _explicitNullValueCause = default!; _explicitNullProperties?.Remove("cause"); }
+            else if (parseNode.GetChildNode("cause") is { } nullNodeCause && nullNodeCause.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cause = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("descriptionKey") is null) { _explicitNullValueDescriptionKey = default!; _explicitNullProperties?.Remove("descriptionKey"); }
+            else if (parseNode.GetChildNode("descriptionKey") is { } nullNodeDescriptionKey && nullNodeDescriptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionKey = null;
+            if (parseNode.GetChildNode("emailDescription") is null) { _explicitNullValueEmailDescription = default!; _explicitNullProperties?.Remove("emailDescription"); }
+            else if (parseNode.GetChildNode("emailDescription") is { } nullNodeEmailDescription && nullNodeEmailDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailDescription = null;
+            if (parseNode.GetChildNode("emailDescriptionKey") is null) { _explicitNullValueEmailDescriptionKey = default!; _explicitNullProperties?.Remove("emailDescriptionKey"); }
+            else if (parseNode.GetChildNode("emailDescriptionKey") is { } nullNodeEmailDescriptionKey && nullNodeEmailDescriptionKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailDescriptionKey = null;
+            if (parseNode.GetChildNode("extraData") is null) { _explicitNullValueExtraData = default!; _explicitNullProperties?.Remove("extraData"); }
+            else if (parseNode.GetChildNode("extraData") is { } nullNodeExtraData && nullNodeExtraData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraData = null;
+            if (parseNode.GetChildNode("generator") is null) { _explicitNullValueGenerator = default!; _explicitNullProperties?.Remove("generator"); }
+            else if (parseNode.GetChildNode("generator") is { } nullNodeGenerator && nullNodeGenerator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Generator = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>The activity described in the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActivityDescription { get => _explicitNullValueActivityDescription; set { _explicitNullValueActivityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescription"); else _explicitNullProperties?.Remove("activityDescription"); } }
+        public string? ActivityDescription { get => _explicitNullValueActivityDescription; set { _explicitNullValueActivityDescription = value; AdditionalData?.Remove("activityDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescription"); else _explicitNullProperties?.Remove("activityDescription"); } }
         private string? _explicitNullValueActivityDescription = default!;
 #nullable restore
 #else
-        public string ActivityDescription { get => _explicitNullValueActivityDescription; set { _explicitNullValueActivityDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescription"); else _explicitNullProperties?.Remove("activityDescription"); } }
+        public string ActivityDescription { get => _explicitNullValueActivityDescription; set { _explicitNullValueActivityDescription = value; AdditionalData?.Remove("activityDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescription"); else _explicitNullProperties?.Remove("activityDescription"); } }
         private string _explicitNullValueActivityDescription = default!;
 #endif
         /// <summary>The key of the activity described in the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ActivityDescriptionKey { get => _explicitNullValueActivityDescriptionKey; set { _explicitNullValueActivityDescriptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescriptionKey"); else _explicitNullProperties?.Remove("activityDescriptionKey"); } }
+        public string? ActivityDescriptionKey { get => _explicitNullValueActivityDescriptionKey; set { _explicitNullValueActivityDescriptionKey = value; AdditionalData?.Remove("activityDescriptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescriptionKey"); else _explicitNullProperties?.Remove("activityDescriptionKey"); } }
         private string? _explicitNullValueActivityDescriptionKey = default!;
 #nullable restore
 #else
-        public string ActivityDescriptionKey { get => _explicitNullValueActivityDescriptionKey; set { _explicitNullValueActivityDescriptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescriptionKey"); else _explicitNullProperties?.Remove("activityDescriptionKey"); } }
+        public string ActivityDescriptionKey { get => _explicitNullValueActivityDescriptionKey; set { _explicitNullValueActivityDescriptionKey = value; AdditionalData?.Remove("activityDescriptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("activityDescriptionKey"); else _explicitNullProperties?.Remove("activityDescriptionKey"); } }
         private string _explicitNullValueActivityDescriptionKey = default!;
 #endif
         /// <summary>Details of the user whose action created the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataActor? Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataActor? Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; AdditionalData?.Remove("actor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataActor? _explicitNullValueActor = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataActor Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataActor Actor { get => _explicitNullValueActor; set { _explicitNullValueActor = value; AdditionalData?.Remove("actor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actor"); else _explicitNullProperties?.Remove("actor"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataActor _explicitNullValueActor = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -66,81 +77,81 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>Details of the cause that triggered the creation the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataCause? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataCause? Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; AdditionalData?.Remove("cause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataCause? _explicitNullValueCause = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataCause Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataCause Cause { get => _explicitNullValueCause; set { _explicitNullValueCause = value; AdditionalData?.Remove("cause"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cause"); else _explicitNullProperties?.Remove("cause"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataCause _explicitNullValueCause = default!;
 #endif
         /// <summary>The description of the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The description key of the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DescriptionKey { get => _explicitNullValueDescriptionKey; set { _explicitNullValueDescriptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionKey"); else _explicitNullProperties?.Remove("descriptionKey"); } }
+        public string? DescriptionKey { get => _explicitNullValueDescriptionKey; set { _explicitNullValueDescriptionKey = value; AdditionalData?.Remove("descriptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionKey"); else _explicitNullProperties?.Remove("descriptionKey"); } }
         private string? _explicitNullValueDescriptionKey = default!;
 #nullable restore
 #else
-        public string DescriptionKey { get => _explicitNullValueDescriptionKey; set { _explicitNullValueDescriptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionKey"); else _explicitNullProperties?.Remove("descriptionKey"); } }
+        public string DescriptionKey { get => _explicitNullValueDescriptionKey; set { _explicitNullValueDescriptionKey = value; AdditionalData?.Remove("descriptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("descriptionKey"); else _explicitNullProperties?.Remove("descriptionKey"); } }
         private string _explicitNullValueDescriptionKey = default!;
 #endif
         /// <summary>The description of the email address associated the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailDescription { get => _explicitNullValueEmailDescription; set { _explicitNullValueEmailDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescription"); else _explicitNullProperties?.Remove("emailDescription"); } }
+        public string? EmailDescription { get => _explicitNullValueEmailDescription; set { _explicitNullValueEmailDescription = value; AdditionalData?.Remove("emailDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescription"); else _explicitNullProperties?.Remove("emailDescription"); } }
         private string? _explicitNullValueEmailDescription = default!;
 #nullable restore
 #else
-        public string EmailDescription { get => _explicitNullValueEmailDescription; set { _explicitNullValueEmailDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescription"); else _explicitNullProperties?.Remove("emailDescription"); } }
+        public string EmailDescription { get => _explicitNullValueEmailDescription; set { _explicitNullValueEmailDescription = value; AdditionalData?.Remove("emailDescription"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescription"); else _explicitNullProperties?.Remove("emailDescription"); } }
         private string _explicitNullValueEmailDescription = default!;
 #endif
         /// <summary>The description key of the email address associated the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailDescriptionKey { get => _explicitNullValueEmailDescriptionKey; set { _explicitNullValueEmailDescriptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescriptionKey"); else _explicitNullProperties?.Remove("emailDescriptionKey"); } }
+        public string? EmailDescriptionKey { get => _explicitNullValueEmailDescriptionKey; set { _explicitNullValueEmailDescriptionKey = value; AdditionalData?.Remove("emailDescriptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescriptionKey"); else _explicitNullProperties?.Remove("emailDescriptionKey"); } }
         private string? _explicitNullValueEmailDescriptionKey = default!;
 #nullable restore
 #else
-        public string EmailDescriptionKey { get => _explicitNullValueEmailDescriptionKey; set { _explicitNullValueEmailDescriptionKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescriptionKey"); else _explicitNullProperties?.Remove("emailDescriptionKey"); } }
+        public string EmailDescriptionKey { get => _explicitNullValueEmailDescriptionKey; set { _explicitNullValueEmailDescriptionKey = value; AdditionalData?.Remove("emailDescriptionKey"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emailDescriptionKey"); else _explicitNullProperties?.Remove("emailDescriptionKey"); } }
         private string _explicitNullValueEmailDescriptionKey = default!;
 #endif
         /// <summary>Additional arbitrary information about the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.ChangelogHistoryMetadataExtraData? ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.ChangelogHistoryMetadataExtraData? ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.ChangelogHistoryMetadataExtraData? _explicitNullValueExtraData = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.ChangelogHistoryMetadataExtraData ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.ChangelogHistoryMetadataExtraData ExtraData { get => _explicitNullValueExtraData; set { _explicitNullValueExtraData = value; AdditionalData?.Remove("extraData"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extraData"); else _explicitNullProperties?.Remove("extraData"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.ChangelogHistoryMetadataExtraData _explicitNullValueExtraData = default!;
 #endif
         /// <summary>Details of the system that generated the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataGenerator? Generator { get => _explicitNullValueGenerator; set { _explicitNullValueGenerator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generator"); else _explicitNullProperties?.Remove("generator"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataGenerator? Generator { get => _explicitNullValueGenerator; set { _explicitNullValueGenerator = value; AdditionalData?.Remove("generator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generator"); else _explicitNullProperties?.Remove("generator"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataGenerator? _explicitNullValueGenerator = default!;
 #nullable restore
 #else
-        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataGenerator Generator { get => _explicitNullValueGenerator; set { _explicitNullValueGenerator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generator"); else _explicitNullProperties?.Remove("generator"); } }
+        public global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataGenerator Generator { get => _explicitNullValueGenerator; set { _explicitNullValueGenerator = value; AdditionalData?.Remove("generator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generator"); else _explicitNullProperties?.Remove("generator"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.HistoryMetadataGenerator _explicitNullValueGenerator = default!;
 #endif
         /// <summary>The type of the history record.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
         /// <summary>
