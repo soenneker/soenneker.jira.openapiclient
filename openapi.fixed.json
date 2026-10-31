@@ -391,6 +391,17 @@
                 "example": "\u0022Only admins can update banner configuration.\u0022"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetBanner204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -644,6 +655,17 @@
           },
           "404": {
             "description": "Returned if any field is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateMultipleCustomFieldValues204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -1014,6 +1036,17 @@
           },
           "404": {
             "description": "Returned if the field is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCustomFieldValue204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -2291,6 +2324,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmittedBulkOperation"
+                },
+                "example": "{\u0022taskId\u0022:\u002210641\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -2507,6 +2552,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmittedBulkOperation"
+                },
+                "example": "{\u0022taskId\u0022:\u002210641\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -2676,6 +2733,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmittedBulkOperation"
+                },
+                "example": "{\u0022taskId\u0022:\u002210641\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -2903,6 +2972,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmittedBulkOperation"
+                },
+                "example": "{\u0022taskId\u0022:\u002210641\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -3007,6 +3088,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmittedBulkOperation"
+                },
+                "example": "{\u0022taskId\u0022:\u002210641\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -3111,6 +3204,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubmittedBulkOperation"
+                },
+                "example": "{\u0022taskId\u0022:\u002210641\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -4012,6 +4117,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectComponent"
+                },
+                "example": "{\u0022ari\u0022:\u0022ari:cloud:compass:fdb3fdec-4e70-be56-11ee-0242ac120002:component/fdb3fdec-4e70-11ee-be56-0242ac120002/fdb3fdec-11ee-4e70-be56-0242ac120002\u0022,\u0022assignee\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022accountType\u0022:\u0022atlassian\u0022,\u0022active\u0022:false,\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=16\u0026s=16\u0022,\u002224x24\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=24\u0026s=24\u0022,\u002232x32\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=32\u0026s=32\u0022,\u002248x48\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=48\u0026s=48\u0022},\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022key\u0022:\u0022\u0022,\u0022name\u0022:\u0022\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022},\u0022assigneeType\u0022:\u0022PROJECT_LEAD\u0022,\u0022description\u0022:\u0022This is a Jira component\u0022,\u0022id\u0022:\u002210000\u0022,\u0022isAssigneeTypeValid\u0022:false,\u0022lead\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022accountType\u0022:\u0022atlassian\u0022,\u0022active\u0022:false,\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=16\u0026s=16\u0022,\u002224x24\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=24\u0026s=24\u0022,\u002232x32\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=32\u0026s=32\u0022,\u002248x48\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=48\u0026s=48\u0022},\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022key\u0022:\u0022\u0022,\u0022name\u0022:\u0022\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022},\u0022metadata\u0022:{\u0022icon\u0022:\u0022https://www.example.com/icon.png\u0022},\u0022name\u0022:\u0022Component 1\u0022,\u0022project\u0022:\u0022HSP\u0022,\u0022projectId\u0022:10000,\u0022realAssignee\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022accountType\u0022:\u0022atlassian\u0022,\u0022active\u0022:false,\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=16\u0026s=16\u0022,\u002224x24\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=24\u0026s=24\u0022,\u002232x32\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=32\u0026s=32\u0022,\u002248x48\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=48\u0026s=48\u0022},\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022key\u0022:\u0022\u0022,\u0022name\u0022:\u0022\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022},\u0022realAssigneeType\u0022:\u0022PROJECT_LEAD\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/component/10000\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -4963,7 +5080,21 @@
         },
         "responses": {
           "200": {
-            "description": "Returned if the removal was successful."
+            "description": "The request completed successfully. No additional content will be sent in the response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveFieldAssociationSchemeItemParametersSuccessResponse"
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/RemoveFieldAssociationSchemeItemParameters204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204",
+            "x-client-original-response": {
+              "description": "Returned if the removal was successful."
+            }
           },
           "204": {
             "description": "The request completed successfully. No additional content will be sent in the response.",
@@ -6506,6 +6637,17 @@
           },
           "403": {
             "description": "Returned if the user does not have the necessary permission."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SelectTimeTrackingImplementation204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -7725,6 +7867,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022The dashboard gadget was not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveGadget204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -7843,6 +7996,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022The dashboard you requested either does not exist or you don\u0027t have the required permissions to perform this action.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateGadget204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -8063,6 +8227,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the dashboard item property is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteDashboardItemProperty204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -9544,6 +9719,18 @@
           },
           "400": {
             "description": "Returned if:\n\n *  the user does not have permission to create custom fields.\n *  any of the request object properties have invalid or missing values."
+          },
+          "200": {
+            "description": "Returned if the custom field is created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FieldDetails"
+                },
+                "example": "{\u0022clauseNames\u0022:[\u0022cf[10101]\u0022,\u0022New custom field\u0022],\u0022custom\u0022:true,\u0022id\u0022:\u0022customfield_10101\u0022,\u0022key\u0022:\u0022customfield_10101\u0022,\u0022name\u0022:\u0022New custom field\u0022,\u0022navigable\u0022:true,\u0022orderable\u0022:true,\u0022schema\u0022:{\u0022custom\u0022:\u0022com.atlassian.jira.plugin.system.customfieldtypes:project\u0022,\u0022customId\u0022:10101,\u0022type\u0022:\u0022project\u0022},\u0022searchable\u0022:true,\u0022untranslatedName\u0022:\u0022New custom field\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -9646,6 +9833,17 @@
           },
           "404": {
             "description": "Returned if the field, project, or issue type is not found."
+          },
+          "200": {
+            "description": "Returned if the field association validation passes.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveAssociations204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -9740,6 +9938,17 @@
           },
           "404": {
             "description": "Returned if the field, project, or issue type is not found."
+          },
+          "200": {
+            "description": "Returned if the field association validation passes.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateAssociations204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -10163,6 +10372,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCustomField204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -10619,6 +10839,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the custom field context is created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateCustomFieldContextBody"
+                },
+                "example": "{\u0022id\u0022:\u002210025\u0022,\u0022name\u0022:\u0022Bug fields context\u0022,\u0022description\u0022:\u0022A context used to define the custom field options for bugs.\u0022,\u0022projectIds\u0022:[],\u0022issueTypeIds\u0022:[\u002210010\u0022]}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -10890,6 +11122,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if operation is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetDefaultValues204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -11123,6 +11366,17 @@
           },
           "404": {
             "description": "Returned if the custom field or a context is not found."
+          },
+          "200": {
+            "description": "Returned if all default values were updated successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetContextDefaultValues204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -11628,6 +11882,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the context is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteCustomFieldContext204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -11754,6 +12019,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the context is updated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateCustomFieldContext204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -11897,6 +12173,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if operation is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddIssueTypesToContext204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -12028,6 +12315,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if operation is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveIssueTypesFromContext204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -12606,6 +12904,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if options are reordered.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReorderCustomFieldOptions204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -12976,6 +13285,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if operation is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignProjectsToCustomFieldContext204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -13107,6 +13427,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the custom field context is removed from the projects.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveCustomFieldContextFromProjects204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -13803,6 +14134,17 @@
           },
           "409": {
             "description": "Returned if the option is selected for the field in any issue."
+          },
+          "200": {
+            "description": "Returned if the field option is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteIssueFieldOption204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -14624,6 +14966,17 @@
           },
           "404": {
             "description": "Returned if the field configuration is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteFieldConfiguration204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -14715,6 +15068,17 @@
           },
           "404": {
             "description": "Returned if the field configuration is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateFieldConfiguration204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -14919,6 +15283,17 @@
           },
           "404": {
             "description": "Returned if the field configuration is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateFieldConfigurationItems204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -15115,6 +15490,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FieldConfigurationScheme"
+                },
+                "example": "{\u0022description\u0022:\u0022We can use this one for software projects.\u0022,\u0022id\u0022:\u002210002\u0022,\u0022name\u0022:\u0022Field Configuration Scheme for software related projects\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "deprecated": true,
@@ -15429,6 +15816,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignFieldConfigurationSchemeToProject204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -15508,6 +15906,17 @@
           },
           "404": {
             "description": "Returned if the field configuration scheme is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteFieldConfigurationScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -15627,6 +16036,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateFieldConfigurationScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -15732,6 +16152,17 @@
           },
           "404": {
             "description": "Returned if the field configuration scheme, the field configuration, or the issue type is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetFieldConfigurationSchemeMapping204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -15861,6 +16292,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022The field configuration scheme was not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveIssueTypesFromGlobalFieldConfigurationScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -17240,6 +17682,17 @@
           },
           "404": {
             "description": "Returned if the filter or the new owner of the filter is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChangeFilterOwner204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -17417,6 +17870,18 @@
           },
           "404": {
             "description": "Returned if:\n\n *  the filter is not found.\n *  the user does not have permission to view the filter."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddSharePermission201ResponseSchema"
+                },
+                "example": "[{\u0022id\u0022:10000,\u0022type\u0022:\u0022global\u0022},{\u0022id\u0022:10010,\u0022project\u0022:{\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=xsmall\u0026pid=10000\u0022,\u002224x24\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=small\u0026pid=10000\u0022,\u002232x32\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=medium\u0026pid=10000\u0022,\u002248x48\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=large\u0026pid=10000\u0022},\u0022id\u0022:\u002210000\u0022,\u0022insight\u0022:{\u0022lastIssueUpdateTime\u0022:\u00222021-04-22T05:37:05.000\u002B0000\u0022,\u0022totalIssueCount\u0022:100},\u0022key\u0022:\u0022EX\u0022,\u0022name\u0022:\u0022Example\u0022,\u0022projectCategory\u0022:{\u0022description\u0022:\u0022First Project Category\u0022,\u0022id\u0022:\u002210000\u0022,\u0022name\u0022:\u0022FIRST\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/projectCategory/10000\u0022},\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/project/EX\u0022,\u0022simplified\u0022:false,\u0022style\u0022:\u0022classic\u0022},\u0022type\u0022:\u0022project\u0022},{\u0022id\u0022:10010,\u0022project\u0022:{\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=xsmall\u0026pid=10002\u0022,\u002224x24\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=small\u0026pid=10002\u0022,\u002232x32\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=medium\u0026pid=10002\u0022,\u002248x48\u0022:\u0022https://your-domain.atlassian.net/secure/projectavatar?size=large\u0026pid=10002\u0022},\u0022deleted\u0022:true,\u0022deletedBy\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022accountType\u0022:\u0022atlassian\u0022,\u0022active\u0022:false,\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=16\u0026s=16\u0022,\u002224x24\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=24\u0026s=24\u0022,\u002232x32\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=32\u0026s=32\u0022,\u002248x48\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=48\u0026s=48\u0022},\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022key\u0022:\u0022\u0022,\u0022name\u0022:\u0022\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022},\u0022deletedDate\u0022:\u00222022-11-11T13:35:29.000\u002B0000\u0022,\u0022id\u0022:\u002210002\u0022,\u0022insight\u0022:{\u0022lastIssueUpdateTime\u0022:\u00222021-04-22T05:37:05.000\u002B0000\u0022,\u0022totalIssueCount\u0022:100},\u0022key\u0022:\u0022MKY\u0022,\u0022name\u0022:\u0022Example\u0022,\u0022projectCategory\u0022:{\u0022description\u0022:\u0022First Project Category\u0022,\u0022id\u0022:\u002210000\u0022,\u0022name\u0022:\u0022FIRST\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/projectCategory/10000\u0022},\u0022retentionTillDate\u0022:\u00222023-01-10T13:35:29.000\u002B0000\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/project/MKY\u0022,\u0022simplified\u0022:false,\u0022style\u0022:\u0022classic\u0022},\u0022role\u0022:{\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/project/MKY/role/10360\u0022,\u0022name\u0022:\u0022Developers\u0022,\u0022id\u0022:10360,\u0022description\u0022:\u0022A project role that represents developers in a project\u0022,\u0022actors\u0022:[{\u0022actorGroup\u0022:{\u0022name\u0022:\u0022jira-developers\u0022,\u0022displayName\u0022:\u0022jira-developers\u0022,\u0022groupId\u0022:\u0022952d12c3-5b5b-4d04-bb32-44d383afc4b2\u0022},\u0022displayName\u0022:\u0022jira-developers\u0022,\u0022id\u0022:10240,\u0022name\u0022:\u0022jira-developers\u0022,\u0022type\u0022:\u0022atlassian-group-role-actor\u0022},{\u0022actorUser\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022},\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022id\u0022:10241,\u0022type\u0022:\u0022atlassian-user-role-actor\u0022}],\u0022scope\u0022:{\u0022project\u0022:{\u0022id\u0022:\u002210000\u0022,\u0022key\u0022:\u0022KEY\u0022,\u0022name\u0022:\u0022Next Gen Project\u0022},\u0022type\u0022:\u0022PROJECT\u0022}},\u0022type\u0022:\u0022project\u0022},{\u0022group\u0022:{\u0022groupId\u0022:\u0022276f955c-63d7-42c8-9520-92d01dca0625\u0022,\u0022name\u0022:\u0022jira-administrators\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/group?groupId=276f955c-63d7-42c8-9520-92d01dca0625\u0022},\u0022id\u0022:10010,\u0022type\u0022:\u0022group\u0022}]"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -17694,6 +18159,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Accepted. Returns the task ID for polling progress.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ForgePanelProjectPinAsyncResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -18020,6 +18496,18 @@
           },
           "403": {
             "description": "Returned if the user does not have the necessary permission."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Group"
+                },
+                "example": "{\u0022expand\u0022:\u0022users\u0022,\u0022groupId\u0022:\u0022276f955c-63d7-42c8-9520-92d01dca0625\u0022,\u0022name\u0022:\u0022power-users\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/group?groupId=276f955c-63d7-42c8-9520-92d01dca0625\u0022,\u0022users\u0022:{\u0022end-index\u0022:0,\u0022items\u0022:[{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022active\u0022:false,\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022}],\u0022max-results\u0022:50,\u0022size\u0022:1,\u0022start-index\u0022:0}}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -18494,6 +18982,17 @@
           },
           "429": {
             "description": "Returned if rate limiting is being enforced."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Group"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -19180,6 +19679,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatedIssue"
+                },
+                "example": "{\u0022id\u0022:\u002210000\u0022,\u0022key\u0022:\u0022ED-24\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/issue/10000\u0022,\u0022transition\u0022:{\u0022status\u0022:200,\u0022errorCollection\u0022:{\u0022errorMessages\u0022:[],\u0022errors\u0022:{}}}}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -19302,6 +19813,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returns the URL to check the status of the submitted request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArchiveIssuesAsync202ResponseSchema"
+                },
+                "example": "\u0022https://your-domain.atlassian.net/rest/api/3/task/1010\u0022"
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -19760,6 +20283,18 @@
           },
           "401": {
             "description": "Returned if the authentication credentials are incorrect or missing."
+          },
+          "200": {
+            "description": "Returned if any of the issue or subtask creation requests were successful. A request may be unsuccessful when it:\n\n *  is missing required fields.\n *  contains invalid field values.\n *  contains fields that cannot be set for the issue type.\n *  is by a user who does not have the necessary permission.\n *  is to create a subtype in a project different that of the parent issue.\n *  is for a subtask when the option to create subtasks is disabled.\n *  is invalid for any other reason.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatedIssues"
+                },
+                "example": "{\u0022issues\u0022:[{\u0022id\u0022:\u002210000\u0022,\u0022key\u0022:\u0022ED-24\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/issue/10000\u0022,\u0022transition\u0022:{\u0022status\u0022:200,\u0022errorCollection\u0022:{\u0022errorMessages\u0022:[],\u0022errors\u0022:{}}}},{\u0022id\u0022:\u002210001\u0022,\u0022key\u0022:\u0022ED-25\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/issue/10001\u0022}],\u0022errors\u0022:[]}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -21630,6 +22165,17 @@
           },
           "404": {
             "description": "Returned if the issue is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignIssue204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -22137,6 +22683,18 @@
           },
           "413": {
             "description": "Returned if the per-issue limit has been breached for one of the following fields:\n\n *  comments\n *  attachments"
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comment"
+                },
+                "example": "{\u0022author\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022active\u0022:false,\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022},\u0022body\u0022:{\u0022type\u0022:\u0022doc\u0022,\u0022version\u0022:1,\u0022content\u0022:[{\u0022type\u0022:\u0022paragraph\u0022,\u0022content\u0022:[{\u0022type\u0022:\u0022text\u0022,\u0022text\u0022:\u0022Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget venenatis elit. Duis eu justo eget augue iaculis fermentum. Sed semper quam laoreet nisi egestas at posuere augue semper.\u0022}]}]},\u0022created\u0022:\u00222021-01-17T12:34:00.000\u002B0000\u0022,\u0022id\u0022:\u002210000\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/issue/10010/comment/10000\u0022,\u0022updateAuthor\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022active\u0022:false,\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022},\u0022updated\u0022:\u00222021-01-18T23:45:00.000\u002B0000\u0022,\u0022visibility\u0022:{\u0022identifier\u0022:\u0022Administrators\u0022,\u0022type\u0022:\u0022role\u0022,\u0022value\u0022:\u0022Administrators\u0022}}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -22684,6 +23242,17 @@
           },
           "404": {
             "description": "Returned if the issue is not found."
+          },
+          "200": {
+            "description": "Returned if the email is queued for sending.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Notify204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -23635,6 +24204,17 @@
           },
           "404": {
             "description": "Returned if the issue or remote issue link is not found or the user does not have permission to view the issue."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateRemoteIssueLink204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -23906,6 +24486,17 @@
           },
           "422": {
             "description": "Returned if a configuration problem prevents the creation of the issue."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DoTransition204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -24120,6 +24711,17 @@
           },
           "404": {
             "description": "Returned if:\n\n *  voting is disabled.\n *  the issue is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddVote204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -24370,6 +24972,17 @@
           },
           "404": {
             "description": "Returned if the issue or the user is not found or the user does not have permission to view the issue."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddWatcher204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -24768,6 +25381,17 @@
           },
           "413": {
             "description": "Returned if the per-issue limit has been breached for one of the following fields:\n\n *  worklogs\n *  attachments"
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Worklog"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -25774,6 +26398,17 @@
           },
           "413": {
             "description": "Returned if the per-issue limit for issue links has been breached."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LinkIssues201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -26071,6 +26706,18 @@
           },
           "404": {
             "description": "Returned if:\n\n *  issue linking is disabled.\n *  the issue link type name is in use.\n *  the user does not have the required permissions."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueLinkType"
+                },
+                "example": "{\u0022id\u0022:\u00221000\u0022,\u0022inward\u0022:\u0022Duplicated by\u0022,\u0022name\u0022:\u0022Duplicate\u0022,\u0022outward\u0022:\u0022Duplicates\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/issueLinkType/1000\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -26444,6 +27091,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returns the details of your export task. You can use the [get task](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-tasks/#api-rest-api-3-task-taskid-get) API to view the progress of your request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportArchivedIssuesTaskProgressResponse"
+                },
+                "example": "{\u0022payload\u0022:\u0022{projects=[FOO, BAR], reporters=[uuid-rep-001, uuid-rep-002], issueTypes=[10001, 10002], archivedDate={dateAfterInstant=2023-01-01, dateBeforeInstant=2023-01-12}, archivedBy=[uuid-rep-001, uuid-rep-002]}\u0022,\u0022progress\u0022:0,\u0022status\u0022:\u0022ENQUEUED\u0022,\u0022submittedTime\u0022:1623230887000,\u0022taskId\u0022:\u002210990\u0022}"
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -26629,6 +27288,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SecuritySchemeId"
+                },
+                "example": "{\u0022id\u0022:\u002210001\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -26875,6 +27546,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Issue security scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetDefaultLevels204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -27545,6 +28227,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Issue security scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateIssueSecurityScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -27636,6 +28329,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Issue security scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteSecurityScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -27889,6 +28593,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddSecurityLevel204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -28123,6 +28838,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Issue security scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateSecurityLevel204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -28246,6 +28972,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Issue security scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddSecurityLevelMembers204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -28356,6 +29093,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Issue security scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveMemberFromSecurityLevel204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -28479,6 +29227,17 @@
           },
           "409": {
             "description": "Returned if the issue type name is in use or creation conflicts with another request."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueTypeDetails"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -29019,6 +29778,18 @@
           },
           "404": {
             "description": "Returned if the issue type is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Avatar"
+                },
+                "example": "{\u0022id\u0022:\u00221010\u0022,\u0022isDeletable\u0022:true,\u0022isSelected\u0022:false,\u0022isSystemAvatar\u0022:false}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -29611,6 +30382,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueTypeSchemeId"
+                },
+                "example": "{\u0022issueTypeSchemeId\u0022:\u002210010\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -29915,6 +30698,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignIssueTypeSchemeToProject204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -30021,6 +30815,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the issue type scheme is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteIssueTypeScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -30140,6 +30945,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateIssueTypeScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -30262,6 +31078,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddIssueTypesToIssueTypeScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -30385,6 +31212,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReorderIssueTypesInIssueTypeScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -30500,6 +31338,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveIssueTypeFromIssueTypeScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -30757,6 +31606,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IssueTypeScreenSchemeId"
+                },
+                "example": "{\u0022id\u0022:\u002210001\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -31061,6 +31922,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignIssueTypeScreenSchemeToProject204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -31157,6 +32029,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the issue type screen scheme is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteIssueTypeScreenScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -31274,6 +32157,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateIssueTypeScreenScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -31407,6 +32301,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppendMappingsForIssueTypeScreenScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -31524,6 +32429,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateDefaultScreenScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -31645,6 +32561,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the screen scheme mappings are removed from the issue type screen scheme.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveMappingsFromIssueTypeScreenScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -33335,6 +34262,17 @@
           },
           "404": {
             "description": "Returned if the key or value is not provided or invalid."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetPreference204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -33466,6 +34404,17 @@
           },
           "401": {
             "description": "Returned if the authentication credentials are incorrect or missing."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetLocale204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "deprecated": true,
@@ -33778,6 +34727,18 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022You are not authorized to perform this action. Administrator privileges are required.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationSchemeId"
+                },
+                "example": "{\u0022id\u0022:\u002210001\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -34097,6 +35058,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Notification scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateNotificationScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -34188,6 +35160,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Notification scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteNotificationScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -34306,6 +35289,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Notification scheme with ID 10001 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddNotifications204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -34406,6 +35400,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Notification scheme with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveNotificationFromNotificationScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -34816,6 +35821,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the permission scheme is created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionScheme"
+                },
+                "example": "{\u0022description\u0022:\u0022description\u0022,\u0022id\u0022:10000,\u0022name\u0022:\u0022Example permission scheme\u0022,\u0022permissions\u0022:[{\u0022holder\u0022:{\u0022expand\u0022:\u0022group\u0022,\u0022parameter\u0022:\u0022jira-core-users\u0022,\u0022type\u0022:\u0022group\u0022,\u0022value\u0022:\u0022ca85fac0-d974-40ca-a615-7af99c48d24f\u0022},\u0022id\u0022:10000,\u0022permission\u0022:\u0022ADMINISTER_PROJECTS\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/permissionscheme/permission/10000\u0022}],\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/permissionscheme/10000\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -35305,6 +36322,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the scheme permission is created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PermissionGrant"
+                },
+                "example": "{\u0022holder\u0022:{\u0022expand\u0022:\u0022group\u0022,\u0022parameter\u0022:\u0022jira-core-users\u0022,\u0022type\u0022:\u0022group\u0022,\u0022value\u0022:\u0022ca85fac0-d974-40ca-a615-7af99c48d24f\u0022},\u0022id\u0022:10000,\u0022permission\u0022:\u0022ADMINISTER_PROJECTS\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/permissionscheme/permission/10000\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -35757,6 +36786,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePlan201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -35967,6 +37007,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePlan204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -36058,6 +37109,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArchivePlan204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -36172,6 +37234,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DuplicatePlan201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -36391,6 +37464,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddAtlassianTeam204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -36491,6 +37575,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveAtlassianTeam204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -36709,6 +37804,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateAtlassianTeam204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -36831,6 +37937,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreatePlanOnlyTeam201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -36932,6 +38049,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletePlanOnlyTeam204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -37152,6 +38280,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePlanOnlyTeam204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -37243,6 +38382,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrashPlan204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -38112,6 +39262,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriorityId"
+                },
+                "example": "{\u0022id\u0022:\u002210001\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -38206,6 +39368,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Priority with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetDefaultPriority204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -38304,6 +39477,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Priority with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MovePriorities204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -38729,6 +39913,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Priority with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePriority204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -38975,6 +40170,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is completed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PrioritySchemeId"
+                },
+                "example": "{\u0022id\u0022:\u002210001\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -39254,6 +40461,17 @@
           },
           "403": {
             "description": "Returned if the user doesn\u0027t have the necessary permissions."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeletePriorityScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -39395,6 +40613,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is accepted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdatePrioritySchemeResponseBean"
+                },
+                "example": "{\u0022task\u0022:{\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/task/1\u0022,\u0022id\u0022:\u00221\u0022,\u0022description\u0022:\u0022Task description\u0022,\u0022status\u0022:\u0022COMPLETE\u0022,\u0022result\u0022:\u0022the task result, this may be any JSON\u0022,\u0022submittedBy\u0022:10000,\u0022progress\u0022:100,\u0022elapsedRuntime\u0022:156,\u0022submitted\u0022:1501708132800,\u0022started\u0022:1501708132900,\u0022finished\u0022:1501708133000,\u0022lastUpdate\u0022:1501708133000},\u0022updated\u0022:{\u0022description\u0022:\u0022This is the default scheme used by all new and unassigned projects\u0022,\u0022id\u0022:\u00221\u0022,\u0022isDefault\u0022:true,\u0022name\u0022:\u0022Default Priority Scheme\u0022,\u0022priorities\u0022:{\u0022isLast\u0022:true,\u0022maxResults\u0022:50,\u0022startAt\u0022:0,\u0022total\u0022:3,\u0022values\u0022:[{\u0022description\u0022:\u0022Serious problem that could block progress.\u0022,\u0022iconUrl\u0022:\u0022/images/icons/priorities/high.svg\u0022,\u0022id\u0022:\u00221\u0022,\u0022isDefault\u0022:false,\u0022name\u0022:\u0022High\u0022,\u0022statusColor\u0022:\u0022#f15C75\u0022},{\u0022description\u0022:\u0022Has the potential to affect progress.\u0022,\u0022iconUrl\u0022:\u0022/images/icons/priorities/medium.svg\u0022,\u0022id\u0022:\u00222\u0022,\u0022isDefault\u0022:true,\u0022name\u0022:\u0022Medium\u0022,\u0022statusColor\u0022:\u0022#f79232\u0022},{\u0022description\u0022:\u0022Minor problem or easily worked around.\u0022,\u0022iconUrl\u0022:\u0022/images/icons/priorities/low.svg\u0022,\u0022id\u0022:\u00223\u0022,\u0022isDefault\u0022:false,\u0022name\u0022:\u0022Low\u0022,\u0022statusColor\u0022:\u0022#707070\u0022}]},\u0022projects\u0022:{\u0022isLast\u0022:true,\u0022maxResults\u0022:50,\u0022startAt\u0022:0,\u0022total\u0022:1,\u0022values\u0022:[{\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022secure/projectavatar?size=xsmall\u0026pid=10000\u0022,\u002224x24\u0022:\u0022secure/projectavatar?size=small\u0026pid=10000\u0022,\u002232x32\u0022:\u0022secure/projectavatar?size=medium\u0026pid=10000\u0022,\u002248x48\u0022:\u0022secure/projectavatar?size=large\u0026pid=10000\u0022},\u0022id\u0022:\u002210000\u0022,\u0022key\u0022:\u0022EX\u0022,\u0022name\u0022:\u0022Example\u0022,\u0022projectCategory\u0022:{\u0022description\u0022:\u0022Project category description\u0022,\u0022id\u0022:\u002210000\u0022,\u0022name\u0022:\u0022A project category\u0022},\u0022projectTypeKey\u0022:\u0022ProjectTypeKey{key=\u0027software\u0027}\u0022,\u0022self\u0022:\u0022project/EX\u0022,\u0022simplified\u0022:false}]}}}"
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -39797,6 +41027,18 @@
           },
           "403": {
             "description": "Returned if the user does not have permission to create projects."
+          },
+          "200": {
+            "description": "Returned if the project is created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectIdentifiers"
+                },
+                "example": "{\u0022id\u0022:10010,\u0022key\u0022:\u0022EX\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/jira/rest/api/3/project/10042\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -41506,6 +42748,17 @@
           },
           "404": {
             "description": "Returned if the project is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArchiveProject204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -41594,6 +42847,17 @@
           },
           "404": {
             "description": "Returned if the project or avatar is not found or the user does not have permission to view the project."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateProjectAvatar204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -41791,6 +43055,18 @@
           },
           "404": {
             "description": "Returned if the project is not found or the user does not have permission to view the project."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Avatar"
+                },
+                "example": "{\u0022id\u0022:\u00221010\u0022,\u0022isDeletable\u0022:true,\u0022isSelected\u0022:false,\u0022isSystemAvatar\u0022:false}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -42014,6 +43290,17 @@
           },
           "404": {
             "description": "Returned if the project is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RemoveDefaultProjectClassification204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -42171,6 +43458,17 @@
           },
           "404": {
             "description": "Returned if the project is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateDefaultProjectClassification204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -44118,6 +45416,17 @@
           },
           "404": {
             "description": "Returned if the project is not found."
+          },
+          "200": {
+            "description": "Returned if the project\u0027s sender email address is successfully set.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateProjectEmail204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -44768,6 +46077,18 @@
           },
           "409": {
             "description": "Returned if the project category name is in use."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectCategory"
+                },
+                "example": "{\u0022description\u0022:\u0022Created Project Category\u0022,\u0022id\u0022:\u002210100\u0022,\u0022name\u0022:\u0022CREATED\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/projectCategory/10100\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -45450,6 +46771,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the job submission is successful. The response contains the job id.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Redact202ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -45678,6 +47010,18 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022You are not authorized to perform this action. Administrator privileges are required.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResolutionId"
+                },
+                "example": "{\u0022id\u0022:\u002210001\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -45773,6 +47117,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Priority with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetDefaultResolution204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -45872,6 +47227,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Resolution with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveResolutions204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -46268,6 +47634,17 @@
                 "example": "{\u0022errorMessages\u0022:[\u0022Resolution with ID 10000 not found.\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateResolution204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -47273,6 +48650,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Screen"
+                },
+                "example": "{\u0022id\u0022:10005,\u0022name\u0022:\u0022Resolve Security Issue Screen\u0022,\u0022description\u0022:\u0022Enables changes to resolution and linked issues.\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -48531,6 +49920,17 @@
           },
           "404": {
             "description": "Returned if the screen, screen tab, or field is not found or the field can\u0027t be moved to the requested position."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveScreenTabField204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -48630,6 +50030,17 @@
           },
           "404": {
             "description": "Returned if the screen or screen tab is not found or the position is invalid."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoveScreenTab204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -48865,6 +50276,18 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenSchemeId"
+                },
+                "example": "{\u0022id\u0022:10001}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -49082,6 +50505,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateScreenScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -50266,6 +51700,17 @@
           },
           "401": {
             "description": "Returned if the authentication credentials are incorrect or missing, or the caller doesn\u0027t have permissions to perform the operation."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteStatusesById204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -50527,6 +51972,17 @@
           },
           "409": {
             "description": "Returned if another workflow configuration update task is ongoing."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateStatuses204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -51223,6 +52679,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CancelTask202ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         },
         "security": [
@@ -51448,6 +52915,18 @@
                 "example": "{\u0022details\u0022:{\u0022issueTypesNotFound\u0022:{\u002210001\u0022:[\u002210000\u0022,\u002210001\u0022]},\u0022projectNotFound\u0022:[\u002210000\u0022]},\u0022errorMessages\u0022:[\u0022Project with ID \u002710000\u0027 was not found.\u0022,\u0022Project with ID \u002710001\u0027. The following issue types were not found: [10000, 10001]\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the UI modification is created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UiModificationIdentifiers"
+                },
+                "example": "{\u0022id\u0022:\u0022d7dbda8a-6239-4b63-8e13-a5ef975c8e61\u0022,\u0022self\u0022:\u0022https://api.atlassian.com/ex/jira/{cloudid}/rest/api/2/uiModifications/d7dbda8a-6239-4b63-8e13-a5ef975c8e61\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -51523,6 +53002,17 @@
           },
           "404": {
             "description": "Returned if the UI modification is not found."
+          },
+          "200": {
+            "description": "Returned if the UI modification is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteUiModification204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -51652,6 +53142,17 @@
                 "example": "{\u0022details\u0022:{\u0022issueTypesNotFound\u0022:{\u002210001\u0022:[\u002210000\u0022,\u002210001\u0022]},\u0022projectNotFound\u0022:[\u002210000\u0022]},\u0022errorMessages\u0022:[\u0022Project with ID \u002710000\u0027 was not found.\u0022,\u0022Project with ID \u002710001\u0027. The following issue types were not found: [10000, 10001]\u0022],\u0022errors\u0022:{}}"
               }
             }
+          },
+          "200": {
+            "description": "Returned if the UI modification is updated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UpdateUiModification204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -51861,6 +53362,18 @@
           },
           "404": {
             "description": "Returned if the avatar type is invalid, the associated item ID is missing, or the item is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Avatar"
+                },
+                "example": "{\u0022id\u0022:\u00221010\u0022,\u0022isDeletable\u0022:true,\u0022isSelected\u0022:false,\u0022isSystemAvatar\u0022:false}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -52028,39 +53541,25 @@
           "200": {
             "description": "Returned if the request is successful.",
             "content": {
-              "*/*": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "description": "Fallback media schema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/StreamingResponseBody"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "*/*": {
+                "schema": {
+                  "description": "Fallback media schema"
                 }
               },
               "image/png": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "image/svg\u002Bxml": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               }
@@ -52239,39 +53738,25 @@
           "200": {
             "description": "Returned if the request is successful.",
             "content": {
-              "*/*": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "description": "Fallback media schema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/StreamingResponseBody"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "*/*": {
+                "schema": {
+                  "description": "Fallback media schema"
                 }
               },
               "image/png": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "image/svg\u002Bxml": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               }
@@ -52477,39 +53962,25 @@
           "200": {
             "description": "Returned if the request is successful.",
             "content": {
-              "*/*": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "description": "Fallback media schema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/StreamingResponseBody"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "*/*": {
+                "schema": {
+                  "description": "Fallback media schema"
                 }
               },
               "image/png": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               },
               "image/svg\u002Bxml": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "description": "Fallback media schema"
                 }
               }
@@ -55472,6 +56943,18 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Version"
+                },
+                "example": "{\u0022archived\u0022:false,\u0022description\u0022:\u0022An excellent version\u0022,\u0022id\u0022:\u002210000\u0022,\u0022name\u0022:\u0022New Version 1\u0022,\u0022project\u0022:\u0022PXA\u0022,\u0022projectId\u0022:10000,\u0022releaseDate\u0022:\u00222010-07-06\u0022,\u0022released\u0022:true,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/version/10000\u0022,\u0022userReleaseDate\u0022:\u00226/Jul/2010\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -55818,6 +57301,17 @@
           },
           "404": {
             "description": "Returned if the version to be deleted or the version to merge to are not found."
+          },
+          "200": {
+            "description": "Returned if the version is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MergeVersions204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -56150,6 +57644,18 @@
           },
           "404": {
             "description": "Returned if the version is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VersionRelatedWork"
+                },
+                "example": "{\u0022category\u0022:\u0022Design\u0022,\u0022relatedWorkId\u0022:\u0022fabcdef6-7878-1234-beaf-43211234abcd\u0022,\u0022title\u0022:\u0022Design link\u0022,\u0022url\u0022:\u0022https://www.atlassian.com\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -56328,6 +57834,17 @@
           },
           "404": {
             "description": "Returned if:\n\n *  the version to delete is not found.\n *  the user does not have the required permissions."
+          },
+          "200": {
+            "description": "Returned if the version is deleted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteAndReplaceVersion204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -59584,6 +61101,18 @@
           },
           "403": {
             "description": "Returned if the user does not have the necessary permission."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkflowScheme"
+                },
+                "example": "{\u0022defaultWorkflow\u0022:\u0022jira\u0022,\u0022description\u0022:\u0022The description of the example workflow scheme.\u0022,\u0022draft\u0022:false,\u0022id\u0022:101010,\u0022issueTypeMappings\u0022:{\u002210000\u0022:\u0022scrum workflow\u0022,\u002210001\u0022:\u0022builds workflow\u0022},\u0022name\u0022:\u0022Example workflow scheme\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/workflowscheme/101010\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -59806,6 +61335,17 @@
                 "x-schema-inferred-from-examples": true
               }
             }
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssignSchemeToProject204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -60318,6 +61858,17 @@
           },
           "404": {
             "description": "Returned if the workflow scheme is not found."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteWorkflowScheme204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "security": [
@@ -60588,6 +62139,18 @@
           },
           "403": {
             "description": "Returned if the user does not have the necessary permission."
+          },
+          "200": {
+            "description": "Returned if the request is successful.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkflowScheme"
+                },
+                "example": "{\u0022defaultWorkflow\u0022:\u0022scrum workflow\u0022,\u0022description\u0022:\u0022The description of the example workflow scheme.\u0022,\u0022draft\u0022:true,\u0022id\u0022:17218781,\u0022issueTypeMappings\u0022:{\u002210000\u0022:\u0022jira\u0022,\u002210001\u0022:\u0022jira\u0022},\u0022lastModified\u0022:\u0022Today 6:38 PM\u0022,\u0022lastModifiedUser\u0022:{\u0022accountId\u0022:\u00225b10a2844c20165700ede21g\u0022,\u0022accountType\u0022:\u0022atlassian\u0022,\u0022active\u0022:true,\u0022applicationRoles\u0022:{\u0022items\u0022:[],\u0022size\u0022:1},\u0022avatarUrls\u0022:{\u002216x16\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=16\u0026s=16\u0022,\u002224x24\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=24\u0026s=24\u0022,\u002232x32\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=32\u0026s=32\u0022,\u002248x48\u0022:\u0022https://avatar-management--avatars.server-location.prod.public.atl-paas.net/initials/MK-5.png?size=48\u0026s=48\u0022},\u0022displayName\u0022:\u0022Mia Krystof\u0022,\u0022emailAddress\u0022:\u0022mia@example.com\u0022,\u0022groups\u0022:{\u0022items\u0022:[],\u0022size\u0022:3},\u0022key\u0022:\u0022\u0022,\u0022name\u0022:\u0022\u0022,\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/user?accountId=5b10a2844c20165700ede21g\u0022,\u0022timeZone\u0022:\u0022Australia/Sydney\u0022},\u0022name\u0022:\u0022Example workflow scheme\u0022,\u0022originalDefaultWorkflow\u0022:\u0022jira\u0022,\u0022originalIssueTypeMappings\u0022:{\u002210001\u0022:\u0022builds workflow\u0022},\u0022self\u0022:\u0022https://your-domain.atlassian.net/rest/api/3/workflowscheme/17218781/draft\u0022}"
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
