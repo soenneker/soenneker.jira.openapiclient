@@ -88,6 +88,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Remotelink
         /// <param name="body">Details of a remote issue link.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.CreateOrUpdateRemoteIssueLink400ResponseSchemaError">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkIdentifies?> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -99,7 +100,13 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Remotelink
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkIdentifies>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkIdentifies.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Jira.OpenApiClient.Models.CreateOrUpdateRemoteIssueLink400ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkIdentifies>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.RemoteIssueLinkIdentifies.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes the remote issue link from the issue using the link&apos;s global ID. Where the global ID includes reserved URL characters these must be escaped in the request. For example, pass `system=http://www.mycompany.com/support&amp;id=1` as `system%3Dhttp%3A%2F%2Fwww.mycompany.com%2Fsupport%26id%3D1`.This operation requires [issue linking to be active](https://confluence.atlassian.com/x/yoXKM).This operation can be accessed anonymously.**[Permissions](#permissions) required:** *  *Browse projects* and *Link issues* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in. *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is implemented, issue-level security permission to view the issue.

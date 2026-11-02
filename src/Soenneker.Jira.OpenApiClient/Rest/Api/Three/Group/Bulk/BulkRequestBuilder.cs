@@ -39,6 +39,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Group.Bulk
         /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.PageBeanGroupDetails"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.BulkGetGroups403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.BulkGetGroups500ResponseSchemaError">When receiving a 500 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.PageBeanGroupDetails?> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Group.Bulk.BulkRequestBuilder.BulkRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +51,14 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Group.Bulk
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanGroupDetails>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanGroupDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.BulkGetGroups403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Jira.OpenApiClient.Models.BulkGetGroups500ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanGroupDetails>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanGroupDetails.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns a [paginated](#pagination) list of groups.**[Permissions](#permissions) required:** *Browse users and groups* [global permission](https://confluence.atlassian.com/x/x4dKLg).

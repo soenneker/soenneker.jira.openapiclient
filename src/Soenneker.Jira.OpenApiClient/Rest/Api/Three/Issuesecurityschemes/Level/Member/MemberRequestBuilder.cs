@@ -39,6 +39,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issuesecurityschemes.Level
         /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.PageBeanSecurityLevelMember"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.GetSecurityLevelMembers403ResponseSchemaError">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.PageBeanSecurityLevelMember?> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issuesecurityschemes.Level.Member.MemberRequestBuilder.MemberRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +50,13 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issuesecurityschemes.Level
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanSecurityLevelMember>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanSecurityLevelMember.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.GetSecurityLevelMembers403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PageBeanSecurityLevelMember>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PageBeanSecurityLevelMember.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns a [paginated](#pagination) list of issue security level members.Only issue security level members in the context of classic projects are returned.Filtering using parameters is inclusive: if you specify both security scheme IDs and level IDs, the result will include all issue security level members from the specified schemes and levels.**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).

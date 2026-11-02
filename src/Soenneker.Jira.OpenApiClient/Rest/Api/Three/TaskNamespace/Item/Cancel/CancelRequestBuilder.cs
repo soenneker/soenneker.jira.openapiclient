@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Jira.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -38,6 +39,10 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.TaskNamespace.Item.Cancel
         /// <returns>A <see cref="UntypedNode"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.CancelTask400ResponseSchemaError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.CancelTask401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.CancelTask403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.CancelTask404ResponseSchemaError">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<UntypedNode?> PostAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -48,7 +53,16 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.TaskNamespace.Item.Cancel
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Jira.OpenApiClient.Models.CancelTask400ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.CancelTask401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.CancelTask403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Jira.OpenApiClient.Models.CancelTask404ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Cancels a task.**[Permissions](#permissions) required:** either of: *  *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg). *  Creator of the task.

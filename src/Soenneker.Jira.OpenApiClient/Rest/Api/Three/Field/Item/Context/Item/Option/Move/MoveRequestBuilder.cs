@@ -40,6 +40,9 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Context.Item.Op
         /// <param name="body">An ordered list of custom field option IDs and information on where to move them.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ReorderCustomFieldOptions400ResponseSchemaError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ReorderCustomFieldOptions403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ReorderCustomFieldOptions404ResponseSchemaError">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<UntypedNode?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.OrderOfCustomFieldOptions body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +54,15 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Context.Item.Op
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Jira.OpenApiClient.Models.ReorderCustomFieldOptions400ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.ReorderCustomFieldOptions403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Jira.OpenApiClient.Models.ReorderCustomFieldOptions404ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Changes the order of custom field options or cascading options in a context.This operation works for custom field options created in Jira or the operations from this resource. **To work with issue field select list options created for Connect apps use the [Issue custom field options (apps)](#api-group-issue-custom-field-options--apps-) operations.****[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).

@@ -40,6 +40,10 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issues.Archive.Export
         /// <param name="body">Details of a filter for exporting archived issues.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues400ResponseSchemaError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues412ResponseSchemaError">When receiving a 412 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssuesTaskProgressResponse?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.ArchivedIssuesFilterRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +55,16 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issues.Archive.Export
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssuesTaskProgressResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssuesTaskProgressResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues400ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssues412ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssuesTaskProgressResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.ExportArchivedIssuesTaskProgressResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Enables admins to retrieve details of all archived issues. Upon a successful request, the admin who submitted it will receive an email with a link to download a CSV file with the issue details.Note that this API only exports the values of system fields and archival-specific fields (`ArchivedBy` and `ArchivedDate`). Custom fields aren&apos;t supported.**[Permissions](#permissions) required:** Jira admin or site admin: [global permission](https://confluence.atlassian.com/x/x4dKLg)**License required:** Premium or Enterprise**Signed-in users only:** This API can&apos;t be accessed anonymously.**Rate limiting:** Only a single request can be active at any given time.  

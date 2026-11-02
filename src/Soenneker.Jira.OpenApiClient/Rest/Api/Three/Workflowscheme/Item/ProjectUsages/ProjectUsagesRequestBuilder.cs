@@ -39,6 +39,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflowscheme.Item.Projec
         /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectUsageDto"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.GetProjectUsagesForWorkflowScheme400ResponseSchemaError">When receiving a 400 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectUsageDto?> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflowscheme.Item.ProjectUsages.ProjectUsagesRequestBuilder.ProjectUsagesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -49,7 +50,13 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Workflowscheme.Item.Projec
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectUsageDto>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectUsageDto.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Jira.OpenApiClient.Models.GetProjectUsagesForWorkflowScheme400ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectUsageDto>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.WorkflowSchemeProjectUsageDto.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns a page of projects using a given workflow scheme.

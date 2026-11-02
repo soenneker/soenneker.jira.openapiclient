@@ -47,6 +47,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Fields
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemes401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemes403ResponseSchemaError">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesSuccessResponse?> DeleteAsync(global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -61,6 +63,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Fields
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.MinimalFieldSchemeToFieldsResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemes401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.RemoveFieldsAssociatedWithSchemes403ResponseSchemaError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -74,6 +78,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Fields
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemes401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemes403ResponseSchemaError">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesSuccessResponse?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -88,6 +94,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Fields
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToFieldsResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemes401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.UpdateFieldsAssociatedWithSchemes403ResponseSchemaError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

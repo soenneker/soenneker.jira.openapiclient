@@ -40,6 +40,10 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Archive
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync400ResponseSchemaError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync412ResponseSchemaError">When receiving a 412 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<string?> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssueAsyncRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -51,7 +55,16 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Archive
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync400ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssuesAsync412ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Enables admins to archive up to 1000 issues in a single request using issue ID/key, returning details of the issue(s) archived in the process and the errors encountered, if any.**Note that:** *  you can&apos;t archive subtasks directly, only through their parent issues *  you can only archive issues from software, service management, and business projects**[Permissions](#permissions) required:** Jira admin or site admin: [global permission](https://confluence.atlassian.com/x/x4dKLg)**License required:** Premium or Enterprise**Signed-in users only:** This API can&apos;t be accessed anonymously.  
@@ -60,6 +73,10 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Archive
         /// <param name="body">List of Issue Ids Or Keys that are to be archived or unarchived</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues400ResponseSchemaError">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues412ResponseSchemaError">When receiving a 412 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncResponse?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -71,7 +88,16 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Archive
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues400ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Jira.OpenApiClient.Models.ArchiveIssues412ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.IssueArchivalSyncResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Enables admins to archive up to 100,000 issues in a single request using JQL, returning the URL to check the status of the submitted request.You can use the [get task](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-tasks/#api-rest-api-3-task-taskid-get) and [cancel task](https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-tasks/#api-rest-api-3-task-taskid-cancel-post) APIs to manage the request.**Note that:** *  you can&apos;t archive subtasks directly, only through their parent issues *  you can only archive issues from software, service management, and business projects**[Permissions](#permissions) required:** Jira admin or site admin: [global permission](https://confluence.atlassian.com/x/x4dKLg)**License required:** Premium or Enterprise**Signed-in users only:** This API can&apos;t be accessed anonymously.**Rate limiting:** Only a single request per jira instance can be active at any given time.  

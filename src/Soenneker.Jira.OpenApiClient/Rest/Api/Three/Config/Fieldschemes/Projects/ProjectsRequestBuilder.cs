@@ -40,6 +40,9 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Projec
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.ErrorCollections">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.GetProjectsWithFieldSchemes401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.GetProjectsWithFieldSchemes403ResponseSchemaError">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.GetProjectsWithFieldSchemes404ResponseSchemaError">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.PageBean2GetProjectsWithFieldSchemesResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -53,6 +56,9 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Projec
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.ErrorCollections.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.GetProjectsWithFieldSchemes401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.GetProjectsWithFieldSchemes403ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Jira.OpenApiClient.Models.GetProjectsWithFieldSchemes404ResponseSchemaError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
@@ -66,6 +72,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Projec
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToProjectsResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.AssociateProjectsToFieldAssociationSchemes401ResponseSchemaError">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Jira.OpenApiClient.Models.AssociateProjectsToFieldAssociationSchemes403ResponseSchemaError">When receiving a 403 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Jira.OpenApiClient.Models.AssociateProjectsToFieldAssociationSchemesSuccessResponse?> PutAsync(global::Soenneker.Jira.OpenApiClient.Models.AssociateProjectsToFieldAssociationSchemesRequestRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -80,6 +88,8 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Config.Fieldschemes.Projec
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "400", global::Soenneker.Jira.OpenApiClient.Models.FieldSchemeToProjectsResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Jira.OpenApiClient.Models.AssociateProjectsToFieldAssociationSchemes401ResponseSchemaError.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Jira.OpenApiClient.Models.AssociateProjectsToFieldAssociationSchemes403ResponseSchemaError.CreateFromDiscriminatorValue },
                 { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
                 { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };

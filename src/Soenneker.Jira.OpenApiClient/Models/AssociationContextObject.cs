@@ -52,12 +52,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public static global::Soenneker.Jira.OpenApiClient.Models.AssociationContextObject CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
-            return mappingValue switch
-            {
-                "ProjectIdAssociationContext" => new global::Soenneker.Jira.OpenApiClient.Models.ProjectIdAssociationContext(),
-                _ => new global::Soenneker.Jira.OpenApiClient.Models.AssociationContextObject(),
-            };
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Jira.OpenApiClient.Models.AssociationContextObject(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
