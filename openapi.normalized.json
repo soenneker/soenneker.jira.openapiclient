@@ -30275,7 +30275,7 @@
     },
     "termsOfService": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
     "title": "The Jira Cloud platform REST API",
-    "version": "1001.0.0-SNAPSHOT-fb5206f4949aae5c09b83f7aef3c5a1381f67e25"
+    "version": "1001.0.0-SNAPSHOT-a32094323a5560ebf4e0cf3235ca80b1ff49ca3c"
   },
   "openapi": "3.0.1",
   "paths": {
