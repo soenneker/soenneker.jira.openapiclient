@@ -30275,7 +30275,7 @@
     },
     "termsOfService": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
     "title": "The Jira Cloud platform REST API",
-    "version": "1001.0.0-SNAPSHOT-a32094323a5560ebf4e0cf3235ca80b1ff49ca3c"
+    "version": "1001.0.0-SNAPSHOT-30f301faa123fbef7f33006c52a9db372ad7afa7"
   },
   "openapi": "3.0.1",
   "paths": {
@@ -47059,7 +47059,7 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Sets the columns for a filter. Only navigable fields can be set as columns. Use [Get fields](#api-rest-api-3-field-get) to get the list fields in Jira. A navigable field has \u0060navigable\u0060 set to \u0060true\u0060.\n\nThe parameters for this resource are expressed as HTML form data. For example, in curl:\n\n\u0060curl -X PUT -d columns=summary -d columns=description https://your-domain.atlassian.net/rest/api/3/filter/10000/columns\u0060\n\n**[Permissions](#permissions) required:** Permission to access Jira, however, columns are only set for:\n\n *  filters owned by the user.\n *  filters shared with a group that the user is a member of.\n *  filters shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.\n *  filters shared with a public project.\n *  filters shared with the public.",
+        "description": "Sets the columns for a filter. Only navigable fields can be set as columns. Use [Get fields](#api-rest-api-3-field-get) to get the list fields in Jira. A navigable field has \u0060navigable\u0060 set to \u0060true\u0060.\n\nSend the columns as a JSON request body, for example \u0060{\u0022columns\u0022: [\u0022summary\u0022, \u0022description\u0022]}\u0060. To remove all columns from the filter, send an empty \u0060columns\u0060 array or omit \u0060columns\u0060 from the request body.\n\n**[Permissions](#permissions) required:** Permission to access Jira, however, columns are only set for:\n\n *  filters owned by the user.\n *  filters shared with a group that the user is a member of.\n *  filters shared with a private project that the user has *Browse projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for.\n *  filters shared with a public project.\n *  filters shared with the public.",
         "operationId": "setColumns",
         "parameters": [
           {
@@ -47091,7 +47091,7 @@
               }
             }
           },
-          "description": "The IDs of the fields to set as columns. In the form data, specify each field as \u0060columns=id\u0060, where \u0060id\u0060 is the *id* of a field (as seen in the response for [Get fields](#api-rest-api-\u003Cver\u003E-field-get)). For example, \u0060columns=summary\u0060.",
+          "description": "The IDs of the fields to set as columns, specified in the \u0060columns\u0060 array of the JSON request body, where each entry is the *id* of a field (as seen in the response for [Get fields](#api-rest-api-\u003Cver\u003E-field-get)). For example, \u0060{\u0022columns\u0022: [\u0022summary\u0022]}\u0060.",
           "required": true
         },
         "responses": {
