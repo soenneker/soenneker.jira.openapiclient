@@ -30275,7 +30275,7 @@
     },
     "termsOfService": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
     "title": "The Jira Cloud platform REST API",
-    "version": "1001.0.0-SNAPSHOT-37bdb440188c5b94db5486d134b4d3bbf7517e25"
+    "version": "1001.0.0-SNAPSHOT-8e29bebf69d92b486d0010d2bd2ba39ddae62c43"
   },
   "openapi": "3.0.1",
   "paths": {
@@ -42320,6 +42320,14 @@
             "schema": {
               "format": "int64",
               "type": "integer"
+            }
+          },
+          {
+            "description": "Case-insensitive literal substring of the option value. Blank queries do not filter. Combined with optionId and onlyOptions before pagination; totals count matching options.",
+            "in": "query",
+            "name": "query",
+            "schema": {
+              "type": "string"
             }
           },
           {

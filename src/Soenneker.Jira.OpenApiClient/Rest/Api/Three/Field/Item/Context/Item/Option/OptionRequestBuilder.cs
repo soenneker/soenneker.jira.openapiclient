@@ -41,7 +41,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Context.Item.Op
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OptionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/field/{fieldId}/context/{contextId}/option{?maxResults*,onlyOptions*,optionId*,startAt*}", pathParameters)
+        public OptionRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/field/{fieldId}/context/{contextId}/option{?maxResults*,onlyOptions*,optionId*,query*,startAt*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Context.Item.Op
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public OptionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/field/{fieldId}/context/{contextId}/option{?maxResults*,onlyOptions*,optionId*,startAt*}", rawUrl)
+        public OptionRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/field/{fieldId}/context/{contextId}/option{?maxResults*,onlyOptions*,optionId*,query*,startAt*}", rawUrl)
         {
         }
         /// <summary>
@@ -232,6 +232,16 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Field.Item.Context.Item.Op
             /// <summary>The ID of the option.</summary>
             [QueryParameter("optionId")]
             public long? OptionId { get; set; }
+            /// <summary>Case-insensitive literal substring of the option value. Blank queries do not filter. Combined with optionId and onlyOptions before pagination; totals count matching options.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("query")]
+            public string? Query { get; set; }
+#nullable restore
+#else
+            [QueryParameter("query")]
+            public string Query { get; set; }
+#endif
             /// <summary>The index of the first item to return in a page of results (page offset).</summary>
             [QueryParameter("startAt")]
             public long? StartAt { get; set; }
