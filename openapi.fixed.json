@@ -11,7 +11,7 @@
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version": "1001.0.0-SNAPSHOT-8e29bebf69d92b486d0010d2bd2ba39ddae62c43"
+    "version": "1001.0.0-SNAPSHOT-73c38b88cadf4e761a2014a9282fd8e3296142d1"
   },
   "servers": [
     {
@@ -11321,6 +11321,7 @@
             "state": "Beta"
           }
         ],
+        "x-experimental": true,
         "x-atlassian-connect-scope": "READ"
       },
       "put": {
@@ -32908,6 +32909,16 @@
             "description": "The partial predicate item name entered by the user.",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "name": "maxResults",
+            "in": "query",
+            "description": "EXPERIMENTAL. A hint for the maximum number of suggestions to return for each of the field and predicate values. The value is capped at 50 and may be ignored, in which case the default of 15 is used. It is subject to change and may be removed without notice.",
+            "schema": {
+              "type": "integer",
+              "description": "EXPERIMENTAL. A hint for the maximum number of suggestions to return. Capped at 50 and may be ignored, in which case the default of 15 is used.",
+              "format": "int32"
             }
           }
         ],
@@ -100465,7 +100476,8 @@
         "enum": [
           "None",
           "SprintDates",
-          "ReleaseDates"
+          "ReleaseDates",
+          "AnySprintDates"
         ],
         "type": "string",
         "description": "The inferred dates for the plan. This must be \u0022None\u0022, \u0022SprintDates\u0022 or \u0022ReleaseDates\u0022."
@@ -101266,7 +101278,8 @@
         "enum": [
           "None",
           "SprintDates",
-          "ReleaseDates"
+          "ReleaseDates",
+          "AnySprintDates"
         ],
         "type": "string",
         "description": "The inferred dates for the plan. This is \u0022None\u0022, \u0022SprintDates\u0022 or \u0022ReleaseDates\u0022."

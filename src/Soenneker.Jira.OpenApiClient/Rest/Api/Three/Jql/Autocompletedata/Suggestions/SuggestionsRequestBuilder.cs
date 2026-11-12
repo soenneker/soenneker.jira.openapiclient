@@ -22,7 +22,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Autocompletedata.Sugge
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SuggestionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/jql/autocompletedata/suggestions{?fieldName*,fieldValue*,predicateName*,predicateValue*}", pathParameters)
+        public SuggestionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/jql/autocompletedata/suggestions{?fieldName*,fieldValue*,maxResults*,predicateName*,predicateValue*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Autocompletedata.Sugge
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public SuggestionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/jql/autocompletedata/suggestions{?fieldName*,fieldValue*,predicateName*,predicateValue*}", rawUrl)
+        public SuggestionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/jql/autocompletedata/suggestions{?fieldName*,fieldValue*,maxResults*,predicateName*,predicateValue*}", rawUrl)
         {
         }
         /// <summary>
@@ -105,6 +105,9 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Jql.Autocompletedata.Sugge
             [QueryParameter("fieldValue")]
             public string FieldValue { get; set; }
 #endif
+            /// <summary>EXPERIMENTAL. A hint for the maximum number of suggestions to return for each of the field and predicate values. The value is capped at 50 and may be ignored, in which case the default of 15 is used. It is subject to change and may be removed without notice.</summary>
+            [QueryParameter("maxResults")]
+            public int? MaxResults { get; set; }
             /// <summary>The name of the [ CHANGED operator predicate](https://confluence.atlassian.com/x/hQORLQ#Advancedsearching-operatorsreference-CHANGEDCHANGED) for which the suggestions are generated. The valid predicate operators are *by*, *from*, and *to*.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

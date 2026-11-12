@@ -4434,7 +4434,8 @@
             "enum": [
               "None",
               "SprintDates",
-              "ReleaseDates"
+              "ReleaseDates",
+              "AnySprintDates"
             ],
             "type": "string"
           },
@@ -9284,7 +9285,8 @@
             "enum": [
               "None",
               "SprintDates",
-              "ReleaseDates"
+              "ReleaseDates",
+              "AnySprintDates"
             ],
             "type": "string"
           },
@@ -30275,7 +30277,7 @@
     },
     "termsOfService": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
     "title": "The Jira Cloud platform REST API",
-    "version": "1001.0.0-SNAPSHOT-8e29bebf69d92b486d0010d2bd2ba39ddae62c43"
+    "version": "1001.0.0-SNAPSHOT-73c38b88cadf4e761a2014a9282fd8e3296142d1"
   },
   "openapi": "3.0.1",
   "paths": {
@@ -41372,6 +41374,7 @@
             "state": "Beta"
           }
         ],
+        "x-experimental": true,
         "x-atlassian-connect-scope": "READ"
       },
       "put": {
@@ -62020,6 +62023,16 @@
             "name": "predicateValue",
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "description": "EXPERIMENTAL. A hint for the maximum number of suggestions to return for each of the field and predicate values. The value is capped at 50 and may be ignored, in which case the default of 15 is used. It is subject to change and may be removed without notice.",
+            "in": "query",
+            "name": "maxResults",
+            "schema": {
+              "description": "EXPERIMENTAL. A hint for the maximum number of suggestions to return. Capped at 50 and may be ignored, in which case the default of 15 is used.",
+              "format": "int32",
+              "type": "integer"
             }
           }
         ],

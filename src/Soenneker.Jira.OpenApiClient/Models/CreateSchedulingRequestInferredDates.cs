@@ -19,5 +19,9 @@ namespace Soenneker.Jira.OpenApiClient.Models
         #pragma warning disable CS1591
         ReleaseDates,
         #pragma warning restore CS1591
+        [EnumMember(Value = "AnySprintDates")]
+        #pragma warning disable CS1591
+        AnySprintDates,
+        #pragma warning restore CS1591
     }
 }
