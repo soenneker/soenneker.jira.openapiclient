@@ -11,7 +11,7 @@
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version": "1001.0.0-SNAPSHOT-73c38b88cadf4e761a2014a9282fd8e3296142d1"
+    "version": "1001.0.0-SNAPSHOT-83d88a18b8b4802935182c6ee49cc6f906b4e4e8"
   },
   "servers": [
     {
@@ -41563,6 +41563,16 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CreateProjectWithCustomTemplate303ResponseSchema"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "422 response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LimitExceededResponseBean"
                 }
               }
             }
