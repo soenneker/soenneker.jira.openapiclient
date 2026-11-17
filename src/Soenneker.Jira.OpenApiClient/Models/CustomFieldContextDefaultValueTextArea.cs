@@ -38,7 +38,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public string ContextId { get => _explicitNullValueContextId; set { _explicitNullValueContextId = value; AdditionalData?.Remove("contextId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contextId"); else _explicitNullProperties?.Remove("contextId"); } }
         private string _explicitNullValueContextId = default!;
 #endif
-        /// <summary>The default text. The maximum length is 32767 characters.</summary>
+        /// <summary>The default text. The maximum length is the instance&apos;s text field character limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Text { get => _explicitNullValueText; set { _explicitNullValueText = value; AdditionalData?.Remove("text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text"); else _explicitNullProperties?.Remove("text"); } }
