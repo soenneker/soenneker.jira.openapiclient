@@ -128,7 +128,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "clauseNames", n => { ClauseNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "custom", n => { Custom = n.GetBoolValue(); } },

@@ -11,7 +11,7 @@
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version": "1001.0.0-SNAPSHOT-6fa495098cd3f8b059d19f7937e8cb427cbc93e9"
+    "version": "1001.0.0-SNAPSHOT-e92d688328ae175f94e88e52762c76ef7566d5c3"
   },
   "servers": [
     {
@@ -11192,7 +11192,7 @@
           "Issue custom field contexts"
         ],
         "summary": "Get default values for a custom field grouped by context and issue type",
-        "description": "Returns a paginated list of default values grouped by custom field context.\n\nEach returned \u0060ContextDefaultValuesBean\u0060 has a \u0060contextId\u0060 and a \u0060defaultValues\u0060 list of \u0060IssueTypeDefaultValueBean\u0060 entries - one per issue-type-scoped default value configured for the context. An entry with \u0060\u0022isAnyIssueType\u0022: true\u0060 represents the catch-all default that applies to every issue type covered by the context that is not covered by a more specific entry; a non-null \u0060issueTypeId\u0060 represents a default that only applies to that issue type.\n\nFor contexts that have not been converted to the multiple-contexts data model, exactly one entry is returned per context with \u0060isAnyIssueType=true\u0060. For converted contexts, one entry is returned per configured per-issue-type default.\n\nThe value object on each entry is the same polymorphic \u0060CustomFieldContextDefaultValueBean\u0060 exposed by the deprecated \u0060GET /defaultValue\u0060 endpoint - its concrete subtype depends on the custom field\u0027s type (see the list of supported types on that endpoint).\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Returns a paginated list of default values grouped by custom field context.\n\nEach returned \u0060ContextDefaultValuesBean\u0060 has a \u0060contextId\u0060 and a \u0060defaultValues\u0060 list of \u0060IssueTypeDefaultValueBean\u0060 entries - one per issue-type-scoped default value configured for the context. An entry with \u0060\u0022isAnyIssueType\u0022: true\u0060 represents the catch-all default that applies to every issue type covered by the context that is not covered by a more specific entry; a non-null \u0060issueTypeId\u0060 represents a default that only applies to that issue type.\n\nFor contexts that have not been converted to the multiple-contexts data model, exactly one entry is returned per context with \u0060isAnyIssueType=true\u0060. For converted contexts, one entry is returned per configured per-issue-type default.\n\nThe value object on each entry is the same polymorphic \u0060CustomFieldContextDefaultValueBean\u0060 exposed by the deprecated \u0060GET /defaultValue\u0060 endpoint - its concrete subtype depends on the custom field\u0027s type (see the list of supported types on that endpoint).\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "GetContextDefaultValues",
         "parameters": [
           {
@@ -11266,7 +11266,7 @@
             "description": "Returned if the authentication credentials are incorrect or missing."
           },
           "403": {
-            "description": "Returned if the user does not have the required permissions.",
+            "description": "Returned if the user does not have the required permissions, or the feature is not enabled for the tenant.",
             "content": {
               "application/json": {
                 "schema": {

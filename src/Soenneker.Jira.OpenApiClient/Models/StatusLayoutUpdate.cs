@@ -93,7 +93,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "approvalConfiguration", n => { ApprovalConfiguration = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration>(global::Soenneker.Jira.OpenApiClient.Models.ApprovalConfiguration.CreateFromDiscriminatorValue); } },
                 { "layout", n => { Layout = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout>(global::Soenneker.Jira.OpenApiClient.Models.WorkflowLayout.CreateFromDiscriminatorValue); } },

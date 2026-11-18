@@ -105,7 +105,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "archivedBy", n => { ArchivedBy = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "archivedDateRange", n => { ArchivedDateRange = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest>(global::Soenneker.Jira.OpenApiClient.Models.DateRangeFilterRequest.CreateFromDiscriminatorValue); } },

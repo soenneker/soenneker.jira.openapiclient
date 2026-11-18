@@ -155,7 +155,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "defaultGroups", n => { DefaultGroups = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "defaultGroupsDetails", n => { DefaultGroupsDetails = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.GroupName>(global::Soenneker.Jira.OpenApiClient.Models.GroupName.CreateFromDiscriminatorValue)?.AsList(); } },

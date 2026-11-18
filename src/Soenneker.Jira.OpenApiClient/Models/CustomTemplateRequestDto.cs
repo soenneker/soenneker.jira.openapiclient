@@ -168,7 +168,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "boardFeatures", n => { BoardFeatures = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload>(global::Soenneker.Jira.OpenApiClient.Models.BoardFeaturesPayload.CreateFromDiscriminatorValue); } },
                 { "boards", n => { Boards = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload>(global::Soenneker.Jira.OpenApiClient.Models.BoardsPayload.CreateFromDiscriminatorValue); } },

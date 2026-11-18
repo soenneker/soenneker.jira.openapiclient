@@ -101,7 +101,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "groups", n => { Groups = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.LinkGroup>(global::Soenneker.Jira.OpenApiClient.Models.LinkGroup.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "header", n => { Header = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.SimpleLink>(global::Soenneker.Jira.OpenApiClient.Models.SimpleLink.CreateFromDiscriminatorValue); } },

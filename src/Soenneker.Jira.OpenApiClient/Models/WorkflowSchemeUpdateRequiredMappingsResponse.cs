@@ -83,7 +83,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "statusMappingsByIssueTypes", n => { StatusMappingsByIssueTypes = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType>(global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByIssueType.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "statusMappingsByWorkflows", n => { StatusMappingsByWorkflows = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows>(global::Soenneker.Jira.OpenApiClient.Models.RequiredMappingByWorkflows.CreateFromDiscriminatorValue)?.AsList(); } },

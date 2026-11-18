@@ -82,7 +82,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "callback", n => { Callback = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName>(global::Soenneker.Jira.OpenApiClient.Models.ListWrapperCallbackGroupName.CreateFromDiscriminatorValue); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.GroupName>(global::Soenneker.Jira.OpenApiClient.Models.GroupName.CreateFromDiscriminatorValue)?.AsList(); } },

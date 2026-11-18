@@ -105,7 +105,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "actors", n => { Actors = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.RoleActor>(global::Soenneker.Jira.OpenApiClient.Models.RoleActor.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "admin", n => { Admin = n.GetBoolValue(); } },

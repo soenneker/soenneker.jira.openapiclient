@@ -194,7 +194,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "actions", n => { Actions = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.WorkflowRuleConfiguration>(global::Soenneker.Jira.OpenApiClient.Models.WorkflowRuleConfiguration.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "conditions", n => { Conditions = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupUpdate>(global::Soenneker.Jira.OpenApiClient.Models.ConditionGroupUpdate.CreateFromDiscriminatorValue); } },

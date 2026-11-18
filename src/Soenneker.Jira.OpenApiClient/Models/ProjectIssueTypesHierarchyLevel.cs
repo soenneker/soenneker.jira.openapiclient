@@ -56,7 +56,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "entityId", n => { EntityId = n.GetGuidValue(); } },
                 { "issueTypes", n => { IssueTypes = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeInfo>(global::Soenneker.Jira.OpenApiClient.Models.IssueTypeInfo.CreateFromDiscriminatorValue)?.AsList(); } },

@@ -147,7 +147,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.WorklogAuthor>(global::Soenneker.Jira.OpenApiClient.Models.WorklogAuthor.CreateFromDiscriminatorValue); } },
                 { "comment", n => { Comment = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },

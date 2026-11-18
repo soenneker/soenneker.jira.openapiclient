@@ -131,7 +131,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "crossProjectReleases", n => { CrossProjectReleases = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest>(global::Soenneker.Jira.OpenApiClient.Models.CreateCrossProjectReleaseRequest.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "customFields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest>(global::Soenneker.Jira.OpenApiClient.Models.CreateCustomFieldRequest.CreateFromDiscriminatorValue)?.AsList(); } },

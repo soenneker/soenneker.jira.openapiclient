@@ -84,7 +84,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "beans", n => { Beans = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans>(global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanBeans.CreateFromDiscriminatorValue); } },
                 { "expensiveOperations", n => { ExpensiveOperations = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations>(global::Soenneker.Jira.OpenApiClient.Models.JiraExpressionsComplexityBeanExpensiveOperations.CreateFromDiscriminatorValue); } },
