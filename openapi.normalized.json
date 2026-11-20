@@ -30277,7 +30277,7 @@
     },
     "termsOfService": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
     "title": "The Jira Cloud platform REST API",
-    "version": "1001.0.0-SNAPSHOT-b174c735d864a71a1aa91662ffe707e4007d84d3"
+    "version": "1001.0.0-SNAPSHOT-eac1257d8e1582ed7dd2a97a93dbea3c277d24be"
   },
   "openapi": "3.0.1",
   "paths": {
@@ -67376,7 +67376,7 @@
     "/rest/api/3/policies": {
       "get": {
         "deprecated": false,
-        "description": "Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.\n\nWhen \\{@code tanuki-358-cursor-policy-listing\\} is enabled, omit cursor for the first page and pass the returned \\{@code nextPageCursor\\} for subsequent pages. The legacy \\{@code startAt\\} and \\{@code total\\} fields are null because an offset and total are not available in cursor mode. When disabled, the offset contract is unchanged.",
+        "description": "Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.\n\nOmit cursor for the first page and pass the returned \\{@code nextPageCursor\\} for subsequent pages. The legacy \\{@code startAt\\} and \\{@code total\\} fields are null because an offset and total are not available in cursor mode.",
         "operationId": "listPolicies",
         "parameters": [
           {

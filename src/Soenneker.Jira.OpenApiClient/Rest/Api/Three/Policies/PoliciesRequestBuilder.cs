@@ -53,7 +53,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Policies
         {
         }
         /// <summary>
-        /// Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.When \{@code tanuki-358-cursor-policy-listing\} is enabled, omit cursor for the first page and pass the returned \{@code nextPageCursor\} for subsequent pages. The legacy \{@code startAt\} and \{@code total\} fields are null because an offset and total are not available in cursor mode. When disabled, the offset contract is unchanged.
+        /// Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.Omit cursor for the first page and pass the returned \{@code nextPageCursor\} for subsequent pages. The legacy \{@code startAt\} and \{@code total\} fields are null because an offset and total are not available in cursor mode.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Jira.OpenApiClient.Models.PolicySummaryResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -84,7 +84,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Policies
             return await RequestAdapter.SendAsync<global::Soenneker.Jira.OpenApiClient.Models.PolicySummaryResponse>(requestInfo, global::Soenneker.Jira.OpenApiClient.Models.PolicySummaryResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.When \{@code tanuki-358-cursor-policy-listing\} is enabled, omit cursor for the first page and pass the returned \{@code nextPageCursor\} for subsequent pages. The legacy \{@code startAt\} and \{@code total\} fields are null because an offset and total are not available in cursor mode. When disabled, the offset contract is unchanged.
+        /// Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.Omit cursor for the first page and pass the returned \{@code nextPageCursor\} for subsequent pages. The legacy \{@code startAt\} and \{@code total\} fields are null because an offset and total are not available in cursor mode.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -112,7 +112,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Policies
             return new global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Policies.PoliciesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.When \{@code tanuki-358-cursor-policy-listing\} is enabled, omit cursor for the first page and pass the returned \{@code nextPageCursor\} for subsequent pages. The legacy \{@code startAt\} and \{@code total\} fields are null because an offset and total are not available in cursor mode. When disabled, the offset contract is unchanged.
+        /// Returns a paginated summary of all known policies, including their names, descriptions, and which projects each policy is assigned to.Omit cursor for the first page and pass the returned \{@code nextPageCursor\} for subsequent pages. The legacy \{@code startAt\} and \{@code total\} fields are null because an offset and total are not available in cursor mode.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PoliciesRequestBuilderGetQueryParameters 
