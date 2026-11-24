@@ -35,7 +35,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue DefaultValue { get => _explicitNullValueDefaultValue; set { _explicitNullValueDefaultValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValue"); else _explicitNullProperties?.Remove("defaultValue"); } }
         private global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue _explicitNullValueDefaultValue = default!;
 #endif
-        /// <summary>Whether to add or retain the any-issue-type mapping. At least one of this property or issueTypeIds is required. Defaults to false.</summary>
+        /// <summary>Whether to replace applicability with all issue types. Mutually exclusive with specific issueTypeIds. Defaults to false.</summary>
         public bool? IsAnyIssueType { get => _explicitNullValueIsAnyIssueType; set { _explicitNullValueIsAnyIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAnyIssueType"); else _explicitNullProperties?.Remove("isAnyIssueType"); } }
         private bool? _explicitNullValueIsAnyIssueType = default!;
         /// <summary>The issue type IDs to add. Optional when isAnyIssueType is true.</summary>

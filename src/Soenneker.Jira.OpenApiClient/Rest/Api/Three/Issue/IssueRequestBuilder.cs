@@ -90,7 +90,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IssueRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue{?updateHistory*}", pathParameters)
+        public IssueRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue{?preferFieldAssociatedErrors*,updateHistory*}", pathParameters)
         {
         }
         /// <summary>
@@ -98,7 +98,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public IssueRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue{?updateHistory*}", rawUrl)
+        public IssueRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue{?preferFieldAssociatedErrors*,updateHistory*}", rawUrl)
         {
         }
         /// <summary>
@@ -171,6 +171,9 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class IssueRequestBuilderPostQueryParameters 
         {
+            /// <summary>EXPERIMENTAL. Whether you prefer errors that relate to a field to be returned as field errors (`errors`) rather than as general errors (`errorMessages`). A response can contain both kinds of error, regardless of what this is set to. When this is `true`, more errors are returned as field errors, and which errors are field errors and which are general errors isn&apos;t part of the contract and can change without notice.</summary>
+            [QueryParameter("preferFieldAssociatedErrors")]
+            public bool? PreferFieldAssociatedErrors { get; set; }
             /// <summary>Whether the project in which the issue is created is added to the user&apos;s **Recently viewed** project list, as shown under **Projects** in Jira. When provided, the issue type and request type are added to the user&apos;s history for a project. These values are then used to provide defaults on the issue create screen.</summary>
             [QueryParameter("updateHistory")]
             public bool? UpdateHistory { get; set; }

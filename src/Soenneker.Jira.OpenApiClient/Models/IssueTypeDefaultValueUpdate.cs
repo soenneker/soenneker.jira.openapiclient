@@ -24,6 +24,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
             else if (parseNode.GetChildNode("isAnyIssueType") is { } nullNodeIsAnyIssueType && nullNodeIsAnyIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAnyIssueType = null;
             if (parseNode.GetChildNode("issueTypeId") is null) { _explicitNullValueIssueTypeId = default!; _explicitNullProperties?.Remove("issueTypeId"); }
             else if (parseNode.GetChildNode("issueTypeId") is { } nullNodeIssueTypeId && nullNodeIssueTypeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueTypeId = null;
+            if (parseNode.GetChildNode("operation") is null) { _explicitNullValueOperation = default!; _explicitNullProperties?.Remove("operation"); }
+            else if (parseNode.GetChildNode("operation") is { } nullNodeOperation && nullNodeOperation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Operation = null;
             if (parseNode.GetChildNode("value") is null) { _explicitNullValueValue = default!; _explicitNullProperties?.Remove("value"); }
             else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
@@ -31,7 +33,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The ID of the context.</summary>
         public long? ContextId { get => _explicitNullValueContextId; set { _explicitNullValueContextId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contextId"); else _explicitNullProperties?.Remove("contextId"); } }
         private long? _explicitNullValueContextId = default!;
-        /// <summary>True when this is the catch-all default for issue types without a specific default.</summary>
+        /// <summary>True when targeting the base default, independently of context applicability.</summary>
         public bool? IsAnyIssueType { get => _explicitNullValueIsAnyIssueType; set { _explicitNullValueIsAnyIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAnyIssueType"); else _explicitNullProperties?.Remove("isAnyIssueType"); } }
         private bool? _explicitNullValueIsAnyIssueType = default!;
         /// <summary>The ID of the issue type this default value applies to.</summary>
@@ -44,6 +46,9 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public string IssueTypeId { get => _explicitNullValueIssueTypeId; set { _explicitNullValueIssueTypeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issueTypeId"); else _explicitNullProperties?.Remove("issueTypeId"); } }
         private string _explicitNullValueIssueTypeId = default!;
 #endif
+        /// <summary>The write operation. Defaults to set when omitted or null.</summary>
+        public global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValueUpdateOperation? Operation { get => _explicitNullValueOperation; set { _explicitNullValueOperation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("operation"); else _explicitNullProperties?.Remove("operation"); } }
+        private global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValueUpdateOperation? _explicitNullValueOperation = default!;
         /// <summary>The value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -70,11 +75,12 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(4)
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "contextId", n => { ContextId = n.GetLongValue(); } },
                 { "isAnyIssueType", n => { IsAnyIssueType = n.GetBoolValue(); } },
                 { "issueTypeId", n => { IssueTypeId = n.GetStringValue(); } },
+                { "operation", n => { Operation = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValueUpdateOperation>(); } },
                 { "value", n => { Value = n.GetObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue>(global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue.CreateFromDiscriminatorValue); } },
             };
         }
@@ -88,6 +94,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             writer.WriteLongValue("contextId", ContextId);
             writer.WriteBoolValue("isAnyIssueType", IsAnyIssueType);
             writer.WriteStringValue("issueTypeId", IssueTypeId);
+            writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValueUpdateOperation>("operation", Operation);
             writer.WriteObjectValue<global::Soenneker.Jira.OpenApiClient.Models.CustomFieldContextDefaultValue>("value", Value);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

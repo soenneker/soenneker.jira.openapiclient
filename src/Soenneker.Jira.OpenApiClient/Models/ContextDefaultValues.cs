@@ -27,7 +27,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <summary>The ID of the context.</summary>
         public long? ContextId { get => _explicitNullValueContextId; set { _explicitNullValueContextId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contextId"); else _explicitNullProperties?.Remove("contextId"); } }
         private long? _explicitNullValueContextId = default!;
-        /// <summary>Per-issue-type default values for this context. May contain a single entry for unconverted contexts, or one entry per issue type for converted contexts.</summary>
+        /// <summary>The base default and explicitly stored issue-type overrides for this context. Inherited defaults are not duplicated.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValue>? DefaultValues { get => _explicitNullValueDefaultValues; set { _explicitNullValueDefaultValues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("defaultValues"); else _explicitNullProperties?.Remove("defaultValues"); } }

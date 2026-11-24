@@ -26,7 +26,7 @@ namespace Soenneker.Jira.OpenApiClient.Models
             else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
-        /// <summary>True when this default value applies to every issue type covered by the context (no specific issue type). Only present when true; omitted otherwise.</summary>
+        /// <summary>True when this entry is the base default scope, independently of context applicability. Only present when true; omitted otherwise.</summary>
         public bool? IsAnyIssueType { get => _explicitNullValueIsAnyIssueType; set { _explicitNullValueIsAnyIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAnyIssueType"); else _explicitNullProperties?.Remove("isAnyIssueType"); } }
         private bool? _explicitNullValueIsAnyIssueType = default!;
         /// <summary>The ID of the issue type this default value applies to. Null when isAnyIssueType is true.</summary>

@@ -34,7 +34,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Project.Item.Classificatio
         {
         }
         /// <summary>
-        /// Remove the default data classification level for a project.**[Permissions](#permissions) required:** *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+        /// Remove the default data classification level for a project.**[Permissions](#permissions) required:** any **one** of the following is sufficient. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
         /// <returns>A <see cref="UntypedNode"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Project.Item.Classificatio
             return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the default data classification for a project.**[Permissions](#permissions) required:** *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+        /// Returns the default data classification for a project.**[Permissions](#permissions) required:** any **one** of the following is sufficient. *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
         /// <returns>A <see cref="UntypedNode"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -70,7 +70,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Project.Item.Classificatio
             return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the default data classification level for a project.**[Permissions](#permissions) required:** *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+        /// Updates the default data classification level for a project.**[Permissions](#permissions) required:** any **one** of the following is sufficient. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
         /// <returns>A <see cref="UntypedNode"/></returns>
         /// <param name="body">The request for updating the default project classification level.</param>
@@ -90,7 +90,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Project.Item.Classificatio
             return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Remove the default data classification level for a project.**[Permissions](#permissions) required:** *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+        /// Remove the default data classification level for a project.**[Permissions](#permissions) required:** any **one** of the following is sufficient. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -109,7 +109,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Project.Item.Classificatio
             return requestInfo;
         }
         /// <summary>
-        /// Returns the default data classification for a project.**[Permissions](#permissions) required:** *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+        /// Returns the default data classification for a project.**[Permissions](#permissions) required:** any **one** of the following is sufficient. *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -128,7 +128,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Project.Item.Classificatio
             return requestInfo;
         }
         /// <summary>
-        /// Updates the default data classification level for a project.**[Permissions](#permissions) required:** *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
+        /// Updates the default data classification level for a project.**[Permissions](#permissions) required:** any **one** of the following is sufficient. *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project. *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request for updating the default project classification level.</param>

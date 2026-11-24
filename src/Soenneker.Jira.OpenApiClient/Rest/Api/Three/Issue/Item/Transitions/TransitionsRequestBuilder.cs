@@ -22,7 +22,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransitionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue/{issueIdOrKey}/transitions{?expand*,includeUnavailableTransitions*,skipRemoteOnlyCondition*,sortByOpsBarAndStatus*,transitionId*}", pathParameters)
+        public TransitionsRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue/{issueIdOrKey}/transitions{?expand*,includeUnavailableTransitions*,preferFieldAssociatedErrors*,skipRemoteOnlyCondition*,sortByOpsBarAndStatus*,transitionId*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public TransitionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue/{issueIdOrKey}/transitions{?expand*,includeUnavailableTransitions*,skipRemoteOnlyCondition*,sortByOpsBarAndStatus*,transitionId*}", rawUrl)
+        public TransitionsRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/rest/api/3/issue/{issueIdOrKey}/transitions{?expand*,includeUnavailableTransitions*,preferFieldAssociatedErrors*,skipRemoteOnlyCondition*,sortByOpsBarAndStatus*,transitionId*}", rawUrl)
         {
         }
         /// <summary>
@@ -60,11 +60,11 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<UntypedNode?> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<UntypedNode?> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions.TransitionsRequestBuilder.TransitionsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<UntypedNode> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<UntypedNode> PostAsync(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions.TransitionsRequestBuilder.TransitionsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -98,11 +98,11 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions.TransitionsRequestBuilder.TransitionsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Jira.OpenApiClient.Models.IssueUpdateDetails body, Action<RequestConfiguration<global::Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions.TransitionsRequestBuilder.TransitionsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -156,6 +156,16 @@ namespace Soenneker.Jira.OpenApiClient.Rest.Api.Three.Issue.Item.Transitions
             [QueryParameter("transitionId")]
             public string TransitionId { get; set; }
 #endif
+        }
+        /// <summary>
+        /// Performs an issue transition and, if the transition has a screen, updates the fields from the transition screen.sortByCategory To update the fields on the transition screen, specify the fields in the `fields` or `update` parameters in the request body. Get details about the fields using [ Get transitions](#api-rest-api-3-issue-issueIdOrKey-transitions-get) with the `transitions.fields` expand.This operation can be accessed anonymously.**[Permissions](#permissions) required:** *  *Browse projects* and *Transition issues* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project that the issue is in. *  If [issue-level security](https://confluence.atlassian.com/x/J4lKLg) is configured, issue-level security permission to view the issue.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class TransitionsRequestBuilderPostQueryParameters 
+        {
+            /// <summary>EXPERIMENTAL. Whether you prefer errors that relate to a field to be returned as field errors (`errors`) rather than as general errors (`errorMessages`). A response can contain both kinds of error, regardless of what this is set to. When this is `true`, more errors are returned as field errors, and which errors are field errors and which are general errors isn&apos;t part of the contract and can change without notice.</summary>
+            [QueryParameter("preferFieldAssociatedErrors")]
+            public bool? PreferFieldAssociatedErrors { get; set; }
         }
     }
 }

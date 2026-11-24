@@ -125,7 +125,7 @@
             "$ref": "#/components/schemas/CustomFieldContextDefaultValue"
           },
           "isAnyIssueType": {
-            "description": "Whether to add or retain the any-issue-type mapping. At least one of this property or issueTypeIds is required. Defaults to false.",
+            "description": "Whether to replace applicability with all issue types. Mutually exclusive with specific issueTypeIds. Defaults to false.",
             "type": "boolean"
           },
           "issueTypeIds": {
@@ -3560,7 +3560,7 @@
             "type": "integer"
           },
           "defaultValues": {
-            "description": "Per-issue-type default values for this context. May contain a single entry for unconverted contexts, or one entry per issue type for converted contexts.",
+            "description": "The base default and explicitly stored issue-type overrides for this context. Inherited defaults are not duplicated.",
             "items": {
               "$ref": "#/components/schemas/IssueTypeDefaultValue"
             },
@@ -10898,7 +10898,7 @@
         "description": "A default value associated with an issue type within a context.",
         "properties": {
           "isAnyIssueType": {
-            "description": "True when this default value applies to every issue type covered by the context (no specific issue type). Only present when true; omitted otherwise.",
+            "description": "True when this entry is the base default scope, independently of context applicability. Only present when true; omitted otherwise.",
             "nullable": true,
             "type": "boolean"
           },
@@ -10923,12 +10923,22 @@
             "type": "integer"
           },
           "isAnyIssueType": {
-            "description": "True when this is the catch-all default for issue types without a specific default.",
+            "description": "True when targeting the base default, independently of context applicability.",
             "nullable": true,
             "type": "boolean"
           },
           "issueTypeId": {
             "description": "The ID of the issue type this default value applies to.",
+            "nullable": true,
+            "type": "string"
+          },
+          "operation": {
+            "default": "set",
+            "description": "The write operation. Defaults to set when omitted or null.",
+            "enum": [
+              "set",
+              "removeOverride"
+            ],
             "nullable": true,
             "type": "string"
           },
@@ -30277,7 +30287,7 @@
     },
     "termsOfService": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
     "title": "The Jira Cloud platform REST API",
-    "version": "1001.0.0-SNAPSHOT-eac1257d8e1582ed7dd2a97a93dbea3c277d24be"
+    "version": "1001.0.0-SNAPSHOT-a7b4351c3da87b54b4403678bdb0ff81c88ca648"
   },
   "openapi": "3.0.1",
   "paths": {
@@ -40993,7 +41003,7 @@
     "/rest/api/3/field/{fieldId}/context/defaultValue": {
       "get": {
         "deprecated": true,
-        "description": "Returns a [paginated](#pagination) list of defaults for a custom field. The results can be filtered by \u0060contextId\u0060, otherwise all values are returned. If no defaults are set for a context, nothing is returned.  \nThe returned object depends on type of the custom field:\n\n *  \u0060CustomFieldContextDefaultValueDate\u0060 (type \u0060datepicker\u0060) for date fields.\n *  \u0060CustomFieldContextDefaultValueDateTime\u0060 (type \u0060datetimepicker\u0060) for date-time fields.\n *  \u0060CustomFieldContextDefaultValueSingleOption\u0060 (type \u0060option.single\u0060) for single choice select lists and radio buttons.\n *  \u0060CustomFieldContextDefaultValueMultipleOption\u0060 (type \u0060option.multiple\u0060) for multiple choice select lists and checkboxes.\n *  \u0060CustomFieldContextDefaultValueCascadingOption\u0060 (type \u0060option.cascading\u0060) for cascading select lists.\n *  \u0060CustomFieldContextSingleUserPickerDefaults\u0060 (type \u0060single.user.select\u0060) for single users.\n *  \u0060CustomFieldContextDefaultValueMultiUserPicker\u0060 (type \u0060multi.user.select\u0060) for user lists.\n *  \u0060CustomFieldContextDefaultValueSingleGroupPicker\u0060 (type \u0060grouppicker.single\u0060) for single choice group pickers.\n *  \u0060CustomFieldContextDefaultValueMultipleGroupPicker\u0060 (type \u0060grouppicker.multiple\u0060) for multiple choice group pickers.\n *  \u0060CustomFieldContextDefaultValueURL\u0060 (type \u0060url\u0060) for URLs.\n *  \u0060CustomFieldContextDefaultValueProject\u0060 (type \u0060project\u0060) for project pickers.\n *  \u0060CustomFieldContextDefaultValueFloat\u0060 (type \u0060float\u0060) for floats (floating-point numbers).\n *  \u0060CustomFieldContextDefaultValueLabels\u0060 (type \u0060labels\u0060) for labels.\n *  \u0060CustomFieldContextDefaultValueTextField\u0060 (type \u0060textfield\u0060) for text fields.\n *  \u0060CustomFieldContextDefaultValueTextArea\u0060 (type \u0060textarea\u0060) for text area fields.\n *  \u0060CustomFieldContextDefaultValueLongText\u0060 (type \u0060longtext\u0060) for plain text paragraph fields.\n *  \u0060CustomFieldContextDefaultValueReadOnly\u0060 (type \u0060readonly\u0060) for read only (text) fields.\n *  \u0060CustomFieldContextDefaultValueMultipleVersion\u0060 (type \u0060version.multiple\u0060) for single choice version pickers.\n *  \u0060CustomFieldContextDefaultValueSingleVersion\u0060 (type \u0060version.single\u0060) for multiple choice version pickers.\n\nForge custom fields [types](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field-type/#data-types) are also supported, returning:\n\n *  \u0060CustomFieldContextDefaultValueForgeStringFieldBean\u0060 (type \u0060forge.string\u0060) for Forge string fields.\n *  \u0060CustomFieldContextDefaultValueForgeMultiStringFieldBean\u0060 (type \u0060forge.string.list\u0060) for Forge string collection fields.\n *  \u0060CustomFieldContextDefaultValueForgeObjectFieldBean\u0060 (type \u0060forge.object\u0060) for Forge object fields.\n *  \u0060CustomFieldContextDefaultValueForgeDateTimeFieldBean\u0060 (type \u0060forge.datetime\u0060) for Forge date-time fields.\n *  \u0060CustomFieldContextDefaultValueForgeGroupFieldBean\u0060 (type \u0060forge.group\u0060) for Forge group fields.\n *  \u0060CustomFieldContextDefaultValueForgeMultiGroupFieldBean\u0060 (type \u0060forge.group.list\u0060) for Forge group collection fields.\n *  \u0060CustomFieldContextDefaultValueForgeNumberFieldBean\u0060 (type \u0060forge.number\u0060) for Forge number fields.\n *  \u0060CustomFieldContextDefaultValueForgeUserFieldBean\u0060 (type \u0060forge.user\u0060) for Forge user fields.\n *  \u0060CustomFieldContextDefaultValueForgeMultiUserFieldBean\u0060 (type \u0060forge.user.list\u0060) for Forge user collection fields.\n\n**Deprecated:** This API is deprecated and will be removed in October 2026. A replacement API that supports multiple default values per issue type within a context is coming soon. See the deprecation notice [CHANGE-3082](https://developer.atlassian.com/cloud/jira/platform/changelog/#CHANGE-3082) for more details.\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Returns a [paginated](#pagination) list of defaults for a custom field. The results can be filtered by \u0060contextId\u0060, otherwise all values are returned. Only the base default for each context is returned; issue-type overrides are not included. Use \u0060GET /rest/api/3/field/{fieldId}/context/defaultValues\u0060 to retrieve those overrides. An unset base default is represented by an object containing the type and contextId without value properties.  \nThe returned object depends on type of the custom field:\n\n *  \u0060CustomFieldContextDefaultValueDate\u0060 (type \u0060datepicker\u0060) for date fields.\n *  \u0060CustomFieldContextDefaultValueDateTime\u0060 (type \u0060datetimepicker\u0060) for date-time fields.\n *  \u0060CustomFieldContextDefaultValueSingleOption\u0060 (type \u0060option.single\u0060) for single choice select lists and radio buttons.\n *  \u0060CustomFieldContextDefaultValueMultipleOption\u0060 (type \u0060option.multiple\u0060) for multiple choice select lists and checkboxes.\n *  \u0060CustomFieldContextDefaultValueCascadingOption\u0060 (type \u0060option.cascading\u0060) for cascading select lists.\n *  \u0060CustomFieldContextSingleUserPickerDefaults\u0060 (type \u0060single.user.select\u0060) for single users.\n *  \u0060CustomFieldContextDefaultValueMultiUserPicker\u0060 (type \u0060multi.user.select\u0060) for user lists.\n *  \u0060CustomFieldContextDefaultValueSingleGroupPicker\u0060 (type \u0060grouppicker.single\u0060) for single choice group pickers.\n *  \u0060CustomFieldContextDefaultValueMultipleGroupPicker\u0060 (type \u0060grouppicker.multiple\u0060) for multiple choice group pickers.\n *  \u0060CustomFieldContextDefaultValueURL\u0060 (type \u0060url\u0060) for URLs.\n *  \u0060CustomFieldContextDefaultValueProject\u0060 (type \u0060project\u0060) for project pickers.\n *  \u0060CustomFieldContextDefaultValueFloat\u0060 (type \u0060float\u0060) for floats (floating-point numbers).\n *  \u0060CustomFieldContextDefaultValueLabels\u0060 (type \u0060labels\u0060) for labels.\n *  \u0060CustomFieldContextDefaultValueTextField\u0060 (type \u0060textfield\u0060) for text fields.\n *  \u0060CustomFieldContextDefaultValueTextArea\u0060 (type \u0060textarea\u0060) for text area fields.\n *  \u0060CustomFieldContextDefaultValueLongText\u0060 (type \u0060longtext\u0060) for plain text paragraph fields.\n *  \u0060CustomFieldContextDefaultValueReadOnly\u0060 (type \u0060readonly\u0060) for read only (text) fields.\n *  \u0060CustomFieldContextDefaultValueMultipleVersion\u0060 (type \u0060version.multiple\u0060) for single choice version pickers.\n *  \u0060CustomFieldContextDefaultValueSingleVersion\u0060 (type \u0060version.single\u0060) for multiple choice version pickers.\n\nForge custom fields [types](https://developer.atlassian.com/platform/forge/manifest-reference/modules/jira-custom-field-type/#data-types) are also supported, returning:\n\n *  \u0060CustomFieldContextDefaultValueForgeStringFieldBean\u0060 (type \u0060forge.string\u0060) for Forge string fields.\n *  \u0060CustomFieldContextDefaultValueForgeMultiStringFieldBean\u0060 (type \u0060forge.string.list\u0060) for Forge string collection fields.\n *  \u0060CustomFieldContextDefaultValueForgeObjectFieldBean\u0060 (type \u0060forge.object\u0060) for Forge object fields.\n *  \u0060CustomFieldContextDefaultValueForgeDateTimeFieldBean\u0060 (type \u0060forge.datetime\u0060) for Forge date-time fields.\n *  \u0060CustomFieldContextDefaultValueForgeGroupFieldBean\u0060 (type \u0060forge.group\u0060) for Forge group fields.\n *  \u0060CustomFieldContextDefaultValueForgeMultiGroupFieldBean\u0060 (type \u0060forge.group.list\u0060) for Forge group collection fields.\n *  \u0060CustomFieldContextDefaultValueForgeNumberFieldBean\u0060 (type \u0060forge.number\u0060) for Forge number fields.\n *  \u0060CustomFieldContextDefaultValueForgeUserFieldBean\u0060 (type \u0060forge.user\u0060) for Forge user fields.\n *  \u0060CustomFieldContextDefaultValueForgeMultiUserFieldBean\u0060 (type \u0060forge.user.list\u0060) for Forge user collection fields.\n\n**Deprecated:** This API is deprecated and will be removed in October 2026. A replacement API that supports multiple default values per issue type within a context is coming soon. See the deprecation notice [CHANGE-3082](https://developer.atlassian.com/cloud/jira/platform/changelog/#CHANGE-3082) for more details.\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "getDefaultValues",
         "parameters": [
           {
@@ -41052,7 +41062,7 @@
             "description": "Returned if the request is successful."
           },
           "400": {
-            "description": "Returned if one or more of the field\u0027s contexts have different default values per issue type, which this endpoint cannot represent. Use \u0060GET /rest/api/3/field/{fieldId}/context/defaultvalues\u0060 instead."
+            "description": "Returned if the request is invalid or the field type is unsupported."
           },
           "401": {
             "description": "Returned if the authentication credentials are incorrect or missing."
@@ -41249,7 +41259,7 @@
     "/rest/api/3/field/{fieldId}/context/defaultValues": {
       "get": {
         "deprecated": false,
-        "description": "Returns a paginated list of default values grouped by custom field context.\n\nEach returned \u0060ContextDefaultValuesBean\u0060 has a \u0060contextId\u0060 and a \u0060defaultValues\u0060 list of \u0060IssueTypeDefaultValueBean\u0060 entries - one per issue-type-scoped default value configured for the context. An entry with \u0060\u0022isAnyIssueType\u0022: true\u0060 represents the catch-all default that applies to every issue type covered by the context that is not covered by a more specific entry; a non-null \u0060issueTypeId\u0060 represents a default that only applies to that issue type.\n\nFor contexts that have not been converted to the multiple-contexts data model, exactly one entry is returned per context with \u0060isAnyIssueType=true\u0060. For converted contexts, one entry is returned per configured per-issue-type default.\n\nThe value object on each entry is the same polymorphic \u0060CustomFieldContextDefaultValueBean\u0060 exposed by the deprecated \u0060GET /defaultValue\u0060 endpoint - its concrete subtype depends on the custom field\u0027s type (see the list of supported types on that endpoint).\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Returns a paginated list of default values grouped by custom field context.\n\nEach context includes its base default with \u0060isAnyIssueType=true\u0060, even in a restricted context or when unset (\u0060value: null\u0060). Additional entries are explicitly stored issue-type overrides. Inherited defaults are not duplicated. Pagination is by context. Filtering by \\{@code issueTypeId\\} limits only the returned overrides; each returned context still includes its base default, even when none of its overrides match the filter.\n\nThe value object on each entry is the same polymorphic \u0060CustomFieldContextDefaultValueBean\u0060 exposed by the deprecated \u0060GET /defaultValue\u0060 endpoint - its concrete subtype depends on the custom field\u0027s type (see the list of supported types on that endpoint).\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "getContextDefaultValues",
         "parameters": [
           {
@@ -41275,7 +41285,7 @@
             }
           },
           {
-            "description": "The IDs of the issue types to restrict the returned per-issue-type default values to. If omitted, default values for every issue type are returned. This filter never removes the catch-all \u0060isAnyIssueType\u0060 entry of a context.",
+            "description": "The IDs of the issue types whose stored overrides are returned. If omitted, all stored overrides are returned. Each returned context includes its base default regardless of this filter.",
             "in": "query",
             "name": "issueTypeId",
             "schema": {
@@ -41318,6 +41328,9 @@
               }
             },
             "description": "Returned if the request is successful."
+          },
+          "400": {
+            "description": "Returned if the request is invalid or the field type does not support retrieving default values."
           },
           "401": {
             "description": "Returned if the authentication credentials are incorrect or missing."
@@ -41379,7 +41392,7 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Updates default values for individual issue types in custom field contexts.\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\nEach entry targets either one issue type through \\{@code issueTypeId\\}, or the catch-all configuration through \\{@code isAnyIssueType=true\\}. A null value removes the default for that target. Entries not included in the request are left unchanged.",
+        "description": "Updates default values for individual issue types in custom field contexts.\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\nEach entry targets either one issue type through \\{@code issueTypeId\\}, or the catch-all configuration through \\{@code isAnyIssueType=true\\}. Null clears the base default. Entries not included in the request are left unchanged. Each scope may appear only once. The operation defaults to \\{@code set\\}, which requires a value. \\{@code operation=\u0022removeOverride\u0022\\} requires issueTypeId and allows the value property to be omitted or null. The contextId belongs on the enclosing update; setting contextId inside the value object is invalid.",
         "operationId": "setContextDefaultValues",
         "parameters": [
           {
@@ -41422,7 +41435,7 @@
             "description": "Returned if the user cannot administer the custom field, or the feature is not enabled for the tenant."
           },
           "404": {
-            "description": "Returned if the custom field or a context is not found."
+            "description": "Returned if the custom field, a context, or a referenced option, user, group, project, or version is not found. An option from another context is treated as not found."
           }
         },
         "security": [
@@ -41460,6 +41473,7 @@
             "state": "Beta"
           }
         ],
+        "x-experimental": true,
         "x-atlassian-connect-scope": "ADMIN"
       }
     },
@@ -42050,7 +42064,7 @@
     "/rest/api/3/field/{fieldId}/context/{contextId}/issuetype": {
       "put": {
         "deprecated": false,
-        "description": "Adds issue types to a custom field context, appending the issue types to the issue types list.\n\nA custom field context without any issue types applies to all issue types. Adding issue types replaces the any-issue-type mapping unless \\{@code isAnyIssueType\\} is true. A supplied \\{@code defaultValue\\} applies to newly added mappings. If omitted, the default value of the first existing issue type mapping is copied. Existing mappings retain their defaults.\n\nIf any of the issue types exists in the custom field context, the operation fails and no issue types are added.\n\nThis API will not allow adding issue types to the global context from April 2026. Instead, an HTTP 400 response will be returned. See [CHANGE-3019](https://developer.atlassian.com/changelog/#CHANGE-3019)\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Adds issue types to a custom field context, appending the issue types to the issue types list.\n\nA custom field context without any issue types applies to all issue types. Adding issue types replaces the any-issue-type mapping unless \\{@code isAnyIssueType\\} is true. For sites that support defaults per issue type, a supplied \\{@code defaultValue\\} sets overrides for added IDs or the base default for all issue types. Omitted or null defaults leave stored defaults unchanged. Specific IDs and \\{@code isAnyIssueType=true\\} are mutually exclusive. Applicability and defaults update atomically.\n\nIf any of the issue types exists in the custom field context, the operation fails and no issue types are added. Requesting \\{@code isAnyIssueType=true\\} when the context already applies to all issue types also returns HTTP 400, even when a default is supplied.\n\nThis API will not allow adding issue types to the global context from April 2026. Instead, an HTTP 400 response will be returned. See [CHANGE-3019](https://developer.atlassian.com/changelog/#CHANGE-3019)\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "addIssueTypesToContext",
         "parameters": [
           {
@@ -49181,6 +49195,15 @@
               "default": false,
               "type": "boolean"
             }
+          },
+          {
+            "description": "EXPERIMENTAL. Whether you prefer errors that relate to a field to be returned as field errors (\u0060errors\u0060) rather than as general errors (\u0060errorMessages\u0060). A response can contain both kinds of error, regardless of what this is set to. When this is \u0060true\u0060, more errors are returned as field errors, and which errors are field errors and which are general errors isn\u0027t part of the contract and can change without notice.",
+            "in": "query",
+            "name": "preferFieldAssociatedErrors",
+            "schema": {
+              "default": false,
+              "type": "boolean"
+            }
           }
         ],
         "requestBody": {
@@ -53978,6 +54001,15 @@
             "required": true,
             "schema": {
               "type": "string"
+            }
+          },
+          {
+            "description": "EXPERIMENTAL. Whether you prefer errors that relate to a field to be returned as field errors (\u0060errors\u0060) rather than as general errors (\u0060errorMessages\u0060). A response can contain both kinds of error, regardless of what this is set to. When this is \u0060true\u0060, more errors are returned as field errors, and which errors are field errors and which are general errors isn\u0027t part of the contract and can change without notice.",
+            "in": "query",
+            "name": "preferFieldAssociatedErrors",
+            "schema": {
+              "default": false,
+              "type": "boolean"
             }
           }
         ],
@@ -72140,7 +72172,7 @@
     "/rest/api/3/project/{projectIdOrKey}/classification-config": {
       "get": {
         "deprecated": false,
-        "description": "Returns the consolidated classification configuration for a project\u0027s admin settings page.\n\nThis includes permitted classification levels (with status), the project\u0027s default classification level, the organization\u0027s default classification level, and the container override setting.\n\n**[Permissions](#permissions) required:**\n\n *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Returns the consolidated classification configuration for a project\u0027s admin settings page.\n\nThis includes permitted classification levels (with status), the project\u0027s default classification level, the organization\u0027s default classification level, and the container override setting.\n\n**[Permissions](#permissions) required:** any **one** of the following is sufficient.\n\n *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "getProjectClassificationConfig",
         "parameters": [
           {
@@ -72167,7 +72199,7 @@
             "description": "Returned if the user does not have the necessary permission."
           },
           "404": {
-            "description": "Returned if the project is not found or the feature is disabled."
+            "description": "Returned if the project is not found."
           }
         },
         "security": [
@@ -72212,7 +72244,7 @@
     "/rest/api/3/project/{projectIdOrKey}/classification-level/default": {
       "delete": {
         "deprecated": false,
-        "description": "Remove the default data classification level for a project.\n\n**[Permissions](#permissions) required:**\n\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Remove the default data classification level for a project.\n\n**[Permissions](#permissions) required:** any **one** of the following is sufficient.\n\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "removeDefaultProjectClassification",
         "parameters": [
           {
@@ -72284,7 +72316,7 @@
       },
       "get": {
         "deprecated": false,
-        "description": "Returns the default data classification for a project.\n\n**[Permissions](#permissions) required:**\n\n *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Returns the default data classification for a project.\n\n**[Permissions](#permissions) required:** any **one** of the following is sufficient.\n\n *  *Browse Projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "getDefaultProjectClassification",
         "parameters": [
           {
@@ -72354,7 +72386,7 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Updates the default data classification level for a project.\n\n**[Permissions](#permissions) required:**\n\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+        "description": "Updates the default data classification level for a project.\n\n**[Permissions](#permissions) required:** any **one** of the following is sufficient.\n\n *  *Administer projects* [project permission](https://confluence.atlassian.com/x/yodKLg) for the project.\n *  *Administer jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
         "operationId": "updateDefaultProjectClassification",
         "parameters": [
           {
