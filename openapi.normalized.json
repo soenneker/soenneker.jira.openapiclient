@@ -3550,6 +3550,38 @@
         },
         "type": "object"
       },
+      "ContextDefaultValueUpdate": {
+        "additionalProperties": false,
+        "description": "Updates for one custom field context.",
+        "properties": {
+          "contextId": {
+            "description": "The ID of the context.",
+            "format": "int64",
+            "type": "integer"
+          },
+          "defaultValues": {
+            "description": "The default values to update.",
+            "items": {
+              "$ref": "#/components/schemas/IssueTypeDefaultValueUpdate"
+            },
+            "type": "array"
+          },
+          "mode": {
+            "default": "merge",
+            "description": "How to handle omitted defaults.",
+            "enum": [
+              "merge",
+              "replace"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "contextId",
+          "defaultValues"
+        ],
+        "type": "object"
+      },
       "ContextDefaultValues": {
         "additionalProperties": false,
         "description": "Default values grouped by custom field context.",
@@ -5442,14 +5474,17 @@
         "additionalProperties": false,
         "description": "Default value updates grouped by context and issue type.",
         "properties": {
-          "defaultValues": {
-            "description": "The default values to update.",
+          "contexts": {
+            "description": "The contexts to update.",
             "items": {
-              "$ref": "#/components/schemas/IssueTypeDefaultValueUpdate"
+              "$ref": "#/components/schemas/ContextDefaultValueUpdate"
             },
             "type": "array"
           }
         },
+        "required": [
+          "contexts"
+        ],
         "type": "object"
       },
       "CustomFieldContextOption": {
@@ -10917,11 +10952,6 @@
         "additionalProperties": false,
         "description": "A default value update for one issue-type scope in a context.",
         "properties": {
-          "contextId": {
-            "description": "The ID of the context.",
-            "format": "int64",
-            "type": "integer"
-          },
           "isAnyIssueType": {
             "description": "True when targeting the base default, independently of context applicability.",
             "nullable": true,
@@ -10946,9 +10976,6 @@
             "$ref": "#/components/schemas/CustomFieldContextDefaultValue"
           }
         },
-        "required": [
-          "contextId"
-        ],
         "type": "object"
       },
       "IssueTypeDetails": {
@@ -30287,7 +30314,7 @@
     },
     "termsOfService": "https://developer.atlassian.com/platform/marketplace/atlassian-developer-terms/",
     "title": "The Jira Cloud platform REST API",
-    "version": "1001.0.0-SNAPSHOT-a7b4351c3da87b54b4403678bdb0ff81c88ca648"
+    "version": "1001.0.0-SNAPSHOT-c708f3bbbb25201455fbb24169cbdc71ef7764bf"
   },
   "openapi": "3.0.1",
   "paths": {
@@ -41392,7 +41419,7 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Updates default values for individual issue types in custom field contexts.\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\nEach entry targets either one issue type through \\{@code issueTypeId\\}, or the catch-all configuration through \\{@code isAnyIssueType=true\\}. Null clears the base default. Entries not included in the request are left unchanged. Each scope may appear only once. The operation defaults to \\{@code set\\}, which requires a value. \\{@code operation=\u0022removeOverride\u0022\\} requires issueTypeId and allows the value property to be omitted or null. The contextId belongs on the enclosing update; setting contextId inside the value object is invalid.",
+        "description": "Updates default values for individual issue types in custom field contexts.\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\nEach entry targets either one issue type through \\{@code issueTypeId\\}, or the catch-all configuration through \\{@code isAnyIssueType=true\\}. Null clears the base default. Each context group requires defaultValues. In merge mode (the default), omitted defaults are preserved. In replace mode, omitted defaults are cleared and removeOverride is invalid. Each scope may appear only once. The operation defaults to \\{@code set\\}, which requires a value. \\{@code operation=\u0022removeOverride\u0022\\} requires issueTypeId and allows the value property to be omitted or null. The contextId belongs on the context group; setting contextId inside the value object is invalid.",
         "operationId": "setContextDefaultValues",
         "parameters": [
           {
@@ -54324,6 +54351,9 @@
           },
           "404": {
             "description": "Returned if:\n\n *  voting is disabled.\n *  the issue is not found."
+          },
+          "413": {
+            "description": "Returned if the per-issue voter limit of 50,000 has been reached."
           }
         },
         "security": [

@@ -18,8 +18,6 @@ namespace Soenneker.Jira.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("contextId") is null) { _explicitNullValueContextId = default!; _explicitNullProperties?.Remove("contextId"); }
-            else if (parseNode.GetChildNode("contextId") is { } nullNodeContextId && nullNodeContextId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContextId = null;
             if (parseNode.GetChildNode("isAnyIssueType") is null) { _explicitNullValueIsAnyIssueType = default!; _explicitNullProperties?.Remove("isAnyIssueType"); }
             else if (parseNode.GetChildNode("isAnyIssueType") is { } nullNodeIsAnyIssueType && nullNodeIsAnyIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsAnyIssueType = null;
             if (parseNode.GetChildNode("issueTypeId") is null) { _explicitNullValueIssueTypeId = default!; _explicitNullProperties?.Remove("issueTypeId"); }
@@ -30,9 +28,6 @@ namespace Soenneker.Jira.OpenApiClient.Models
             else if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
         }
 
-        /// <summary>The ID of the context.</summary>
-        public long? ContextId { get => _explicitNullValueContextId; set { _explicitNullValueContextId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contextId"); else _explicitNullProperties?.Remove("contextId"); } }
-        private long? _explicitNullValueContextId = default!;
         /// <summary>True when targeting the base default, independently of context applicability.</summary>
         public bool? IsAnyIssueType { get => _explicitNullValueIsAnyIssueType; set { _explicitNullValueIsAnyIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isAnyIssueType"); else _explicitNullProperties?.Remove("isAnyIssueType"); } }
         private bool? _explicitNullValueIsAnyIssueType = default!;
@@ -75,9 +70,8 @@ namespace Soenneker.Jira.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(5)
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
-                { "contextId", n => { ContextId = n.GetLongValue(); } },
                 { "isAnyIssueType", n => { IsAnyIssueType = n.GetBoolValue(); } },
                 { "issueTypeId", n => { IssueTypeId = n.GetStringValue(); } },
                 { "operation", n => { Operation = n.GetEnumValue<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValueUpdateOperation>(); } },
@@ -91,7 +85,6 @@ namespace Soenneker.Jira.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteLongValue("contextId", ContextId);
             writer.WriteBoolValue("isAnyIssueType", IsAnyIssueType);
             writer.WriteStringValue("issueTypeId", IssueTypeId);
             writer.WriteEnumValue<global::Soenneker.Jira.OpenApiClient.Models.IssueTypeDefaultValueUpdateOperation>("operation", Operation);

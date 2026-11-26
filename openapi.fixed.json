@@ -11,7 +11,7 @@
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "version": "1001.0.0-SNAPSHOT-a7b4351c3da87b54b4403678bdb0ff81c88ca648"
+    "version": "1001.0.0-SNAPSHOT-c708f3bbbb25201455fbb24169cbdc71ef7764bf"
   },
   "servers": [
     {
@@ -11332,7 +11332,7 @@
           "Issue custom field contexts"
         ],
         "summary": "Set default values for a custom field by context and issue type",
-        "description": "Updates default values for individual issue types in custom field contexts.\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\nEach entry targets either one issue type through \\{@code issueTypeId\\}, or the catch-all configuration through \\{@code isAnyIssueType=true\\}. Null clears the base default. Entries not included in the request are left unchanged. Each scope may appear only once. The operation defaults to \\{@code set\\}, which requires a value. \\{@code operation=\u0022removeOverride\u0022\\} requires issueTypeId and allows the value property to be omitted or null. The contextId belongs on the enclosing update; setting contextId inside the value object is invalid.",
+        "description": "Updates default values for individual issue types in custom field contexts.\n\nOnly tenants enrolled in the early access program (EAP) can access this resource. See the [EAP announcement](https://ecosystem.atlassian.net/browse/CHANGE-3082) for details.\n\nEach entry targets either one issue type through \\{@code issueTypeId\\}, or the catch-all configuration through \\{@code isAnyIssueType=true\\}. Null clears the base default. Each context group requires defaultValues. In merge mode (the default), omitted defaults are preserved. In replace mode, omitted defaults are cleared and removeOverride is invalid. Each scope may appear only once. The operation defaults to \\{@code set\\}, which requires a value. \\{@code operation=\u0022removeOverride\u0022\\} requires issueTypeId and allows the value property to be omitted or null. The contextId belongs on the context group; setting contextId inside the value object is invalid.",
         "operationId": "SetContextDefaultValues",
         "parameters": [
           {
@@ -24750,6 +24750,9 @@
           },
           "404": {
             "description": "Returned if:\n\n *  voting is disabled.\n *  the issue is not found."
+          },
+          "413": {
+            "description": "Returned if the per-issue voter limit of 50,000 has been reached."
           },
           "200": {
             "description": "Returned if the request is successful.",
@@ -69405,6 +69408,32 @@
         "additionalProperties": false,
         "description": "A context."
       },
+      "ContextDefaultValueUpdate": {
+        "required": [
+          "contextId",
+          "defaultValues"
+        ],
+        "type": "object",
+        "properties": {
+          "contextId": {
+            "type": "integer",
+            "description": "The ID of the context.",
+            "format": "int64"
+          },
+          "defaultValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/IssueTypeDefaultValueUpdate"
+            },
+            "description": "The default values to update."
+          },
+          "mode": {
+            "$ref": "#/components/schemas/ContextDefaultValueUpdateMode"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Updates for one custom field context."
+      },
       "ContextDefaultValues": {
         "required": [
           "contextId"
@@ -71012,14 +71041,17 @@
         "description": "Default values to update."
       },
       "CustomFieldContextDefaultValuesUpdate": {
+        "required": [
+          "contexts"
+        ],
         "type": "object",
         "properties": {
-          "defaultValues": {
+          "contexts": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/IssueTypeDefaultValueUpdate"
+              "$ref": "#/components/schemas/ContextDefaultValueUpdate"
             },
-            "description": "The default values to update."
+            "description": "The contexts to update."
           }
         },
         "additionalProperties": false,
@@ -75307,16 +75339,8 @@
         "description": "A default value associated with an issue type within a context."
       },
       "IssueTypeDefaultValueUpdate": {
-        "required": [
-          "contextId"
-        ],
         "type": "object",
         "properties": {
-          "contextId": {
-            "type": "integer",
-            "description": "The ID of the context.",
-            "format": "int64"
-          },
           "isAnyIssueType": {
             "type": "boolean",
             "description": "True when targeting the base default, independently of context applicability.",
@@ -100052,6 +100076,28 @@
             {
               "value": "issue-worklog",
               "name": "IssueWorklog"
+            }
+          ]
+        }
+      },
+      "ContextDefaultValueUpdateMode": {
+        "enum": [
+          "merge",
+          "replace"
+        ],
+        "type": "string",
+        "description": "How to handle omitted defaults.",
+        "x-ms-enum": {
+          "name": "ContextDefaultValueUpdateMode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "merge",
+              "name": "Merge"
+            },
+            {
+              "value": "replace",
+              "name": "Replace"
             }
           ]
         }
